@@ -1,0 +1,1255 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Content Editor — Woonklasse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --ink: #1a1a1a;
+  --muted: #6b6b6b;
+  --line: #e6e2dc;
+  --cream: #faf7f1;
+  --taupe: #ada89e;
+  --gold: #2a2e33;
+  --bg: #fff;
+  --display: "Advent Pro", "Helvetica Neue", Arial, sans-serif;
+  --body: "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Header */
+.editor-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+  padding: 20px 28px;
+}
+.editor-header__inner {
+  max-width: 1480px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.editor-header__title {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 0;
+  color: var(--ink);
+}
+.editor-header__title span { color: var(--muted); font-weight: 400; letter-spacing: 0.05em; margin-left: 8px; font-size: 13px; }
+.editor-header__actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.btn {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 10px 18px;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color .2s, color .2s;
+}
+.btn:hover { background: var(--gold); border-color: var(--gold); }
+.btn--ghost { background: transparent; color: var(--ink); }
+.btn--ghost:hover { background: var(--ink); color: #fff; }
+.btn--danger { border-color: #c9543a; color: #c9543a; background: transparent; }
+.btn--danger:hover { background: #c9543a; color: #fff; }
+
+/* Progress bar */
+.progress-wrap {
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 12px 28px 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: var(--display);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.progress-bar {
+  flex: 1;
+  height: 3px;
+  background: var(--line);
+  overflow: hidden;
+}
+.progress-bar__fill {
+  height: 100%;
+  background: var(--gold);
+  width: 0;
+  transition: width .25s ease;
+}
+
+/* Layout */
+.editor-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  max-width: 1480px;
+  margin: 0 auto;
+  gap: 40px;
+  padding: 32px 28px 80px;
+  align-items: start;
+}
+
+/* Sidebar */
+.sidebar {
+  position: sticky;
+  top: 130px;
+  max-height: calc(100vh - 160px);
+  overflow-y: auto;
+  padding-right: 8px;
+}
+.sidebar h2 {
+  font-family: var(--display);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 22px 0 8px;
+  font-weight: 500;
+}
+.sidebar h2:first-child { margin-top: 0; }
+.sidebar a {
+  display: block;
+  padding: 8px 14px;
+  font-family: var(--body);
+  font-size: 13.5px;
+  color: var(--ink);
+  text-decoration: none;
+  border-left: 2px solid transparent;
+  transition: background-color .15s, border-color .15s, color .15s;
+  position: relative;
+}
+.sidebar a:hover { background: var(--cream); border-left-color: var(--line); }
+.sidebar a.active { background: var(--cream); border-left-color: var(--gold); font-weight: 500; }
+.sidebar a .count {
+  font-size: 11px;
+  color: var(--muted);
+  font-family: var(--display);
+  letter-spacing: 0.08em;
+  margin-left: 8px;
+  background: var(--line);
+  padding: 1px 6px;
+  border-radius: 999px;
+}
+.sidebar a.has-changes .count { background: var(--gold); color: #fff; }
+
+/* Filter input */
+.filter-box {
+  margin-bottom: 16px;
+  position: relative;
+}
+.filter-box input {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  background: #fff;
+  font-family: var(--body);
+  font-size: 13.5px;
+  color: var(--ink);
+}
+.filter-box input:focus { outline: none; border-color: var(--ink); }
+
+/* Main content */
+.main {
+  min-width: 0;
+}
+.section {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 32px 36px;
+  margin-bottom: 24px;
+  scroll-margin-top: 140px;
+}
+.section__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+}
+.section__title {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin: 0;
+  color: var(--ink);
+}
+.section__page {
+  font-family: var(--display);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--cream);
+  padding: 4px 10px;
+}
+
+/* Field */
+.field {
+  margin-bottom: 22px;
+  position: relative;
+}
+.field.is-changed::before {
+  content: "";
+  position: absolute;
+  left: -36px;
+  top: 6px;
+  bottom: 6px;
+  width: 3px;
+  background: var(--gold);
+}
+.field__label {
+  display: block;
+  font-family: var(--display);
+  font-size: 11.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+.field__current {
+  font-family: var(--body);
+  font-size: 14px;
+  color: var(--muted);
+  background: var(--cream);
+  border-left: 2px solid var(--line);
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.field__current::before {
+  content: "Huidig: ";
+  font-family: var(--display);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 10.5px;
+  color: var(--muted);
+  margin-right: 4px;
+  font-weight: 500;
+}
+.field input,
+.field textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: #fff;
+  font-family: var(--body);
+  font-size: 14.5px;
+  color: var(--ink);
+  padding: 10px 14px;
+  transition: border-color .2s;
+  resize: vertical;
+}
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--ink);
+}
+.field textarea { min-height: 72px; }
+.field.is-changed input,
+.field.is-changed textarea {
+  border-color: var(--gold);
+  background: #f5f7fa;
+}
+.field__hint {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+/* Section intro/note */
+.section__note {
+  font-size: 13.5px;
+  color: var(--muted);
+  background: var(--cream);
+  border-left: 2px solid var(--gold);
+  padding: 10px 14px;
+  margin-bottom: 20px;
+  line-height: 1.55;
+}
+
+/* Status bar */
+.status {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--ink);
+  color: #fff;
+  padding: 10px 16px;
+  font-family: var(--display);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .25s, transform .25s;
+  z-index: 100;
+  pointer-events: none;
+}
+.status.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+  .editor-layout { grid-template-columns: 1fr; }
+  .sidebar { position: static; max-height: none; }
+  .section { padding: 24px 20px; }
+}
+</style>
+</head>
+<body>
+
+<header class="editor-header">
+  <div class="editor-header__inner">
+    <h1 class="editor-header__title">Woonklasse Content Editor <span id="autosaveStatus">auto-saved</span></h1>
+    <div class="editor-header__actions">
+      <button class="btn btn--ghost" id="filterToggle">⌕ Zoek</button>
+      <button class="btn btn--danger" id="resetBtn">Reset</button>
+      <button class="btn" id="exportBtn">↓ Exporteer wijzigingen</button>
+    </div>
+  </div>
+  <div class="progress-wrap">
+    <span id="progressLabel">0 / 0 velden gewijzigd</span>
+    <div class="progress-bar"><div class="progress-bar__fill" id="progressFill"></div></div>
+  </div>
+</header>
+
+<div class="editor-layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="filter-box" id="filterBox" style="display: none;">
+      <input type="text" id="filterInput" placeholder="Zoek in velden..."/>
+    </div>
+    <!-- nav rendered by JS -->
+  </aside>
+
+  <main class="main" id="main">
+    <!-- sections rendered by JS -->
+  </main>
+</div>
+
+<div class="status" id="status">opgeslagen</div>
+
+<script>
+// =========================================================================
+// CONTENT DATA
+// Every editable text block on the site, organized by page → section → field.
+// =========================================================================
+
+const CONTENT = [
+  /* ─── SHARED ─── */
+  {
+    id: "shared-header",
+    page: "alle pagina's",
+    title: "Header navigatie",
+    fields: [
+      { id: "nav.diensten", label: "Nav item 1", current: "Diensten" },
+      { id: "nav.prijzen", label: "Nav item 2", current: "Prijzen" },
+      { id: "nav.projecten", label: "Nav item 3", current: "Projecten" },
+      { id: "nav.overons", label: "Nav item 4", current: "Over ons" },
+      { id: "nav.contact", label: "Nav item 5", current: "Contact" },
+    ]
+  },
+  {
+    id: "shared-footer",
+    page: "alle pagina's",
+    title: "Footer",
+    fields: [
+      { id: "footer.tagline", label: "Tagline onder logo", current: "Jouw droomwoning begint hier. Kwaliteit, vakmanschap en persoonlijke aandacht in elk project.", multiline: true },
+      { id: "footer.email", label: "E-mailadres", current: "info@woonklasse.nl" },
+      { id: "footer.phone", label: "Telefoonnummer", current: "+31 30 207 23 88" },
+      { id: "footer.whatsapp_label", label: "WhatsApp label", current: "WhatsApp" },
+      { id: "footer.address", label: "Adres", current: "Joop Geesinkweg 201, 1114 AB Amsterdam-Duivendrecht", multiline: true },
+      { id: "footer.sister_label", label: "Zusterbedrijf label", current: "Zusterbedrijf" },
+      { id: "footer.sister_link", label: "Zusterbedrijf link tekst", current: "Badkamerstijl →" },
+      { id: "footer.copyright", label: "Copyright regel", current: "© 2026 Woonklasse. Alle rechten voorbehouden." },
+      { id: "footer.legal1", label: "Legal link 1", current: "Privacybeleid" },
+      { id: "footer.legal2", label: "Legal link 2", current: "Algemene voorwaarden" },
+      { id: "footer.kvk_btw", label: "Bedrijfsgegevens", current: "KVK 85409146 · BTW NL004092100B36" },
+    ]
+  },
+
+  /* ─── HOMEPAGE ─── */
+  {
+    id: "home-hero",
+    page: "index.html",
+    title: "Homepage — Hero",
+    fields: [
+      { id: "home.hero.eyebrow", label: "Eyebrow boven titel", current: "Vakmanschap · Kwaliteit · Ontzorging" },
+      { id: "home.hero.title", label: "Hero titel (3 regels)", current: "Hoogwaardige renovaties zonder stress", multiline: true },
+      { id: "home.hero.sub", label: "Hero subtitel", current: "Eén aanspreekpunt van ontwerp tot oplevering. Vast team, vaste prijs, oog voor detail.", multiline: true },
+      { id: "home.hero.cta1", label: "CTA link 1", current: "Offertegesprek aanvragen" },
+      { id: "home.hero.cta2", label: "CTA link 2", current: "Alle projecten bekijken" },
+    ]
+  },
+  {
+    id: "home-quiz",
+    page: "index.html",
+    title: "Homepage — Lead Quiz (3-stappen)",
+    note: "Het multi-step formulier rechts in de hero.",
+    fields: [
+      { id: "quiz.kicker", label: "Kicker bovenaan formulier", current: "Persoonlijk advies · in 3 stappen" },
+      { id: "quiz.title", label: "Form titel", current: "Vertel ons over je project, wij denken met je mee", multiline: true },
+      { id: "quiz.s1.q1", label: "Stap 1 — vraag 1", current: "Hoeveel kamers wil je verbouwen?" },
+      { id: "quiz.s1.q2", label: "Stap 1 — vraag 2", current: "Wat voor type project?" },
+      { id: "quiz.s1.type1", label: "Type chip 1", current: "Totaal renovatie" },
+      { id: "quiz.s1.type2", label: "Type chip 2", current: "Nieuwbouw" },
+      { id: "quiz.s1.type3", label: "Type chip 3", current: "Sanitair / badkamer" },
+      { id: "quiz.s1.type4", label: "Type chip 4", current: "Onderhoud" },
+      { id: "quiz.s1.type5", label: "Type chip 5", current: "Anders" },
+      { id: "quiz.s2.header", label: "Stap 2 header", current: "Per kamer" },
+      { id: "quiz.s2.addroom", label: "Knop: + Kamer toevoegen", current: "+ Kamer toevoegen" },
+      { id: "quiz.s2.room1", label: "Kamer-type chip 1", current: "Woonkamer" },
+      { id: "quiz.s2.room2", label: "Kamer-type chip 2", current: "Keuken" },
+      { id: "quiz.s2.room3", label: "Kamer-type chip 3", current: "Badkamer" },
+      { id: "quiz.s2.room4", label: "Kamer-type chip 4", current: "Slaapkamer" },
+      { id: "quiz.s2.room5", label: "Kamer-type chip 5", current: "Hal / entree" },
+      { id: "quiz.s2.room6", label: "Kamer-type chip 6", current: "Hele woning" },
+      { id: "quiz.s2.room7", label: "Kamer-type chip 7", current: "Anders" },
+      { id: "quiz.s2.m2", label: "m² placeholder", current: "m² (optioneel)" },
+      { id: "quiz.s2.desc", label: "Beschrijving placeholder", current: "Korte beschrijving (optioneel)" },
+      { id: "quiz.s2.photoLabel", label: "Foto label", current: "Foto's huidige situatie (optioneel)" },
+      { id: "quiz.s2.photoBtn", label: "Foto knop", current: "+ Foto" },
+      { id: "quiz.s2.remove", label: "Verwijder kamer link", current: "verwijder" },
+      { id: "quiz.s3.name", label: "Stap 3 — Naam placeholder", current: "Naam *" },
+      { id: "quiz.s3.email", label: "Stap 3 — E-mail placeholder", current: "E-mailadres *" },
+      { id: "quiz.s3.phone", label: "Stap 3 — Telefoon placeholder", current: "Telefoon *" },
+      { id: "quiz.s3.city", label: "Stap 3 — Plaats placeholder", current: "Plaats / stad (optioneel)" },
+      { id: "quiz.s3.expand", label: "Extra info uitklap label", current: "▸ Extra informatie (optioneel), klap uit" },
+      { id: "quiz.s3.budget", label: "Budget label", current: "Indicatie budget" },
+      { id: "quiz.s3.timing", label: "Timing label", current: "Wanneer wil je starten?" },
+      { id: "quiz.s3.message", label: "Textarea placeholder", current: "Bijzondere wensen, voorkeuren of vragen..." },
+      { id: "quiz.s3.submit", label: "Submit knop", current: "Verstuur aanvraag" },
+      { id: "quiz.s3.assurance", label: "Geruststelling onderaan", current: "We nemen binnen 2 werkdagen contact met je op om je advies persoonlijk door te spreken. We delen je gegevens nooit met derden.", multiline: true },
+      { id: "quiz.done.title", label: "Bevestiging titel", current: "Bedankt — we hebben je aanvraag ontvangen", multiline: true },
+      { id: "quiz.done.body1", label: "Bevestiging body 1", current: "We nemen binnen 2 werkdagen contact met je op om je project persoonlijk door te spreken.", multiline: true },
+      { id: "quiz.done.body2", label: "Bevestiging body 2", current: "In de tussentijd kun je ons ook bereiken op +31 30 207 23 88." },
+      { id: "quiz.done.restart", label: "Bevestiging knop", current: "Nieuwe aanvraag starten" },
+    ]
+  },
+  {
+    id: "home-watdoenwij",
+    page: "index.html",
+    title: "Homepage — \"Wat doen wij?\" sectie",
+    fields: [
+      { id: "home.wdw.title", label: "Section titel", current: "Wat doen wij?" },
+      { id: "home.wdw.p1", label: "Paragraaf 1", current: "Een verbouwing kost je tienduizenden euro's en maanden van je leven. De grootste angst is niet de bouw zelf, het is de onzekerheid. Lopen de kosten uit de hand? Wordt het echt mooi? Sleept het maanden langer dan beloofd? Dat is precies waar wij het verschil maken.", multiline: true },
+      { id: "home.wdw.p2", label: "Paragraaf 2", current: "We hebben samen meer dan 15 jaar ervaring in bouw en sanitair, dus je krijgt mensen die weten wat ze doen. We werken met onze eigen leveranciers, dus je betaalt geen opslag van tussenpersonen. En je hebt één vast aanspreekpunt van begin tot eind, iemand die je kent en die je gewoon kunt bellen. Geen gedoe, geen verrassingen, je weet steeds waar je aan toe bent.", multiline: true },
+      { id: "home.wdw.p3", label: "Paragraaf 3", current: "Dit zijn niet zomaar projecten. Het zijn huizen waar mensen zich beter voelen, waar het werkt, waar alles op z'n plek zit. Ruimten die we samen met jou hebben opgebouwd.", multiline: true },
+    ]
+  },
+  {
+    id: "home-quote",
+    page: "index.html",
+    title: "Homepage — Pull quote",
+    fields: [
+      { id: "home.quote", label: "Quote tekst", current: "Je verbouwing verdient beter dan onzekerheid. Beter dan gedoe. Beter dan een aannemer die je niet kent.", multiline: true },
+    ]
+  },
+  {
+    id: "home-discipline",
+    page: "index.html",
+    title: "Homepage — Discipline split",
+    fields: [
+      { id: "home.disc.eyebrow", label: "Eyebrow", current: "Discipline" },
+      { id: "home.disc.title", label: "Titel", current: "Volledige renovatie, één aanspreekpunt." },
+      { id: "home.disc.body", label: "Body tekst", current: "Of je nu je badkamer vernieuwt, een slaapkamer uitbouwt of je hele huis omgooit, het principe is hetzelfde. We beginnen bij jou thuis, kijken wat er is, beluisteren wat je wil en maken een plan waar je achter staat. Geen verrassingen onderweg. Je weet vanaf het begin waar je aan toe bent.", multiline: true },
+      { id: "home.disc.item1", label: "Stap 1", current: "Ontwerp" },
+      { id: "home.disc.item2", label: "Stap 2", current: "Vergunningen" },
+      { id: "home.disc.item3", label: "Stap 3", current: "Uitvoering" },
+      { id: "home.disc.item4", label: "Stap 4", current: "Oplevering" },
+    ]
+  },
+  {
+    id: "home-specialisme",
+    page: "index.html",
+    title: "Homepage — Specialisme split",
+    fields: [
+      { id: "home.spec.eyebrow", label: "Eyebrow", current: "Specialisme" },
+      { id: "home.spec.title", label: "Titel", current: "Luxe badkamers door eigen sanitairspecialisten." },
+      { id: "home.spec.p1", label: "Paragraaf 1", current: "Voor badkamers zijn we nog specialistischer. Acht jaar ervaring met sanitair, en we hebben onze eigen leverancier voor badkamermeubels en tegelwerk. Dat geeft ons scherpte die je bij een reguliere aannemer niet hebt. En het geeft jou iets unieks: we bouwen samen jouw droombadkamer.", multiline: true },
+      { id: "home.spec.p2", label: "Paragraaf 2", current: "Voor badkamers doen we nog iets extra: we werken met Saninet, software waarmee we in 3D jouw droombadkamer samen ontwerpen. We doen dit op locatie bij jou thuis, zodat je precies ziet hoe het wordt voordat we beginnen. Geen gokwerk, geen verrassingen, gewoon zekerheid.", multiline: true },
+      { id: "home.spec.link", label: "Link", current: "Bekijk Saninet 3D" },
+    ]
+  },
+  {
+    id: "home-beloftes",
+    page: "index.html",
+    title: "Homepage — Vier beloftes",
+    fields: [
+      { id: "home.bel.title", label: "Section titel", current: "Vier beloftes" },
+      { id: "home.bel.1.t", label: "Belofte 1 — titel", current: "Eigen leveranciers, geen tussenpersonen, scherp geprijsd" },
+      { id: "home.bel.1.b", label: "Belofte 1 — body", current: "We werken direct met onze eigen leveranciers voor materialen, sanitair en meubel. Geen tussenpartij, geen opslag.", multiline: true },
+      { id: "home.bel.2.t", label: "Belofte 2 — titel", current: "Eén aanspreekpunt, geen gedoe" },
+      { id: "home.bel.2.b", label: "Belofte 2 — body", current: "Iemand die je kent en die je gewoon kunt bellen. Van offerte tot oplevering — één persoon, één lijn.", multiline: true },
+      { id: "home.bel.3.t", label: "Belofte 3 — titel", current: "15+ jaar ervaring in bouw en sanitair" },
+      { id: "home.bel.3.b", label: "Belofte 3 — body", current: "Mensen die weten wat ze doen — en wat er kan misgaan. Vakmanschap dat zich bewijst in elk detail.", multiline: true },
+      { id: "home.bel.4.t", label: "Belofte 4 — titel", current: "Opgeleverd op tijd, afspraken zijn afspraken" },
+      { id: "home.bel.4.b", label: "Belofte 4 — body", current: "Vaste prijs, vaste planning, vaste oplevering. Bewezen door 200+ opgeleverde projecten.", multiline: true },
+    ]
+  },
+  {
+    id: "home-uitwerk",
+    page: "index.html",
+    title: "Homepage — Uit ons werk",
+    fields: [
+      { id: "home.werk.title", label: "Section titel", current: "Uit ons werk" },
+      { id: "home.werk.1", label: "Project 1 naam", current: "Complete renovatie" },
+      { id: "home.werk.2", label: "Project 2 naam", current: "Luxe afwerking" },
+      { id: "home.werk.3", label: "Project 3 naam", current: "Totaalverbouwing" },
+      { id: "home.werk.4", label: "Project 4 naam", current: "Luxe dubbel penthouse" },
+      { id: "home.werk.5", label: "Project 5 naam", current: "Drielaagse transformatie" },
+    ]
+  },
+  {
+    id: "home-cta",
+    page: "index.html",
+    title: "Homepage — CTA banner",
+    fields: [
+      { id: "home.cta.title", label: "Titel", current: "Klaar om te starten? Laten we kennismaken.", multiline: true },
+      { id: "home.cta.link", label: "Link", current: "Offertegesprek aanvragen" },
+    ]
+  },
+
+  /* ─── DIENSTEN ─── */
+  {
+    id: "diensten-hero",
+    page: "diensten.html",
+    title: "Diensten — Hero",
+    fields: [
+      { id: "diensten.hero.eyebrow", label: "Eyebrow", current: "Onze Diensten" },
+      { id: "diensten.hero.title", label: "Titel", current: "Vakmanschap in elk project" },
+      { id: "diensten.hero.sub", label: "Subtitel", current: "Van badkamer en keuken tot complete woningrenovatie — alle disciplines in eigen huis.", multiline: true },
+      { id: "diensten.hero.cta", label: "CTA link", current: "Bespreek uw project" },
+    ]
+  },
+  {
+    id: "diensten-aanpak",
+    page: "diensten.html",
+    title: "Diensten — Onze Aanpak",
+    fields: [
+      { id: "diensten.aanpak.eyebrow", label: "Eyebrow", current: "Onze Aanpak" },
+      { id: "diensten.aanpak.title", label: "Titel", current: "Vier stappen, één visie." },
+      { id: "diensten.aanpak.body", label: "Body", current: "Elk project begint met luisteren. We verdiepen ons in de locatie, de architectuur en jullie wensen — en bouwen vanuit die context naar een ontwerp dat klopt.", multiline: true },
+    ]
+  },
+  {
+    id: "diensten-fases",
+    page: "diensten.html",
+    title: "Diensten — De vier fases",
+    fields: [
+      { id: "diensten.fases.title", label: "Section titel", current: "De vier fases" },
+      { id: "diensten.f1.t", label: "Fase 1 — titel", current: "Context" },
+      { id: "diensten.f1.b", label: "Fase 1 — body", current: "Elk project begint met luisteren. We verdiepen ons in de locatie, de architectuur en de manier waarop jij wilt wonen. Zonder die context geen ontwerp dat klopt.", multiline: true },
+      { id: "diensten.f2.t", label: "Fase 2 — titel", current: "Compositie" },
+      { id: "diensten.f2.b", label: "Fase 2 — body", current: "Schaal, proportie en materiaalgebruik in balans. We tekenen tot het ritme klopt — pas dan gaan de eerste stenen om.", multiline: true },
+      { id: "diensten.f3.t", label: "Fase 3 — titel", current: "Emotie" },
+      { id: "diensten.f3.b", label: "Fase 3 — body", current: "Door licht, textuur en volume orchestreren we een gevoel van thuiskomen. Een woning die werkt, voelt eerst goed voor het iets anders is.", multiline: true },
+      { id: "diensten.f4.t", label: "Fase 4 — titel", current: "Ambacht" },
+      { id: "diensten.f4.b", label: "Fase 4 — body", current: "Van de eerste steen tot de laatste afwerking — ons eigen team voert uit. Vakmensen die hun werk verstaan en eigenaar zijn van het resultaat.", multiline: true },
+    ]
+  },
+  {
+    id: "diensten-specialismen",
+    page: "diensten.html",
+    title: "Diensten — Alle specialismen",
+    fields: [
+      { id: "diensten.spec.eyebrow", label: "Eyebrow", current: "Alle diensten op een rij" },
+      { id: "diensten.spec.title", label: "Titel", current: "Specialismen." },
+      { id: "diensten.s1.t", label: "1 — Naam", current: "Badkamer renovatie" },
+      { id: "diensten.s1.b", label: "1 — Beschrijving", current: "Eigen sanitairspecialisten, Saninet 3D-ontwerp, premium materialen.", multiline: true },
+      { id: "diensten.s1.p", label: "1 — Prijs", current: "Vanaf €8.500" },
+      { id: "diensten.s2.t", label: "2 — Naam", current: "Keuken renovatie" },
+      { id: "diensten.s2.b", label: "2 — Beschrijving", current: "Maatwerk ontwerp, apparatuur, werkbladen en installatie inbegrepen.", multiline: true },
+      { id: "diensten.s2.p", label: "2 — Prijs", current: "Vanaf €7.500" },
+      { id: "diensten.s3.t", label: "3 — Naam", current: "Aanbouw & uitbouw" },
+      { id: "diensten.s3.b", label: "3 — Beschrijving", current: "Uitbouwen, opbouwen en serres — inclusief vergunningstraject.", multiline: true },
+      { id: "diensten.s3.p", label: "3 — Prijs", current: "Vanaf €1.800 / m²" },
+      { id: "diensten.s4.t", label: "4 — Naam", current: "Volledige woningrenovatie" },
+      { id: "diensten.s4.b", label: "4 — Beschrijving", current: "Van casco tot sleutelklaar — sloop, ruwbouw, afbouw, oplevering.", multiline: true },
+      { id: "diensten.s4.p", label: "4 — Prijs", current: "Vanaf €800 / m²" },
+      { id: "diensten.s5.t", label: "5 — Naam", current: "Dakwerk" },
+      { id: "diensten.s5.b", label: "5 — Beschrijving", current: "Platte en hellende daken, dakkapellen, isolatie en loodwerk.", multiline: true },
+      { id: "diensten.s5.p", label: "5 — Prijs", current: "Vanaf €85 / m²" },
+      { id: "diensten.s6.t", label: "6 — Naam", current: "Vloeren" },
+      { id: "diensten.s6.b", label: "6 — Beschrijving", current: "Hout, tegel, natuursteen en gietvloeren — incl. egalisatie en isolatie.", multiline: true },
+      { id: "diensten.s6.p", label: "6 — Prijs", current: "Vanaf €55 / m²" },
+      { id: "diensten.s7.t", label: "7 — Naam", current: "Schilderwerk" },
+      { id: "diensten.s7.b", label: "7 — Beschrijving", current: "Binnen- en buitenschilderwerk met hoogwaardige verven, behang en stuc.", multiline: true },
+      { id: "diensten.s7.p", label: "7 — Prijs", current: "Vanaf €38 / m²" },
+      { id: "diensten.s8.t", label: "8 — Naam", current: "Onderhoud" },
+      { id: "diensten.s8.b", label: "8 — Beschrijving", current: "Periodiek onderhoud, kleine reparaties en servicecontracten.", multiline: true },
+      { id: "diensten.s8.p", label: "8 — Prijs", current: "Vanaf €65 / uur" },
+    ]
+  },
+  {
+    id: "diensten-cta",
+    page: "diensten.html",
+    title: "Diensten — CTA banner",
+    fields: [
+      { id: "diensten.cta.title", label: "Titel", current: "Vertel ons over uw plannen. Binnen 48 uur een voorstel.", multiline: true },
+      { id: "diensten.cta.link", label: "Link", current: "Start uw project" },
+    ]
+  },
+
+  /* ─── PRIJZEN ─── */
+  {
+    id: "prijzen-hero",
+    page: "prijzen.html",
+    title: "Prijzen — Hero",
+    fields: [
+      { id: "prijzen.hero.eyebrow", label: "Eyebrow", current: "Prijzen 2026" },
+      { id: "prijzen.hero.title", label: "Titel", current: "Wat kost een verbouwing in 2026?" },
+      { id: "prijzen.hero.sub", label: "Subtitel", current: "Vier heldere prijscategorieën, een interactieve calculator en alle factoren die uw budget beïnvloeden — zonder verborgen kosten of vage uurtarieven.", multiline: true },
+      { id: "prijzen.hero.cta", label: "CTA link", current: "Bereken uw indicatie" },
+    ]
+  },
+  {
+    id: "prijzen-tier1",
+    page: "prijzen.html",
+    title: "Prijzen — Tier 1 (Basis)",
+    fields: [
+      { id: "prijzen.t1.name", label: "Naam", current: "Basis" },
+      { id: "prijzen.t1.range", label: "Range", current: "Tussen €500 en €5.000 · 1 tot 5 werkdagen" },
+      { id: "prijzen.t1.price", label: "Vanaf-prijs", current: "Vanaf €500" },
+      { id: "prijzen.t1.items", label: "Items (één per regel)", current: "Herstel houtrot, kit- en voegwerk\nKleine loodgieter- of elektraklus\nBuitenschilderwerk per gevel\nVervangen van enkele kozijnen of deuren\nAfvoer puin en eindschoonmaak", multiline: true },
+      { id: "prijzen.t1.cta", label: "Knop", current: "Plan een opname" },
+    ]
+  },
+  {
+    id: "prijzen-tier2",
+    page: "prijzen.html",
+    title: "Prijzen — Tier 2 (Standaard)",
+    fields: [
+      { id: "prijzen.t2.name", label: "Naam", current: "Standaard" },
+      { id: "prijzen.t2.badge", label: "Badge label", current: "Meest gekozen" },
+      { id: "prijzen.t2.range", label: "Range", current: "Tussen €5.000 en €15.000 · 1 tot 3 weken" },
+      { id: "prijzen.t2.price", label: "Vanaf-prijs", current: "Vanaf €5.000" },
+      { id: "prijzen.t2.items", label: "Items (één per regel)", current: "Sloop, afvoer en bouwkundige voorbereiding\nNieuwe leidingen elektra en water\nTegelwerk vloer en wand\nPlaatsing keuken of sanitair\nSchilder- en stucwerk\nEindcontrole en oplevering", multiline: true },
+      { id: "prijzen.t2.cta", label: "Knop", current: "Bespreek uw plan" },
+    ]
+  },
+  {
+    id: "prijzen-tier3",
+    page: "prijzen.html",
+    title: "Prijzen — Tier 3 (Uitgebreid)",
+    fields: [
+      { id: "prijzen.t3.name", label: "Naam", current: "Uitgebreid" },
+      { id: "prijzen.t3.range", label: "Range", current: "Tussen €15.000 en €50.000 · 4 tot 12 weken" },
+      { id: "prijzen.t3.price", label: "Vanaf-prijs", current: "Vanaf €15.000" },
+      { id: "prijzen.t3.items", label: "Items (één per regel)", current: "Indelingswijziging en lichte constructie\nComplete keuken én badkamer\nVloer- en wandafwerking volledig nieuw\nNieuwe groepenkast en bedrading\nVloerverwarming en isolatie\nEigen projectleider gedurende doorlooptijd", multiline: true },
+      { id: "prijzen.t3.cta", label: "Knop", current: "Vraag persoonlijk advies" },
+    ]
+  },
+  {
+    id: "prijzen-tier4",
+    page: "prijzen.html",
+    title: "Prijzen — Tier 4 (Maatwerk)",
+    fields: [
+      { id: "prijzen.t4.name", label: "Naam", current: "Maatwerk" },
+      { id: "prijzen.t4.range", label: "Range", current: "Vanaf €50.000 · 3 tot 9 maanden" },
+      { id: "prijzen.t4.price", label: "Vanaf-prijs", current: "€50.000+" },
+      { id: "prijzen.t4.items", label: "Items (één per regel)", current: "Architect, constructeur en aannemer in één traject\nVergunningstraject bij de gemeente\nGrootschalige aan- of opbouw\nTopafwerking en exclusieve materialen\nDomotica en duurzame installaties\nNazorg en garantieboek bij oplevering", multiline: true },
+      { id: "prijzen.t4.cta", label: "Knop", current: "Ontvang een maatwerk voorstel" },
+    ]
+  },
+  {
+    id: "prijzen-disclaimer",
+    page: "prijzen.html",
+    title: "Prijzen — Disclaimer + FAQ",
+    fields: [
+      { id: "prijzen.disclaimer", label: "Disclaimer onder tiers", current: "Indicatie excl. BTW. Werkelijke kosten hangen af van bouwkundige staat, vergunningen, materiaalkeuzes en regio.", multiline: true },
+      { id: "prijzen.faq.title", label: "FAQ section titel", current: "Veelgestelde vragen" },
+      { id: "prijzen.faq.q1", label: "Q1", current: "Hoe weet ik in welke categorie mijn project valt?" },
+      { id: "prijzen.faq.a1", label: "A1", current: "Tijdens het kennismakingsgesprek brengen we je wensen in kaart en geven we direct een eerste indicatie. Vaak hoor je binnen een half uur in welke richting je moet denken.", multiline: true },
+      { id: "prijzen.faq.q2", label: "Q2", current: "Krijg ik echt een vaste prijs?" },
+      { id: "prijzen.faq.a2", label: "A2", current: "Ja. Na het definitieve ontwerp ontvang je een vaste prijsopgave. Meerwerk gebeurt alleen na schriftelijke goedkeuring — en blijft uitzondering, geen regel.", multiline: true },
+      { id: "prijzen.faq.q3", label: "Q3", current: "Wat zit er bij de prijs inbegrepen?" },
+      { id: "prijzen.faq.a3", label: "A3", current: "Arbeid, materiaal, projectleiding, oplevering en BTW. Vergunningleges en eventuele constructeurskosten worden apart genoemd in de offerte.", multiline: true },
+      { id: "prijzen.faq.q4", label: "Q4", current: "Werken jullie met een betaalschema?" },
+      { id: "prijzen.faq.a4", label: "A4", current: "Ja — meestal in 3 tot 5 termijnen gekoppeld aan opleverfases. Geen vooruitbetaling van het volledige bedrag.", multiline: true },
+      { id: "prijzen.faq.q5", label: "Q5", current: "Krijg ik garantie op het werk?" },
+      { id: "prijzen.faq.a5", label: "A5", current: "Standaard 5 jaar garantie op constructieve onderdelen en 2 jaar op afwerking. Sanitaironderdelen volgen de fabrikantgarantie. Bij Maatwerk-projecten ontvang je een garantieboek bij oplevering.", multiline: true },
+      { id: "prijzen.cta.title", label: "CTA titel", current: "Klaar voor een prijsindicatie?" },
+      { id: "prijzen.cta.link", label: "CTA link", current: "Bel direct +31 30 207 23 88" },
+    ]
+  },
+
+  /* ─── PROJECTEN ─── */
+  {
+    id: "projecten-hero",
+    page: "projecten.html",
+    title: "Projecten — Hero",
+    fields: [
+      { id: "projecten.hero.eyebrow", label: "Eyebrow", current: "Portfolio" },
+      { id: "projecten.hero.title", label: "Titel", current: "Onze realisaties" },
+      { id: "projecten.hero.sub", label: "Subtitel", current: "Ruimtes die inspireren en duurzaam zijn. Van volledige transformaties tot verfijnde details. Bekijk ons werk.", multiline: true },
+    ]
+  },
+  {
+    id: "projecten-list",
+    page: "projecten.html",
+    title: "Projecten — 5 projecten",
+    fields: [
+      { id: "projecten.1.name", label: "Project 1 — naam", current: "Complete renovatie" },
+      { id: "projecten.1.desc", label: "Project 1 — beschrijving", current: "Van historisch casco tot modern meesterwerk. Een volledige transformatie met behoud van authentiek karakter.", multiline: true },
+      { id: "projecten.2.name", label: "Project 2 — naam", current: "Luxe afwerking" },
+      { id: "projecten.2.desc", label: "Project 2 — beschrijving", current: "Panoramisch uitzicht verdient een interieur dat daaraan evenredig is. Strak, warm en tijdloos.", multiline: true },
+      { id: "projecten.3.name", label: "Project 3 — naam", current: "Totaalverbouwing" },
+      { id: "projecten.3.desc", label: "Project 3 — beschrijving", current: "Een ruime villa volledig getransformeerd met oog voor licht, ruimte en duurzaamheid.", multiline: true },
+      { id: "projecten.4.name", label: "Project 4 — naam", current: "Luxe dubbel penthouse" },
+      { id: "projecten.4.desc", label: "Project 4 — beschrijving", current: "Twee verdiepingen samengevoegd tot één spectaculaire woonervaring met adembenemende afwerking.", multiline: true },
+      { id: "projecten.5.name", label: "Project 5 — naam", current: "Drielaagse transformatie" },
+      { id: "projecten.5.desc", label: "Project 5 — beschrijving", current: "Een indrukwekkend meervoudig appartement omgetoverd tot een architecturaal juweel met oog voor detail.", multiline: true },
+    ]
+  },
+  {
+    id: "projecten-cta",
+    page: "projecten.html",
+    title: "Projecten — CTA",
+    fields: [
+      { id: "projecten.cta.title", label: "Titel", current: "Neem contact op voor een vrijblijvend gesprek over uw droomproject.", multiline: true },
+      { id: "projecten.cta.link", label: "Link", current: "Start uw project" },
+    ]
+  },
+
+  /* ─── OVER ONS ─── */
+  {
+    id: "overons-hero",
+    page: "over-ons.html",
+    title: "Over Ons — Hero",
+    fields: [
+      { id: "overons.hero.eyebrow", label: "Eyebrow", current: "Over Woonklasse" },
+      { id: "overons.hero.title", label: "Titel", current: "Ons Verhaal" },
+      { id: "overons.hero.sub", label: "Subtitel", current: "Bouwen aan droomwoningen sinds 2010." },
+    ]
+  },
+  {
+    id: "overons-story",
+    page: "over-ons.html",
+    title: "Over Ons — Ons Verhaal",
+    fields: [
+      { id: "overons.story.eyebrow", label: "Eyebrow", current: "Ons Verhaal" },
+      { id: "overons.story.title", label: "Titel", current: "Van eerste schets tot laatste afwerking." },
+      { id: "overons.story.p1", label: "Paragraaf 1", current: "Wat begon als een klein aannemersbedrijf is uitgegroeid tot een bouwbedrijf met alle disciplines in huis, gespecialiseerd in complete woningtransformaties.", multiline: true },
+      { id: "overons.story.p2", label: "Paragraaf 2", current: "Van de eerste schets tot de laatste afwerking — wij doen het allemaal in eigen beheer. Ons team bestaat uit ervaren timmerlieden, metselaars, stukadoors en projectleiders die allemaal dezelfde standaard delen: het moet uitzonderlijk zijn.", multiline: true },
+      { id: "overons.story.p3", label: "Paragraaf 3", current: "Die instelling heeft ons gebracht waar we nu zijn: een bedrijf waar klanten graag terugkomen.", multiline: true },
+      { id: "overons.story.link", label: "Link", current: "Neem vrijblijvend contact op" },
+    ]
+  },
+  {
+    id: "overons-waarden",
+    page: "over-ons.html",
+    title: "Over Ons — Onze waarden",
+    fields: [
+      { id: "overons.w.title", label: "Section titel", current: "Onze waarden" },
+      { id: "overons.w1.t", label: "Waarde 1 — titel", current: "Vakmanschap" },
+      { id: "overons.w1.b", label: "Waarde 1 — body", current: "Elk project wordt uitgevoerd door ervaren vakmensen die trots zijn op hun werk. Geen concessies, alleen het beste.", multiline: true },
+      { id: "overons.w2.t", label: "Waarde 2 — titel", current: "Transparantie" },
+      { id: "overons.w2.b", label: "Waarde 2 — body", current: "Heldere communicatie, eerlijke prijzen en geen verrassingen. U weet altijd waar u aan toe bent.", multiline: true },
+      { id: "overons.w3.t", label: "Waarde 3 — titel", current: "Persoonlijk" },
+      { id: "overons.w3.b", label: "Waarde 3 — body", current: "Eén vast aanspreekpunt van begin tot eind. Wij luisteren, denken mee en leveren op maat.", multiline: true },
+      { id: "overons.w4.t", label: "Waarde 4 — titel", current: "Duurzaam" },
+      { id: "overons.w4.b", label: "Waarde 4 — body", current: "We bouwen met materialen en technieken die meegaan. Kwaliteit die de tand des tijds doorstaat.", multiline: true },
+      { id: "overons.w5.t", label: "Waarde 5 — titel", current: "Ambitie" },
+      { id: "overons.w5.b", label: "Waarde 5 — body", current: "We leggen de lat hoog voor onszelf en voor uw project. Perfect is niet goed genoeg, het moet uitzonderlijk zijn.", multiline: true },
+    ]
+  },
+  {
+    id: "overons-cijfers",
+    page: "over-ons.html",
+    title: "Over Ons — In cijfers",
+    fields: [
+      { id: "overons.cijfers.eyebrow", label: "Eyebrow", current: "In cijfers" },
+      { id: "overons.cijfers.title", label: "Titel", current: "Vijftien jaar bouwen aan vertrouwen." },
+      { id: "overons.stat1.n", label: "Stat 1 — cijfer", current: "2010" },
+      { id: "overons.stat1.l", label: "Stat 1 — label", current: "Opgericht" },
+      { id: "overons.stat2.n", label: "Stat 2 — cijfer", current: "200+" },
+      { id: "overons.stat2.l", label: "Stat 2 — label", current: "Opgeleverde projecten" },
+      { id: "overons.stat3.n", label: "Stat 3 — cijfer", current: "28" },
+      { id: "overons.stat3.l", label: "Stat 3 — label", current: "Eigen vakmensen" },
+      { id: "overons.stat4.n", label: "Stat 4 — cijfer", current: "9.4" },
+      { id: "overons.stat4.l", label: "Stat 4 — label", current: "Klantbeoordeling" },
+    ]
+  },
+  {
+    id: "overons-cta",
+    page: "over-ons.html",
+    title: "Over Ons — CTA",
+    fields: [
+      { id: "overons.cta.title", label: "Titel", current: "Laten we kennismaken." },
+      { id: "overons.cta.link", label: "Link", current: "Neem contact op" },
+    ]
+  },
+
+  /* ─── CONTACT ─── */
+  {
+    id: "contact-header",
+    page: "contact.html",
+    title: "Contact — Header",
+    fields: [
+      { id: "contact.hero.eyebrow", label: "Eyebrow", current: "Contact" },
+      { id: "contact.hero.title", label: "Titel", current: "Start uw project." },
+      { id: "contact.hero.sub", label: "Subtitel", current: "Vertel ons over uw plannen en ontvang binnen 48 uur een maatwerk voorstel. Elk gesprek begint met luisteren.", multiline: true },
+    ]
+  },
+  {
+    id: "contact-info",
+    page: "contact.html",
+    title: "Contact — Info kolom (links)",
+    fields: [
+      { id: "contact.info.tel_label", label: "Telefoon label", current: "Telefoon" },
+      { id: "contact.info.tel", label: "Telefoon waarde", current: "+31 30 207 23 88" },
+      { id: "contact.info.mail_label", label: "Mailadres label", current: "Mailadres" },
+      { id: "contact.info.mail", label: "Mailadres waarde", current: "info@woonklasse.nl" },
+      { id: "contact.info.wa_label", label: "WhatsApp label", current: "WhatsApp" },
+      { id: "contact.info.wa", label: "WhatsApp waarde", current: "+31 6 5042 4683" },
+      { id: "contact.info.adr_label", label: "Bezoekadres label", current: "Bezoekadres" },
+      { id: "contact.info.adr", label: "Bezoekadres waarde", current: "Joop Geesinkweg 201\n1114 AB Amsterdam-Duivendrecht", multiline: true },
+      { id: "contact.info.hrs_label", label: "Openingstijden label", current: "Openingstijden" },
+      { id: "contact.info.hrs", label: "Openingstijden waarde", current: "Maandag – vrijdag 08:00 – 17:00\nZaterdag op afspraak", multiline: true },
+      { id: "contact.info.kvk_label", label: "Bedrijfsgegevens label", current: "Bedrijfsgegevens" },
+      { id: "contact.info.kvk", label: "Bedrijfsgegevens waarde", current: "KVK 85409146\nBTW NL004092100B36", multiline: true },
+    ]
+  },
+  {
+    id: "contact-form",
+    page: "contact.html",
+    title: "Contact — Formulier (rechts)",
+    fields: [
+      { id: "contact.form.title", label: "Formulier titel", current: "Maatwerk voorstel aanvragen" },
+      { id: "contact.form.sub", label: "Formulier sub", current: "Vul onderstaand formulier in — we reageren binnen 48 uur met een vrijblijvende inschatting.", multiline: true },
+      { id: "contact.form.naam_label", label: "Naam label", current: "Naam *" },
+      { id: "contact.form.naam_ph", label: "Naam placeholder", current: "Voor- en achternaam" },
+      { id: "contact.form.bedrijf_label", label: "Bedrijf label", current: "Bedrijf" },
+      { id: "contact.form.bedrijf_ph", label: "Bedrijf placeholder", current: "Optioneel" },
+      { id: "contact.form.mail_label", label: "Mailadres label", current: "Mailadres *" },
+      { id: "contact.form.mail_ph", label: "Mailadres placeholder", current: "je@voorbeeld.nl" },
+      { id: "contact.form.tel_label", label: "Telefoon label", current: "Telefoon *" },
+      { id: "contact.form.tel_ph", label: "Telefoon placeholder", current: "06 ..." },
+      { id: "contact.form.plaats_label", label: "Plaats label", current: "Plaats / stad" },
+      { id: "contact.form.plaats_ph", label: "Plaats placeholder", current: "Amsterdam, Utrecht, ..." },
+      { id: "contact.form.type_label", label: "Type project label", current: "Type project" },
+      { id: "contact.form.type_o1", label: "Type optie 1", current: "Totaal renovatie / nieuwbouw" },
+      { id: "contact.form.type_o2", label: "Type optie 2", current: "Complete renovatie" },
+      { id: "contact.form.type_o3", label: "Type optie 3", current: "Sanitair / badkamer specialist" },
+      { id: "contact.form.type_o4", label: "Type optie 4", current: "Keuken renovatie" },
+      { id: "contact.form.type_o5", label: "Type optie 5", current: "Dakkapel / dakwerk" },
+      { id: "contact.form.type_o6", label: "Type optie 6", current: "Onderhoud / herstelwerk" },
+      { id: "contact.form.type_o7", label: "Type optie 7", current: "Nog oriënteren" },
+      { id: "contact.form.bericht_label", label: "Bericht label", current: "Projectdetails" },
+      { id: "contact.form.bericht_ph", label: "Bericht placeholder", current: "Wat wil je verbouwen? In welke fase ben je? Hoe ziet de planning eruit?", multiline: true },
+      { id: "contact.form.submit", label: "Verstuur knop", current: "Verstuur aanvraag" },
+      { id: "contact.form.footer", label: "Footer regel onder formulier", current: "Kwaliteit, vakmanschap en persoonlijke aandacht in elk project.", multiline: true },
+    ]
+  },
+
+  /* ─── STADSPAGINA TEMPLATE ─── */
+  {
+    id: "city-intro",
+    page: "stadspagina template (50×)",
+    title: "Stadspagina — Aanpak",
+    note: "Wijzigingen op deze template worden uitgerold over alle 50 stadspagina's. Gebruik {City} als plaats-token (wordt automatisch vervangen door bv. 'Amsterdam').",
+    fields: [
+      { id: "city.approach", label: "Aanpak per-stad teksten", current: "(50 unieke stadsbeschrijvingen — kies hieronder)", multiline: true, hint: "Beschrijf hier hoe je per-stad teksten wil aanpakken. Bv: 'Behouden zoals nu' / 'Generieke template voor alle steden' / 'Stuur ik per stad apart'." },
+    ]
+  },
+  {
+    id: "city-hero",
+    page: "stadspagina template",
+    title: "Stadspagina — Hero",
+    fields: [
+      { id: "city.hero.eyebrow", label: "Eyebrow", current: "Verbouwen in {City}" },
+      { id: "city.hero.title", label: "Titel", current: "Verbouwen in {City} zonder verrassingen", multiline: true },
+      { id: "city.hero.sub", label: "Subtitel", current: "Renovatie en verbouwing door eigen vakmensen." },
+      { id: "city.hero.cta1", label: "CTA link 1", current: "Offerte aanvragen" },
+      { id: "city.hero.cta2", label: "CTA link 2", current: "+31 30 207 23 88" },
+    ]
+  },
+  {
+    id: "city-overcity",
+    page: "stadspagina template",
+    title: "Stadspagina — Over {City}",
+    fields: [
+      { id: "city.over.eyebrow", label: "Eyebrow", current: "Over {City}" },
+      { id: "city.over.title", label: "Titel", current: "We kennen het werk hier." },
+      { id: "city.over.link", label: "Link onder body", current: "Plan een gesprek" },
+    ]
+  },
+  {
+    id: "city-beloftes",
+    page: "stadspagina template",
+    title: "Stadspagina — Vier beloftes",
+    fields: [
+      { id: "city.bel.title", label: "Section titel", current: "Vier beloftes voor {City}" },
+      { id: "city.bel.1.t", label: "Belofte 1 — titel", current: "Eén vast aanspreekpunt" },
+      { id: "city.bel.1.b", label: "Belofte 1 — body", current: "Van eerste gesprek tot oplevering altijd dezelfde persoon. Eén projectleider die jouw woning kent.", multiline: true },
+      { id: "city.bel.2.t", label: "Belofte 2 — titel", current: "Vaste prijs vooraf" },
+      { id: "city.bel.2.b", label: "Belofte 2 — body", current: "Scherpe vaste prijs via ons eigen leveranciersnetwerk. Geen tussenpersonen, geen verborgen meerwerk.", multiline: true },
+      { id: "city.bel.3.t", label: "Belofte 3 — titel", current: "Op tijd opgeleverd" },
+      { id: "city.bel.3.b", label: "Belofte 3 — body", current: "Afspraak is afspraak, ook de opleverdatum staat vast. Vaste planning, vast team, vaste oplevering.", multiline: true },
+      { id: "city.bel.4.t", label: "Belofte 4 — titel", current: "15+ jaar track record" },
+      { id: "city.bel.4.b", label: "Belofte 4 — body", current: "Bewezen ervaring in bouw en sanitair. 200+ opgeleverde projecten — we weten wat we doen en wat er kan misgaan.", multiline: true },
+    ]
+  },
+  {
+    id: "city-diensten",
+    page: "stadspagina template",
+    title: "Stadspagina — Diensten",
+    fields: [
+      { id: "city.dnst.eyebrow", label: "Eyebrow", current: "Diensten in {City}" },
+      { id: "city.dnst.title", label: "Titel", current: "Wat we voor je kunnen doen." },
+      { id: "city.dnst.1.t", label: "Dienst 1 — naam", current: "Totaal renovatie & nieuwbouw" },
+      { id: "city.dnst.2.t", label: "Dienst 2 — naam", current: "Sanitair specialist" },
+      { id: "city.dnst.3.t", label: "Dienst 3 — naam", current: "Woningonderhoud" },
+      { id: "city.dnst.4.t", label: "Dienst 4 — naam", current: "Keukens" },
+      { id: "city.dnst.5.t", label: "Dienst 5 — naam", current: "Dakwerk" },
+      { id: "city.dnst.6.t", label: "Dienst 6 — naam", current: "Schilderwerk" },
+      { id: "city.dnst.7.t", label: "Dienst 7 — naam", current: "Loodgieterwerk" },
+      { id: "city.dnst.8.t", label: "Dienst 8 — naam", current: "Elektra" },
+    ]
+  },
+  {
+    id: "city-prijzen",
+    page: "stadspagina template",
+    title: "Stadspagina — Prijzen (city-specifieke tiers)",
+    note: "Let op: dit is een ander prijsschema dan de hoofdpagina /prijzen — city-pages framen grotere projecten.",
+    fields: [
+      { id: "city.prijs.eyebrow", label: "Eyebrow", current: "Prijzen in {City}" },
+      { id: "city.prijs.title", label: "Titel", current: "Welk budget past bij jouw project?" },
+      { id: "city.prijs.t1.n", label: "Tier 1 — naam", current: "Budget" },
+      { id: "city.prijs.t1.r", label: "Tier 1 — range", current: "€8.000 – €25.000" },
+      { id: "city.prijs.t2.n", label: "Tier 2 — naam", current: "Standaard" },
+      { id: "city.prijs.t2.r", label: "Tier 2 — range", current: "€25.000 – €60.000" },
+      { id: "city.prijs.t3.n", label: "Tier 3 — naam", current: "Premium" },
+      { id: "city.prijs.t3.r", label: "Tier 3 — range", current: "€60.000 – €150.000" },
+      { id: "city.prijs.t4.n", label: "Tier 4 — naam", current: "Maatwerk" },
+      { id: "city.prijs.t4.r", label: "Tier 4 — range", current: "€150.000+" },
+      { id: "city.prijs.disclaimer", label: "Disclaimer", current: "Indicatie excl. BTW. Werkelijke kosten hangen af van bouwkundige staat, vergunningen, materiaalkeuzes en regio.", multiline: true },
+    ]
+  },
+  {
+    id: "city-cta",
+    page: "stadspagina template",
+    title: "Stadspagina — CTA",
+    fields: [
+      { id: "city.cta.title", label: "Titel", current: "Verbouwingsplannen in {City}?" },
+      { id: "city.cta.link", label: "Link", current: "Plan een gesprek" },
+    ]
+  },
+  {
+    id: "city-faq",
+    page: "stadspagina template",
+    title: "Stadspagina — FAQ (7 vragen)",
+    fields: [
+      { id: "city.faq.title", label: "Section titel", current: "Veelgestelde vragen over {City}" },
+      { id: "city.faq.q1", label: "Q1", current: "Werken jullie ook in {wijk1} en omliggende wijken?" },
+      { id: "city.faq.a1", label: "A1", current: "Ja — we zijn actief in heel {City}, inclusief {wijken-lijst}. Onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.", multiline: true },
+      { id: "city.faq.q2", label: "Q2", current: "Hoe lang duurt een renovatie in {City}?" },
+      { id: "city.faq.a2", label: "A2", current: "Voor een eenvoudige badkamer of toilet rekenen we 2 tot 4 weken. Een complete verdieping duurt 6 tot 10 weken. Een totaalrenovatie van een woning duurt 3 tot 6 maanden. We geven vooraf een vaste planning.", multiline: true },
+      { id: "city.faq.q3", label: "Q3", current: "Wat kost een verbouwing in {City}?" },
+      { id: "city.faq.a3", label: "A3", current: "Een eenvoudige badkamer start vanaf €8.000. Een volledige verdieping zit meestal tussen €25.000 en €60.000. Een totaalrenovatie van een woning loopt vaak tussen €60.000 en €150.000. Voor nieuwbouw of villa-renovatie maken we maatwerk.", multiline: true },
+      { id: "city.faq.q4", label: "Q4", current: "Verzorgen jullie ook de vergunning in {City}?" },
+      { id: "city.faq.a4", label: "A4", current: "Ja. We werken samen met architect en constructeur en kennen het {City}-omgevingsloket. Het vergunningstraject kunnen we volledig uit handen nemen — inclusief welstand bij monumenten.", multiline: true },
+      { id: "city.faq.q5", label: "Q5", current: "Werken jullie met een vaste prijs?" },
+      { id: "city.faq.a5", label: "A5", current: "Ja. Na het definitieve ontwerp ontvang je een vaste prijsopgave. Meerwerk gebeurt alleen na schriftelijke goedkeuring — en blijft uitzondering, geen regel.", multiline: true },
+      { id: "city.faq.q6", label: "Q6", current: "Kan ik in mijn woning blijven wonen tijdens de verbouwing?" },
+      { id: "city.faq.a6", label: "A6", current: "Voor een enkele kamer of badkamer kan dat meestal prima. Bij een totaalrenovatie adviseren we tijdelijk elders te wonen — we bespreken dit altijd vooraf.", multiline: true },
+      { id: "city.faq.q7", label: "Q7", current: "Welke garantie krijg ik op het werk?" },
+      { id: "city.faq.a7", label: "A7", current: "Tot 10 jaar garantie op constructieve onderdelen en 5 jaar op installaties. Sanitairartikelen volgen de fabrikantgarantie. Bij Maatwerk-projecten ontvang je een garantieboek bij oplevering.", multiline: true },
+    ]
+  },
+  {
+    id: "city-nearby",
+    page: "stadspagina template",
+    title: "Stadspagina — Omgeving",
+    fields: [
+      { id: "city.nearby.title", label: "Section titel", current: "Ook actief in de omgeving" },
+      { id: "city.nearby.chip", label: "Chip format", current: "Verbouwen in {NearbyCity}" },
+    ]
+  },
+];
+
+// =========================================================================
+// STATE & STORAGE
+// =========================================================================
+const STORAGE_KEY = 'woonklasse-content-editor-v1';
+let state = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+
+const saveState = () => {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  flashStatus('opgeslagen');
+};
+
+const allFields = CONTENT.flatMap(s => s.fields.map(f => ({...f, sectionId: s.id})));
+const totalFields = allFields.length;
+
+// =========================================================================
+// RENDER
+// =========================================================================
+const main = document.getElementById('main');
+const sidebar = document.getElementById('sidebar');
+
+const countChangesInSection = (sectionId) => {
+  const sec = CONTENT.find(s => s.id === sectionId);
+  if (!sec) return 0;
+  return sec.fields.filter(f => state[f.id] && state[f.id].trim()).length;
+};
+
+const renderSidebar = () => {
+  // Group by page
+  const pages = {};
+  CONTENT.forEach(s => {
+    if (!pages[s.page]) pages[s.page] = [];
+    pages[s.page].push(s);
+  });
+
+  let html = '<div class="filter-box"><input type="text" id="filterInput" placeholder="Zoek in alle velden..."/></div>';
+  Object.entries(pages).forEach(([page, sections]) => {
+    html += `<h2>${escapeHtml(page)}</h2>`;
+    sections.forEach(s => {
+      const changeCount = countChangesInSection(s.id);
+      const total = s.fields.length;
+      html += `<a href="#${s.id}" data-section="${s.id}" class="${changeCount > 0 ? 'has-changes' : ''}">${escapeHtml(s.title)} <span class="count">${changeCount}/${total}</span></a>`;
+    });
+  });
+  sidebar.innerHTML = html;
+
+  // Filter input event
+  const filter = document.getElementById('filterInput');
+  if (filter) filter.addEventListener('input', applyFilter);
+};
+
+const renderMain = () => {
+  let html = '';
+  CONTENT.forEach(sec => {
+    html += `<section class="section" id="${sec.id}">
+      <div class="section__head">
+        <h2 class="section__title">${escapeHtml(sec.title)}</h2>
+        <span class="section__page">${escapeHtml(sec.page)}</span>
+      </div>`;
+    if (sec.note) html += `<div class="section__note">${escapeHtml(sec.note)}</div>`;
+
+    sec.fields.forEach(f => {
+      const v = state[f.id] || '';
+      const isChanged = v.trim().length > 0;
+      const isMulti = f.multiline || (f.current && f.current.length > 80) || (f.current && f.current.includes('\n'));
+      const inputEl = isMulti
+        ? `<textarea data-id="${f.id}" placeholder="${escapeAttr(f.hint || 'Type hier de nieuwe tekst...')}">${escapeHtml(v)}</textarea>`
+        : `<input type="text" data-id="${f.id}" value="${escapeAttr(v)}" placeholder="${escapeAttr(f.hint || 'Type hier de nieuwe tekst...')}"/>`;
+      html += `
+        <div class="field ${isChanged ? 'is-changed' : ''}" data-field="${f.id}">
+          <label class="field__label">${escapeHtml(f.label)}</label>
+          <div class="field__current">${escapeHtml(f.current)}</div>
+          ${inputEl}
+          ${f.hint ? `<p class="field__hint">${escapeHtml(f.hint)}</p>` : ''}
+        </div>`;
+    });
+    html += `</section>`;
+  });
+  main.innerHTML = html;
+
+  // Bind input events
+  main.querySelectorAll('[data-id]').forEach(el => {
+    el.addEventListener('input', () => {
+      const id = el.dataset.id;
+      const val = el.value;
+      if (val.trim()) state[id] = val;
+      else delete state[id];
+      el.closest('.field').classList.toggle('is-changed', val.trim().length > 0);
+      saveState();
+      updateProgress();
+      renderSidebar();
+    });
+  });
+};
+
+const updateProgress = () => {
+  const changed = Object.values(state).filter(v => v && v.trim()).length;
+  document.getElementById('progressLabel').textContent = `${changed} / ${totalFields} velden gewijzigd`;
+  document.getElementById('progressFill').style.width = `${(changed / totalFields) * 100}%`;
+};
+
+// Active section tracking
+const observeSections = () => {
+  const opts = { rootMargin: '-140px 0px -60% 0px', threshold: 0 };
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        document.querySelectorAll('.sidebar a').forEach(a => a.classList.remove('active'));
+        const link = document.querySelector(`.sidebar a[data-section="${e.target.id}"]`);
+        if (link) link.classList.add('active');
+      }
+    });
+  }, opts);
+  document.querySelectorAll('.section').forEach(s => obs.observe(s));
+};
+
+// Filter
+const applyFilter = (e) => {
+  const q = e.target.value.toLowerCase().trim();
+  document.querySelectorAll('.section').forEach(sec => {
+    let anyVisible = false;
+    sec.querySelectorAll('.field').forEach(field => {
+      const text = field.textContent.toLowerCase();
+      const match = !q || text.includes(q);
+      field.style.display = match ? '' : 'none';
+      if (match) anyVisible = true;
+    });
+    sec.style.display = anyVisible ? '' : 'none';
+  });
+};
+
+// =========================================================================
+// EXPORT
+// =========================================================================
+const exportChanges = () => {
+  const changes = [];
+  CONTENT.forEach(sec => {
+    const sectionChanges = sec.fields
+      .filter(f => state[f.id] && state[f.id].trim())
+      .map(f => ({
+        id: f.id,
+        label: f.label,
+        current: f.current,
+        new: state[f.id].trim()
+      }));
+    if (sectionChanges.length) {
+      changes.push({
+        section: sec.title,
+        page: sec.page,
+        fields: sectionChanges
+      });
+    }
+  });
+
+  if (changes.length === 0) {
+    alert('Nog geen wijzigingen om te exporteren.');
+    return;
+  }
+
+  // Build markdown
+  const ts = new Date().toLocaleString('nl-NL');
+  let md = `# Woonklasse — Content wijzigingen\n*Gegenereerd: ${ts}*\n\n`;
+  changes.forEach(sec => {
+    md += `\n## ${sec.section}  \n*${sec.page}*\n\n`;
+    sec.fields.forEach(f => {
+      md += `### ${f.label}  \n\`${f.id}\`\n\n`;
+      md += `**Huidig:** ${f.current}\n\n`;
+      md += `**Nieuw:** ${f.new}\n\n`;
+      md += `---\n\n`;
+    });
+  });
+
+  // Build JSON
+  const jsonObj = {};
+  changes.forEach(sec => sec.fields.forEach(f => { jsonObj[f.id] = f.new; }));
+
+  // Download both
+  download('woonklasse-content-changes.md', md, 'text/markdown');
+  download('woonklasse-content-changes.json', JSON.stringify(jsonObj, null, 2), 'application/json');
+  flashStatus('geëxporteerd');
+};
+
+const download = (filename, content, mime) => {
+  const blob = new Blob([content], { type: mime });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+};
+
+// =========================================================================
+// UTILS
+// =========================================================================
+const escapeHtml = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({
+  '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+}[c]));
+const escapeAttr = (s) => escapeHtml(s);
+
+let statusTimer;
+const flashStatus = (msg) => {
+  const el = document.getElementById('status');
+  el.textContent = msg;
+  el.classList.add('show');
+  clearTimeout(statusTimer);
+  statusTimer = setTimeout(() => el.classList.remove('show'), 1500);
+};
+
+// =========================================================================
+// BOOT
+// =========================================================================
+renderSidebar();
+renderMain();
+updateProgress();
+observeSections();
+
+document.getElementById('exportBtn').addEventListener('click', exportChanges);
+document.getElementById('resetBtn').addEventListener('click', () => {
+  if (confirm('Weet je zeker dat je alle wijzigingen wil verwijderen? Dit kan niet ongedaan worden gemaakt.')) {
+    state = {};
+    saveState();
+    renderSidebar();
+    renderMain();
+    updateProgress();
+    flashStatus('reset');
+  }
+});
+
+document.getElementById('filterToggle').addEventListener('click', () => {
+  const box = document.querySelector('.filter-box');
+  box.style.display = box.style.display === 'none' ? 'block' : 'none';
+  if (box.style.display === 'block') box.querySelector('input').focus();
+});
+
+// Smooth scroll on sidebar clicks
+sidebar.addEventListener('click', (e) => {
+  const link = e.target.closest('a[data-section]');
+  if (link) {
+    e.preventDefault();
+    document.getElementById(link.dataset.section).scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+});
+</script>
+
+</body>
+</html>

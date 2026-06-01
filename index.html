@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Woonklasse — Hoogwaardige renovaties zonder stress</title>
+<meta name="description" content="Eén aanspreekpunt van ontwerp tot oplevering. Vast team, vaste prijs, oog voor detail. Renovaties, luxe badkamers en complete woningverbouwingen."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <a class="logo-block" href="index.html" aria-label="Woonklasse home">
+    <img src="assets/woonklasse-logo-dark.png" alt="Woonklasse" class="logo-block__img" width="160" height="160"/>
+  </a>
+  <nav class="nav" aria-label="Hoofdmenu">
+    <a href="diensten.html">Diensten</a>
+    <a href="prijzen.html">Prijzen</a>
+    <a href="projecten.html">Projecten</a>
+    <a href="over-ons.html">Over ons</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- Hero with integrated 3-step lead form -->
+<section class="hero hero--with-quiz">
+  <div class="hero__media"><img src="https://images.unsplash.com/photo-1521783593447-5702b9bfd267?w=2000&q=80&auto=format&fit=crop" alt="Moderne luxe woning renovatie"/></div>
+  <div class="hero__overlay" aria-hidden="true"></div>
+
+  <div class="hero__inner hero__inner--split">
+
+    <div class="hero__text">
+      <p class="hero__sub" style="margin-bottom: 20px; letter-spacing: 0.18em;">Vakmanschap · Kwaliteit · Ontzorging</p>
+      <h1 class="hero__title">Hoogwaardige<br/>renovaties<br/><em>zonder stress</em></h1>
+      <p class="hero__sub">Eén aanspreekpunt van ontwerp tot oplevering. Vast team, vaste prijs, oog voor detail.</p>
+      <div class="hero__actions">
+        <a href="projecten.html" class="link-underline link-underline--light">Alle projecten bekijken</a>
+      </div>
+    </div>
+
+    <!-- 3-stappen lead quiz -->
+    <form class="lead-quiz" id="leadQuiz" novalidate>
+      <p class="lead-quiz__kicker">Persoonlijk advies · in 3 stappen</p>
+      <h3 class="lead-quiz__title">Vertel ons over je project, <em>wij denken met je mee</em></h3>
+      <div class="lead-quiz__progress" aria-hidden="true">
+        <span class="active"></span><span></span><span></span>
+      </div>
+
+      <!-- Stap 1 — kamers + type -->
+      <div class="lead-quiz__step" data-step="1">
+        <label>Hoeveel kamers wil je verbouwen?</label>
+        <div class="chips chips--num" data-group="rooms">
+          <button type="button" data-rooms="1">1</button>
+          <button type="button" data-rooms="2">2</button>
+          <button type="button" data-rooms="3">3</button>
+          <button type="button" data-rooms="4">4</button>
+          <button type="button" data-rooms="5+">5+</button>
+        </div>
+
+        <label>Wat voor type project?</label>
+        <div class="chips" data-group="type">
+          <button type="button" data-type="Totaal renovatie">Totaal renovatie</button>
+          <button type="button" data-type="Nieuwbouw">Nieuwbouw</button>
+          <button type="button" data-type="Sanitair / badkamer">Sanitair / badkamer</button>
+          <button type="button" data-type="Onderhoud">Onderhoud</button>
+          <button type="button" data-type="Anders">Anders</button>
+        </div>
+
+        <div class="lead-quiz__actions lead-quiz__actions--end">
+          <button type="button" class="lead-quiz__btn lead-quiz__next" disabled>Volgende →</button>
+        </div>
+      </div>
+
+      <!-- Stap 2 — per kamer details -->
+      <div class="lead-quiz__step hidden" data-step="2">
+        <div class="lead-quiz__rooms-head">
+          <span>Per kamer</span>
+          <span id="roomsCount">0 kamers · 0 foto's</span>
+        </div>
+        <div id="roomsList"></div>
+
+        <button type="button" class="add-room-btn" id="addRoomBtn">+ Kamer toevoegen</button>
+
+        <div class="lead-quiz__actions">
+          <button type="button" class="lead-quiz__back">← Terug</button>
+          <button type="button" class="lead-quiz__btn lead-quiz__next">Volgende →</button>
+        </div>
+      </div>
+
+      <!-- Stap 3 — contact -->
+      <div class="lead-quiz__step hidden" data-step="3">
+        <div class="lead-quiz__row">
+          <input type="text" name="name" placeholder="Naam *" required autocomplete="name"/>
+          <input type="email" name="email" placeholder="E-mailadres *" required autocomplete="email"/>
+        </div>
+        <input type="tel" name="phone" placeholder="Telefoon *" required autocomplete="tel"/>
+        <input type="text" name="city" placeholder="Plaats / stad (optioneel)" autocomplete="address-level2"/>
+
+        <details class="lead-quiz__more">
+          <summary>▸ Extra informatie (optioneel), klap uit</summary>
+          <div class="lead-quiz__more-grid">
+            <div>
+              <label class="inline-label">Indicatie budget</label>
+              <select name="budget">
+                <option value="">Selecteer een bandbreedte</option>
+                <option>Onder €10.000</option>
+                <option>€10.000 – €25.000</option>
+                <option>€25.000 – €60.000</option>
+                <option>€60.000 – €150.000</option>
+                <option>€150.000+</option>
+                <option>Weet ik nog niet</option>
+              </select>
+            </div>
+            <div>
+              <label class="inline-label">Wanneer wil je starten?</label>
+              <select name="timing">
+                <option value="">Selecteer een termijn</option>
+                <option>Zo snel mogelijk</option>
+                <option>Binnen 3 maanden</option>
+                <option>Dit jaar</option>
+                <option>Volgend jaar</option>
+                <option>Nog flexibel</option>
+              </select>
+            </div>
+          </div>
+          <textarea name="message" placeholder="Bijzondere wensen, voorkeuren of vragen..."></textarea>
+        </details>
+
+        <div class="lead-quiz__actions">
+          <button type="button" class="lead-quiz__back">← Terug</button>
+          <button type="submit" class="lead-quiz__btn lead-quiz__submit" disabled>Verstuur aanvraag</button>
+        </div>
+
+        <p class="lead-quiz__assurance">We nemen binnen 2 werkdagen contact met je op om je advies persoonlijk door te spreken. We delen je gegevens nooit met derden.</p>
+      </div>
+
+      <!-- Stap 4 — bevestiging na submit -->
+      <div class="lead-quiz__step hidden lead-quiz__done" data-step="4">
+        <div class="lead-quiz__check" aria-hidden="true">✓</div>
+        <h3 class="lead-quiz__title">Bedankt — <em>we hebben je aanvraag ontvangen</em></h3>
+        <p style="font-size: 15px; color: var(--muted); line-height: 1.6; margin: 0 0 8px;">We nemen binnen <strong>2 werkdagen</strong> contact met je op om je project persoonlijk door te spreken.</p>
+        <p style="font-size: 15px; color: var(--muted); line-height: 1.6; margin: 0 0 24px;">In de tussentijd kun je ons ook bereiken op <a href="tel:+31302072388" style="color: var(--ink); border-bottom: 1px solid currentColor;">+31 30 207 23 88</a>.</p>
+        <button type="button" class="lead-quiz__btn lead-quiz__restart">Nieuwe aanvraag starten</button>
+      </div>
+    </form>
+
+  </div>
+</section>
+
+<!-- Wat doen wij — long body copy -->
+<section class="section section--taupe">
+  <div class="section__inner">
+    <h2 class="section-title section-title--light" style="margin-bottom: 48px;">Wat doen wij?</h2>
+    <div style="max-width: 880px;">
+      <p style="font-family: var(--body); font-size: 18px; line-height: 1.6; color: #fff; margin: 0 0 24px;">Een verbouwing kost je tienduizenden euro's en maanden van je leven. De grootste angst is niet de bouw zelf, het is de onzekerheid. Lopen de kosten uit de hand? Wordt het echt mooi? Sleept het maanden langer dan beloofd? Dat is precies waar wij het verschil maken.</p>
+      <p style="font-family: var(--body); font-size: 18px; line-height: 1.6; color: #fff; margin: 0 0 24px;">We hebben samen meer dan 15 jaar ervaring in bouw en sanitair, dus je krijgt mensen die weten wat ze doen. We werken met onze eigen leveranciers, dus je betaalt geen opslag van tussenpersonen. En je hebt één vast aanspreekpunt van begin tot eind, iemand die je kent en die je gewoon kunt bellen. Geen gedoe, geen verrassingen, je weet steeds waar je aan toe bent.</p>
+      <p style="font-family: var(--body); font-size: 18px; line-height: 1.6; color: #fff; margin: 0;">Dit zijn niet zomaar projecten. Het zijn huizen waar mensen zich beter voelen, waar het werkt, waar alles op z'n plek zit. Ruimten die we samen met jou hebben opgebouwd.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Pull quote -->
+<section class="section" style="padding: clamp(80px, 10vw, 120px) 0;">
+  <div class="section__inner" style="text-align: center;">
+    <p style="font-family: var(--display); font-weight: 400; font-size: clamp(28px, 4vw, 48px); line-height: 1.2; text-transform: uppercase; letter-spacing: 0; max-width: 22ch; margin: 0 auto; color: var(--ink);">Je verbouwing verdient beter dan onzekerheid. Beter dan gedoe. Beter dan een aannemer die je niet kent.</p>
+  </div>
+</section>
+
+<!-- Discipline split -->
+<section class="story" style="padding-top: 0;">
+  <div class="story__grid">
+    <div class="story__media"><img src="https://images.unsplash.com/photo-1601086540476-7d9fa9dd6023?w=1000&q=80&auto=format&fit=crop" alt="Maatwerk renovatie"/></div>
+    <div class="story__text">
+      <p style="font-family: var(--display); text-transform: uppercase; letter-spacing: 0.18em; font-size: 13px; color: var(--gold); margin: 0 0 18px;">Discipline</p>
+      <h2 class="section-title">Volledige renovatie, één aanspreekpunt.</h2>
+      <p class="body-caps" style="margin-top: 32px;">Of je nu je badkamer vernieuwt, een slaapkamer uitbouwt of je hele huis omgooit, het principe is hetzelfde. We beginnen bij jou thuis, kijken wat er is, beluisteren wat je wil en maken een plan waar je achter staat. Geen verrassingen onderweg. Je weet vanaf het begin waar je aan toe bent.</p>
+      <ul style="list-style: none; padding: 0; margin: 32px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 24px;">
+        <li style="font-family: var(--display); text-transform: uppercase; letter-spacing: 0.04em; font-size: 15px; padding: 12px 0; border-top: 1px solid var(--line);">Ontwerp</li>
+        <li style="font-family: var(--display); text-transform: uppercase; letter-spacing: 0.04em; font-size: 15px; padding: 12px 0; border-top: 1px solid var(--line);">Vergunningen</li>
+        <li style="font-family: var(--display); text-transform: uppercase; letter-spacing: 0.04em; font-size: 15px; padding: 12px 0; border-top: 1px solid var(--line);">Uitvoering</li>
+        <li style="font-family: var(--display); text-transform: uppercase; letter-spacing: 0.04em; font-size: 15px; padding: 12px 0; border-top: 1px solid var(--line);">Oplevering</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Specialisme split -->
+<section class="story" style="padding-top: 0;">
+  <div class="story__grid">
+    <div class="story__text">
+      <p style="font-family: var(--display); text-transform: uppercase; letter-spacing: 0.18em; font-size: 13px; color: var(--gold); margin: 0 0 18px;">Specialisme</p>
+      <h2 class="section-title">Luxe badkamers door eigen sanitairspecialisten.</h2>
+      <p class="body-caps" style="margin-top: 32px;">Voor badkamers zijn we nog specialistischer. Acht jaar ervaring met sanitair, en we hebben onze eigen leverancier voor badkamermeubels en tegelwerk. Dat geeft ons scherpte die je bij een reguliere aannemer niet hebt. En het geeft jou iets unieks: we bouwen samen jouw droombadkamer.</p>
+      <p class="body-caps" style="margin-top: 20px;">Voor badkamers doen we nog iets extra: we werken met Saninet, software waarmee we in 3D jouw droombadkamer samen ontwerpen. We doen dit op locatie bij jou thuis, zodat je precies ziet hoe het wordt voordat we beginnen. Geen gokwerk, geen verrassingen, gewoon zekerheid.</p>
+      <a href="diensten.html" class="link-underline" style="margin-top:32px;">Bekijk Saninet 3D</a>
+    </div>
+    <div class="story__media"><img src="https://images.unsplash.com/photo-1746439318854-4a8bc02a03ba?w=1000&q=80&auto=format&fit=crop" alt="Luxe badkamer"/></div>
+  </div>
+</section>
+
+<!-- USP strip -->
+<section class="services" style="padding-bottom: clamp(60px, 8vw, 90px);">
+  <div class="services__head">
+    <h2 class="section-title section-title--light">Vier beloftes</h2>
+  </div>
+  <div class="services__list">
+    <div class="service-row"><span class="service-row__num">01</span><span class="service-row__title">Eigen leveranciers, geen tussenpersonen, scherp geprijsd</span><span class="service-row__toggle">+</span><p class="service-row__body">We werken direct met onze eigen leveranciers voor materialen, sanitair en meubel. Geen tussenpartij, geen opslag.</p></div>
+    <div class="service-row"><span class="service-row__num">02</span><span class="service-row__title">Eén aanspreekpunt, geen gedoe</span><span class="service-row__toggle">+</span><p class="service-row__body">Iemand die je kent en die je gewoon kunt bellen. Van offerte tot oplevering — één persoon, één lijn.</p></div>
+    <div class="service-row"><span class="service-row__num">03</span><span class="service-row__title">15+ jaar ervaring in bouw en sanitair</span><span class="service-row__toggle">+</span><p class="service-row__body">Mensen die weten wat ze doen — en wat er kan misgaan. Vakmanschap dat zich bewijst in elk detail.</p></div>
+    <div class="service-row"><span class="service-row__num">04</span><span class="service-row__title">Opgeleverd op tijd, afspraken zijn afspraken</span><span class="service-row__toggle">+</span><p class="service-row__body">Vaste prijs, vaste planning, vaste oplevering. Bewezen door 200+ opgeleverde projecten.</p></div>
+  </div>
+</section>
+
+<!-- Uit ons werk — staggered projects -->
+<section class="projects">
+  <div class="projects__head"><h2 class="section-title">Uit ons werk</h2></div>
+  <div class="projects__track">
+    <a class="proj-card proj-card--offset-1" href="projecten.html"><div class="proj-card__img"><img src="https://images.unsplash.com/photo-1710883734891-93709398496d?w=900&q=80&auto=format&fit=crop" alt="Complete renovatie"/></div><p class="proj-card__name">Complete renovatie</p><p class="proj-card__num">01</p></a>
+    <a class="proj-card proj-card--offset-3 proj-card--bg-black" href="projecten.html"><div class="proj-card__img"><img src="https://images.unsplash.com/photo-1708111776235-990d08c84658?w=900&q=80&auto=format&fit=crop" alt="Luxe afwerking"/></div><p class="proj-card__name">Luxe afwerking</p><p class="proj-card__num">02</p></a>
+    <a class="proj-card proj-card--offset-2" href="projecten.html"><div class="proj-card__img"><img src="https://images.unsplash.com/photo-1746439318854-4a8bc02a03ba?w=900&q=80&auto=format&fit=crop" alt="Totaalverbouwing"/></div><p class="proj-card__name">Totaalverbouwing</p><p class="proj-card__num">03</p></a>
+    <a class="proj-card proj-card--offset-4" href="projecten.html"><div class="proj-card__img"><img src="https://images.unsplash.com/photo-1521783593447-5702b9bfd267?w=900&q=80&auto=format&fit=crop" alt="Luxe dubbel penthouse"/></div><p class="proj-card__name">Luxe dubbel penthouse</p><p class="proj-card__num">04</p></a>
+    <a class="proj-card proj-card--offset-1 proj-card--bg-black" href="projecten.html"><div class="proj-card__img"><img src="https://images.unsplash.com/photo-1601086540476-7d9fa9dd6023?w=900&q=80&auto=format&fit=crop" alt="Drielaagse transformatie"/></div><p class="proj-card__name">Drielaagse transformatie</p><p class="proj-card__num">05</p></a>
+  </div>
+</section>
+
+<!-- CTA - Klaar om te starten -->
+<section class="cta">
+  <div class="cta__deco" aria-hidden="true"></div>
+  <div class="cta__inner">
+    <h2 class="cta__title">Klaar om te <em>starten</em>?<br/>Laten we kennismaken.</h2>
+    <a href="contact.html" class="link-underline">Offertegesprek aanvragen</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <img src="assets/woonklasse-logo-white.png" alt="Woonklasse" class="footer__brand-img" width="120" height="120"/>
+      <span class="footer__wordmark">Woonklasse</span>
+    </div>
+    <p style="font-family: var(--body); color: rgba(255,255,255,0.7); max-width: 36ch; margin: -40px 0 50px; font-size: 14.5px;">Jouw droomwoning begint hier. Kwaliteit, vakmanschap en persoonlijke aandacht in elk project.</p>
+    <div class="footer__cols">
+      <div>
+        <a href="index.html">Home</a>
+        <a href="diensten.html">Diensten</a>
+        <a href="prijzen.html">Prijzen</a>
+        <a href="projecten.html">Projecten</a>
+        <a href="over-ons.html">Over ons</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <a href="mailto:info@woonklasse.nl">info@woonklasse.nl</a>
+        <a href="tel:+31302072388">+31 30 207 23 88</a>
+        <a href="https://wa.me/31650424683">WhatsApp</a>
+        <span>Joop Geesinkweg 201<br/>1114 AB Amsterdam-Duivendrecht</span>
+      </div>
+      <div>
+        <span style="opacity: 0.6; font-size: 12px;">Zusterbedrijf</span>
+        <a href="#">Badkamerstijl →</a>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <span>© 2026 Woonklasse. Alle rechten voorbehouden.</span>
+      <span class="sep">|</span>
+      <a href="#">Privacybeleid</a>
+      <span class="sep">|</span>
+      <a href="#">Algemene voorwaarden</a>
+    </div>
+    <p class="footer__credit">KVK 85409146 · BTW NL004092100B36</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
