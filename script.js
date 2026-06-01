@@ -309,22 +309,20 @@ if (quiz) {
     step3Submit.textContent = 'Versturen…';
 
     // 1) Upload photos straight to Vercel Blob (browser → Blob, via a
-    //    same-origin signed-token proxy), then attach their URLs per room.
-    let rooms;
-    try {
-      rooms = await uploadRoomPhotos(state.roomDetails, (done, total) => {
-        step3Submit.textContent = `Foto's uploaden… ${done}/${total}`;
-      });
-    } catch (err) {
-      status.textContent = "Foto's uploaden mislukt. Controleer je verbinding en probeer het opnieuw.";
-      status.dataset.state = 'error';
-      step3Submit.disabled = false;
-      step3Submit.textContent = origLabel;
-      return;
-    }
+    //    same-origin signed-token proxy). Photo-upload failures never block the
+    //    lead — we submit without the failed photos and note it instead.
+    const { rooms, total, failed } = await uploadRoomPhotos(
+      state.roomDetails,
+      (done, n) => { step3Submit.textContent = `Foto's uploaden… ${done}/${n}`; },
+    );
 
-    // 2) Submit the lead (incl. photo URLs) to the advies endpoint.
+    // 2) Submit the lead (incl. uploaded photo URLs) to the advies endpoint.
     step3Submit.textContent = 'Versturen…';
+    let bericht = contact.message;
+    if (failed > 0) {
+      const note = `Let op: ${failed} van ${total} foto('s) kon niet worden geüpload en ontbreekt bij deze aanvraag.`;
+      bericht = bericht ? `${bericht}\n\n${note}` : note;
+    }
     const result = await postLead({
       brand: 'woonklasse',
       naam: contact.naam,
@@ -334,7 +332,7 @@ if (quiz) {
       city: contact.city || undefined,
       budget: contact.budget || undefined,
       tijdpad: contact.timing || undefined,
-      bericht: contact.message || undefined,
+      bericht: bericht || undefined,
       rooms,
     }, '/api/advies');
 
@@ -439,11 +437,18 @@ async function postLead(payload, endpoint = '/api/contact') {
 async function uploadRoomPhotos(roomDetails, onProgress) {
   const total = roomDetails.reduce((n, r) => n + r.photos.length, 0);
   let done = 0;
+  let failed = 0;
   let uploadFn = null;
 
+  // Load the Blob client SDK on demand. If the CDN is unreachable we degrade
+  // to a photo-less submission rather than blocking the lead.
   if (total > 0) {
-    const mod = await import('https://esm.sh/@vercel/blob@2.3.3/client');
-    uploadFn = mod.upload;
+    try {
+      const mod = await import('https://esm.sh/@vercel/blob@2.3.3/client');
+      uploadFn = mod.upload;
+    } catch (_) {
+      uploadFn = null;
+    }
     if (onProgress) onProgress(0, total);
   }
 
@@ -451,13 +456,22 @@ async function uploadRoomPhotos(roomDetails, onProgress) {
   for (const r of roomDetails) {
     const photos = [];
     for (const p of r.photos) {
-      if (!p.file || !uploadFn) continue;
-      const safe = (p.file.name || 'foto.jpg').replace(/[^a-zA-Z0-9._-]/g, '_');
-      const res = await uploadFn(`lead/${safe}`, p.file, {
-        access: 'public',
-        handleUploadUrl: '/api/advies/upload-url',
-      });
-      photos.push({ url: res.url, filename: p.file.name || safe });
+      if (!p.file) continue;
+      if (uploadFn) {
+        try {
+          const safe = (p.file.name || 'foto.jpg').replace(/[^a-zA-Z0-9._-]/g, '_');
+          const res = await uploadFn(`lead/${safe}`, p.file, {
+            access: 'public',
+            handleUploadUrl: '/api/advies/upload-url',
+          });
+          photos.push({ url: res.url, filename: p.file.name || safe });
+        } catch (_) {
+          // Upload service down/suspended — skip this photo, keep the lead.
+          failed += 1;
+        }
+      } else {
+        failed += 1;
+      }
       done += 1;
       if (onProgress) onProgress(done, total);
     }
@@ -468,7 +482,7 @@ async function uploadRoomPhotos(roomDetails, onProgress) {
       photos,
     });
   }
-  return rooms;
+  return { rooms, total, failed };
 }
 
 // Contact-page form (.lead-form). Replaces the old inline alert() stub.
