@@ -416,7 +416,9 @@ body.loaded::before { opacity: 0; visibility: hidden; }
   content: "";
   position: absolute;
   inset: -40px -30px 60px 30px;
-  background: var(--black);
+  /* Soft warm-neutral panel (same token as .section--taupe surfaces) instead of
+     near-black, so the overlaid --ink title/number stays readable (~7.4:1). */
+  background: var(--taupe);
   z-index: -1;
   transition: transform .6s var(--ease);
 }
