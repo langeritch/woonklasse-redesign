@@ -1274,3 +1274,29 @@ body.loaded::before { opacity: 0; visibility: hidden; }
   .footer__cols { grid-template-columns: 1fr; gap: 0; }
   .footer__cols a, .footer__cols span { padding: 6px 0; }
 }
+
+/* ── Lead forms: honeypot + submit status ──────────────────────────────── */
+.lead-form__hp {
+  position: absolute !important;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+.form-status,
+.lead-quiz__status {
+  font-family: var(--body);
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 18px 0 0;
+}
+.form-status[data-state="success"],
+.lead-quiz__status[data-state="success"] {
+  color: var(--ink);
+  font-weight: 600;
+}
+.form-status[data-state="error"],
+.lead-quiz__status[data-state="error"] {
+  color: #b3261e;
+}

@@ -282,7 +282,7 @@ if (quiz) {
   });
 
   // ---------- Submit ------------------------------------------------------
-  quiz.addEventListener('submit', (e) => {
+  quiz.addEventListener('submit', async (e) => {
     e.preventDefault();
     if (step3Submit.disabled) return;
     const fd = {
@@ -297,11 +297,42 @@ if (quiz) {
       timing: (quiz.querySelector('[name="timing"]') || {}).value || '',
       message: (quiz.querySelector('[name="message"]') || {}).value || '',
     };
-    console.log('Lead submitted:', fd);
-    // Show confirmation step (4)
-    state.step = 4;
-    stepEls.forEach(s => s.classList.toggle('hidden', +s.dataset.step !== 4));
-    progressEls.forEach(el => el.classList.add('active'));
+
+    let status = quiz.querySelector('.lead-quiz__status');
+    if (!status) {
+      status = document.createElement('p');
+      status.className = 'lead-quiz__status';
+      step3Submit.insertAdjacentElement('afterend', status);
+    }
+    status.textContent = '';
+    status.removeAttribute('data-state');
+
+    const origLabel = step3Submit.textContent;
+    step3Submit.disabled = true;
+    step3Submit.textContent = 'Versturen…';
+
+    const result = await postLead({
+      naam: fd.name,
+      email: fd.email,
+      telefoon: fd.phone,
+      formulier: 'offerte',
+      brand: 'woonklasse',
+      type: fd.type || undefined,
+      bericht: composeQuizBericht(fd),
+    });
+
+    if (result.ok) {
+      // Show confirmation step (4)
+      state.step = 4;
+      stepEls.forEach(s => s.classList.toggle('hidden', +s.dataset.step !== 4));
+      progressEls.forEach(el => el.classList.add('active'));
+    } else {
+      status.textContent = result.message
+        || 'Versturen mislukt. Probeer het opnieuw of mail naar info@woonklasse.nl.';
+      status.dataset.state = 'error';
+      step3Submit.disabled = false;
+      step3Submit.textContent = origLabel;
+    }
   });
 
   // ---------- Restart -----------------------------------------------------
@@ -358,3 +389,117 @@ if ('IntersectionObserver' in window) {
     });
   });
 }
+
+// =========================================================================
+// Lead submission — shared helper + contact-page form
+// (the homepage quiz handler above also calls postLead / composeQuizBericht)
+// =========================================================================
+
+// POST a normalised lead payload to the same-origin /api/contact proxy, which
+// forwards it to the Woonklasse backend (email + inbox + push notification).
+async function postLead(payload) {
+  try {
+    const r = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    let data = {};
+    try { data = await r.json(); } catch (_) { /* non-JSON response */ }
+    if (r.ok && data && data.success) return { ok: true, data };
+    const msg = data && (Array.isArray(data.errors) ? data.errors[0] : data.message);
+    return { ok: false, message: msg || null };
+  } catch (_) {
+    return { ok: false, message: null };
+  }
+}
+
+// Build a readable "bericht" string from the homepage quiz state.
+function composeQuizBericht(fd) {
+  const lines = [];
+  if (fd.rooms) lines.push(`Aantal ruimtes: ${fd.rooms}`);
+  if (fd.type) lines.push(`Type project: ${fd.type}`);
+  if (fd.city) lines.push(`Plaats: ${fd.city}`);
+  if (fd.budget) lines.push(`Budget: ${fd.budget}`);
+  if (fd.timing) lines.push(`Gewenste planning: ${fd.timing}`);
+  if (Array.isArray(fd.roomDetails) && fd.roomDetails.length) {
+    lines.push('', 'Ruimtes:');
+    fd.roomDetails.forEach((r, i) => {
+      lines.push(`  ${i + 1}. ${r.kind || '-'} · ${r.m2 || '?'} m² · ${r.photoCount || 0} foto(s)${r.desc ? ` · ${r.desc}` : ''}`);
+    });
+  }
+  if (fd.message) lines.push('', fd.message);
+  return lines.join('\n') || undefined;
+}
+
+// Contact-page form (.lead-form). Replaces the old inline alert() stub.
+(function () {
+  const form = document.querySelector('.lead-form');
+  if (!form) return;
+
+  const isEmail = (s) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(String(s || '').trim());
+  const isPhone = (s) => /^[+\d][\d\s\-()]{6,}$/.test(String(s || '').trim());
+  const val = (n) => {
+    const el = form.querySelector(`[name="${n}"]`);
+    return el ? String(el.value || '').trim() : '';
+  };
+
+  const btn = form.querySelector('.form-submit') || form.querySelector('[type="submit"]');
+  let status = form.querySelector('.form-status');
+  const ensureStatus = () => {
+    if (!status) {
+      status = document.createElement('p');
+      status.className = 'form-status';
+      if (btn) btn.insertAdjacentElement('beforebegin', status);
+      else form.appendChild(status);
+    }
+    return status;
+  };
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const s = ensureStatus();
+    s.textContent = '';
+    s.removeAttribute('data-state');
+
+    const naam = val('name');
+    const email = val('email');
+    const telefoon = val('phone');
+    if (!naam || !isEmail(email) || !isPhone(telefoon)) {
+      s.textContent = 'Vul je naam, een geldig e-mailadres en een telefoonnummer in.';
+      s.dataset.state = 'error';
+      return;
+    }
+
+    const city = val('city');
+    const bericht = [val('message'), city ? `Plaats: ${city}` : '']
+      .filter(Boolean).join('\n\n');
+
+    const origLabel = btn ? btn.textContent : '';
+    if (btn) { btn.disabled = true; btn.textContent = 'Versturen…'; }
+
+    const result = await postLead({
+      naam,
+      email,
+      telefoon,
+      bedrijf: val('company') || undefined,
+      type: val('type') || undefined,
+      formulier: 'contact',
+      brand: 'woonklasse',
+      bericht: bericht || undefined,
+      website: val('website'), // honeypot — filled only by bots
+    });
+
+    if (result.ok) {
+      form.querySelectorAll('label, input, select, textarea, .form-submit')
+        .forEach((el) => { el.style.display = 'none'; });
+      s.textContent = 'Bedankt! We hebben je aanvraag ontvangen en nemen binnen 48 uur contact op.';
+      s.dataset.state = 'success';
+    } else {
+      s.textContent = result.message
+        || 'Versturen mislukt. Probeer het later opnieuw of mail naar info@woonklasse.nl.';
+      s.dataset.state = 'error';
+      if (btn) { btn.disabled = false; btn.textContent = origLabel; }
+    }
+  });
+})();
