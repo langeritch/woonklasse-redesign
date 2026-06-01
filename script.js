@@ -285,17 +285,14 @@ if (quiz) {
   quiz.addEventListener('submit', async (e) => {
     e.preventDefault();
     if (step3Submit.disabled) return;
-    const fd = {
-      rooms: state.rooms,
-      type: state.type,
-      roomDetails: state.roomDetails.map(r => ({ kind: r.kind, m2: r.m2, desc: r.desc, photoCount: r.photos.length })),
-      name: quiz.querySelector('[name="name"]').value,
-      email: quiz.querySelector('[name="email"]').value,
-      phone: quiz.querySelector('[name="phone"]').value,
-      city: (quiz.querySelector('[name="city"]') || {}).value || '',
-      budget: (quiz.querySelector('[name="budget"]') || {}).value || '',
-      timing: (quiz.querySelector('[name="timing"]') || {}).value || '',
-      message: (quiz.querySelector('[name="message"]') || {}).value || '',
+    const contact = {
+      naam: quiz.querySelector('[name="name"]').value.trim(),
+      email: quiz.querySelector('[name="email"]').value.trim(),
+      phone: quiz.querySelector('[name="phone"]').value.trim(),
+      city: ((quiz.querySelector('[name="city"]') || {}).value || '').trim(),
+      budget: ((quiz.querySelector('[name="budget"]') || {}).value || '').trim(),
+      timing: ((quiz.querySelector('[name="timing"]') || {}).value || '').trim(),
+      message: ((quiz.querySelector('[name="message"]') || {}).value || '').trim(),
     };
 
     let status = quiz.querySelector('.lead-quiz__status');
@@ -311,15 +308,35 @@ if (quiz) {
     step3Submit.disabled = true;
     step3Submit.textContent = 'Versturen…';
 
+    // 1) Upload photos straight to Vercel Blob (browser → Blob, via a
+    //    same-origin signed-token proxy), then attach their URLs per room.
+    let rooms;
+    try {
+      rooms = await uploadRoomPhotos(state.roomDetails, (done, total) => {
+        step3Submit.textContent = `Foto's uploaden… ${done}/${total}`;
+      });
+    } catch (err) {
+      status.textContent = "Foto's uploaden mislukt. Controleer je verbinding en probeer het opnieuw.";
+      status.dataset.state = 'error';
+      step3Submit.disabled = false;
+      step3Submit.textContent = origLabel;
+      return;
+    }
+
+    // 2) Submit the lead (incl. photo URLs) to the advies endpoint.
+    step3Submit.textContent = 'Versturen…';
     const result = await postLead({
-      naam: fd.name,
-      email: fd.email,
-      telefoon: fd.phone,
-      formulier: 'offerte',
       brand: 'woonklasse',
-      type: fd.type || undefined,
-      bericht: composeQuizBericht(fd),
-    });
+      naam: contact.naam,
+      email: contact.email,
+      telefoon: contact.phone,
+      projectType: state.type || undefined,
+      city: contact.city || undefined,
+      budget: contact.budget || undefined,
+      tijdpad: contact.timing || undefined,
+      bericht: contact.message || undefined,
+      rooms,
+    }, '/api/advies');
 
     if (result.ok) {
       // Show confirmation step (4)
@@ -392,14 +409,14 @@ if ('IntersectionObserver' in window) {
 
 // =========================================================================
 // Lead submission — shared helper + contact-page form
-// (the homepage quiz handler above also calls postLead / composeQuizBericht)
+// (the homepage quiz handler above also calls postLead / uploadRoomPhotos)
 // =========================================================================
 
 // POST a normalised lead payload to the same-origin /api/contact proxy, which
 // forwards it to the Woonklasse backend (email + inbox + push notification).
-async function postLead(payload) {
+async function postLead(payload, endpoint = '/api/contact') {
   try {
-    const r = await fetch('/api/contact', {
+    const r = await fetch(endpoint, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
@@ -414,22 +431,44 @@ async function postLead(payload) {
   }
 }
 
-// Build a readable "bericht" string from the homepage quiz state.
-function composeQuizBericht(fd) {
-  const lines = [];
-  if (fd.rooms) lines.push(`Aantal ruimtes: ${fd.rooms}`);
-  if (fd.type) lines.push(`Type project: ${fd.type}`);
-  if (fd.city) lines.push(`Plaats: ${fd.city}`);
-  if (fd.budget) lines.push(`Budget: ${fd.budget}`);
-  if (fd.timing) lines.push(`Gewenste planning: ${fd.timing}`);
-  if (Array.isArray(fd.roomDetails) && fd.roomDetails.length) {
-    lines.push('', 'Ruimtes:');
-    fd.roomDetails.forEach((r, i) => {
-      lines.push(`  ${i + 1}. ${r.kind || '-'} · ${r.m2 || '?'} m² · ${r.photoCount || 0} foto(s)${r.desc ? ` · ${r.desc}` : ''}`);
+// Upload each room's photos straight to Vercel Blob (browser → Blob, bypassing
+// the 4.5 MB function body limit) and return the rooms shaped for /api/advies:
+// [{ type, meters?, notes?, photos: [{ url, filename }] }]. The @vercel/blob
+// client SDK is loaded on demand from a CDN (the static site has no bundler),
+// and only when there is at least one photo to upload.
+async function uploadRoomPhotos(roomDetails, onProgress) {
+  const total = roomDetails.reduce((n, r) => n + r.photos.length, 0);
+  let done = 0;
+  let uploadFn = null;
+
+  if (total > 0) {
+    const mod = await import('https://esm.sh/@vercel/blob@2.3.3/client');
+    uploadFn = mod.upload;
+    if (onProgress) onProgress(0, total);
+  }
+
+  const rooms = [];
+  for (const r of roomDetails) {
+    const photos = [];
+    for (const p of r.photos) {
+      if (!p.file || !uploadFn) continue;
+      const safe = (p.file.name || 'foto.jpg').replace(/[^a-zA-Z0-9._-]/g, '_');
+      const res = await uploadFn(`lead/${safe}`, p.file, {
+        access: 'public',
+        handleUploadUrl: '/api/advies/upload-url',
+      });
+      photos.push({ url: res.url, filename: p.file.name || safe });
+      done += 1;
+      if (onProgress) onProgress(done, total);
+    }
+    rooms.push({
+      type: (r.kind && r.kind.trim()) || 'Niet gespecificeerd',
+      meters: (r.m2 && String(r.m2).trim()) || undefined,
+      notes: (r.desc && r.desc.trim()) || undefined,
+      photos,
     });
   }
-  if (fd.message) lines.push('', fd.message);
-  return lines.join('\n') || undefined;
+  return rooms;
 }
 
 // Contact-page form (.lead-form). Replaces the old inline alert() stub.
