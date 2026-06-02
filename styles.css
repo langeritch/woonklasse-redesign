@@ -13,6 +13,12 @@
   --gold: #2a2e33;           /* deep anthracite — a few shades above black */
   --gold-soft: #6c747d;
   --black: #0a0a0a;
+  /* Soft blue-grey (slate) — for the pre-footer CTA strip à la Saba. The
+     palette had no light cool neutral, so these extend it (Tailwind slate). */
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-line: #94a3b8;     /* slate-400, for the zigzag ribbon stroke */
   --display: "Advent Pro", "Helvetica Neue", Arial, sans-serif;
   --body: "Inter", "Helvetica Neue", Arial, sans-serif;
   --gutter: clamp(28px, 5vw, 80px);
@@ -518,7 +524,11 @@ body.loaded::before { opacity: 0; visibility: hidden; }
 /* =========================================================================
    CTA — folded ribbon decoration
    ========================================================================= */
-.cta { background: #fff; padding: clamp(100px, 13vw, 160px) 0 0; position: relative; overflow: hidden; }
+/* Warm cream→beige→deep-warm strip that fades into the black footer (no hard
+   seam). Top stays near-white to melt from the white .projects section above;
+   the bottom band lands on var(--black) inside the empty padding, below the
+   copy, so the dark text never loses contrast. */
+.cta { background: linear-gradient(180deg, #FBF6EC 0%, #F3E8D6 38%, #E4D2B4 68%, #B89B73 86%, var(--black) 100%); padding: clamp(100px, 13vw, 160px) 0 0; position: relative; overflow: hidden; }
 .cta__inner {
   max-width: var(--max);
   margin: 0 auto;
@@ -545,15 +555,12 @@ body.loaded::before { opacity: 0; visibility: hidden; }
 /* Folded ribbon pattern — Saba-style 3D ribbon shapes */
 .cta__deco {
   position: absolute;
-  right: -8%;
-  top: 0;
-  width: 70%;
-  height: 100%;
+  inset: 0;
   z-index: 0;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120' fill='none' stroke='%23d8d4cd' stroke-width='0.45'><path d='M 10 30 L 50 30 L 70 10 L 130 10 L 150 30 L 190 30 L 190 50 L 150 50 L 130 30 L 70 30 L 50 50 L 10 50 Z'/><path d='M 10 70 L 50 70 L 70 50 L 130 50 L 150 70 L 190 70 L 190 90 L 150 90 L 130 70 L 70 70 L 50 90 L 10 90 Z'/><path d='M -30 50 L 10 50 L 30 30 L 50 30 M 150 50 L 190 50 L 210 30 L 230 30'/><path d='M -30 90 L 10 90 L 30 70 L 50 70 M 150 90 L 190 90 L 210 70 L 230 70'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120' fill='none' stroke='%23B89B73' stroke-width='0.45'><path d='M 10 30 L 50 30 L 70 10 L 130 10 L 150 30 L 190 30 L 190 50 L 150 50 L 130 30 L 70 30 L 50 50 L 10 50 Z'/><path d='M 10 70 L 50 70 L 70 50 L 130 50 L 150 70 L 190 70 L 190 90 L 150 90 L 130 70 L 70 70 L 50 90 L 10 90 Z'/><path d='M -30 50 L 10 50 L 30 30 L 50 30 M 150 50 L 190 50 L 210 30 L 230 30'/><path d='M -30 90 L 10 90 L 30 70 L 50 70 M 150 90 L 190 90 L 210 70 L 230 70'/></svg>");
   background-repeat: repeat;
   background-size: 460px 280px;
-  opacity: 0.9;
+  opacity: 0.13;
 }
 
 /* =========================================================================
@@ -562,9 +569,33 @@ body.loaded::before { opacity: 0; visibility: hidden; }
 .footer {
   background: var(--black);
   color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;   /* 50/50 split — desktop ≥ lg */
+  align-items: stretch;
+}
+/* Left half: all existing footer content, padded exactly as before. */
+.footer__inner {
+  max-width: 880px;
   padding: 80px var(--gutter) 28px;
 }
-.footer__inner { max-width: 880px; }
+/* Right half: full-bleed project photo. Edge-to-edge top→bottom, no padding,
+   no radius, no caption — part of the footer, not a card. Stretches to the
+   footer's full height via the grid row. */
+.footer::after {
+  content: "";
+  display: block;
+  /* JPG shorthand first as the universal fallback; the AVIF image-set then
+     overrides background-image only where supported (saves ~80% bytes). */
+  background: #14110f url("assets/footer-project.jpg") center center / cover no-repeat;
+  background-image: image-set(url("assets/footer-project.avif") type("image/avif"), url("assets/footer-project.jpg") type("image/jpeg"));
+}
+/* Mobile: stack vertically — photo on top, black content block below, both
+   full width. The split is desktop ≥ lg (1024px) only. */
+@media (max-width: 1024px) {
+  .footer { grid-template-columns: 1fr; }
+  .footer::after { grid-row: 1; min-height: 300px; }
+  .footer__inner { grid-row: 2; max-width: none; }
+}
 .footer__brand {
   display: flex;
   align-items: center;
