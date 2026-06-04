@@ -405,6 +405,39 @@ if ('IntersectionObserver' in window) {
   });
 }
 
+// Hero parallax — the photo drifts slower than the scroll for depth.
+// Transform-only + rAF-throttled (no layout thrash), and skipped entirely for
+// reduced-motion users. Pairs with the .js-parallax CSS that oversizes the
+// image so the translate never exposes a top/bottom edge.
+(function () {
+  const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const hero = document.querySelector('.hero');
+  const img = hero && hero.querySelector('.hero__media img');
+  if (!hero || !img || reduceMotion) return;
+
+  document.documentElement.classList.add('js-parallax');
+
+  const FACTOR = 0.16; // fraction of scroll distance the photo lags behind
+  let ticking = false;
+
+  const update = () => {
+    ticking = false;
+    const rect = hero.getBoundingClientRect();
+    // Skip work once the hero is well out of view.
+    if (rect.bottom < -200 || rect.top > window.innerHeight + 200) return;
+    const scrolledPast = Math.max(0, -rect.top);
+    img.style.transform = `translate3d(0, ${(scrolledPast * FACTOR).toFixed(1)}px, 0)`;
+  };
+
+  const onScroll = () => {
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  update();
+})();
+
 // =========================================================================
 // Lead submission — shared helper + contact-page form
 // (the homepage quiz handler above also calls postLead / uploadRoomPhotos)

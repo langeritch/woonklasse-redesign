@@ -205,6 +205,16 @@ body.loaded::before { opacity: 0; visibility: hidden; }
   object-fit: cover;
   z-index: 0;
 }
+/* Hero parallax — JS adds .js-parallax to <html>; the image is oversized and
+   the wrapper clips it, so the scroll-driven translate never reveals an edge.
+   Reduced-motion users never get the class, so the image stays static. */
+.js-parallax .hero__media { overflow: hidden; }
+.js-parallax .hero__media img {
+  top: -20%;
+  bottom: auto;
+  height: 140%;
+  will-change: transform;
+}
 .hero__overlay {
   position: absolute;
   inset: 0;
