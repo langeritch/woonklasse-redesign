@@ -534,11 +534,9 @@ body.loaded::before { opacity: 0; visibility: hidden; }
 /* =========================================================================
    CTA — folded ribbon decoration
    ========================================================================= */
-/* Warm cream→beige→deep-warm strip that fades into the black footer (no hard
-   seam). Top stays near-white to melt from the white .projects section above;
-   the bottom band lands on var(--black) inside the empty padding, below the
-   copy, so the dark text never loses contrast. */
-.cta { background: linear-gradient(180deg, #FBF6EC 0%, #F3E8D6 38%, #E4D2B4 68%, #B89B73 86%, var(--black) 100%); padding: clamp(100px, 13vw, 160px) 0 0; position: relative; overflow: hidden; }
+/* Clean solid CTA (gradient fade removed per request): white like the .projects
+   section above, into the black footer below. */
+.cta { background: var(--bg); padding: clamp(100px, 13vw, 160px) 0 clamp(80px, 10vw, 120px); position: relative; overflow: hidden; }
 .cta__inner {
   max-width: var(--max);
   margin: 0 auto;
