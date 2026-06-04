@@ -576,99 +576,73 @@ body.loaded::before { opacity: 0; visibility: hidden; }
 /* =========================================================================
    Footer
    ========================================================================= */
-/* Saba-style: full-bleed project photo as the background layer, with a solid
-   black CTA block overlaid on the left ~50%. The photo peeks ABOVE the block
-   at the top (the footer's padding-top) and fills the whole right half. */
+/* Exact Saba Stones footer: solid black, full-width. Content sits in a
+   left-aligned max-width container — logo + wordmark, three uppercase link
+   columns, a muted legal line and a credit line. No photo: Saba's footer
+   image is a ~7%-opacity flourish, so the footer reads as pure black. */
 .footer {
   background: var(--black);
   color: #fff;
   position: relative;
-  overflow: hidden;
-  /* Top gap so the photo peeks above the dark block (Saba "floating" block). */
-  padding-top: clamp(64px, 8vw, 120px);
 }
-/* Layer 1: full-bleed photo behind everything. Focal point pushed right so the
-   subject lands in the visible right half, not behind the dark block.
-   JPG shorthand first as the universal fallback; the AVIF image-set then
-   overrides background-image only where supported (saves ~80% bytes). */
-.footer::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background: #14110f url("assets/footer-project.jpg") 78% center / cover no-repeat;
-  background-image: image-set(url("assets/footer-project.avif") type("image/avif"), url("assets/footer-project.jpg") type("image/jpeg"));
-}
-/* Layer 2: the dark CTA block — solid, ~50% wide, anchored left, over the photo. */
 .footer__inner {
   position: relative;
-  z-index: 1;
-  width: 50%;
-  max-width: 820px;
-  min-height: 440px;
-  background: var(--black);
-  padding: 56px var(--gutter) 28px;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: clamp(76px, 9vw, 128px) var(--gutter) clamp(52px, 6vw, 84px);
 }
-/* Soft fade melting the block's right edge into the photo. */
-.footer__inner::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 100%;
-  width: 96px;
-  background: linear-gradient(to right, var(--black), transparent);
-  pointer-events: none;
-}
-/* Mobile (≤1024px): photo as a strip on top, dark block full-width below. */
-@media (max-width: 1024px) {
-  .footer { padding-top: 300px; }
-  .footer__inner { width: 100%; max-width: none; }
-  .footer__inner::after { display: none; }
-}
+/* Saba goes straight from logo to columns — hide the marketing tagline so the
+   layout matches exactly (kept in markup, just not shown). */
+.footer__inner > p { display: none; }
 .footer__brand {
   display: flex;
   align-items: center;
   gap: 18px;
-  margin-bottom: 70px;
+  margin-bottom: clamp(48px, 6vw, 88px);
 }
+.footer__brand-img { width: 56px; height: auto; }
 .footer__brand svg { width: 56px; height: 56px; }
 .footer__wordmark {
   font-family: var(--display);
   font-weight: 500;
   font-size: 22px;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #fff;
 }
+/* Three columns clustered on the left with generous gaps, like Saba. */
 .footer__cols {
   display: grid;
-  grid-template-columns: 1fr 1.4fr 1fr;
-  gap: 32px;
-  margin-bottom: 50px;
+  grid-template-columns: repeat(3, max-content);
+  gap: 4px clamp(48px, 7vw, 112px);
+  margin-bottom: clamp(48px, 6vw, 80px);
 }
 .footer__cols a, .footer__cols span {
   display: block;
   font-family: var(--display);
-  font-size: 15px;
-  letter-spacing: 0.05em;
+  font-size: clamp(17px, 1.4vw, 20px);
+  line-height: 2;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
   color: #fff;
-  padding: 10px 0;
   transition: opacity .2s, letter-spacing .2s;
 }
-.footer__cols a:hover { opacity: 0.6; letter-spacing: 0.08em; }
+.footer__cols span { color: rgba(255,255,255,0.78); }
+.footer__cols a:hover { opacity: 0.55; letter-spacing: 0.06em; }
 .footer__legal {
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 20px;
-  font-size: 13px;
-  color: rgba(255,255,255,0.7);
-  display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
+  font-size: 13.5px;
+  color: rgba(255,255,255,0.6);
+  display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
 }
-.footer__legal a { color: rgba(255,255,255,0.7); text-decoration: underline; }
+.footer__legal a { color: rgba(255,255,255,0.6); text-decoration: underline; }
 .footer__legal a:hover { color: #fff; }
 .footer__legal .sep { color: rgba(255,255,255,0.3); }
-.footer__credit { margin-top: 14px; font-size: 13px; color: rgba(255,255,255,0.7); }
+.footer__credit { margin-top: 12px; font-size: 13px; color: rgba(255,255,255,0.45); }
+/* Stack columns on phones. */
+@media (max-width: 760px) {
+  .footer__cols { grid-template-columns: 1fr; gap: 0; }
+  .footer__cols > div { margin-bottom: 28px; }
+}
 
 /* =========================================================================
    Page-specific bits (pricing tiers, FAQ, chips, contact form, stats)
