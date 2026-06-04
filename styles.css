@@ -585,17 +585,20 @@ body.loaded::before { opacity: 0; visibility: hidden; }
   background: var(--black);
   color: #fff;
   position: relative;
-  overflow: hidden;
+  overflow: visible;           /* let the photo peek above the top edge */
   min-height: clamp(440px, 40vw, 560px);
   display: flex;
   align-items: stretch;
 }
-/* Photo fills the right ~52%. JPG fallback first, AVIF where supported. */
+/* Project photo as a full-bleed layer BEHIND everything, peeking a bit above
+   the footer's top edge (Saba lifts its photo above the footer). The solid
+   black content block overlays the left half, so the photo reads on the right
+   plus a sliver up top. */
 .footer::before {
   content: "";
   position: absolute;
-  top: 0; right: 0; bottom: 0;
-  width: 52%;
+  top: clamp(-60px, -5vw, -34px);
+  left: 0; right: 0; bottom: 0;
   z-index: 0;
   background: #14110f url("assets/footer-project.jpg") center center / cover no-repeat;
   background-image: image-set(url("assets/footer-project.avif") type("image/avif"), url("assets/footer-project.jpg") type("image/jpeg"));
@@ -664,9 +667,11 @@ body.loaded::before { opacity: 0; visibility: hidden; }
 }
 /* Tablet/phone: photo becomes a top strip, black content full-width below. */
 @media (max-width: 900px) {
-  .footer { display: block; min-height: 0; }
-  .footer::before { width: 100%; height: 230px; bottom: auto; }
-  .footer__inner { width: 100%; max-width: none; margin-top: 230px; justify-content: flex-start; }
+  /* Photo as a top strip; use padding (not a child margin, which would collapse
+     out of the footer and leave a white gap) so the black bg fills the strip. */
+  .footer { display: block; min-height: 0; overflow: hidden; padding-top: 220px; }
+  .footer::before { top: 0; left: 0; right: 0; height: 220px; bottom: auto; }
+  .footer__inner { width: 100%; max-width: none; justify-content: flex-start; }
 }
 @media (max-width: 560px) {
   .footer__cols { grid-template-columns: 1fr; gap: 0; }
