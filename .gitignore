@@ -28,3 +28,4 @@ package-lock.json
 *.tmp
 *.bak
 .vercel
+.gstack/
