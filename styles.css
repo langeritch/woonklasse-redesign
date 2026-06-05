@@ -431,13 +431,16 @@ body.loaded::before { opacity: 0; visibility: hidden; }
 .proj-card--bg-black::before {
   content: "";
   position: absolute;
-  inset: -40px -30px 60px 30px;
-  /* Soft cool-neutral panel (light anthracite tint) instead of the full
-     anthracite surface, so the overlaid --ink title/number stays readable. */
-  background: var(--taupe-soft);
+  /* Anthracite panel behind/around the photo, flush-left so it fully backs the
+     caption (peeks top/right/bottom). Title/number go white below. */
+  inset: -40px -30px -16px 0;
+  background: #32383b;          /* antraciet — same value as --taupe */
   z-index: -1;
   transition: transform .6s var(--ease);
 }
+/* On the dark-panel cards the caption sits on anthracite, so it must be white. */
+.proj-card--bg-black .proj-card__name,
+.proj-card--bg-black .proj-card__num { color: #fff; }
 .proj-card:hover { transform: translateY(-8px); }
 .proj-card__img {
   aspect-ratio: 3/4;
