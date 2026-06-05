@@ -431,9 +431,9 @@ body.loaded::before { opacity: 0; visibility: hidden; }
 .proj-card--bg-black::before {
   content: "";
   position: absolute;
-  /* Anthracite panel behind/around the photo, flush-left so it fully backs the
-     caption (peeks top/right/bottom). Title/number go white below. */
-  inset: -40px -30px -16px 0;
+  /* Anthracite panel behind/around the photo — peeks out symmetrically left and
+     right (and top/bottom) beyond the photo, fully backing the white caption. */
+  inset: -40px -30px -16px -30px;
   background: #32383b;          /* antraciet — same value as --taupe */
   z-index: -1;
   transition: transform .6s var(--ease);
