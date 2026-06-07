@@ -611,3 +611,36 @@ async function uploadRoomPhotos(roomDetails, onProgress) {
     initWhatsApp();
   }
 })();
+
+/* Mobiel hamburger-menu (injecteert de knop in de header op elke pagina) */
+(function () {
+  function initNav() {
+    var header = document.getElementById('siteHeader');
+    if (!header || header.querySelector('.nav-toggle')) return;
+    var btn = document.createElement('button');
+    btn.className = 'nav-toggle';
+    btn.type = 'button';
+    btn.setAttribute('aria-label', 'Menu openen of sluiten');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.innerHTML = '<span></span><span></span><span></span>';
+    btn.addEventListener('click', function () {
+      var open = header.classList.toggle('nav-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    header.appendChild(btn);
+    var nav = header.querySelector('.nav');
+    if (nav) {
+      nav.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') {
+          header.classList.remove('nav-open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initNav);
+  } else {
+    initNav();
+  }
+})();

@@ -183,6 +183,33 @@ body.loaded::before { opacity: 0; visibility: hidden; }
   height: 1px; background: currentColor;
 }
 
+/* Mobiel menu-knop (hamburger) — standaard verborgen op desktop */
+.nav-toggle {
+  display: none;
+  position: relative;
+  z-index: 60;
+  width: 28px;
+  height: 20px;
+  margin: 34px var(--gutter) 0 0;
+  padding: 0;
+  background: none;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+}
+.nav-toggle span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: currentColor;
+  transition: transform .25s ease, opacity .2s ease, top .25s ease;
+}
+.nav-toggle span:nth-child(1) { top: 0; }
+.nav-toggle span:nth-child(2) { top: 9px; }
+.nav-toggle span:nth-child(3) { top: 18px; }
+.site-header.scrolled .nav-toggle { color: var(--ink); }
+
 /* =========================================================================
    Hero — full-bleed + asymmetric step overlap into next section
    ========================================================================= */
@@ -1311,8 +1338,30 @@ body.loaded::before { opacity: 0; visibility: hidden; }
   .logo-block { width: 88px; height: 70px; }
   .logo-block svg { width: 40px; height: 40px; }
   .site-header.scrolled .logo-block { width: 70px; height: 56px; }
-  .nav { gap: 16px; font-size: 12px; padding-top: 26px; }
-  .nav a:nth-child(n+2):not([aria-current]) { display: none; }
+  .nav-toggle { display: block; }
+  .nav {
+    position: fixed;
+    inset: 0 0 0 auto;
+    width: min(80vw, 300px);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+    padding: 96px 36px 36px;
+    background: #fff;
+    color: var(--ink);
+    font-size: 19px;
+    transform: translateX(100%);
+    transition: transform .3s ease;
+    box-shadow: -12px 0 44px rgba(0, 0, 0, 0.16);
+  }
+  .site-header.scrolled .nav { color: var(--ink); padding-top: 96px; }
+  .nav a:nth-child(n+2):not([aria-current]) { display: block; }
+  .site-header.nav-open .nav { transform: translateX(0); }
+  .site-header.nav-open .nav-toggle { color: var(--ink); }
+  .site-header.nav-open .nav-toggle span:nth-child(1) { top: 9px; transform: rotate(45deg); }
+  .site-header.nav-open .nav-toggle span:nth-child(2) { opacity: 0; }
+  .site-header.nav-open .nav-toggle span:nth-child(3) { top: 9px; transform: rotate(-45deg); }
 
   .hero { min-height: 88vh; }
   .hero__title { font-size: clamp(48px, 12vw, 72px); }
@@ -1324,7 +1373,9 @@ body.loaded::before { opacity: 0; visibility: hidden; }
   .kamer-card__inputs { grid-template-columns: 1fr; }
   .chips--num button { min-width: 48px; }
 
-  .story__grid { grid-template-columns: 1fr; gap: 48px; }
+  .story__grid { grid-template-columns: minmax(0, 1fr); gap: 48px; }
+  .story__text .section-title,
+  .story__text .body-caps { overflow-wrap: break-word; }
   .story__deco { width: 100%; opacity: 0.5; }
 
   .service-row { grid-template-columns: 50px 1fr auto; gap: 16px; padding: 24px 4px; }
