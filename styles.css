@@ -506,6 +506,94 @@ body.loaded::before { opacity: 0; visibility: hidden; }
   letter-spacing: 0;
 }
 
+/* ── Uit ons werk — editoriale featured-gallery ───────────────────────── */
+.work { background: #fff; padding: clamp(100px, 13vw, 160px) 0; }
+.work__inner { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+.work__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+.work__eyebrow {
+  font-family: var(--display);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 13px;
+  color: var(--gold);
+  margin: 0 0 16px;
+}
+.work__all { white-space: nowrap; }
+.work__grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 16px;
+  height: clamp(460px, 56vw, 660px);
+}
+.work-item--main { grid-row: 1 / 3; }
+.work-item {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+.work-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 1s var(--ease);
+}
+.work-item:hover img { transform: scale(1.05); }
+.work-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0) 50%);
+  pointer-events: none;
+}
+.work-item__cap {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: 26px 28px;
+  color: #fff;
+  transition: transform .5s var(--ease);
+}
+.work-item:hover .work-item__cap { transform: translateY(-4px); }
+.work-item__tag {
+  display: block;
+  font-family: var(--display);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 12px;
+  opacity: 0.85;
+  margin-bottom: 6px;
+}
+.work-item__name {
+  display: block;
+  font-family: var(--display);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: clamp(19px, 1.8vw, 24px);
+  line-height: 1.05;
+}
+.work-item--main .work-item__name { font-size: clamp(28px, 3.2vw, 40px); }
+
+@media (max-width: 768px) {
+  .work__head { flex-direction: column; align-items: flex-start; gap: 18px; margin-bottom: 32px; }
+  .work__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    height: auto;
+  }
+  .work-item--main { grid-row: auto; aspect-ratio: 4 / 5; }
+  .work-item { aspect-ratio: 4 / 3; }
+}
+
 /* =========================================================================
    Testimonials — taupe bg with prev/next arrows
    ========================================================================= */
