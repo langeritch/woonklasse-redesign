@@ -356,7 +356,7 @@ body.loaded::before { opacity: 0; visibility: hidden; }
   background-size: 720px 720px;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.9;
+  opacity: 0.35;
 }
 
 /* =========================================================================
@@ -1376,7 +1376,7 @@ body.loaded::before { opacity: 0; visibility: hidden; }
   .story__grid { grid-template-columns: minmax(0, 1fr); gap: 48px; }
   .story__text .section-title,
   .story__text .body-caps { overflow-wrap: break-word; }
-  .story__deco { width: 100%; opacity: 0.5; }
+  .story__deco { width: 100%; opacity: 0.3; }
 
   .service-row { grid-template-columns: 50px 1fr auto; gap: 16px; padding: 24px 4px; }
 
