@@ -1403,3 +1403,45 @@ body.loaded::before { opacity: 0; visibility: hidden; }
     height: 52px;
   }
 }
+
+/* Saninet: responsieve grids (op-locatie kaarten + cijfers) */
+.saninet-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.saninet-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+}
+.saninet-stat {
+  padding: 36px 24px;
+  border-bottom: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.saninet-stat:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+.saninet-stat:last-child {
+  padding-right: 0;
+}
+@media (max-width: 768px) {
+  .saninet-cards {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .saninet-stats {
+    grid-template-columns: 1fr;
+  }
+  .saninet-stat,
+  .saninet-stat:first-child,
+  .saninet-stat:last-child {
+    border-left: none;
+    padding: 26px 0;
+  }
+}
