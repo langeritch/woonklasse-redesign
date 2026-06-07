@@ -12,6 +12,7 @@ Icon
 *.swp
 *.swo
 .cursor/
+.claude/
 
 # Node (if ever used)
 node_modules/

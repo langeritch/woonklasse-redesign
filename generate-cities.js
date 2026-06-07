@@ -140,7 +140,7 @@ const FOOTER = `
       </div>
       <div>
         <span style="opacity: 0.6; font-size: 12px;">Zusterbedrijf</span>
-        <a href="#">Badkamerstijl →</a>
+        <a href="https://badkamerstijl.nl" target="_blank" rel="noopener">Badkamerstijl →</a>
       </div>
     </div>
     <div class="footer__legal">
