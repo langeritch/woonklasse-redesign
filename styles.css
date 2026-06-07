@@ -528,13 +528,21 @@ body.loaded::before { opacity: 0; visibility: hidden; }
 .work__viewport { overflow: hidden; }
 .work__track {
   display: flex;
-  gap: 20px;
-  padding: 0 var(--gutter);
   width: max-content;
   will-change: transform;
+  animation: work-marquee 34s linear infinite;
+}
+.work__track:hover { animation-play-state: paused; }
+@keyframes work-marquee {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .work__track { animation: none; }
 }
 .work-slide {
   flex: 0 0 clamp(260px, 40vw, 540px);
+  margin-right: 20px;
   position: relative;
   display: block;
   overflow: hidden;

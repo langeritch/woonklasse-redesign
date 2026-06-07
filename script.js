@@ -644,37 +644,3 @@ async function uploadRoomPhotos(roomDetails, onProgress) {
     initNav();
   }
 })();
-
-/* 'Uit ons werk' — horizontale gallery die meebeweegt met de verticale scroll */
-(function () {
-  function initWork() {
-    var track = document.getElementById('workTrack');
-    if (!track) return;
-    var section = track.closest('.work');
-    var viewport = track.parentElement;
-    var maxShift = 0;
-
-    function measure() {
-      maxShift = Math.max(0, track.scrollWidth - viewport.clientWidth);
-    }
-    function update() {
-      var vh = window.innerHeight || document.documentElement.clientHeight;
-      var rect = section.getBoundingClientRect();
-      // 0 wanneer de sectie net onderin beeld komt, 1 wanneer hij bovenuit verdwijnt
-      var p = (vh - rect.top) / (rect.height + vh);
-      if (p < 0) p = 0; else if (p > 1) p = 1;
-      track.style.transform = 'translate3d(' + (-p * maxShift).toFixed(1) + 'px,0,0)';
-    }
-
-    measure();
-    update();
-    window.addEventListener('scroll', update, { passive: true });
-    window.addEventListener('resize', function () { measure(); update(); });
-    window.addEventListener('load', function () { measure(); update(); });
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initWork);
-  } else {
-    initWork();
-  }
-})();
