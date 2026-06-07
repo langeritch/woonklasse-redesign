@@ -589,3 +589,25 @@ async function uploadRoomPhotos(roomDetails, onProgress) {
     }
   });
 })();
+
+/* Zwevende WhatsApp-knop (rechtsonder, op elke pagina) */
+(function () {
+  function initWhatsApp() {
+    if (document.querySelector('.wa-float')) return;
+    var a = document.createElement('a');
+    a.className = 'wa-float';
+    a.href = 'https://wa.me/31650424683?text=' +
+      encodeURIComponent('Hallo Woonklasse, ik heb een vraag over mijn verbouwing.');
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.setAttribute('aria-label', 'Stuur ons een WhatsApp-bericht');
+    a.innerHTML = '<svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true" focusable="false">' +
+      '<path fill="currentColor" d="M16.04 4C9.95 4 5 8.95 5 15.04c0 2.05.56 4.05 1.62 5.8L5 28l7.34-1.92a11 11 0 0 0 3.7.64h.01c6.08 0 11.03-4.95 11.03-11.04C27.08 8.95 22.13 4 16.04 4zm0 20.2h-.01c-1.13 0-2.24-.3-3.21-.88l-.23-.14-3.84 1.01 1.02-3.75-.15-.24a9.1 9.1 0 0 1-1.39-4.84c0-5.04 4.1-9.14 9.15-9.14 2.44 0 4.74.95 6.46 2.68a9.08 9.08 0 0 1 2.68 6.47c0 5.04-4.1 9.14-9.14 9.14zm5.02-6.84c-.27-.14-1.63-.8-1.88-.9-.25-.09-.43-.13-.61.14-.18.27-.7.9-.86 1.08-.16.18-.32.2-.59.07-.27-.14-1.16-.43-2.21-1.36-.82-.73-1.37-1.63-1.53-1.9-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.44-.46-.61-.46l-.52-.01c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.3 0 1.36.98 2.67 1.12 2.85.14.18 1.93 2.95 4.68 4.14.65.28 1.16.45 1.56.58.66.21 1.25.18 1.72.11.52-.08 1.63-.67 1.86-1.31.23-.64.23-1.19.16-1.31-.07-.12-.25-.18-.52-.32z"/></svg>';
+    document.body.appendChild(a);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initWhatsApp);
+  } else {
+    initWhatsApp();
+  }
+})();

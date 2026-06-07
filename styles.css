@@ -1368,3 +1368,38 @@ body.loaded::before { opacity: 0; visibility: hidden; }
 .lead-quiz__status[data-state="error"] {
   color: #b3261e;
 }
+
+/* Zwevende WhatsApp-knop (rechtsonder, alle pagina's) */
+.wa-float {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 9999;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.wa-float:hover {
+  transform: scale(1.06);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+  color: #fff;
+  opacity: 1;
+}
+.wa-float svg {
+  display: block;
+}
+@media (max-width: 600px) {
+  .wa-float {
+    right: 16px;
+    bottom: 16px;
+    width: 52px;
+    height: 52px;
+  }
+}
