@@ -68,11 +68,29 @@ const map = buildMap(raw);
 const TOKEN = /\{\{\s*([a-zA-Z0-9_.-]+)\s*\}\}/g;
 
 function render(html) {
-  return html.replace(TOKEN, (match, key) => {
-    if (key in map) return map[key];
-    console.warn(`[cms] missing block: ${key} (left token in place)`);
-    return match;
+  // Loop until no more tokens get resolved. Block values can reference
+  // other block keys (e.g. a CTA label "Bel direct {{footer.phoneDisplay}}"),
+  // and a single pass would leave those nested references behind.
+  // Cap at 5 passes so a self-referential block can't infinite-loop.
+  let out = html;
+  for (let pass = 0; pass < 5; pass++) {
+    let touched = false;
+    const next = out.replace(TOKEN, (match, key) => {
+      if (key in map) {
+        touched = true;
+        return map[key];
+      }
+      return match;
+    });
+    if (!touched) return next;
+    out = next;
+  }
+  // Final pass: any tokens left are missing keys; warn once.
+  out.replace(TOKEN, (_m, key) => {
+    if (!(key in map)) console.warn(`[cms] missing block: ${key} (left token in place)`);
+    return _m;
   });
+  return out;
 }
 
 const FILES = fs.readdirSync(ROOT).filter((f) => f.endsWith(".html"));

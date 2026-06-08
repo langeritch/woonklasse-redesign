@@ -1,6 +1,6 @@
 {
   "dashboard": "woonklasse",
-  "generated_at": "2026-06-08T20:20:21.802Z",
+  "generated_at": "2026-06-08T00:00:00.000Z",
   "blocks": [
     {
       "key": "hero.kicker",
@@ -273,6 +273,1734 @@
       "text": "KVK 85409146 · BTW NL004092100B36",
       "image": null,
       "sort_order": 960
+    },
+    {
+      "key": "diensten.hero.kicker",
+      "label": "Diensten · Hero kicker",
+      "kind": "text",
+      "text": "Onze Diensten",
+      "image": null,
+      "sort_order": 1000
+    },
+    {
+      "key": "diensten.hero.title",
+      "label": "Diensten · Hero title (HTML)",
+      "kind": "rich_text",
+      "text": "Vakmanschap<br/><em>in elk project</em>",
+      "image": null,
+      "sort_order": 1010
+    },
+    {
+      "key": "diensten.hero.sub",
+      "label": "Diensten · Hero subhead",
+      "kind": "text",
+      "text": "Van badkamer en keuken tot complete woningrenovatie. Alle disciplines in eigen huis.",
+      "image": null,
+      "sort_order": 1020
+    },
+    {
+      "key": "diensten.hero.cta",
+      "label": "Diensten · Hero CTA label",
+      "kind": "text",
+      "text": "Bespreek je project",
+      "image": null,
+      "sort_order": 1030
+    },
+    {
+      "key": "diensten.hero.image",
+      "label": "Diensten · Hero image",
+      "kind": "image",
+      "text": null,
+      "image": "https://images.unsplash.com/photo-1601086540476-7d9fa9dd6023?w=2000&q=80&auto=format&fit=crop",
+      "sort_order": 1040
+    },
+    {
+      "key": "diensten.section1.title",
+      "label": "Diensten · Section 1 title",
+      "kind": "rich_text",
+      "text": "Vier stappen, één visie.",
+      "image": null,
+      "sort_order": 1050
+    },
+    {
+      "key": "diensten.section2.title",
+      "label": "Diensten · Section 2 title",
+      "kind": "rich_text",
+      "text": "De vier fases",
+      "image": null,
+      "sort_order": 1060
+    },
+    {
+      "key": "diensten.section3.title",
+      "label": "Diensten · Section 3 title",
+      "kind": "rich_text",
+      "text": "Specialismen.",
+      "image": null,
+      "sort_order": 1070
+    },
+    {
+      "key": "diensten.finalCta.title",
+      "label": "Diensten · Final CTA title (HTML)",
+      "kind": "rich_text",
+      "text": "Vertel ons over je <em>plannen</em>.<br/>Binnen 48 uur een voorstel.",
+      "image": null,
+      "sort_order": 1080
+    },
+    {
+      "key": "diensten.finalCta.label",
+      "label": "Diensten · Final CTA label",
+      "kind": "text",
+      "text": "Start je project",
+      "image": null,
+      "sort_order": 1090
+    },
+    {
+      "key": "prijzen.hero.kicker",
+      "label": "Prijzen · Hero kicker",
+      "kind": "text",
+      "text": "Prijzen 2026",
+      "image": null,
+      "sort_order": 1100
+    },
+    {
+      "key": "prijzen.hero.title",
+      "label": "Prijzen · Hero title (HTML)",
+      "kind": "rich_text",
+      "text": "Wat kost een<br/><em>verbouwing</em> in 2026?",
+      "image": null,
+      "sort_order": 1110
+    },
+    {
+      "key": "prijzen.hero.sub",
+      "label": "Prijzen · Hero subhead",
+      "kind": "text",
+      "text": "Vier heldere prijscategorieën, een interactieve calculator en alle factoren die je budget beïnvloeden, zonder verborgen kosten of vage uurtarieven.",
+      "image": null,
+      "sort_order": 1120
+    },
+    {
+      "key": "prijzen.hero.cta",
+      "label": "Prijzen · Hero CTA label",
+      "kind": "text",
+      "text": "Bereken je indicatie",
+      "image": null,
+      "sort_order": 1130
+    },
+    {
+      "key": "prijzen.hero.image",
+      "label": "Prijzen · Hero image",
+      "kind": "image",
+      "text": null,
+      "image": "https://images.unsplash.com/photo-1601086540476-7d9fa9dd6023?w=2000&q=80&auto=format&fit=crop",
+      "sort_order": 1140
+    },
+    {
+      "key": "prijzen.section1.title",
+      "label": "Prijzen · Section 1 title",
+      "kind": "rich_text",
+      "text": "Veelgestelde vragen",
+      "image": null,
+      "sort_order": 1150
+    },
+    {
+      "key": "prijzen.finalCta.title",
+      "label": "Prijzen · Final CTA title (HTML)",
+      "kind": "rich_text",
+      "text": "Klaar voor een <em>prijsindicatie</em>?",
+      "image": null,
+      "sort_order": 1160
+    },
+    {
+      "key": "prijzen.finalCta.label",
+      "label": "Prijzen · Final CTA label",
+      "kind": "text",
+      "text": "Bel direct {{footer.phoneDisplay}}",
+      "image": null,
+      "sort_order": 1170
+    },
+    {
+      "key": "projecten.hero.kicker",
+      "label": "Projecten · Hero kicker",
+      "kind": "text",
+      "text": "Portfolio",
+      "image": null,
+      "sort_order": 1200
+    },
+    {
+      "key": "projecten.hero.title",
+      "label": "Projecten · Hero title (HTML)",
+      "kind": "rich_text",
+      "text": "Onze<br/><em>realisaties</em>",
+      "image": null,
+      "sort_order": 1210
+    },
+    {
+      "key": "projecten.hero.sub",
+      "label": "Projecten · Hero subhead",
+      "kind": "text",
+      "text": "Ruimtes die inspireren en duurzaam zijn. Van volledige transformaties tot verfijnde details. Bekijk ons werk.",
+      "image": null,
+      "sort_order": 1220
+    },
+    {
+      "key": "projecten.hero.image",
+      "label": "Projecten · Hero image",
+      "kind": "image",
+      "text": null,
+      "image": "https://images.unsplash.com/photo-1708111776235-990d08c84658?w=2000&q=80&auto=format&fit=crop",
+      "sort_order": 1230
+    },
+    {
+      "key": "projecten.finalCta.title",
+      "label": "Projecten · Final CTA title (HTML)",
+      "kind": "rich_text",
+      "text": "Neem contact op voor een vrijblijvend gesprek over uw <em>droomproject</em>.",
+      "image": null,
+      "sort_order": 1240
+    },
+    {
+      "key": "projecten.finalCta.label",
+      "label": "Projecten · Final CTA label",
+      "kind": "text",
+      "text": "Start uw project",
+      "image": null,
+      "sort_order": 1250
+    },
+    {
+      "key": "overons.hero.kicker",
+      "label": "Over ons · Hero kicker",
+      "kind": "text",
+      "text": "Over Woonklasse",
+      "image": null,
+      "sort_order": 1300
+    },
+    {
+      "key": "overons.hero.title",
+      "label": "Over ons · Hero title (HTML)",
+      "kind": "rich_text",
+      "text": "Ons<br/><em>Verhaal</em>",
+      "image": null,
+      "sort_order": 1310
+    },
+    {
+      "key": "overons.hero.sub",
+      "label": "Over ons · Hero subhead",
+      "kind": "text",
+      "text": "Een jong bedrijf, gedragen door ervaren vakmensen.",
+      "image": null,
+      "sort_order": 1320
+    },
+    {
+      "key": "overons.hero.image",
+      "label": "Over ons · Hero image",
+      "kind": "image",
+      "text": null,
+      "image": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=2000&q=80&auto=format&fit=crop",
+      "sort_order": 1330
+    },
+    {
+      "key": "overons.section1.title",
+      "label": "Over ons · Section 1 title",
+      "kind": "rich_text",
+      "text": "Jong bedrijf, doorgewinterde vakmensen.",
+      "image": null,
+      "sort_order": 1340
+    },
+    {
+      "key": "overons.section2.title",
+      "label": "Over ons · Section 2 title",
+      "kind": "rich_text",
+      "text": "Onze waarden",
+      "image": null,
+      "sort_order": 1350
+    },
+    {
+      "key": "overons.section3.title",
+      "label": "Over ons · Section 3 title",
+      "kind": "rich_text",
+      "text": "Ervaring die je voelt.",
+      "image": null,
+      "sort_order": 1360
+    },
+    {
+      "key": "overons.finalCta.title",
+      "label": "Over ons · Final CTA title (HTML)",
+      "kind": "rich_text",
+      "text": "Laten we <em>kennismaken</em>.",
+      "image": null,
+      "sort_order": 1370
+    },
+    {
+      "key": "overons.finalCta.label",
+      "label": "Over ons · Final CTA label",
+      "kind": "text",
+      "text": "Neem contact op",
+      "image": null,
+      "sort_order": 1380
+    },
+    {
+      "key": "diensten.aanpak.body",
+      "label": "Diensten · Aanpak body",
+      "kind": "text",
+      "text": "Elk project begint met luisteren. We verdiepen ons in de locatie, de architectuur en jullie wensen. Vanuit die context bouwen we naar een ontwerp dat klopt.",
+      "image": null,
+      "sort_order": 2000
+    },
+    {
+      "key": "diensten.fase1.title",
+      "label": "Diensten · Fase 1 title",
+      "kind": "text",
+      "text": "Context",
+      "image": null,
+      "sort_order": 2005
+    },
+    {
+      "key": "diensten.fase1.body",
+      "label": "Diensten · Fase 1 body",
+      "kind": "text",
+      "text": "Elk project begint met luisteren. We verdiepen ons in de locatie, de architectuur en de manier waarop jij wilt wonen. Zonder die context geen ontwerp dat klopt.",
+      "image": null,
+      "sort_order": 2010
+    },
+    {
+      "key": "diensten.fase2.title",
+      "label": "Diensten · Fase 2 title",
+      "kind": "text",
+      "text": "Compositie",
+      "image": null,
+      "sort_order": 2015
+    },
+    {
+      "key": "diensten.fase2.body",
+      "label": "Diensten · Fase 2 body",
+      "kind": "text",
+      "text": "Schaal, proportie en materiaalgebruik in balans. We tekenen tot het ritme klopt. Pas dan gaan de eerste stenen om.",
+      "image": null,
+      "sort_order": 2020
+    },
+    {
+      "key": "diensten.fase3.title",
+      "label": "Diensten · Fase 3 title",
+      "kind": "text",
+      "text": "Emotie",
+      "image": null,
+      "sort_order": 2025
+    },
+    {
+      "key": "diensten.fase3.body",
+      "label": "Diensten · Fase 3 body",
+      "kind": "text",
+      "text": "Door licht, textuur en volume orchestreren we een gevoel van thuiskomen. Een woning die werkt, voelt eerst goed voor het iets anders is.",
+      "image": null,
+      "sort_order": 2030
+    },
+    {
+      "key": "diensten.fase4.title",
+      "label": "Diensten · Fase 4 title",
+      "kind": "text",
+      "text": "Ambacht",
+      "image": null,
+      "sort_order": 2035
+    },
+    {
+      "key": "diensten.fase4.body",
+      "label": "Diensten · Fase 4 body",
+      "kind": "text",
+      "text": "Van de eerste steen tot de laatste afwerking: ons eigen team voert uit. Vakmensen die hun werk verstaan en eigenaar zijn van het resultaat.",
+      "image": null,
+      "sort_order": 2040
+    },
+    {
+      "key": "diensten.spec1.title",
+      "label": "Diensten · Specialism 1 title",
+      "kind": "text",
+      "text": "Badkamer renovatie",
+      "image": null,
+      "sort_order": 2045
+    },
+    {
+      "key": "diensten.spec1.desc",
+      "label": "Diensten · Specialism 1 description",
+      "kind": "text",
+      "text": "Eigen sanitairspecialisten, Saninet 3D-ontwerp, premium materialen.",
+      "image": null,
+      "sort_order": 2050
+    },
+    {
+      "key": "diensten.spec1.price",
+      "label": "Diensten · Specialism 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.500",
+      "image": null,
+      "sort_order": 2055
+    },
+    {
+      "key": "diensten.spec2.title",
+      "label": "Diensten · Specialism 2 title",
+      "kind": "text",
+      "text": "Keuken renovatie",
+      "image": null,
+      "sort_order": 2060
+    },
+    {
+      "key": "diensten.spec2.desc",
+      "label": "Diensten · Specialism 2 description",
+      "kind": "text",
+      "text": "Maatwerk ontwerp, apparatuur, werkbladen en installatie inbegrepen.",
+      "image": null,
+      "sort_order": 2065
+    },
+    {
+      "key": "diensten.spec2.price",
+      "label": "Diensten · Specialism 2 price",
+      "kind": "text",
+      "text": "Vanaf €7.500",
+      "image": null,
+      "sort_order": 2070
+    },
+    {
+      "key": "diensten.spec3.title",
+      "label": "Diensten · Specialism 3 title",
+      "kind": "text",
+      "text": "Aanbouw &amp; uitbouw",
+      "image": null,
+      "sort_order": 2075
+    },
+    {
+      "key": "diensten.spec3.desc",
+      "label": "Diensten · Specialism 3 description",
+      "kind": "text",
+      "text": "Uitbouwen, opbouwen en serres, inclusief vergunningstraject.",
+      "image": null,
+      "sort_order": 2080
+    },
+    {
+      "key": "diensten.spec3.price",
+      "label": "Diensten · Specialism 3 price",
+      "kind": "text",
+      "text": "Vanaf €1.800 / m²",
+      "image": null,
+      "sort_order": 2085
+    },
+    {
+      "key": "diensten.spec4.title",
+      "label": "Diensten · Specialism 4 title",
+      "kind": "text",
+      "text": "Volledige woningrenovatie",
+      "image": null,
+      "sort_order": 2090
+    },
+    {
+      "key": "diensten.spec4.desc",
+      "label": "Diensten · Specialism 4 description",
+      "kind": "text",
+      "text": "Van casco tot sleutelklaar: sloop, ruwbouw, afbouw, oplevering.",
+      "image": null,
+      "sort_order": 2095
+    },
+    {
+      "key": "diensten.spec4.price",
+      "label": "Diensten · Specialism 4 price",
+      "kind": "text",
+      "text": "Vanaf €800 / m²",
+      "image": null,
+      "sort_order": 2100
+    },
+    {
+      "key": "diensten.spec5.title",
+      "label": "Diensten · Specialism 5 title",
+      "kind": "text",
+      "text": "Dakwerk",
+      "image": null,
+      "sort_order": 2105
+    },
+    {
+      "key": "diensten.spec5.desc",
+      "label": "Diensten · Specialism 5 description",
+      "kind": "text",
+      "text": "Platte en hellende daken, dakkapellen, isolatie en loodwerk.",
+      "image": null,
+      "sort_order": 2110
+    },
+    {
+      "key": "diensten.spec5.price",
+      "label": "Diensten · Specialism 5 price",
+      "kind": "text",
+      "text": "Vanaf €85 / m²",
+      "image": null,
+      "sort_order": 2115
+    },
+    {
+      "key": "diensten.spec6.title",
+      "label": "Diensten · Specialism 6 title",
+      "kind": "text",
+      "text": "Vloeren",
+      "image": null,
+      "sort_order": 2120
+    },
+    {
+      "key": "diensten.spec6.desc",
+      "label": "Diensten · Specialism 6 description",
+      "kind": "text",
+      "text": "Hout, tegel, natuursteen en gietvloeren, incl. egalisatie en isolatie.",
+      "image": null,
+      "sort_order": 2125
+    },
+    {
+      "key": "diensten.spec6.price",
+      "label": "Diensten · Specialism 6 price",
+      "kind": "text",
+      "text": "Vanaf €55 / m²",
+      "image": null,
+      "sort_order": 2130
+    },
+    {
+      "key": "diensten.spec7.title",
+      "label": "Diensten · Specialism 7 title",
+      "kind": "text",
+      "text": "Schilderwerk",
+      "image": null,
+      "sort_order": 2135
+    },
+    {
+      "key": "diensten.spec7.desc",
+      "label": "Diensten · Specialism 7 description",
+      "kind": "text",
+      "text": "Binnen- en buitenschilderwerk met hoogwaardige verven, behang en stuc.",
+      "image": null,
+      "sort_order": 2140
+    },
+    {
+      "key": "diensten.spec7.price",
+      "label": "Diensten · Specialism 7 price",
+      "kind": "text",
+      "text": "Vanaf €38 / m²",
+      "image": null,
+      "sort_order": 2145
+    },
+    {
+      "key": "diensten.spec8.title",
+      "label": "Diensten · Specialism 8 title",
+      "kind": "text",
+      "text": "Onderhoud",
+      "image": null,
+      "sort_order": 2150
+    },
+    {
+      "key": "diensten.spec8.desc",
+      "label": "Diensten · Specialism 8 description",
+      "kind": "text",
+      "text": "Periodiek onderhoud, kleine reparaties en servicecontracten.",
+      "image": null,
+      "sort_order": 2155
+    },
+    {
+      "key": "diensten.spec8.price",
+      "label": "Diensten · Specialism 8 price",
+      "kind": "text",
+      "text": "Vanaf €65 / uur",
+      "image": null,
+      "sort_order": 2160
+    },
+    {
+      "key": "prijzen.tier1.title",
+      "label": "Prijzen · Tier 1 title (HTML)",
+      "kind": "rich_text",
+      "text": "Basis",
+      "image": null,
+      "sort_order": 2165
+    },
+    {
+      "key": "prijzen.tier1.range",
+      "label": "Prijzen · Tier 1 range",
+      "kind": "text",
+      "text": "Tussen €500 en €5.000 · 1 tot 5 werkdagen",
+      "image": null,
+      "sort_order": 2170
+    },
+    {
+      "key": "prijzen.tier1.price",
+      "label": "Prijzen · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €500",
+      "image": null,
+      "sort_order": 2175
+    },
+    {
+      "key": "prijzen.tier1.feature1",
+      "label": "Prijzen · Tier 1 feature 1",
+      "kind": "text",
+      "text": "Herstel houtrot, kit- en voegwerk",
+      "image": null,
+      "sort_order": 2180
+    },
+    {
+      "key": "prijzen.tier1.feature2",
+      "label": "Prijzen · Tier 1 feature 2",
+      "kind": "text",
+      "text": "Kleine loodgieter- of elektraklus",
+      "image": null,
+      "sort_order": 2185
+    },
+    {
+      "key": "prijzen.tier1.feature3",
+      "label": "Prijzen · Tier 1 feature 3",
+      "kind": "text",
+      "text": "Buitenschilderwerk per gevel",
+      "image": null,
+      "sort_order": 2190
+    },
+    {
+      "key": "prijzen.tier1.feature4",
+      "label": "Prijzen · Tier 1 feature 4",
+      "kind": "text",
+      "text": "Vervangen van enkele kozijnen of deuren",
+      "image": null,
+      "sort_order": 2195
+    },
+    {
+      "key": "prijzen.tier1.feature5",
+      "label": "Prijzen · Tier 1 feature 5",
+      "kind": "text",
+      "text": "Afvoer puin en eindschoonmaak",
+      "image": null,
+      "sort_order": 2200
+    },
+    {
+      "key": "prijzen.tier1.cta",
+      "label": "Prijzen · Tier 1 CTA label",
+      "kind": "text",
+      "text": "Plan een opname",
+      "image": null,
+      "sort_order": 2205
+    },
+    {
+      "key": "prijzen.tier2.title",
+      "label": "Prijzen · Tier 2 title (HTML)",
+      "kind": "rich_text",
+      "text": "Standaard <span style=\"font-family: var(--body); font-weight: 500; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-left: 8px; vertical-align: middle;\">Meest gekozen</span>",
+      "image": null,
+      "sort_order": 2210
+    },
+    {
+      "key": "prijzen.tier2.range",
+      "label": "Prijzen · Tier 2 range",
+      "kind": "text",
+      "text": "Tussen €5.000 en €15.000 · 1 tot 3 weken",
+      "image": null,
+      "sort_order": 2215
+    },
+    {
+      "key": "prijzen.tier2.price",
+      "label": "Prijzen · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €5.000",
+      "image": null,
+      "sort_order": 2220
+    },
+    {
+      "key": "prijzen.tier2.feature1",
+      "label": "Prijzen · Tier 2 feature 1",
+      "kind": "text",
+      "text": "Sloop, afvoer en bouwkundige voorbereiding",
+      "image": null,
+      "sort_order": 2225
+    },
+    {
+      "key": "prijzen.tier2.feature2",
+      "label": "Prijzen · Tier 2 feature 2",
+      "kind": "text",
+      "text": "Nieuwe leidingen elektra en water",
+      "image": null,
+      "sort_order": 2230
+    },
+    {
+      "key": "prijzen.tier2.feature3",
+      "label": "Prijzen · Tier 2 feature 3",
+      "kind": "text",
+      "text": "Tegelwerk vloer en wand",
+      "image": null,
+      "sort_order": 2235
+    },
+    {
+      "key": "prijzen.tier2.feature4",
+      "label": "Prijzen · Tier 2 feature 4",
+      "kind": "text",
+      "text": "Plaatsing keuken of sanitair",
+      "image": null,
+      "sort_order": 2240
+    },
+    {
+      "key": "prijzen.tier2.feature5",
+      "label": "Prijzen · Tier 2 feature 5",
+      "kind": "text",
+      "text": "Schilder- en stucwerk",
+      "image": null,
+      "sort_order": 2245
+    },
+    {
+      "key": "prijzen.tier2.feature6",
+      "label": "Prijzen · Tier 2 feature 6",
+      "kind": "text",
+      "text": "Eindcontrole en oplevering",
+      "image": null,
+      "sort_order": 2250
+    },
+    {
+      "key": "prijzen.tier2.cta",
+      "label": "Prijzen · Tier 2 CTA label",
+      "kind": "text",
+      "text": "Bespreek je plan",
+      "image": null,
+      "sort_order": 2255
+    },
+    {
+      "key": "prijzen.tier3.title",
+      "label": "Prijzen · Tier 3 title (HTML)",
+      "kind": "rich_text",
+      "text": "Uitgebreid",
+      "image": null,
+      "sort_order": 2260
+    },
+    {
+      "key": "prijzen.tier3.range",
+      "label": "Prijzen · Tier 3 range",
+      "kind": "text",
+      "text": "Tussen €15.000 en €50.000 · 4 tot 12 weken",
+      "image": null,
+      "sort_order": 2265
+    },
+    {
+      "key": "prijzen.tier3.price",
+      "label": "Prijzen · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €15.000",
+      "image": null,
+      "sort_order": 2270
+    },
+    {
+      "key": "prijzen.tier3.feature1",
+      "label": "Prijzen · Tier 3 feature 1",
+      "kind": "text",
+      "text": "Indelingswijziging en lichte constructie",
+      "image": null,
+      "sort_order": 2275
+    },
+    {
+      "key": "prijzen.tier3.feature2",
+      "label": "Prijzen · Tier 3 feature 2",
+      "kind": "text",
+      "text": "Complete keuken én badkamer",
+      "image": null,
+      "sort_order": 2280
+    },
+    {
+      "key": "prijzen.tier3.feature3",
+      "label": "Prijzen · Tier 3 feature 3",
+      "kind": "text",
+      "text": "Vloer- en wandafwerking volledig nieuw",
+      "image": null,
+      "sort_order": 2285
+    },
+    {
+      "key": "prijzen.tier3.feature4",
+      "label": "Prijzen · Tier 3 feature 4",
+      "kind": "text",
+      "text": "Nieuwe groepenkast en bedrading",
+      "image": null,
+      "sort_order": 2290
+    },
+    {
+      "key": "prijzen.tier3.feature5",
+      "label": "Prijzen · Tier 3 feature 5",
+      "kind": "text",
+      "text": "Vloerverwarming en isolatie",
+      "image": null,
+      "sort_order": 2295
+    },
+    {
+      "key": "prijzen.tier3.feature6",
+      "label": "Prijzen · Tier 3 feature 6",
+      "kind": "text",
+      "text": "Eigen projectleider gedurende doorlooptijd",
+      "image": null,
+      "sort_order": 2300
+    },
+    {
+      "key": "prijzen.tier3.cta",
+      "label": "Prijzen · Tier 3 CTA label",
+      "kind": "text",
+      "text": "Vraag persoonlijk advies",
+      "image": null,
+      "sort_order": 2305
+    },
+    {
+      "key": "prijzen.tier4.title",
+      "label": "Prijzen · Tier 4 title (HTML)",
+      "kind": "rich_text",
+      "text": "Maatwerk",
+      "image": null,
+      "sort_order": 2310
+    },
+    {
+      "key": "prijzen.tier4.range",
+      "label": "Prijzen · Tier 4 range",
+      "kind": "text",
+      "text": "Vanaf €50.000 · 3 tot 9 maanden",
+      "image": null,
+      "sort_order": 2315
+    },
+    {
+      "key": "prijzen.tier4.price",
+      "label": "Prijzen · Tier 4 price",
+      "kind": "text",
+      "text": "€50.000+",
+      "image": null,
+      "sort_order": 2320
+    },
+    {
+      "key": "prijzen.tier4.feature1",
+      "label": "Prijzen · Tier 4 feature 1",
+      "kind": "text",
+      "text": "Architect, constructeur en aannemer in één traject",
+      "image": null,
+      "sort_order": 2325
+    },
+    {
+      "key": "prijzen.tier4.feature2",
+      "label": "Prijzen · Tier 4 feature 2",
+      "kind": "text",
+      "text": "Vergunningstraject bij de gemeente",
+      "image": null,
+      "sort_order": 2330
+    },
+    {
+      "key": "prijzen.tier4.feature3",
+      "label": "Prijzen · Tier 4 feature 3",
+      "kind": "text",
+      "text": "Grootschalige aan- of opbouw",
+      "image": null,
+      "sort_order": 2335
+    },
+    {
+      "key": "prijzen.tier4.feature4",
+      "label": "Prijzen · Tier 4 feature 4",
+      "kind": "text",
+      "text": "Topafwerking en exclusieve materialen",
+      "image": null,
+      "sort_order": 2340
+    },
+    {
+      "key": "prijzen.tier4.feature5",
+      "label": "Prijzen · Tier 4 feature 5",
+      "kind": "text",
+      "text": "Domotica en duurzame installaties",
+      "image": null,
+      "sort_order": 2345
+    },
+    {
+      "key": "prijzen.tier4.feature6",
+      "label": "Prijzen · Tier 4 feature 6",
+      "kind": "text",
+      "text": "Nazorg en garantieboek bij oplevering",
+      "image": null,
+      "sort_order": 2350
+    },
+    {
+      "key": "prijzen.tier4.cta",
+      "label": "Prijzen · Tier 4 CTA label",
+      "kind": "text",
+      "text": "Ontvang een maatwerk voorstel",
+      "image": null,
+      "sort_order": 2355
+    },
+    {
+      "key": "prijzen.faq1.q",
+      "label": "Prijzen · FAQ 1 question",
+      "kind": "text",
+      "text": "Hoe weet ik in welke categorie mijn project valt?",
+      "image": null,
+      "sort_order": 2360
+    },
+    {
+      "key": "prijzen.faq1.a",
+      "label": "Prijzen · FAQ 1 answer",
+      "kind": "text",
+      "text": "Tijdens het kennismakingsgesprek brengen we je wensen in kaart en geven we direct een eerste indicatie. Vaak hoor je binnen een half uur in welke richting je moet denken.",
+      "image": null,
+      "sort_order": 2365
+    },
+    {
+      "key": "prijzen.faq2.q",
+      "label": "Prijzen · FAQ 2 question",
+      "kind": "text",
+      "text": "Krijg ik echt een vaste prijs?",
+      "image": null,
+      "sort_order": 2370
+    },
+    {
+      "key": "prijzen.faq2.a",
+      "label": "Prijzen · FAQ 2 answer",
+      "kind": "text",
+      "text": "Ja. Na het definitieve ontwerp ontvang je een vaste prijsopgave. Meerwerk gebeurt alleen na schriftelijke goedkeuring en blijft uitzondering, geen regel.",
+      "image": null,
+      "sort_order": 2375
+    },
+    {
+      "key": "prijzen.faq3.q",
+      "label": "Prijzen · FAQ 3 question",
+      "kind": "text",
+      "text": "Wat zit er bij de prijs inbegrepen?",
+      "image": null,
+      "sort_order": 2380
+    },
+    {
+      "key": "prijzen.faq3.a",
+      "label": "Prijzen · FAQ 3 answer",
+      "kind": "text",
+      "text": "Arbeid, materiaal, projectleiding, oplevering en BTW. Vergunningleges en eventuele constructeurskosten worden apart genoemd in de offerte.",
+      "image": null,
+      "sort_order": 2385
+    },
+    {
+      "key": "prijzen.faq4.q",
+      "label": "Prijzen · FAQ 4 question",
+      "kind": "text",
+      "text": "Werken jullie met een betaalschema?",
+      "image": null,
+      "sort_order": 2390
+    },
+    {
+      "key": "prijzen.faq4.a",
+      "label": "Prijzen · FAQ 4 answer",
+      "kind": "text",
+      "text": "Ja, meestal in 3 tot 5 termijnen gekoppeld aan opleverfases. Geen vooruitbetaling van het volledige bedrag.",
+      "image": null,
+      "sort_order": 2395
+    },
+    {
+      "key": "prijzen.faq5.q",
+      "label": "Prijzen · FAQ 5 question",
+      "kind": "text",
+      "text": "Krijg ik garantie op het werk?",
+      "image": null,
+      "sort_order": 2400
+    },
+    {
+      "key": "prijzen.faq5.a",
+      "label": "Prijzen · FAQ 5 answer",
+      "kind": "text",
+      "text": "Standaard 5 jaar garantie op constructieve onderdelen en 2 jaar op afwerking. Sanitaironderdelen volgen de fabrikantgarantie. Bij Maatwerk-projecten ontvang je een garantieboek bij oplevering.",
+      "image": null,
+      "sort_order": 2405
+    },
+    {
+      "key": "prijzen.disclaimer",
+      "label": "Prijzen · Disclaimer",
+      "kind": "text",
+      "text": "Indicatie excl. BTW. Werkelijke kosten hangen af van bouwkundige staat, vergunningen, materiaalkeuzes en regio.",
+      "image": null,
+      "sort_order": 2410
+    },
+    {
+      "key": "projecten.card1.name",
+      "label": "Projecten · Card 1 name",
+      "kind": "text",
+      "text": "Complete renovatie",
+      "image": null,
+      "sort_order": 2415
+    },
+    {
+      "key": "projecten.card1.image",
+      "label": "Projecten · Card 1 image",
+      "kind": "image",
+      "text": null,
+      "image": "https://images.unsplash.com/photo-1710883734891-93709398496d?w=900&q=80&auto=format&fit=crop",
+      "sort_order": 2420
+    },
+    {
+      "key": "projecten.card2.name",
+      "label": "Projecten · Card 2 name",
+      "kind": "text",
+      "text": "Luxe afwerking",
+      "image": null,
+      "sort_order": 2425
+    },
+    {
+      "key": "projecten.card2.image",
+      "label": "Projecten · Card 2 image",
+      "kind": "image",
+      "text": null,
+      "image": "https://images.unsplash.com/photo-1708111776235-990d08c84658?w=900&q=80&auto=format&fit=crop",
+      "sort_order": 2430
+    },
+    {
+      "key": "projecten.card3.name",
+      "label": "Projecten · Card 3 name",
+      "kind": "text",
+      "text": "Totaalverbouwing",
+      "image": null,
+      "sort_order": 2435
+    },
+    {
+      "key": "projecten.card3.image",
+      "label": "Projecten · Card 3 image",
+      "kind": "image",
+      "text": null,
+      "image": "https://images.unsplash.com/photo-1746439318854-4a8bc02a03ba?w=900&q=80&auto=format&fit=crop",
+      "sort_order": 2440
+    },
+    {
+      "key": "projecten.card4.name",
+      "label": "Projecten · Card 4 name",
+      "kind": "text",
+      "text": "Luxe dubbel penthouse",
+      "image": null,
+      "sort_order": 2445
+    },
+    {
+      "key": "projecten.card4.image",
+      "label": "Projecten · Card 4 image",
+      "kind": "image",
+      "text": null,
+      "image": "https://images.unsplash.com/photo-1521783593447-5702b9bfd267?w=900&q=80&auto=format&fit=crop",
+      "sort_order": 2450
+    },
+    {
+      "key": "projecten.card5.name",
+      "label": "Projecten · Card 5 name",
+      "kind": "text",
+      "text": "Drielaagse transformatie",
+      "image": null,
+      "sort_order": 2455
+    },
+    {
+      "key": "projecten.card5.image",
+      "label": "Projecten · Card 5 image",
+      "kind": "image",
+      "text": null,
+      "image": "https://images.unsplash.com/photo-1601086540476-7d9fa9dd6023?w=900&q=80&auto=format&fit=crop",
+      "sort_order": 2460
+    },
+    {
+      "key": "projecten.desc1.eyebrow",
+      "label": "Projecten · Description 1 eyebrow",
+      "kind": "text",
+      "text": "Verbouwing",
+      "image": null,
+      "sort_order": 2465
+    },
+    {
+      "key": "projecten.desc1.title",
+      "label": "Projecten · Description 1 title",
+      "kind": "text",
+      "text": "Complete renovatie",
+      "image": null,
+      "sort_order": 2470
+    },
+    {
+      "key": "projecten.desc1.body",
+      "label": "Projecten · Description 1 body",
+      "kind": "text",
+      "text": "Van historisch casco tot modern meesterwerk. Een volledige transformatie met behoud van authentiek karakter.",
+      "image": null,
+      "sort_order": 2475
+    },
+    {
+      "key": "projecten.desc2.eyebrow",
+      "label": "Projecten · Description 2 eyebrow",
+      "kind": "text",
+      "text": "Verbouwing",
+      "image": null,
+      "sort_order": 2480
+    },
+    {
+      "key": "projecten.desc2.title",
+      "label": "Projecten · Description 2 title",
+      "kind": "text",
+      "text": "Luxe afwerking",
+      "image": null,
+      "sort_order": 2485
+    },
+    {
+      "key": "projecten.desc2.body",
+      "label": "Projecten · Description 2 body",
+      "kind": "text",
+      "text": "Panoramisch uitzicht verdient een interieur dat daaraan evenredig is. Strak, warm en tijdloos.",
+      "image": null,
+      "sort_order": 2490
+    },
+    {
+      "key": "projecten.desc3.eyebrow",
+      "label": "Projecten · Description 3 eyebrow",
+      "kind": "text",
+      "text": "Verbouwing",
+      "image": null,
+      "sort_order": 2495
+    },
+    {
+      "key": "projecten.desc3.title",
+      "label": "Projecten · Description 3 title",
+      "kind": "text",
+      "text": "Totaalverbouwing",
+      "image": null,
+      "sort_order": 2500
+    },
+    {
+      "key": "projecten.desc3.body",
+      "label": "Projecten · Description 3 body",
+      "kind": "text",
+      "text": "Een ruime villa volledig getransformeerd met oog voor licht, ruimte en duurzaamheid.",
+      "image": null,
+      "sort_order": 2505
+    },
+    {
+      "key": "projecten.desc4.eyebrow",
+      "label": "Projecten · Description 4 eyebrow",
+      "kind": "text",
+      "text": "Verbouwing",
+      "image": null,
+      "sort_order": 2510
+    },
+    {
+      "key": "projecten.desc4.title",
+      "label": "Projecten · Description 4 title",
+      "kind": "text",
+      "text": "Luxe dubbel penthouse",
+      "image": null,
+      "sort_order": 2515
+    },
+    {
+      "key": "projecten.desc4.body",
+      "label": "Projecten · Description 4 body",
+      "kind": "text",
+      "text": "Twee verdiepingen samengevoegd tot één spectaculaire woonervaring met adembenemende afwerking.",
+      "image": null,
+      "sort_order": 2520
+    },
+    {
+      "key": "projecten.desc5.eyebrow",
+      "label": "Projecten · Description 5 eyebrow",
+      "kind": "text",
+      "text": "Verbouwing",
+      "image": null,
+      "sort_order": 2525
+    },
+    {
+      "key": "projecten.desc5.title",
+      "label": "Projecten · Description 5 title",
+      "kind": "text",
+      "text": "Drielaagse transformatie",
+      "image": null,
+      "sort_order": 2530
+    },
+    {
+      "key": "projecten.desc5.body",
+      "label": "Projecten · Description 5 body",
+      "kind": "text",
+      "text": "Een indrukwekkend meervoudig appartement omgetoverd tot een architecturaal juweel met oog voor detail.",
+      "image": null,
+      "sort_order": 2535
+    },
+    {
+      "key": "overons.story.body1",
+      "label": "Over ons · Story paragraph 1",
+      "kind": "text",
+      "text": "Woonklasse is een jong bedrijf, maar wij zijn allesbehalve nieuw in het vak. We zijn een hechte groep vakmensen die ieder 15 tot 20 jaar ervaring meebrengt in bouw en sanitair.",
+      "image": null,
+      "sort_order": 2540
+    },
+    {
+      "key": "overons.story.body2",
+      "label": "Over ons · Story paragraph 2",
+      "kind": "text",
+      "text": "In die jaren bouwden we een sterk netwerk op. We werken met onze eigen leveranciers en eigen vakmensen, dus geen tussenpersonen en geen opslag. Dat betekent korte lijnen, een fijne samenwerking en scherpe prijzen, van begin tot eind.",
+      "image": null,
+      "sort_order": 2545
+    },
+    {
+      "key": "overons.story.body3",
+      "label": "Over ons · Story paragraph 3",
+      "kind": "text",
+      "text": "Een perfect eindresultaat staat bij ons op één. En jou ontzorgen is ons doel: je krijgt één persoonlijk aanspreekpunt dat je kent en gewoon kunt bellen. Jij droomt, wij regelen de rest.",
+      "image": null,
+      "sort_order": 2550
+    },
+    {
+      "key": "overons.story.cta",
+      "label": "Over ons · Story CTA label",
+      "kind": "text",
+      "text": "Neem vrijblijvend contact op",
+      "image": null,
+      "sort_order": 2555
+    },
+    {
+      "key": "overons.waarde1.title",
+      "label": "Over ons · Waarde 1 title",
+      "kind": "text",
+      "text": "Ervaren vakmensen",
+      "image": null,
+      "sort_order": 2560
+    },
+    {
+      "key": "overons.waarde1.body",
+      "label": "Over ons · Waarde 1 body",
+      "kind": "text",
+      "text": "Een hechte groep met ieder 15 tot 20 jaar ervaring in bouw en sanitair. Mensen die weten wat ze doen, en wat er mis kan gaan.",
+      "image": null,
+      "sort_order": 2565
+    },
+    {
+      "key": "overons.waarde2.title",
+      "label": "Over ons · Waarde 2 title",
+      "kind": "text",
+      "text": "Eigen leveranciers",
+      "image": null,
+      "sort_order": 2570
+    },
+    {
+      "key": "overons.waarde2.body",
+      "label": "Over ons · Waarde 2 body",
+      "kind": "text",
+      "text": "In de loop der jaren bouwden we een sterk netwerk op. Eigen leveranciers, geen tussenpersonen en geen opslag, dus scherpe prijzen.",
+      "image": null,
+      "sort_order": 2575
+    },
+    {
+      "key": "overons.waarde3.title",
+      "label": "Over ons · Waarde 3 title",
+      "kind": "text",
+      "text": "Persoonlijk aanspreekpunt",
+      "image": null,
+      "sort_order": 2580
+    },
+    {
+      "key": "overons.waarde3.body",
+      "label": "Over ons · Waarde 3 body",
+      "kind": "text",
+      "text": "Eén vast contactpersoon van begin tot eind. Iemand die je kent en die je gewoon kunt bellen.",
+      "image": null,
+      "sort_order": 2585
+    },
+    {
+      "key": "overons.waarde4.title",
+      "label": "Over ons · Waarde 4 title",
+      "kind": "text",
+      "text": "Ontzorgen",
+      "image": null,
+      "sort_order": 2590
+    },
+    {
+      "key": "overons.waarde4.body",
+      "label": "Over ons · Waarde 4 body",
+      "kind": "text",
+      "text": "Jou ontzorgen is ons doel. We nemen het hele traject uit handen, jij hoeft je nergens druk om te maken.",
+      "image": null,
+      "sort_order": 2595
+    },
+    {
+      "key": "overons.waarde5.title",
+      "label": "Over ons · Waarde 5 title",
+      "kind": "text",
+      "text": "Perfect eindresultaat",
+      "image": null,
+      "sort_order": 2600
+    },
+    {
+      "key": "overons.waarde5.body",
+      "label": "Over ons · Waarde 5 body",
+      "kind": "text",
+      "text": "Een perfect eindresultaat staat bij ons op één. We leggen de lat hoog, voor onszelf en voor jouw project.",
+      "image": null,
+      "sort_order": 2605
+    },
+    {
+      "key": "overons.stat1.number",
+      "label": "Over ons · Stat 1 number",
+      "kind": "text",
+      "text": "15-20",
+      "image": null,
+      "sort_order": 2610
+    },
+    {
+      "key": "overons.stat1.label",
+      "label": "Over ons · Stat 1 label",
+      "kind": "text",
+      "text": "Jaar ervaring per vakman",
+      "image": null,
+      "sort_order": 2615
+    },
+    {
+      "key": "overons.stat2.number",
+      "label": "Over ons · Stat 2 number",
+      "kind": "text",
+      "text": "100%",
+      "image": null,
+      "sort_order": 2620
+    },
+    {
+      "key": "overons.stat2.label",
+      "label": "Over ons · Stat 2 label",
+      "kind": "text",
+      "text": "In eigen beheer",
+      "image": null,
+      "sort_order": 2625
+    },
+    {
+      "key": "overons.stat3.number",
+      "label": "Over ons · Stat 3 number",
+      "kind": "text",
+      "text": "1",
+      "image": null,
+      "sort_order": 2630
+    },
+    {
+      "key": "overons.stat3.label",
+      "label": "Over ons · Stat 3 label",
+      "kind": "text",
+      "text": "Vast aanspreekpunt",
+      "image": null,
+      "sort_order": 2635
+    },
+    {
+      "key": "overons.stat4.number",
+      "label": "Over ons · Stat 4 number",
+      "kind": "text",
+      "text": "0",
+      "image": null,
+      "sort_order": 2640
+    },
+    {
+      "key": "overons.stat4.label",
+      "label": "Over ons · Stat 4 label",
+      "kind": "text",
+      "text": "Tussenpersonen",
+      "image": null,
+      "sort_order": 2645
+    },
+    {
+      "key": "contact.eyebrow",
+      "label": "Contact · Eyebrow",
+      "kind": "text",
+      "text": "Contact",
+      "image": null,
+      "sort_order": 2650
+    },
+    {
+      "key": "contact.title",
+      "label": "Contact · Page title",
+      "kind": "text",
+      "text": "Start uw project.",
+      "image": null,
+      "sort_order": 2655
+    },
+    {
+      "key": "contact.subtitle",
+      "label": "Contact · Subtitle",
+      "kind": "text",
+      "text": "Vertel ons over uw plannen en ontvang binnen 48 uur een maatwerk voorstel. Elk gesprek begint met luisteren.",
+      "image": null,
+      "sort_order": 2660
+    },
+    {
+      "key": "contact.openingstijden",
+      "label": "Contact · Opening hours",
+      "kind": "text",
+      "text": "Maandag – vrijdag 08:00 – 17:00<br/>Zaterdag op afspraak",
+      "image": null,
+      "sort_order": 2665
+    },
+    {
+      "key": "contact.form.title",
+      "label": "Contact · Form heading",
+      "kind": "text",
+      "text": "Maatwerk voorstel aanvragen",
+      "image": null,
+      "sort_order": 2670
+    },
+    {
+      "key": "contact.form.sub",
+      "label": "Contact · Form sub",
+      "kind": "text",
+      "text": "Vul onderstaand formulier in. We reageren binnen 48 uur met een vrijblijvende inschatting.",
+      "image": null,
+      "sort_order": 2675
+    },
+    {
+      "key": "diensten.item1",
+      "label": "Diensten · List item 1",
+      "kind": "text",
+      "text": "Loodgieterswerk",
+      "image": null,
+      "sort_order": 2680
+    },
+    {
+      "key": "diensten.item2",
+      "label": "Diensten · List item 2",
+      "kind": "text",
+      "text": "Timmerwerk",
+      "image": null,
+      "sort_order": 2685
+    },
+    {
+      "key": "diensten.item3",
+      "label": "Diensten · List item 3",
+      "kind": "text",
+      "text": "Elektra",
+      "image": null,
+      "sort_order": 2690
+    },
+    {
+      "key": "diensten.item4",
+      "label": "Diensten · List item 4",
+      "kind": "text",
+      "text": "Stucwerk",
+      "image": null,
+      "sort_order": 2695
+    },
+    {
+      "key": "diensten.item5",
+      "label": "Diensten · List item 5",
+      "kind": "text",
+      "text": "Schilderwerk",
+      "image": null,
+      "sort_order": 2700
+    },
+    {
+      "key": "diensten.item6",
+      "label": "Diensten · List item 6",
+      "kind": "text",
+      "text": "Sanitair en badkamers",
+      "image": null,
+      "sort_order": 2705
+    },
+    {
+      "key": "diensten.item7",
+      "label": "Diensten · List item 7",
+      "kind": "text",
+      "text": "Maatwerk",
+      "image": null,
+      "sort_order": 2710
+    },
+    {
+      "key": "producten.item1",
+      "label": "Producten · List item 1",
+      "kind": "text",
+      "text": "Veranda's",
+      "image": null,
+      "sort_order": 2715
+    },
+    {
+      "key": "producten.item2",
+      "label": "Producten · List item 2",
+      "kind": "text",
+      "text": "Plissés",
+      "image": null,
+      "sort_order": 2720
+    },
+    {
+      "key": "producten.item3",
+      "label": "Producten · List item 3",
+      "kind": "text",
+      "text": "Vlonders",
+      "image": null,
+      "sort_order": 2725
+    },
+    {
+      "key": "producten.item4",
+      "label": "Producten · List item 4",
+      "kind": "text",
+      "text": "Ramen en deurkozijnen",
+      "image": null,
+      "sort_order": 2730
+    },
+    {
+      "key": "producten.item5",
+      "label": "Producten · List item 5",
+      "kind": "text",
+      "text": "Horren",
+      "image": null,
+      "sort_order": 2735
+    },
+    {
+      "key": "producten.item6",
+      "label": "Producten · List item 6",
+      "kind": "text",
+      "text": "Meubels",
+      "image": null,
+      "sort_order": 2740
+    },
+    {
+      "key": "promises.item1.title",
+      "label": "Promises · Item 1 title",
+      "kind": "text",
+      "text": "Scherpe prijzen, geen tussenpersonen",
+      "image": null,
+      "sort_order": 2745
+    },
+    {
+      "key": "promises.item1.body",
+      "label": "Promises · Item 1 body",
+      "kind": "text",
+      "text": "Vaste leveranciers voor materialen en sanitair. Geen opslag.",
+      "image": null,
+      "sort_order": 2750
+    },
+    {
+      "key": "promises.item2.title",
+      "label": "Promises · Item 2 title",
+      "kind": "text",
+      "text": "Eén vast aanspreekpunt",
+      "image": null,
+      "sort_order": 2755
+    },
+    {
+      "key": "promises.item2.body",
+      "label": "Promises · Item 2 body",
+      "kind": "text",
+      "text": "Iemand die je kent en gewoon kunt bellen, van offerte tot oplevering.",
+      "image": null,
+      "sort_order": 2760
+    },
+    {
+      "key": "promises.item3.title",
+      "label": "Promises · Item 3 title",
+      "kind": "text",
+      "text": "15+ jaar ervaring",
+      "image": null,
+      "sort_order": 2765
+    },
+    {
+      "key": "promises.item3.body",
+      "label": "Promises · Item 3 body",
+      "kind": "text",
+      "text": "Vakmensen die weten wat ze doen, en wat er mis kan gaan.",
+      "image": null,
+      "sort_order": 2770
+    },
+    {
+      "key": "promises.item4.title",
+      "label": "Promises · Item 4 title",
+      "kind": "text",
+      "text": "Altijd op tijd opgeleverd",
+      "image": null,
+      "sort_order": 2775
+    },
+    {
+      "key": "promises.item4.body",
+      "label": "Promises · Item 4 body",
+      "kind": "text",
+      "text": "Vaste prijs, vaste planning. Bewezen door 200+ projecten.",
+      "image": null,
+      "sort_order": 2780
+    },
+    {
+      "key": "work.tile1.image",
+      "label": "Work · Tile 1 image",
+      "kind": "image",
+      "text": null,
+      "image": "assets/badkamer-vleuten.jpg",
+      "sort_order": 2785
+    },
+    {
+      "key": "work.tile1.tag",
+      "label": "Work · Tile 1 tag",
+      "kind": "text",
+      "text": "Complete badkamerrenovatie",
+      "image": null,
+      "sort_order": 2790
+    },
+    {
+      "key": "work.tile1.name",
+      "label": "Work · Tile 1 name",
+      "kind": "text",
+      "text": "Vleuten",
+      "image": null,
+      "sort_order": 2795
+    },
+    {
+      "key": "work.tile2.image",
+      "label": "Work · Tile 2 image",
+      "kind": "image",
+      "text": null,
+      "image": "assets/badkamer-vleuten-wastafel.jpg",
+      "sort_order": 2800
+    },
+    {
+      "key": "work.tile2.tag",
+      "label": "Work · Tile 2 tag",
+      "kind": "text",
+      "text": "Detail",
+      "image": null,
+      "sort_order": 2805
+    },
+    {
+      "key": "work.tile2.name",
+      "label": "Work · Tile 2 name",
+      "kind": "text",
+      "text": "Maatwerk wastafel",
+      "image": null,
+      "sort_order": 2810
+    },
+    {
+      "key": "work.tile3.image",
+      "label": "Work · Tile 3 image",
+      "kind": "image",
+      "text": null,
+      "image": "assets/badkamer-vleuten-2.jpg",
+      "sort_order": 2815
+    },
+    {
+      "key": "work.tile3.tag",
+      "label": "Work · Tile 3 tag",
+      "kind": "text",
+      "text": "Detail",
+      "image": null,
+      "sort_order": 2820
+    },
+    {
+      "key": "work.tile3.name",
+      "label": "Work · Tile 3 name",
+      "kind": "text",
+      "text": "Inloopdouche",
+      "image": null,
+      "sort_order": 2825
+    },
+    {
+      "key": "work.tile4.image",
+      "label": "Work · Tile 4 image",
+      "kind": "image",
+      "text": null,
+      "image": "https://images.unsplash.com/photo-1620626011761-996317b8d101?w=900&q=80&auto=format&fit=crop",
+      "sort_order": 2830
+    },
+    {
+      "key": "work.tile4.tag",
+      "label": "Work · Tile 4 tag",
+      "kind": "text",
+      "text": "Badkamerrenovatie",
+      "image": null,
+      "sort_order": 2835
+    },
+    {
+      "key": "work.tile4.name",
+      "label": "Work · Tile 4 name",
+      "kind": "text",
+      "text": "Luxe badkamer",
+      "image": null,
+      "sort_order": 2840
+    },
+    {
+      "key": "work.tile5.image",
+      "label": "Work · Tile 5 image",
+      "kind": "image",
+      "text": null,
+      "image": "https://images.unsplash.com/photo-1601086540476-7d9fa9dd6023?w=900&q=80&auto=format&fit=crop",
+      "sort_order": 2845
+    },
+    {
+      "key": "work.tile5.tag",
+      "label": "Work · Tile 5 tag",
+      "kind": "text",
+      "text": "Totaalrenovatie",
+      "image": null,
+      "sort_order": 2850
+    },
+    {
+      "key": "work.tile5.name",
+      "label": "Work · Tile 5 name",
+      "kind": "text",
+      "text": "Woningverbouwing",
+      "image": null,
+      "sort_order": 2855
+    },
+    {
+      "key": "work.tile6.image",
+      "label": "Work · Tile 6 image",
+      "kind": "image",
+      "text": null,
+      "image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=900&q=80&auto=format&fit=crop",
+      "sort_order": 2860
+    },
+    {
+      "key": "work.tile6.tag",
+      "label": "Work · Tile 6 tag",
+      "kind": "text",
+      "text": "Sanitair",
+      "image": null,
+      "sort_order": 2865
+    },
+    {
+      "key": "work.tile6.name",
+      "label": "Work · Tile 6 name",
+      "kind": "text",
+      "text": "Moderne badkamer",
+      "image": null,
+      "sort_order": 2870
+    },
+    {
+      "key": "saninet.card1.image",
+      "label": "Saninet · Card 1 image",
+      "kind": "image",
+      "text": null,
+      "image": "assets/saninet-plattegrond.jpg",
+      "sort_order": 2875
+    },
+    {
+      "key": "saninet.card1.caption",
+      "label": "Saninet · Card 1 caption",
+      "kind": "text",
+      "text": "Exacte plattegrond",
+      "image": null,
+      "sort_order": 2880
+    },
+    {
+      "key": "saninet.card2.image",
+      "label": "Saninet · Card 2 image",
+      "kind": "image",
+      "text": null,
+      "image": "assets/saninet-3d.jpg",
+      "sort_order": 2885
+    },
+    {
+      "key": "saninet.card2.caption",
+      "label": "Saninet · Card 2 caption",
+      "kind": "text",
+      "text": "Jouw badkamer in 3D",
+      "image": null,
+      "sort_order": 2890
+    },
+    {
+      "key": "saninet.card3.image",
+      "label": "Saninet · Card 3 image",
+      "kind": "image",
+      "text": null,
+      "image": "https://images.unsplash.com/photo-1746439318854-4a8bc02a03ba?w=900&q=80&auto=format&fit=crop",
+      "sort_order": 2895
+    },
+    {
+      "key": "saninet.card3.caption",
+      "label": "Saninet · Card 3 caption",
+      "kind": "text",
+      "text": "Het eindresultaat",
+      "image": null,
+      "sort_order": 2900
+    },
+    {
+      "key": "diensten.split.image",
+      "label": "Diensten · Split image (homepage)",
+      "kind": "image",
+      "text": null,
+      "image": "https://images.unsplash.com/photo-1601086540476-7d9fa9dd6023?w=1000&q=80&auto=format&fit=crop",
+      "sort_order": 2905
+    },
+    {
+      "key": "producten.split.image",
+      "label": "Producten · Split image (homepage)",
+      "kind": "image",
+      "text": null,
+      "image": "https://images.unsplash.com/photo-1746439318854-4a8bc02a03ba?w=1000&q=80&auto=format&fit=crop",
+      "sort_order": 2910
     }
   ]
 }
