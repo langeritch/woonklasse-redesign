@@ -49,17 +49,17 @@
 
 <!-- Hero with integrated 3-step lead form -->
 <section class="hero hero--with-quiz">
-  <div class="hero__media"><img src="https://images.unsplash.com/photo-1521783593447-5702b9bfd267?w=2000&q=80&auto=format&fit=crop" alt="Moderne luxe woning renovatie"/></div>
+  <div class="hero__media"><img src="{{hero.image}}" alt="Moderne luxe woning renovatie"/></div>
   <div class="hero__overlay" aria-hidden="true"></div>
 
   <div class="hero__inner hero__inner--split">
 
     <div class="hero__text">
-      <p class="hero__sub" style="margin-bottom: 20px; letter-spacing: 0.18em;">Persoonlijk · Vakmanschap · Ontzorgd</p>
-      <h1 class="hero__title">Verbouwen<br/>zonder zorgen,<br/><em>persoonlijk geregeld</em></h1>
-      <p class="hero__sub">Eén vast aanspreekpunt, eigen vakmensen en een vaste prijs. Jij hoeft niets te regelen.</p>
+      <p class="hero__sub" style="margin-bottom: 20px; letter-spacing: 0.18em;">{{hero.kicker}}</p>
+      <h1 class="hero__title">{{hero.title}}</h1>
+      <p class="hero__sub">{{hero.sub}}</p>
       <div class="hero__actions">
-        <a href="contact.html" class="link-underline link-underline--light">Bespreek je project</a>
+        <a href="contact.html" class="link-underline link-underline--light">{{hero.cta}}</a>
       </div>
     </div>
 

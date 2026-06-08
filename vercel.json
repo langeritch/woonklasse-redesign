@@ -1,4 +1,6 @@
 {
+  "buildCommand": "node fetch-blocks.js && node build.js",
+  "outputDirectory": ".",
   "rewrites": [
     { "source": "/saninet", "destination": "/saninet.html" }
   ],
