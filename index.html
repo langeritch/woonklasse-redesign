@@ -49,17 +49,17 @@
 
 <!-- Hero with integrated 3-step lead form -->
 <section class="hero hero--with-quiz">
-  <div class="hero__media"><img src="{{hero.image}}" alt="Moderne luxe woning renovatie"/></div>
+  <div class="hero__media"><img src="{{hero.image}}" data-cms-key="hero.image" alt="Moderne luxe woning renovatie"/></div>
   <div class="hero__overlay" aria-hidden="true"></div>
 
   <div class="hero__inner hero__inner--split">
 
     <div class="hero__text">
-      <p class="hero__sub" style="margin-bottom: 20px; letter-spacing: 0.18em;">{{hero.kicker}}</p>
-      <h1 class="hero__title">{{hero.title}}</h1>
-      <p class="hero__sub">{{hero.sub}}</p>
+      <p class="hero__sub" style="margin-bottom: 20px; letter-spacing: 0.18em;" data-cms-key="hero.kicker">{{hero.kicker}}</p>
+      <h1 class="hero__title" data-cms-key="hero.title">{{hero.title}}</h1>
+      <p class="hero__sub" data-cms-key="hero.sub">{{hero.sub}}</p>
       <div class="hero__actions">
-        <a href="contact.html" class="link-underline link-underline--light">{{hero.cta}}</a>
+        <a href="contact.html" class="link-underline link-underline--light" data-cms-key="hero.cta">{{hero.cta}}</a>
       </div>
     </div>
 
@@ -164,7 +164,7 @@
         <div class="lead-quiz__check" aria-hidden="true">✓</div>
         <h3 class="lead-quiz__title">Bedankt, <em>we hebben je aanvraag ontvangen</em></h3>
         <p style="font-size: 15px; color: var(--muted); line-height: 1.6; margin: 0 0 8px;">We nemen binnen <strong>2 werkdagen</strong> contact met je op om je project persoonlijk door te spreken.</p>
-        <p style="font-size: 15px; color: var(--muted); line-height: 1.6; margin: 0 0 24px;">In de tussentijd kun je ons ook bereiken op <a href="tel:{{footer.phoneHref}}" style="color: var(--ink); border-bottom: 1px solid currentColor;">{{footer.phoneDisplay}}</a>.</p>
+        <p style="font-size: 15px; color: var(--muted); line-height: 1.6; margin: 0 0 24px;">In de tussentijd kun je ons ook bereiken op <a href="tel:{{footer.phoneHref}}" style="color: var(--ink); border-bottom: 1px solid currentColor;" data-cms-key="footer.phoneDisplay">{{footer.phoneDisplay}}</a>.</p>
         <button type="button" class="lead-quiz__btn lead-quiz__restart">Nieuwe aanvraag starten</button>
       </div>
     </form>
@@ -175,10 +175,10 @@
 <!-- Wat doen wij: long body copy -->
 <section class="section section--taupe">
   <div class="section__inner">
-    <h2 class="section-title section-title--light" style="margin-bottom: 48px;">{{intro.title}}</h2>
+    <h2 class="section-title section-title--light" style="margin-bottom: 48px;" data-cms-key="intro.title">{{intro.title}}</h2>
     <div style="max-width: 880px;">
-      <p style="font-family: var(--body); font-size: 18px; line-height: 1.6; color: #fff; margin: 0 0 24px;">{{intro.body1}}</p>
-      <p style="font-family: var(--body); font-size: 18px; line-height: 1.6; color: #fff; margin: 0;">{{intro.body2}}</p>
+      <p style="font-family: var(--body); font-size: 18px; line-height: 1.6; color: #fff; margin: 0 0 24px;" data-cms-key="intro.body1">{{intro.body1}}</p>
+      <p style="font-family: var(--body); font-size: 18px; line-height: 1.6; color: #fff; margin: 0;" data-cms-key="intro.body2">{{intro.body2}}</p>
     </div>
   </div>
 </section>
@@ -186,7 +186,7 @@
 <!-- Pull quote -->
 <section class="section" style="padding: clamp(80px, 10vw, 120px) 0;">
   <div class="section__inner" style="text-align: center;">
-    <p style="font-family: var(--display); font-weight: 400; font-size: clamp(28px, 4vw, 48px); line-height: 1.2; text-transform: uppercase; letter-spacing: 0; max-width: 22ch; margin: 0 auto; color: var(--ink);">{{quote.text}}</p>
+    <p style="font-family: var(--display); font-weight: 400; font-size: clamp(28px, 4vw, 48px); line-height: 1.2; text-transform: uppercase; letter-spacing: 0; max-width: 22ch; margin: 0 auto; color: var(--ink);" data-cms-key="quote.text">{{quote.text}}</p>
   </div>
 </section>
 
@@ -195,9 +195,9 @@
   <div class="story__grid">
     <div class="story__media"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1601086540476-7d9fa9dd6023?w=1000&q=80&auto=format&fit=crop" alt="Maatwerk renovatie"/></div>
     <div class="story__text">
-      <p style="font-family: var(--display); text-transform: uppercase; letter-spacing: 0.18em; font-size: 13px; color: var(--gold); margin: 0 0 18px;">{{diensten.eyebrow}}</p>
-      <h2 class="section-title">{{diensten.title}}</h2>
-      <p class="body-caps" style="margin-top: 32px;">{{diensten.body}}</p>
+      <p style="font-family: var(--display); text-transform: uppercase; letter-spacing: 0.18em; font-size: 13px; color: var(--gold); margin: 0 0 18px;" data-cms-key="diensten.eyebrow">{{diensten.eyebrow}}</p>
+      <h2 class="section-title" data-cms-key="diensten.title">{{diensten.title}}</h2>
+      <p class="body-caps" style="margin-top: 32px;" data-cms-key="diensten.body">{{diensten.body}}</p>
       <ul style="list-style: none; padding: 0; margin: 32px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 24px;">
         <li style="font-family: var(--display); text-transform: uppercase; letter-spacing: 0.04em; font-size: 15px; padding: 12px 0; border-top: 1px solid var(--line);">Loodgieterswerk</li>
         <li style="font-family: var(--display); text-transform: uppercase; letter-spacing: 0.04em; font-size: 15px; padding: 12px 0; border-top: 1px solid var(--line);">Timmerwerk</li>
@@ -215,9 +215,9 @@
 <section class="story" style="padding-top: 0;">
   <div class="story__grid">
     <div class="story__text">
-      <p style="font-family: var(--display); text-transform: uppercase; letter-spacing: 0.18em; font-size: 13px; color: var(--gold); margin: 0 0 18px;">{{producten.eyebrow}}</p>
-      <h2 class="section-title">{{producten.title}}</h2>
-      <p class="body-caps" style="margin-top: 32px;">{{producten.body1}}</p>
+      <p style="font-family: var(--display); text-transform: uppercase; letter-spacing: 0.18em; font-size: 13px; color: var(--gold); margin: 0 0 18px;" data-cms-key="producten.eyebrow">{{producten.eyebrow}}</p>
+      <h2 class="section-title" data-cms-key="producten.title">{{producten.title}}</h2>
+      <p class="body-caps" style="margin-top: 32px;" data-cms-key="producten.body1">{{producten.body1}}</p>
       <ul style="list-style: none; padding: 0; margin: 32px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 24px;">
         <li style="font-family: var(--display); text-transform: uppercase; letter-spacing: 0.04em; font-size: 15px; padding: 12px 0; border-top: 1px solid var(--line);">Veranda's</li>
         <li style="font-family: var(--display); text-transform: uppercase; letter-spacing: 0.04em; font-size: 15px; padding: 12px 0; border-top: 1px solid var(--line);">Plissés</li>
@@ -226,7 +226,7 @@
         <li style="font-family: var(--display); text-transform: uppercase; letter-spacing: 0.04em; font-size: 15px; padding: 12px 0; border-top: 1px solid var(--line);">Horren</li>
         <li style="font-family: var(--display); text-transform: uppercase; letter-spacing: 0.04em; font-size: 15px; padding: 12px 0; border-top: 1px solid var(--line);">Meubels</li>
       </ul>
-      <p class="body-caps" style="margin-top: 24px;">{{producten.body2}}</p>
+      <p class="body-caps" style="margin-top: 24px;" data-cms-key="producten.body2">{{producten.body2}}</p>
       <a href="/saninet" class="link-underline" style="margin-top:32px;">Bekijk Saninet 3D</a>
     </div>
     <div class="story__media"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1746439318854-4a8bc02a03ba?w=1000&q=80&auto=format&fit=crop" alt="Luxe badkamer"/></div>
@@ -236,9 +236,9 @@
 <!-- Saninet op locatie -->
 <section class="section" style="background:#fff;">
   <div class="section__inner" style="text-align:center;">
-    <p style="font-family: var(--display); text-transform: uppercase; letter-spacing: 0.18em; font-size: 13px; color: var(--gold); margin: 0 0 18px;">{{saninet.eyebrow}}</p>
-    <h2 class="section-title" style="margin: 0 auto 20px;">{{saninet.title}}</h2>
-    <p style="font-family: var(--body); font-size: 17px; line-height: 1.6; color: var(--muted); max-width: 62ch; margin: 0 auto 52px;">{{saninet.body1}}</p>
+    <p style="font-family: var(--display); text-transform: uppercase; letter-spacing: 0.18em; font-size: 13px; color: var(--gold); margin: 0 0 18px;" data-cms-key="saninet.eyebrow">{{saninet.eyebrow}}</p>
+    <h2 class="section-title" style="margin: 0 auto 20px;" data-cms-key="saninet.title">{{saninet.title}}</h2>
+    <p style="font-family: var(--body); font-size: 17px; line-height: 1.6; color: var(--muted); max-width: 62ch; margin: 0 auto 52px;" data-cms-key="saninet.body1">{{saninet.body1}}</p>
 
     <div class="saninet-cards">
       <!-- FOTO 1: plattegrond met maatvoering -->
@@ -258,16 +258,16 @@
       </figure>
     </div>
 
-    <p style="font-family: var(--body); font-size: 17px; line-height: 1.6; color: var(--muted); max-width: 62ch; margin: 52px auto 36px;">{{saninet.body2}}</p>
+    <p style="font-family: var(--body); font-size: 17px; line-height: 1.6; color: var(--muted); max-width: 62ch; margin: 52px auto 36px;" data-cms-key="saninet.body2">{{saninet.body2}}</p>
 
-    <a href="contact.html" style="display:inline-block; background: var(--ink); color:#fff; font-family: var(--display); text-transform: uppercase; letter-spacing: 0.08em; font-size: 14px; padding: 17px 40px;">{{saninet.ctaLabel}}</a>
+    <a href="contact.html" style="display:inline-block; background: var(--ink); color:#fff; font-family: var(--display); text-transform: uppercase; letter-spacing: 0.08em; font-size: 14px; padding: 17px 40px;" data-cms-key="saninet.ctaLabel">{{saninet.ctaLabel}}</a>
   </div>
 </section>
 
 <!-- USP strip -->
 <section class="services" style="padding-bottom: clamp(60px, 8vw, 90px);">
   <div class="services__head">
-    <h2 class="section-title section-title--light">{{promises.title}}</h2>
+    <h2 class="section-title section-title--light" data-cms-key="promises.title">{{promises.title}}</h2>
   </div>
   <div class="services__list">
     <div class="service-row"><span class="service-row__num">01</span><span class="service-row__title">Scherpe prijzen, geen tussenpersonen</span><span class="service-row__toggle">+</span><p class="service-row__body">Vaste leveranciers voor materialen en sanitair. Geen opslag.</p></div>
@@ -282,8 +282,8 @@
   <div class="work__inner">
     <div class="work__head">
       <div>
-        <p class="work__eyebrow">{{work.eyebrow}}</p>
-        <h2 class="section-title">{{work.title}}</h2>
+        <p class="work__eyebrow" data-cms-key="work.eyebrow">{{work.eyebrow}}</p>
+        <h2 class="section-title" data-cms-key="work.title">{{work.title}}</h2>
       </div>
       <a href="projecten.html" class="link-underline work__all">Alle projecten</a>
     </div>
@@ -341,8 +341,8 @@
 <section class="cta">
   <div class="cta__deco" aria-hidden="true"></div>
   <div class="cta__inner">
-    <h2 class="cta__title">{{finalCta.title}}</h2>
-    <a href="contact.html" class="link-underline">{{finalCta.label}}</a>
+    <h2 class="cta__title" data-cms-key="finalCta.title">{{finalCta.title}}</h2>
+    <a href="contact.html" class="link-underline" data-cms-key="finalCta.label">{{finalCta.label}}</a>
   </div>
 </section>
 
@@ -353,7 +353,7 @@
       <img src="assets/woonklasse-logo-white.png" alt="Woonklasse" class="footer__brand-img" width="120" height="120"/>
       <span class="footer__wordmark">Woonklasse</span>
     </div>
-    <p style="font-family: var(--body); color: rgba(255,255,255,0.7); max-width: 36ch; margin: -40px 0 50px; font-size: 14.5px;">{{footer.tagline}}</p>
+    <p style="font-family: var(--body); color: rgba(255,255,255,0.7); max-width: 36ch; margin: -40px 0 50px; font-size: 14.5px;" data-cms-key="footer.tagline">{{footer.tagline}}</p>
     <div class="footer__cols">
       <div>
         <a href="index.html">Home</a>
@@ -364,10 +364,10 @@
         <a href="contact.html">Contact</a>
       </div>
       <div>
-        <a href="mailto:{{footer.email}}">{{footer.email}}</a>
-        <a href="tel:{{footer.phoneHref}}">{{footer.phoneDisplay}}</a>
-        <a href="{{footer.whatsappUrl}}">WhatsApp</a>
-        <span>{{footer.address}}</span>
+        <a href="mailto:{{footer.email}}" data-cms-key="footer.email">{{footer.email}}</a>
+        <a href="tel:{{footer.phoneHref}}" data-cms-key="footer.phoneDisplay">{{footer.phoneDisplay}}</a>
+        <a href="{{footer.whatsappUrl}}" data-cms-key="footer.whatsappUrl">WhatsApp</a>
+        <span data-cms-key="footer.address">{{footer.address}}</span>
       </div>
       <div>
         <span style="opacity: 0.6; font-size: 12px;">Zusterbedrijf</span>
@@ -375,13 +375,13 @@
       </div>
     </div>
     <div class="footer__legal">
-      <span>{{footer.copyright}}</span>
+      <span data-cms-key="footer.copyright">{{footer.copyright}}</span>
       <span class="sep">|</span>
       <a href="privacy.html">Privacybeleid</a>
       <span class="sep">|</span>
       <a href="voorwaarden.html">Algemene voorwaarden</a>
     </div>
-    <p class="footer__credit">{{footer.kvk}}</p>
+    <p class="footer__credit" data-cms-key="footer.kvk">{{footer.kvk}}</p>
   </div>
 </footer>
 

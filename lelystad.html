@@ -54,7 +54,7 @@
     <p class="hero__sub">Renovatie en verbouwing door eigen vakmensen.</p>
     <div class="hero__actions">
       <a href="contact.html" class="link-underline link-underline--light">Offerte aanvragen</a>
-      <a href="tel:{{footer.phoneHref}}" class="link-underline link-underline--light">{{footer.phoneDisplay}}</a>
+      <a href="tel:{{footer.phoneHref}}" class="link-underline link-underline--light" data-cms-key="footer.phoneDisplay">{{footer.phoneDisplay}}</a>
     </div>
   </div>
 </section>
@@ -175,7 +175,7 @@
       <img src="assets/woonklasse-logo-white.png" alt="Woonklasse" class="footer__brand-img" width="120" height="120"/>
       <span class="footer__wordmark">Woonklasse</span>
     </div>
-    <p style="font-family: var(--body); color: rgba(255,255,255,0.7); max-width: 36ch; margin: -40px 0 50px; font-size: 14.5px;">{{footer.tagline}}</p>
+    <p style="font-family: var(--body); color: rgba(255,255,255,0.7); max-width: 36ch; margin: -40px 0 50px; font-size: 14.5px;" data-cms-key="footer.tagline">{{footer.tagline}}</p>
     <div class="footer__cols">
       <div>
         <a href="index.html">Home</a>
@@ -186,10 +186,10 @@
         <a href="contact.html">Contact</a>
       </div>
       <div>
-        <a href="mailto:{{footer.email}}">{{footer.email}}</a>
-        <a href="tel:{{footer.phoneHref}}">{{footer.phoneDisplay}}</a>
-        <a href="{{footer.whatsappUrl}}">WhatsApp</a>
-        <span>{{footer.address}}</span>
+        <a href="mailto:{{footer.email}}" data-cms-key="footer.email">{{footer.email}}</a>
+        <a href="tel:{{footer.phoneHref}}" data-cms-key="footer.phoneDisplay">{{footer.phoneDisplay}}</a>
+        <a href="{{footer.whatsappUrl}}" data-cms-key="footer.whatsappUrl">WhatsApp</a>
+        <span data-cms-key="footer.address">{{footer.address}}</span>
       </div>
       <div>
         <span style="opacity: 0.6; font-size: 12px;">Zusterbedrijf</span>
@@ -197,13 +197,13 @@
       </div>
     </div>
     <div class="footer__legal">
-      <span>{{footer.copyright}}</span>
+      <span data-cms-key="footer.copyright">{{footer.copyright}}</span>
       <span class="sep">|</span>
       <a href="privacy.html">Privacybeleid</a>
       <span class="sep">|</span>
       <a href="voorwaarden.html">Algemene voorwaarden</a>
     </div>
-    <p class="footer__credit">{{footer.kvk}}</p>
+    <p class="footer__credit" data-cms-key="footer.kvk">{{footer.kvk}}</p>
   </div>
 </footer>
 <script defer src="/_vercel/insights/script.js"></script>
