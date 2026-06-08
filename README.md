@@ -52,5 +52,5 @@ Amsterdam · Rotterdam · Den Haag · Utrecht · Eindhoven · Tilburg · Groning
 ## Contact
 
 - **info@woonklasse.nl** · **+31 30 207 23 88** · **WhatsApp +31 6 5042 4683**
-- Joop Geesinkweg 201, 1114 AB Amsterdam-Duivendrecht
+- Laantje van Van Iperen 26, 4142 ER Leerdam
 - KVK 85409146 · BTW NL004092100B36
