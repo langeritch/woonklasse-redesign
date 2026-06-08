@@ -27,6 +27,7 @@ const path = require("node:path");
 
 const ROOT = __dirname;
 const BLOCKS_PATH = path.join(ROOT, "cms-blocks.json");
+const CITIES_PATH = path.join(ROOT, "cities.json");
 
 if (!fs.existsSync(BLOCKS_PATH)) {
   console.error(`[cms] cms-blocks.json not found at ${BLOCKS_PATH}`);
@@ -34,6 +35,23 @@ if (!fs.existsSync(BLOCKS_PATH)) {
 }
 
 const raw = JSON.parse(fs.readFileSync(BLOCKS_PATH, "utf8"));
+
+// City pages are generated from a shared template — generate-cities.js
+// emits 60+ near-identical .html files. To keep the CMS editor lean we
+// use ONE set of `citypage.*` blocks for the shared chrome plus
+// per-city `cities.<slug>.*` blocks for content that's genuinely
+// unique per page (positioning paragraph, wijken sentence, etc.).
+// Block values may reference {{cityname}} which build.js fills in
+// per-file based on the filename ↔ cities.json mapping.
+const CITY_BY_SLUG = (() => {
+  const out = {};
+  if (fs.existsSync(CITIES_PATH)) {
+    for (const c of JSON.parse(fs.readFileSync(CITIES_PATH, "utf8"))) {
+      out[c.slug] = c;
+    }
+  }
+  return out;
+})();
 
 // Build a flat key→value map from whichever JSON shape is present.
 function buildMap(raw) {
@@ -67,18 +85,21 @@ const map = buildMap(raw);
 // Match {{ some.key }} with optional surrounding whitespace.
 const TOKEN = /\{\{\s*([a-zA-Z0-9_.-]+)\s*\}\}/g;
 
-function render(html) {
+function render(html, perFile) {
   // Loop until no more tokens get resolved. Block values can reference
-  // other block keys (e.g. a CTA label "Bel direct {{footer.phoneDisplay}}"),
-  // and a single pass would leave those nested references behind.
-  // Cap at 5 passes so a self-referential block can't infinite-loop.
+  // other block keys (e.g. "Verbouwen in {{cityname}}"), so a single
+  // pass would leave those nested references behind. Cap at 5 passes
+  // so a self-referential block can't infinite-loop.
+  // `perFile` is an additional map merged on top of `map` for things
+  // like the per-page {{cityname}} variable.
+  const effective = perFile ? Object.assign({}, map, perFile) : map;
   let out = html;
   for (let pass = 0; pass < 5; pass++) {
     let touched = false;
     const next = out.replace(TOKEN, (match, key) => {
-      if (key in map) {
+      if (key in effective) {
         touched = true;
-        return map[key];
+        return effective[key];
       }
       return match;
     });
@@ -87,10 +108,23 @@ function render(html) {
   }
   // Final pass: any tokens left are missing keys; warn once.
   out.replace(TOKEN, (_m, key) => {
-    if (!(key in map)) console.warn(`[cms] missing block: ${key} (left token in place)`);
+    if (!(key in effective)) console.warn(`[cms] missing block: ${key} (left token in place)`);
     return _m;
   });
   return out;
+}
+
+// Detect the page slug from the filename so render() can inject the
+// right city-specific variables. Anything not in CITY_BY_SLUG is
+// treated as a regular page (no extra context).
+function perFileContext(filename) {
+  const slug = filename.replace(/\.html$/, "");
+  const city = CITY_BY_SLUG[slug];
+  if (!city) return null;
+  return {
+    cityname: city.name,
+    cityslug: city.slug,
+  };
 }
 
 const FILES = fs.readdirSync(ROOT).filter((f) => f.endsWith(".html"));
@@ -98,7 +132,7 @@ let touched = 0;
 for (const file of FILES) {
   const p = path.join(ROOT, file);
   const before = fs.readFileSync(p, "utf8");
-  const after = render(before);
+  const after = render(before, perFileContext(file));
   if (before !== after) {
     fs.writeFileSync(p, after);
     touched++;

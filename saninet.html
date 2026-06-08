@@ -50,14 +50,14 @@
 <!-- Hero -->
 <!-- FOTO: vervang stockbeeld door eigen 3D-render of foto van een ontwerpsessie -->
 <section class="hero hero--short">
-  <div class="hero__media"><img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?w=2000&q=80&auto=format&fit=crop" alt="Saninet 3D badkamerontwerp"/></div>
+  <div class="hero__media"><img src="{{saninet.hero.image}}" data-cms-key="saninet.hero.image" alt="Saninet 3D badkamerontwerp"/></div>
   <div class="hero__overlay" aria-hidden="true"></div>
   <div class="hero__inner">
-    <p class="hero__sub" style="margin-bottom: 18px; letter-spacing: 0.18em;">Saninet · 3D Badkamerontwerp</p>
-    <h1 class="hero__title">Zie je badkamer<br/><em>voordat we beginnen</em></h1>
-    <p class="hero__sub">Samen ontwerpen we jouw badkamer in 3D, 100% naar wens en op de locatie van jouw keuze. Geen gokwerk, geen verrassingen.</p>
+    <p class="hero__sub" style="margin-bottom: 18px; letter-spacing: 0.18em;" data-cms-key="saninet.hero.kicker">{{saninet.hero.kicker}}</p>
+    <h1 class="hero__title" data-cms-key="saninet.hero.title">{{saninet.hero.title}}</h1>
+    <p class="hero__sub" data-cms-key="saninet.hero.sub">{{saninet.hero.sub}}</p>
     <div class="hero__actions">
-      <a href="contact.html" class="link-underline link-underline--light">Plan een ontwerpsessie</a>
+      <a href="contact.html" class="link-underline link-underline--light" data-cms-key="saninet.hero.cta">{{saninet.hero.cta}}</a>
     </div>
   </div>
 </section>
@@ -67,10 +67,10 @@
   <div class="story__deco" aria-hidden="true"></div>
   <div class="story__grid">
     <div class="story__text">
-      <p style="font-family: var(--display); text-transform: uppercase; letter-spacing: 0.18em; font-size: 13px; color: var(--gold); margin: 0 0 18px;">Wat is Saninet?</p>
-      <h2 class="section-title">De standaard onder badkamerspecialisten.</h2>
-      <p class="body-caps" style="margin-top: 32px;">Saninet is dé 3D-ontwerpsoftware voor de badkamer. Sinds 1999 is het marktleider in Nederland en België en wordt het gebruikt in meer dan twintig Europese landen. Het programma werkt met een bibliotheek van tienduizenden echte producten van bestaande merken, van sanitair en meubels tot tegels.</p>
-      <p class="body-caps" style="margin-top: 20px;">Dat betekent dat wat je op het scherm ziet, ook precies is wat er straks bij jou thuis staat. Geen impressie en geen benadering, maar een realistisch 3D-beeld van jouw badkamer tot in het detail.</p>
+      <p style="font-family: var(--display); text-transform: uppercase; letter-spacing: 0.18em; font-size: 13px; color: var(--gold); margin: 0 0 18px;" data-cms-key="saninet.intro.eyebrow">{{saninet.intro.eyebrow}}</p>
+      <h2 class="section-title" data-cms-key="saninet.intro.title">{{saninet.intro.title}}</h2>
+      <p class="body-caps" style="margin-top: 32px;" data-cms-key="saninet.body1">{{saninet.body1}}</p>
+      <p class="body-caps" style="margin-top: 20px;" data-cms-key="saninet.body2">{{saninet.body2}}</p>
     </div>
     <!-- FOTO: screenshot of render uit Saninet, of foto van het scherm tijdens een sessie -->
     <div class="story__media"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=1000&q=80&auto=format&fit=crop" alt="3D badkamerontwerp op scherm"/></div>
@@ -80,7 +80,7 @@
 <!-- Samen ontwerpen op locatie -->
 <section class="section section--taupe">
   <div class="section__inner">
-    <h2 class="section-title section-title--light" style="margin-bottom: 48px;">Samen ontwerpen, bij jou thuis</h2>
+    <h2 class="section-title section-title--light" style="margin-bottom: 48px;" data-cms-key="saninet.light1.title">{{saninet.light1.title}}</h2>
     <div style="max-width: 880px;">
       <p style="font-family: var(--body); font-size: 18px; line-height: 1.6; color: #fff; margin: 0 0 24px;">We ontwerpen je badkamer niet vóór je, maar mét je. Onze sanitairspecialist komt naar de locatie van jouw keuze, bij jou thuis of in onze showroom, en samen bouwen we jouw badkamer op in 3D. Jij ziet elke keuze direct terug. Een ander tegelpatroon, een vrijstaand bad in plaats van een douche, een wand die verschuift. Alles kan, en je ziet meteen wat het doet.</p>
       <p style="font-family: var(--body); font-size: 18px; line-height: 1.6; color: #fff; margin: 0;">Het resultaat is een ontwerp dat voor 100% klopt met wat jij wilt, voordat er ook maar één tegel wordt besteld. Zo weet je precies waar je aan toe bent: hoe het eruitziet, wat erin zit en wat het kost.</p>
@@ -91,13 +91,13 @@
 <!-- In vier stappen -->
 <section class="services">
   <div class="services__head">
-    <h2 class="section-title section-title--light">In vier stappen naar je ontwerp</h2>
+    <h2 class="section-title section-title--light" data-cms-key="saninet.light2.title">{{saninet.light2.title}}</h2>
   </div>
   <div class="services__list">
-    <div class="service-row"><span class="service-row__num">01</span><span class="service-row__title">We komen langs</span><span class="service-row__toggle">+</span><p class="service-row__body">Onze specialist komt naar de locatie van jouw keuze, neemt de ruimte op en luistert naar je wensen. We beginnen altijd bij jou, niet bij een catalogus.</p></div>
-    <div class="service-row"><span class="service-row__num">02</span><span class="service-row__title">Samen inrichten</span><span class="service-row__toggle">+</span><p class="service-row__body">In Saninet kiezen we samen sanitair, meubels en tegels uit duizenden echte producten. Je hoeft niets te raden, want je ziet alles in 3D opgebouwd worden.</p></div>
-    <div class="service-row"><span class="service-row__num">03</span><span class="service-row__title">Verfijnen tot het klopt</span><span class="service-row__toggle">+</span><p class="service-row__body">We schuiven, wisselen en passen aan tot het ontwerp 100% naar wens is. Pas als jij tevreden bent, gaan we verder.</p></div>
-    <div class="service-row"><span class="service-row__num">04</span><span class="service-row__title">Zekerheid vooraf</span><span class="service-row__toggle">+</span><p class="service-row__body">Je krijgt een realistisch 3D-beeld en een duidelijke offerte. Wat je ziet, is wat we bouwen. Geen verrassingen achteraf.</p></div>
+    <div class="service-row"><span class="service-row__num">01</span><span class="service-row__title" data-cms-key="saninet.step1.title">{{saninet.step1.title}}</span><span class="service-row__toggle">+</span><p class="service-row__body" data-cms-key="saninet.step1.body">{{saninet.step1.body}}</p></div>
+    <div class="service-row"><span class="service-row__num">02</span><span class="service-row__title" data-cms-key="saninet.step2.title">{{saninet.step2.title}}</span><span class="service-row__toggle">+</span><p class="service-row__body" data-cms-key="saninet.step2.body">{{saninet.step2.body}}</p></div>
+    <div class="service-row"><span class="service-row__num">03</span><span class="service-row__title" data-cms-key="saninet.step3.title">{{saninet.step3.title}}</span><span class="service-row__toggle">+</span><p class="service-row__body" data-cms-key="saninet.step3.body">{{saninet.step3.body}}</p></div>
+    <div class="service-row"><span class="service-row__num">04</span><span class="service-row__title" data-cms-key="saninet.step4.title">{{saninet.step4.title}}</span><span class="service-row__toggle">+</span><p class="service-row__body" data-cms-key="saninet.step4.body">{{saninet.step4.body}}</p></div>
   </div>
 </section>
 
@@ -109,7 +109,7 @@
     <div class="story__text">
       <p style="font-family: var(--display); text-transform: uppercase; letter-spacing: 0.18em; font-size: 13px; color: var(--gold); margin: 0 0 18px;">Van scherm naar werkelijkheid</p>
       <h2 class="section-title">Wat je ziet, is wat je krijgt.</h2>
-      <p class="body-caps" style="margin-top: 32px;">Omdat we met onze eigen sanitairspecialisten en vaste leveranciers werken, lopen ontwerp en uitvoering naadloos in elkaar over. Het 3D-beeld is geen verkooppraatje, maar de blauwdruk van je nieuwe badkamer.</p>
+      <p class="body-caps" style="margin-top: 20px;" data-cms-key="saninet.body3">{{saninet.body3}}</p>
       <a href="contact.html" class="link-underline" style="margin-top: 32px;">Bespreek je project</a>
     </div>
   </div>
@@ -172,7 +172,7 @@
 <section class="cta">
   <div class="cta__deco" aria-hidden="true"></div>
   <div class="cta__inner">
-    <h2 class="cta__title">Klaar voor je <em>droombadkamer</em>?<br/>Plan een 3D-ontwerpsessie.</h2>
+    <h2 class="cta__title" data-cms-key="saninet.finalCta.title">{{saninet.finalCta.title}}</h2>
     <a href="contact.html" class="link-underline">Bespreek je project</a>
   </div>
 </section>

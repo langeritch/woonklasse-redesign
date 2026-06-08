@@ -1,6 +1,6 @@
 {
   "dashboard": "woonklasse",
-  "generated_at": "2026-06-08T00:00:00.000Z",
+  "generated_at": "2026-06-09T00:00:00.000Z",
   "blocks": [
     {
       "key": "hero.kicker",
@@ -2001,6 +2001,4958 @@
       "text": null,
       "image": "https://images.unsplash.com/photo-1746439318854-4a8bc02a03ba?w=1000&q=80&auto=format&fit=crop",
       "sort_order": 2910
+    },
+    {
+      "key": "privacy.eyebrow",
+      "label": "Privacy · Eyebrow",
+      "kind": "text",
+      "text": "Privacy",
+      "image": null,
+      "sort_order": 3000
+    },
+    {
+      "key": "privacy.title",
+      "label": "Privacy · Page title",
+      "kind": "text",
+      "text": "Privacybeleid",
+      "image": null,
+      "sort_order": 3003
+    },
+    {
+      "key": "privacy.updated",
+      "label": "Privacy · Last-updated note",
+      "kind": "text",
+      "text": "Laatst bijgewerkt: juni 2026",
+      "image": null,
+      "sort_order": 3006
+    },
+    {
+      "key": "privacy.intro",
+      "label": "Privacy · Intro paragraph",
+      "kind": "text",
+      "text": "Woonklasse hecht veel waarde aan je privacy. In dit beleid leggen we uit welke persoonsgegevens we verzamelen, waarom we dat doen en welke rechten je hebt. We gaan zorgvuldig met je gegevens om en houden ons aan de Algemene Verordening Gegevensbescherming (AVG).",
+      "image": null,
+      "sort_order": 3009
+    },
+    {
+      "key": "privacy.section1.title",
+      "label": "Privacy · Section 1 heading",
+      "kind": "text",
+      "text": "Wie zijn wij",
+      "image": null,
+      "sort_order": 3012
+    },
+    {
+      "key": "privacy.section1.body",
+      "label": "Privacy · Section 1 body (HTML)",
+      "kind": "rich_text",
+      "text": "<p>Woonklasse, gevestigd aan de Laantje van Van Iperen 26, 4142 ER Leerdam, is verantwoordelijk voor de verwerking van persoonsgegevens zoals beschreven in dit beleid. KVK 85409146, BTW NL004092100B36. Je kunt ons bereiken via {{footer.email}} of {{footer.phoneDisplay}}.</p>",
+      "image": null,
+      "sort_order": 3015
+    },
+    {
+      "key": "privacy.section2.title",
+      "label": "Privacy · Section 2 heading",
+      "kind": "text",
+      "text": "Welke gegevens we verzamelen",
+      "image": null,
+      "sort_order": 3018
+    },
+    {
+      "key": "privacy.section2.body",
+      "label": "Privacy · Section 2 body (HTML)",
+      "kind": "rich_text",
+      "text": "<p>We verzamelen alleen de gegevens die je zelf aan ons doorgeeft via ons aanvraag- of contactformulier, of wanneer je telefonisch of per e-mail contact opneemt. Het gaat om:</p>\n      <ul>\n        <li>Naam</li>\n        <li>E-mailadres en telefoonnummer</li>\n        <li>Plaats of adres van het project</li>\n        <li>Informatie over je project (zoals omschrijving, budget, planning en eventueel foto's die je uploadt)</li>\n      </ul>\n      <p>Daarnaast verzamelen we via privacyvriendelijke, cookieloze statistieken anonieme gegevens over het gebruik van onze website. Deze gegevens zijn niet tot jou herleidbaar.</p>",
+      "image": null,
+      "sort_order": 3021
+    },
+    {
+      "key": "privacy.section3.title",
+      "label": "Privacy · Section 3 heading",
+      "kind": "text",
+      "text": "Waarvoor we je gegevens gebruiken",
+      "image": null,
+      "sort_order": 3024
+    },
+    {
+      "key": "privacy.section3.body",
+      "label": "Privacy · Section 3 body (HTML)",
+      "kind": "rich_text",
+      "text": "<ul>\n        <li>Om contact met je op te nemen en je aanvraag te behandelen</li>\n        <li>Om een advies of vrijblijvende offerte op te stellen</li>\n        <li>Om een opdracht uit te voeren en met je te communiceren over het project</li>\n        <li>Om onze website te verbeteren (op basis van anonieme statistieken)</li>\n      </ul>",
+      "image": null,
+      "sort_order": 3027
+    },
+    {
+      "key": "privacy.section4.title",
+      "label": "Privacy · Section 4 heading",
+      "kind": "text",
+      "text": "Grondslag",
+      "image": null,
+      "sort_order": 3030
+    },
+    {
+      "key": "privacy.section4.body",
+      "label": "Privacy · Section 4 body (HTML)",
+      "kind": "rich_text",
+      "text": "<p>We verwerken je gegevens op basis van je toestemming, de uitvoering van of de aanloop naar een overeenkomst, en ons gerechtvaardigd belang om je goed van dienst te zijn.</p>",
+      "image": null,
+      "sort_order": 3033
+    },
+    {
+      "key": "privacy.section5.title",
+      "label": "Privacy · Section 5 heading",
+      "kind": "text",
+      "text": "Hoe lang we je gegevens bewaren",
+      "image": null,
+      "sort_order": 3036
+    },
+    {
+      "key": "privacy.section5.body",
+      "label": "Privacy · Section 5 body (HTML)",
+      "kind": "rich_text",
+      "text": "<p>We bewaren je gegevens niet langer dan nodig is voor de doelen waarvoor ze zijn verzameld, of zolang de wet ons daartoe verplicht (bijvoorbeeld voor de fiscale bewaarplicht).</p>",
+      "image": null,
+      "sort_order": 3039
+    },
+    {
+      "key": "privacy.section6.title",
+      "label": "Privacy · Section 6 heading",
+      "kind": "text",
+      "text": "Delen met derden",
+      "image": null,
+      "sort_order": 3042
+    },
+    {
+      "key": "privacy.section6.body",
+      "label": "Privacy · Section 6 body (HTML)",
+      "kind": "rich_text",
+      "text": "<p>We verkopen je gegevens niet en delen ze niet met derden voor commerciële doeleinden. We schakelen wel verwerkers in die ons helpen onze diensten te leveren, zoals onze hostingpartij. Met deze partijen maken we afspraken om je gegevens te beschermen. We delen alleen gegevens als dat wettelijk verplicht is.</p>",
+      "image": null,
+      "sort_order": 3045
+    },
+    {
+      "key": "privacy.section7.title",
+      "label": "Privacy · Section 7 heading",
+      "kind": "text",
+      "text": "Beveiliging",
+      "image": null,
+      "sort_order": 3048
+    },
+    {
+      "key": "privacy.section7.body",
+      "label": "Privacy · Section 7 body (HTML)",
+      "kind": "rich_text",
+      "text": "<p>We nemen passende technische en organisatorische maatregelen om je gegevens te beschermen tegen verlies of onrechtmatige verwerking. Onze website maakt gebruik van een beveiligde (HTTPS) verbinding.</p>",
+      "image": null,
+      "sort_order": 3051
+    },
+    {
+      "key": "privacy.section8.title",
+      "label": "Privacy · Section 8 heading",
+      "kind": "text",
+      "text": "Jouw rechten",
+      "image": null,
+      "sort_order": 3054
+    },
+    {
+      "key": "privacy.section8.body",
+      "label": "Privacy · Section 8 body (HTML)",
+      "kind": "rich_text",
+      "text": "<p>Je hebt het recht om je persoonsgegevens in te zien, te corrigeren of te laten verwijderen. Ook kun je bezwaar maken tegen de verwerking en je toestemming intrekken. Stuur hiervoor een e-mail naar {{footer.email}}. We reageren zo snel mogelijk, uiterlijk binnen vier weken.</p>\n      <p>Heb je een klacht over hoe we met je gegevens omgaan? Dan kun je een klacht indienen bij de Autoriteit Persoonsgegevens via autoriteitpersoonsgegevens.nl.</p>",
+      "image": null,
+      "sort_order": 3057
+    },
+    {
+      "key": "privacy.section9.title",
+      "label": "Privacy · Section 9 heading",
+      "kind": "text",
+      "text": "Vragen",
+      "image": null,
+      "sort_order": 3060
+    },
+    {
+      "key": "privacy.section9.body",
+      "label": "Privacy · Section 9 body (HTML)",
+      "kind": "rich_text",
+      "text": "<p>Heb je vragen over dit privacybeleid? Neem gerust contact met ons op via {{footer.email}} of {{footer.phoneDisplay}}.</p>",
+      "image": null,
+      "sort_order": 3063
+    },
+    {
+      "key": "privacy.backCta",
+      "label": "Privacy · Bottom CTA label",
+      "kind": "text",
+      "text": "Naar contact",
+      "image": null,
+      "sort_order": 3066
+    },
+    {
+      "key": "voorwaarden.eyebrow",
+      "label": "Voorwaarden · Eyebrow",
+      "kind": "text",
+      "text": "Voorwaarden",
+      "image": null,
+      "sort_order": 3069
+    },
+    {
+      "key": "voorwaarden.title",
+      "label": "Voorwaarden · Page title",
+      "kind": "text",
+      "text": "Algemene voorwaarden",
+      "image": null,
+      "sort_order": 3072
+    },
+    {
+      "key": "voorwaarden.updated",
+      "label": "Voorwaarden · Last-updated note",
+      "kind": "text",
+      "text": "Laatst bijgewerkt: juni 2026",
+      "image": null,
+      "sort_order": 3075
+    },
+    {
+      "key": "voorwaarden.section1.title",
+      "label": "Voorwaarden · Section 1 heading",
+      "kind": "text",
+      "text": "1. Toepasselijkheid",
+      "image": null,
+      "sort_order": 3078
+    },
+    {
+      "key": "voorwaarden.section1.body",
+      "label": "Voorwaarden · Section 1 body (HTML)",
+      "kind": "rich_text",
+      "text": "<p>Deze algemene voorwaarden zijn van toepassing op alle offertes, opdrachten en overeenkomsten tussen Woonklasse en de opdrachtgever, tenzij schriftelijk anders is overeengekomen.</p>",
+      "image": null,
+      "sort_order": 3081
+    },
+    {
+      "key": "voorwaarden.section2.title",
+      "label": "Voorwaarden · Section 2 heading",
+      "kind": "text",
+      "text": "2. Offertes en aanbiedingen",
+      "image": null,
+      "sort_order": 3084
+    },
+    {
+      "key": "voorwaarden.section2.body",
+      "label": "Voorwaarden · Section 2 body (HTML)",
+      "kind": "rich_text",
+      "text": "<p>Alle offertes zijn vrijblijvend en gelden gedurende 30 dagen, tenzij anders aangegeven. Een offerte is gebaseerd op de informatie en wensen die je op dat moment hebt aangeleverd. Een overeenkomst komt tot stand zodra je de offerte schriftelijk of per e-mail akkoord geeft.</p>",
+      "image": null,
+      "sort_order": 3087
+    },
+    {
+      "key": "voorwaarden.section3.title",
+      "label": "Voorwaarden · Section 3 heading",
+      "kind": "text",
+      "text": "3. Prijzen",
+      "image": null,
+      "sort_order": 3090
+    },
+    {
+      "key": "voorwaarden.section3.body",
+      "label": "Voorwaarden · Section 3 body (HTML)",
+      "kind": "rich_text",
+      "text": "<p>Prijzen zijn in euro's en exclusief btw, tenzij anders vermeld. Na akkoord op het definitieve ontwerp ontvang je een vaste prijsopgave. Onvoorziene omstandigheden of wijzigingen in je wensen kunnen leiden tot een aanpassing van de prijs, altijd na overleg.</p>",
+      "image": null,
+      "sort_order": 3093
+    },
+    {
+      "key": "voorwaarden.section4.title",
+      "label": "Voorwaarden · Section 4 heading",
+      "kind": "text",
+      "text": "4. Uitvoering van het werk",
+      "image": null,
+      "sort_order": 3096
+    },
+    {
+      "key": "voorwaarden.section4.body",
+      "label": "Voorwaarden · Section 4 body (HTML)",
+      "kind": "rich_text",
+      "text": "<p>We voeren het werk uit met zorg en vakmanschap, volgens de afspraken in de overeenkomst. Je krijgt één vast aanspreekpunt. We doen ons uiterste best om de afgesproken planning te halen; genoemde termijnen zijn een indicatie, tenzij uitdrukkelijk een fatale termijn is afgesproken.</p>",
+      "image": null,
+      "sort_order": 3099
+    },
+    {
+      "key": "voorwaarden.section5.title",
+      "label": "Voorwaarden · Section 5 heading",
+      "kind": "text",
+      "text": "5. Meerwerk",
+      "image": null,
+      "sort_order": 3102
+    },
+    {
+      "key": "voorwaarden.section5.body",
+      "label": "Voorwaarden · Section 5 body (HTML)",
+      "kind": "rich_text",
+      "text": "<p>Werk dat buiten de oorspronkelijke opdracht valt, voeren we alleen uit na jouw schriftelijke goedkeuring. Meerwerk wordt apart in rekening gebracht en blijft een uitzondering, geen regel.</p>",
+      "image": null,
+      "sort_order": 3105
+    },
+    {
+      "key": "voorwaarden.section6.title",
+      "label": "Voorwaarden · Section 6 heading",
+      "kind": "text",
+      "text": "6. Betaling",
+      "image": null,
+      "sort_order": 3108
+    },
+    {
+      "key": "voorwaarden.section6.body",
+      "label": "Voorwaarden · Section 6 body (HTML)",
+      "kind": "rich_text",
+      "text": "<p>Tenzij anders overeengekomen werken we met een betaling in termijnen, gekoppeld aan de voortgang van het werk. Facturen dienen binnen 14 dagen na factuurdatum te worden voldaan. Bij niet-tijdige betaling kunnen wij de uitvoering opschorten.</p>",
+      "image": null,
+      "sort_order": 3111
+    },
+    {
+      "key": "voorwaarden.section7.title",
+      "label": "Voorwaarden · Section 7 heading",
+      "kind": "text",
+      "text": "7. Oplevering",
+      "image": null,
+      "sort_order": 3114
+    },
+    {
+      "key": "voorwaarden.section7.body",
+      "label": "Voorwaarden · Section 7 body (HTML)",
+      "kind": "rich_text",
+      "text": "<p>Het werk geldt als opgeleverd zodra het is afgerond en aan jou is overgedragen, of wanneer je het feitelijk in gebruik neemt. Eventuele restpunten leggen we vast en handelen we binnen een redelijke termijn af.</p>",
+      "image": null,
+      "sort_order": 3117
+    },
+    {
+      "key": "voorwaarden.section8.title",
+      "label": "Voorwaarden · Section 8 heading",
+      "kind": "text",
+      "text": "8. Garantie",
+      "image": null,
+      "sort_order": 3120
+    },
+    {
+      "key": "voorwaarden.section8.body",
+      "label": "Voorwaarden · Section 8 body (HTML)",
+      "kind": "rich_text",
+      "text": "<p>We staan voor de kwaliteit van ons werk. Op constructieve onderdelen geven we standaard garantie volgens de afspraken in de overeenkomst. Voor geleverde materialen en sanitair geldt de garantie van de fabrikant. Garantie vervalt bij ondeskundig gebruik of door derden uitgevoerde wijzigingen.</p>",
+      "image": null,
+      "sort_order": 3123
+    },
+    {
+      "key": "voorwaarden.section9.title",
+      "label": "Voorwaarden · Section 9 heading",
+      "kind": "text",
+      "text": "9. Aansprakelijkheid",
+      "image": null,
+      "sort_order": 3126
+    },
+    {
+      "key": "voorwaarden.section9.body",
+      "label": "Voorwaarden · Section 9 body (HTML)",
+      "kind": "rich_text",
+      "text": "<p>Onze aansprakelijkheid is beperkt tot het bedrag dat in het betreffende geval door onze verzekering wordt uitgekeerd, of bij gebreke daarvan tot het factuurbedrag van de opdracht. We zijn niet aansprakelijk voor indirecte schade of gevolgschade.</p>",
+      "image": null,
+      "sort_order": 3129
+    },
+    {
+      "key": "voorwaarden.section10.title",
+      "label": "Voorwaarden · Section 10 heading",
+      "kind": "text",
+      "text": "10. Klachten",
+      "image": null,
+      "sort_order": 3132
+    },
+    {
+      "key": "voorwaarden.section10.body",
+      "label": "Voorwaarden · Section 10 body (HTML)",
+      "kind": "rich_text",
+      "text": "<p>Heb je een klacht over het werk? Meld dit dan zo snel mogelijk, en uiterlijk binnen 14 dagen na ontdekking, schriftelijk bij ons. We nemen elke klacht serieus en zoeken samen met je naar een passende oplossing.</p>",
+      "image": null,
+      "sort_order": 3135
+    },
+    {
+      "key": "voorwaarden.section11.title",
+      "label": "Voorwaarden · Section 11 heading",
+      "kind": "text",
+      "text": "11. Toepasselijk recht",
+      "image": null,
+      "sort_order": 3138
+    },
+    {
+      "key": "voorwaarden.section11.body",
+      "label": "Voorwaarden · Section 11 body (HTML)",
+      "kind": "rich_text",
+      "text": "<p>Op alle overeenkomsten met Woonklasse is Nederlands recht van toepassing. Geschillen leggen we voor aan de bevoegde rechter in het arrondissement waar Woonklasse is gevestigd.</p>",
+      "image": null,
+      "sort_order": 3141
+    },
+    {
+      "key": "voorwaarden.section12.title",
+      "label": "Voorwaarden · Section 12 heading",
+      "kind": "text",
+      "text": "Contact",
+      "image": null,
+      "sort_order": 3144
+    },
+    {
+      "key": "voorwaarden.section12.body",
+      "label": "Voorwaarden · Section 12 body (HTML)",
+      "kind": "rich_text",
+      "text": "<p>Woonklasse, Laantje van Van Iperen 26, 4142 ER Leerdam. KVK 85409146, BTW NL004092100B36. E-mail {{footer.email}}, telefoon {{footer.phoneDisplay}}.</p>",
+      "image": null,
+      "sort_order": 3147
+    },
+    {
+      "key": "voorwaarden.backCta",
+      "label": "Voorwaarden · Bottom CTA label",
+      "kind": "text",
+      "text": "Naar contact",
+      "image": null,
+      "sort_order": 3150
+    },
+    {
+      "key": "errorpage.title",
+      "label": "404 · Title",
+      "kind": "rich_text",
+      "text": "Pagina niet gevonden",
+      "image": null,
+      "sort_order": 3153
+    },
+    {
+      "key": "errorpage.cta",
+      "label": "404 · Back-home CTA label",
+      "kind": "text",
+      "text": "Naar de homepage",
+      "image": null,
+      "sort_order": 3156
+    },
+    {
+      "key": "saninet.hero.kicker",
+      "label": "Saninet · Hero kicker",
+      "kind": "text",
+      "text": "Saninet · 3D Badkamerontwerp",
+      "image": null,
+      "sort_order": 3159
+    },
+    {
+      "key": "saninet.hero.title",
+      "label": "Saninet · Hero title (HTML)",
+      "kind": "rich_text",
+      "text": "Zie je badkamer<br/><em>voordat we beginnen</em>",
+      "image": null,
+      "sort_order": 3162
+    },
+    {
+      "key": "saninet.hero.sub",
+      "label": "Saninet · Hero subhead",
+      "kind": "text",
+      "text": "Samen ontwerpen we jouw badkamer in 3D, 100% naar wens en op de locatie van jouw keuze. Geen gokwerk, geen verrassingen.",
+      "image": null,
+      "sort_order": 3165
+    },
+    {
+      "key": "saninet.hero.cta",
+      "label": "Saninet · Hero CTA label",
+      "kind": "text",
+      "text": "Plan een ontwerpsessie",
+      "image": null,
+      "sort_order": 3168
+    },
+    {
+      "key": "saninet.hero.image",
+      "label": "Saninet · Hero image",
+      "kind": "image",
+      "text": null,
+      "image": "https://images.unsplash.com/photo-1620626011761-996317b8d101?w=2000&q=80&auto=format&fit=crop",
+      "sort_order": 3171
+    },
+    {
+      "key": "saninet.intro.eyebrow",
+      "label": "Saninet · Intro eyebrow",
+      "kind": "text",
+      "text": "Wat is Saninet?",
+      "image": null,
+      "sort_order": 3174
+    },
+    {
+      "key": "saninet.intro.title",
+      "label": "Saninet · Intro title",
+      "kind": "text",
+      "text": "De standaard onder badkamerspecialisten.",
+      "image": null,
+      "sort_order": 3177
+    },
+    {
+      "key": "saninet.body3",
+      "label": "Saninet · Body paragraph 3",
+      "kind": "text",
+      "text": "Omdat we met onze eigen sanitairspecialisten en vaste leveranciers werken, lopen ontwerp en uitvoering naadloos in elkaar over. Het 3D-beeld is geen verkooppraatje, maar de blauwdruk van je nieuwe badkamer.",
+      "image": null,
+      "sort_order": 3186
+    },
+    {
+      "key": "saninet.light1.title",
+      "label": "Saninet · Section 1 title (white)",
+      "kind": "text",
+      "text": "Samen ontwerpen, bij jou thuis",
+      "image": null,
+      "sort_order": 3189
+    },
+    {
+      "key": "saninet.light2.title",
+      "label": "Saninet · Section 2 title (white)",
+      "kind": "text",
+      "text": "In vier stappen naar je ontwerp",
+      "image": null,
+      "sort_order": 3192
+    },
+    {
+      "key": "saninet.step1.title",
+      "label": "Saninet · Step 1 title",
+      "kind": "text",
+      "text": "We komen langs",
+      "image": null,
+      "sort_order": 3195
+    },
+    {
+      "key": "saninet.step1.body",
+      "label": "Saninet · Step 1 body",
+      "kind": "text",
+      "text": "Onze specialist komt naar de locatie van jouw keuze, neemt de ruimte op en luistert naar je wensen. We beginnen altijd bij jou, niet bij een catalogus.",
+      "image": null,
+      "sort_order": 3198
+    },
+    {
+      "key": "saninet.step2.title",
+      "label": "Saninet · Step 2 title",
+      "kind": "text",
+      "text": "Samen inrichten",
+      "image": null,
+      "sort_order": 3201
+    },
+    {
+      "key": "saninet.step2.body",
+      "label": "Saninet · Step 2 body",
+      "kind": "text",
+      "text": "In Saninet kiezen we samen sanitair, meubels en tegels uit duizenden echte producten. Je hoeft niets te raden, want je ziet alles in 3D opgebouwd worden.",
+      "image": null,
+      "sort_order": 3204
+    },
+    {
+      "key": "saninet.step3.title",
+      "label": "Saninet · Step 3 title",
+      "kind": "text",
+      "text": "Verfijnen tot het klopt",
+      "image": null,
+      "sort_order": 3207
+    },
+    {
+      "key": "saninet.step3.body",
+      "label": "Saninet · Step 3 body",
+      "kind": "text",
+      "text": "We schuiven, wisselen en passen aan tot het ontwerp 100% naar wens is. Pas als jij tevreden bent, gaan we verder.",
+      "image": null,
+      "sort_order": 3210
+    },
+    {
+      "key": "saninet.step4.title",
+      "label": "Saninet · Step 4 title",
+      "kind": "text",
+      "text": "Zekerheid vooraf",
+      "image": null,
+      "sort_order": 3213
+    },
+    {
+      "key": "saninet.step4.body",
+      "label": "Saninet · Step 4 body",
+      "kind": "text",
+      "text": "Je krijgt een realistisch 3D-beeld en een duidelijke offerte. Wat je ziet, is wat we bouwen. Geen verrassingen achteraf.",
+      "image": null,
+      "sort_order": 3216
+    },
+    {
+      "key": "saninet.finalCta.title",
+      "label": "Saninet · Final CTA title (HTML)",
+      "kind": "rich_text",
+      "text": "Klaar voor je <em>droombadkamer</em>?<br/>Plan een 3D-ontwerpsessie.",
+      "image": null,
+      "sort_order": 3219
+    },
+    {
+      "key": "citypage.hero.kicker",
+      "label": "City pages · Hero kicker (uses {{cityname}})",
+      "kind": "text",
+      "text": "Verbouwen in {{cityname}}",
+      "image": null,
+      "sort_order": 3222
+    },
+    {
+      "key": "citypage.hero.title",
+      "label": "City pages · Hero title (HTML, uses {{cityname}})",
+      "kind": "rich_text",
+      "text": "Verbouwen in<br/>{{cityname}}<br/><em>zonder verrassingen</em>",
+      "image": null,
+      "sort_order": 3225
+    },
+    {
+      "key": "citypage.hero.sub",
+      "label": "City pages · Hero subhead",
+      "kind": "text",
+      "text": "Renovatie en verbouwing door eigen vakmensen.",
+      "image": null,
+      "sort_order": 3228
+    },
+    {
+      "key": "citypage.hero.cta1",
+      "label": "City pages · Hero CTA 1 label",
+      "kind": "text",
+      "text": "Offerte aanvragen",
+      "image": null,
+      "sort_order": 3231
+    },
+    {
+      "key": "citypage.story.eyebrow",
+      "label": "City pages · Story eyebrow (uses {{cityname}})",
+      "kind": "text",
+      "text": "Over {{cityname}}",
+      "image": null,
+      "sort_order": 3234
+    },
+    {
+      "key": "citypage.story.title",
+      "label": "City pages · Story h2",
+      "kind": "text",
+      "text": "We kennen het werk hier.",
+      "image": null,
+      "sort_order": 3237
+    },
+    {
+      "key": "cities.amsterdam.positioning",
+      "label": "Cities · Amsterdam · Positioning paragraph",
+      "kind": "text",
+      "text": "In de stad is elke vierkante meter kostbaar en is er weinig ruimte voor fouten. Wij kennen het werk hier, van krappe aanrijroutes tot buren die dichtbij wonen, en houden je woning leefbaar tijdens de bouw.",
+      "image": null,
+      "sort_order": 3240
+    },
+    {
+      "key": "cities.amsterdam.wijken",
+      "label": "Cities · Amsterdam · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Oud-Zuid, IJburg en De Pijp, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 3243
+    },
+    {
+      "key": "citypage.story.cta",
+      "label": "City pages · Story CTA label",
+      "kind": "text",
+      "text": "Plan een gesprek",
+      "image": null,
+      "sort_order": 3246
+    },
+    {
+      "key": "citypage.beloftes.h2",
+      "label": "City pages · Vier beloftes h2 (uses {{cityname}})",
+      "kind": "text",
+      "text": "Vier beloftes voor {{cityname}}",
+      "image": null,
+      "sort_order": 3249
+    },
+    {
+      "key": "citypage.belofte1.title",
+      "label": "City pages · Belofte 1 title",
+      "kind": "text",
+      "text": "Eén vast aanspreekpunt",
+      "image": null,
+      "sort_order": 3252
+    },
+    {
+      "key": "citypage.belofte1.body",
+      "label": "City pages · Belofte 1 body",
+      "kind": "text",
+      "text": "Van eerste gesprek tot oplevering altijd dezelfde persoon. Eén projectleider die jouw woning kent.",
+      "image": null,
+      "sort_order": 3255
+    },
+    {
+      "key": "citypage.belofte2.title",
+      "label": "City pages · Belofte 2 title",
+      "kind": "text",
+      "text": "Vaste prijs vooraf",
+      "image": null,
+      "sort_order": 3258
+    },
+    {
+      "key": "citypage.belofte2.body",
+      "label": "City pages · Belofte 2 body",
+      "kind": "text",
+      "text": "Scherpe vaste prijs via ons eigen leveranciersnetwerk. Geen tussenpersonen, geen verborgen meerwerk.",
+      "image": null,
+      "sort_order": 3261
+    },
+    {
+      "key": "citypage.belofte3.title",
+      "label": "City pages · Belofte 3 title",
+      "kind": "text",
+      "text": "Op tijd opgeleverd",
+      "image": null,
+      "sort_order": 3264
+    },
+    {
+      "key": "citypage.belofte3.body",
+      "label": "City pages · Belofte 3 body",
+      "kind": "text",
+      "text": "Afspraak is afspraak, ook de opleverdatum staat vast. Vaste planning, vast team, vaste oplevering.",
+      "image": null,
+      "sort_order": 3267
+    },
+    {
+      "key": "citypage.belofte4.title",
+      "label": "City pages · Belofte 4 title",
+      "kind": "text",
+      "text": "15+ jaar track record",
+      "image": null,
+      "sort_order": 3270
+    },
+    {
+      "key": "citypage.belofte4.body",
+      "label": "City pages · Belofte 4 body",
+      "kind": "text",
+      "text": "Bewezen ervaring in bouw en sanitair. 200+ opgeleverde projecten. We weten wat we doen en wat er kan misgaan.",
+      "image": null,
+      "sort_order": 3273
+    },
+    {
+      "key": "citypage.diensten.eyebrow",
+      "label": "City pages · Diensten eyebrow (uses {{cityname}})",
+      "kind": "text",
+      "text": "Diensten in {{cityname}}",
+      "image": null,
+      "sort_order": 3276
+    },
+    {
+      "key": "citypage.diensten.h2",
+      "label": "City pages · Diensten h2",
+      "kind": "text",
+      "text": "Wat we voor je kunnen doen.",
+      "image": null,
+      "sort_order": 3279
+    },
+    {
+      "key": "citypage.dienst1.title",
+      "label": "City pages · Dienst 1 title",
+      "kind": "text",
+      "text": "Totaal renovatie &amp; nieuwbouw",
+      "image": null,
+      "sort_order": 3282
+    },
+    {
+      "key": "citypage.dienst1.desc",
+      "label": "City pages · Dienst 1 description (uses {{cityname}})",
+      "kind": "text",
+      "text": "Casco-aanpak van je hele woning in {{cityname}}, van sloop tot sleutelklaar.",
+      "image": null,
+      "sort_order": 3285
+    },
+    {
+      "key": "citypage.dienst2.title",
+      "label": "City pages · Dienst 2 title",
+      "kind": "text",
+      "text": "Sanitair specialist",
+      "image": null,
+      "sort_order": 3288
+    },
+    {
+      "key": "citypage.dienst2.desc",
+      "label": "City pages · Dienst 2 description (uses {{cityname}})",
+      "kind": "text",
+      "text": "Luxe badkamers met eigen sanitairspecialisten en Saninet 3D-ontwerp op locatie.",
+      "image": null,
+      "sort_order": 3291
+    },
+    {
+      "key": "citypage.dienst3.title",
+      "label": "City pages · Dienst 3 title",
+      "kind": "text",
+      "text": "Woningonderhoud",
+      "image": null,
+      "sort_order": 3294
+    },
+    {
+      "key": "citypage.dienst3.desc",
+      "label": "City pages · Dienst 3 description (uses {{cityname}})",
+      "kind": "text",
+      "text": "Periodiek onderhoud, kleine reparaties en servicecontracten voor je {{cityname}}-woning.",
+      "image": null,
+      "sort_order": 3297
+    },
+    {
+      "key": "citypage.dienst4.title",
+      "label": "City pages · Dienst 4 title",
+      "kind": "text",
+      "text": "Keukens",
+      "image": null,
+      "sort_order": 3300
+    },
+    {
+      "key": "citypage.dienst4.desc",
+      "label": "City pages · Dienst 4 description (uses {{cityname}})",
+      "kind": "text",
+      "text": "Maatwerk keukenontwerp inclusief apparatuur, werkbladen en installatie.",
+      "image": null,
+      "sort_order": 3303
+    },
+    {
+      "key": "citypage.dienst5.title",
+      "label": "City pages · Dienst 5 title",
+      "kind": "text",
+      "text": "Dakwerk",
+      "image": null,
+      "sort_order": 3306
+    },
+    {
+      "key": "citypage.dienst5.desc",
+      "label": "City pages · Dienst 5 description (uses {{cityname}})",
+      "kind": "text",
+      "text": "Platte en hellende daken, dakkapellen, loodwerk en dakisolatie.",
+      "image": null,
+      "sort_order": 3309
+    },
+    {
+      "key": "citypage.dienst6.title",
+      "label": "City pages · Dienst 6 title",
+      "kind": "text",
+      "text": "Schilderwerk",
+      "image": null,
+      "sort_order": 3312
+    },
+    {
+      "key": "citypage.dienst6.desc",
+      "label": "City pages · Dienst 6 description (uses {{cityname}})",
+      "kind": "text",
+      "text": "Binnen- en buitenschilderwerk met hoogwaardige verven door eigen ploeg.",
+      "image": null,
+      "sort_order": 3315
+    },
+    {
+      "key": "citypage.dienst7.title",
+      "label": "City pages · Dienst 7 title",
+      "kind": "text",
+      "text": "Loodgieterwerk",
+      "image": null,
+      "sort_order": 3318
+    },
+    {
+      "key": "citypage.dienst7.desc",
+      "label": "City pages · Dienst 7 description (uses {{cityname}})",
+      "kind": "text",
+      "text": "Eigen gecertificeerde loodgieters voor water, gas, CV en ventilatie.",
+      "image": null,
+      "sort_order": 3321
+    },
+    {
+      "key": "citypage.dienst8.title",
+      "label": "City pages · Dienst 8 title",
+      "kind": "text",
+      "text": "Elektra",
+      "image": null,
+      "sort_order": 3324
+    },
+    {
+      "key": "citypage.dienst8.desc",
+      "label": "City pages · Dienst 8 description (uses {{cityname}})",
+      "kind": "text",
+      "text": "Groepenkast, bedrading en NEN-1010 keuring door eigen installateurs.",
+      "image": null,
+      "sort_order": 3327
+    },
+    {
+      "key": "citypage.tier1.name",
+      "label": "City pages · Tier 1 name",
+      "kind": "text",
+      "text": "Budget",
+      "image": null,
+      "sort_order": 3330
+    },
+    {
+      "key": "citypage.tier1.cta",
+      "label": "City pages · Tier 1 CTA label",
+      "kind": "text",
+      "text": "Offerte aanvragen",
+      "image": null,
+      "sort_order": 3333
+    },
+    {
+      "key": "cities.amsterdam.tier1.range",
+      "label": "Cities · Amsterdam · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 3336
+    },
+    {
+      "key": "cities.amsterdam.tier1.price",
+      "label": "Cities · Amsterdam · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 3339
+    },
+    {
+      "key": "citypage.tier2.name",
+      "label": "City pages · Tier 2 name",
+      "kind": "text",
+      "text": "Standaard",
+      "image": null,
+      "sort_order": 3342
+    },
+    {
+      "key": "citypage.tier2.cta",
+      "label": "City pages · Tier 2 CTA label",
+      "kind": "text",
+      "text": "Meest gekozen",
+      "image": null,
+      "sort_order": 3345
+    },
+    {
+      "key": "cities.amsterdam.tier2.range",
+      "label": "Cities · Amsterdam · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 3348
+    },
+    {
+      "key": "cities.amsterdam.tier2.price",
+      "label": "Cities · Amsterdam · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 3351
+    },
+    {
+      "key": "citypage.tier3.name",
+      "label": "City pages · Tier 3 name",
+      "kind": "text",
+      "text": "Premium",
+      "image": null,
+      "sort_order": 3354
+    },
+    {
+      "key": "citypage.tier3.cta",
+      "label": "City pages · Tier 3 CTA label",
+      "kind": "text",
+      "text": "Offerte aanvragen",
+      "image": null,
+      "sort_order": 3357
+    },
+    {
+      "key": "cities.amsterdam.tier3.range",
+      "label": "Cities · Amsterdam · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 3360
+    },
+    {
+      "key": "cities.amsterdam.tier3.price",
+      "label": "Cities · Amsterdam · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 3363
+    },
+    {
+      "key": "citypage.tier4.name",
+      "label": "City pages · Tier 4 name",
+      "kind": "text",
+      "text": "Maatwerk",
+      "image": null,
+      "sort_order": 3366
+    },
+    {
+      "key": "citypage.tier4.cta",
+      "label": "City pages · Tier 4 CTA label",
+      "kind": "text",
+      "text": "Plan gesprek",
+      "image": null,
+      "sort_order": 3369
+    },
+    {
+      "key": "cities.amsterdam.tier4.range",
+      "label": "Cities · Amsterdam · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 3372
+    },
+    {
+      "key": "cities.amsterdam.tier4.price",
+      "label": "Cities · Amsterdam · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 3375
+    },
+    {
+      "key": "citypage.tierDisclaimer",
+      "label": "City pages · Tier disclaimer",
+      "kind": "text",
+      "text": "Indicatie excl. BTW. Werkelijke kosten hangen af van bouwkundige staat, vergunningen, materiaalkeuzes en regio.",
+      "image": null,
+      "sort_order": 3378
+    },
+    {
+      "key": "citypage.werk.h2",
+      "label": "City pages · Recent werk h2 (uses {{cityname}})",
+      "kind": "text",
+      "text": "Recent werk uit {{cityname}}",
+      "image": null,
+      "sort_order": 3381
+    },
+    {
+      "key": "citypage.cta.title",
+      "label": "City pages · Final CTA title (HTML, uses {{cityname}})",
+      "kind": "rich_text",
+      "text": "Verbouwingsplannen in <em>{{cityname}}</em>?",
+      "image": null,
+      "sort_order": 3384
+    },
+    {
+      "key": "citypage.faq.h2",
+      "label": "City pages · FAQ h2 (uses {{cityname}})",
+      "kind": "text",
+      "text": "Veelgestelde vragen over {{cityname}}",
+      "image": null,
+      "sort_order": 3387
+    },
+    {
+      "key": "citypage.nearby.h2",
+      "label": "City pages · Nearby cities h2",
+      "kind": "text",
+      "text": "Ook actief in de omgeving",
+      "image": null,
+      "sort_order": 3390
+    },
+    {
+      "key": "cities.rotterdam.positioning",
+      "label": "Cities · Rotterdam · Positioning paragraph",
+      "kind": "text",
+      "text": "Van naoorlogse portiek-flat tot vooroorlogs herenhuis in Kralingen, Rotterdamse renovaties vragen specifieke kennis van fundering, casco en geluidsoverdracht.",
+      "image": null,
+      "sort_order": 3393
+    },
+    {
+      "key": "cities.rotterdam.wijken",
+      "label": "Cities · Rotterdam · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Kralingen, Hillegersberg en Delfshaven, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 3396
+    },
+    {
+      "key": "cities.rotterdam.tier1.range",
+      "label": "Cities · Rotterdam · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 3399
+    },
+    {
+      "key": "cities.rotterdam.tier1.price",
+      "label": "Cities · Rotterdam · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 3402
+    },
+    {
+      "key": "cities.rotterdam.tier2.range",
+      "label": "Cities · Rotterdam · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 3405
+    },
+    {
+      "key": "cities.rotterdam.tier2.price",
+      "label": "Cities · Rotterdam · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 3408
+    },
+    {
+      "key": "cities.rotterdam.tier3.range",
+      "label": "Cities · Rotterdam · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 3411
+    },
+    {
+      "key": "cities.rotterdam.tier3.price",
+      "label": "Cities · Rotterdam · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 3414
+    },
+    {
+      "key": "cities.rotterdam.tier4.range",
+      "label": "Cities · Rotterdam · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 3417
+    },
+    {
+      "key": "cities.rotterdam.tier4.price",
+      "label": "Cities · Rotterdam · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 3420
+    },
+    {
+      "key": "cities.den-haag.positioning",
+      "label": "Cities · Den Haag · Positioning paragraph",
+      "kind": "text",
+      "text": "Of het nu om een herenhuis in Benoordenhout gaat of een appartement nabij Scheveningen, we werken vaak met monumentale en jaren-30 panden en kennen het Haagse welstandsbeleid.",
+      "image": null,
+      "sort_order": 3423
+    },
+    {
+      "key": "cities.den-haag.wijken",
+      "label": "Cities · Den Haag · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Scheveningen, Benoordenhout en Loosduinen, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 3426
+    },
+    {
+      "key": "cities.den-haag.tier1.range",
+      "label": "Cities · Den Haag · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 3429
+    },
+    {
+      "key": "cities.den-haag.tier1.price",
+      "label": "Cities · Den Haag · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 3432
+    },
+    {
+      "key": "cities.den-haag.tier2.range",
+      "label": "Cities · Den Haag · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 3435
+    },
+    {
+      "key": "cities.den-haag.tier2.price",
+      "label": "Cities · Den Haag · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 3438
+    },
+    {
+      "key": "cities.den-haag.tier3.range",
+      "label": "Cities · Den Haag · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 3441
+    },
+    {
+      "key": "cities.den-haag.tier3.price",
+      "label": "Cities · Den Haag · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 3444
+    },
+    {
+      "key": "cities.den-haag.tier4.range",
+      "label": "Cities · Den Haag · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 3447
+    },
+    {
+      "key": "cities.den-haag.tier4.price",
+      "label": "Cities · Den Haag · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 3450
+    },
+    {
+      "key": "cities.utrecht.positioning",
+      "label": "Cities · Utrecht · Positioning paragraph",
+      "kind": "text",
+      "text": "Van smalle binnenstadspanden in Wittevrouwen tot strakke nieuwbouw in Leidsche Rijn, Utrechtse projecten vragen om creatieve oplossingen en strakke uitvoering.",
+      "image": null,
+      "sort_order": 3453
+    },
+    {
+      "key": "cities.utrecht.wijken",
+      "label": "Cities · Utrecht · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Wittevrouwen, Oog in Al en Leidsche Rijn, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 3456
+    },
+    {
+      "key": "cities.utrecht.tier1.range",
+      "label": "Cities · Utrecht · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 3459
+    },
+    {
+      "key": "cities.utrecht.tier1.price",
+      "label": "Cities · Utrecht · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 3462
+    },
+    {
+      "key": "cities.utrecht.tier2.range",
+      "label": "Cities · Utrecht · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 3465
+    },
+    {
+      "key": "cities.utrecht.tier2.price",
+      "label": "Cities · Utrecht · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 3468
+    },
+    {
+      "key": "cities.utrecht.tier3.range",
+      "label": "Cities · Utrecht · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 3471
+    },
+    {
+      "key": "cities.utrecht.tier3.price",
+      "label": "Cities · Utrecht · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 3474
+    },
+    {
+      "key": "cities.utrecht.tier4.range",
+      "label": "Cities · Utrecht · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 3477
+    },
+    {
+      "key": "cities.utrecht.tier4.price",
+      "label": "Cities · Utrecht · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 3480
+    },
+    {
+      "key": "cities.eindhoven.positioning",
+      "label": "Cities · Eindhoven · Positioning paragraph",
+      "kind": "text",
+      "text": "Het ontwerp van Eindhovense woningen vraagt om gevoel voor architectuur, van klassieke villa's in Stratum tot industrieel-strakke lofts in Strijp.",
+      "image": null,
+      "sort_order": 3483
+    },
+    {
+      "key": "cities.eindhoven.wijken",
+      "label": "Cities · Eindhoven · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Stratum, Strijp en Tongelre, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 3486
+    },
+    {
+      "key": "cities.eindhoven.tier1.range",
+      "label": "Cities · Eindhoven · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 3489
+    },
+    {
+      "key": "cities.eindhoven.tier1.price",
+      "label": "Cities · Eindhoven · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 3492
+    },
+    {
+      "key": "cities.eindhoven.tier2.range",
+      "label": "Cities · Eindhoven · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 3495
+    },
+    {
+      "key": "cities.eindhoven.tier2.price",
+      "label": "Cities · Eindhoven · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 3498
+    },
+    {
+      "key": "cities.eindhoven.tier3.range",
+      "label": "Cities · Eindhoven · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 3501
+    },
+    {
+      "key": "cities.eindhoven.tier3.price",
+      "label": "Cities · Eindhoven · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 3504
+    },
+    {
+      "key": "cities.eindhoven.tier4.range",
+      "label": "Cities · Eindhoven · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 3507
+    },
+    {
+      "key": "cities.eindhoven.tier4.price",
+      "label": "Cities · Eindhoven · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 3510
+    },
+    {
+      "key": "cities.tilburg.positioning",
+      "label": "Cities · Tilburg · Positioning paragraph",
+      "kind": "text",
+      "text": "Tilburgse renovaties variëren van karakteristieke arbeidershuizen in Goirke tot ruime gezinswoningen in Reeshof. Wij brengen jouw woning naar deze tijd, met respect voor de oorsprong.",
+      "image": null,
+      "sort_order": 3513
+    },
+    {
+      "key": "cities.tilburg.wijken",
+      "label": "Cities · Tilburg · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Reeshof, Goirke en Oud-Noord, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 3516
+    },
+    {
+      "key": "cities.tilburg.tier1.range",
+      "label": "Cities · Tilburg · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 3519
+    },
+    {
+      "key": "cities.tilburg.tier1.price",
+      "label": "Cities · Tilburg · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 3522
+    },
+    {
+      "key": "cities.tilburg.tier2.range",
+      "label": "Cities · Tilburg · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 3525
+    },
+    {
+      "key": "cities.tilburg.tier2.price",
+      "label": "Cities · Tilburg · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 3528
+    },
+    {
+      "key": "cities.tilburg.tier3.range",
+      "label": "Cities · Tilburg · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 3531
+    },
+    {
+      "key": "cities.tilburg.tier3.price",
+      "label": "Cities · Tilburg · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 3534
+    },
+    {
+      "key": "cities.tilburg.tier4.range",
+      "label": "Cities · Tilburg · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 3537
+    },
+    {
+      "key": "cities.tilburg.tier4.price",
+      "label": "Cities · Tilburg · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 3540
+    },
+    {
+      "key": "cities.groningen.positioning",
+      "label": "Cities · Groningen · Positioning paragraph",
+      "kind": "text",
+      "text": "Wij werken regelmatig in Groningen, van studentenhuisvesting in het centrum tot gezinswoningen in Helpman. Aardbevingsbestendig bouwen is voor ons standaard.",
+      "image": null,
+      "sort_order": 3543
+    },
+    {
+      "key": "cities.groningen.wijken",
+      "label": "Cities · Groningen · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Helpman, Oosterpark en Vinkhuizen, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 3546
+    },
+    {
+      "key": "cities.groningen.tier1.range",
+      "label": "Cities · Groningen · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 3549
+    },
+    {
+      "key": "cities.groningen.tier1.price",
+      "label": "Cities · Groningen · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 3552
+    },
+    {
+      "key": "cities.groningen.tier2.range",
+      "label": "Cities · Groningen · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 3555
+    },
+    {
+      "key": "cities.groningen.tier2.price",
+      "label": "Cities · Groningen · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 3558
+    },
+    {
+      "key": "cities.groningen.tier3.range",
+      "label": "Cities · Groningen · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 3561
+    },
+    {
+      "key": "cities.groningen.tier3.price",
+      "label": "Cities · Groningen · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 3564
+    },
+    {
+      "key": "cities.groningen.tier4.range",
+      "label": "Cities · Groningen · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 3567
+    },
+    {
+      "key": "cities.groningen.tier4.price",
+      "label": "Cities · Groningen · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 3570
+    },
+    {
+      "key": "cities.almere.positioning",
+      "label": "Cities · Almere · Positioning paragraph",
+      "kind": "text",
+      "text": "Almere is jong en groeit hard. Veel woningen uit de jaren '80 en '90 zijn toe aan een grondige opfris. Wij specialiseren ons in energetische renovaties die comfort en waarde toevoegen.",
+      "image": null,
+      "sort_order": 3573
+    },
+    {
+      "key": "cities.almere.wijken",
+      "label": "Cities · Almere · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Almere Stad, Almere Buiten, Almere Haven en Almere Poort, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 3576
+    },
+    {
+      "key": "cities.almere.tier1.range",
+      "label": "Cities · Almere · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 3579
+    },
+    {
+      "key": "cities.almere.tier1.price",
+      "label": "Cities · Almere · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 3582
+    },
+    {
+      "key": "cities.almere.tier2.range",
+      "label": "Cities · Almere · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 3585
+    },
+    {
+      "key": "cities.almere.tier2.price",
+      "label": "Cities · Almere · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 3588
+    },
+    {
+      "key": "cities.almere.tier3.range",
+      "label": "Cities · Almere · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 3591
+    },
+    {
+      "key": "cities.almere.tier3.price",
+      "label": "Cities · Almere · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 3594
+    },
+    {
+      "key": "cities.almere.tier4.range",
+      "label": "Cities · Almere · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 3597
+    },
+    {
+      "key": "cities.almere.tier4.price",
+      "label": "Cities · Almere · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 3600
+    },
+    {
+      "key": "cities.breda.positioning",
+      "label": "Cities · Breda · Positioning paragraph",
+      "kind": "text",
+      "text": "Bredase woningen kennen veel diversiteit, van karakterpanden in Ginneken tot moderne nieuwbouw in Belcrum. We werken al jaren in de regio.",
+      "image": null,
+      "sort_order": 3603
+    },
+    {
+      "key": "cities.breda.wijken",
+      "label": "Cities · Breda · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Ginneken, Belcrum en Princenhage, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 3606
+    },
+    {
+      "key": "cities.breda.tier1.range",
+      "label": "Cities · Breda · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 3609
+    },
+    {
+      "key": "cities.breda.tier1.price",
+      "label": "Cities · Breda · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 3612
+    },
+    {
+      "key": "cities.breda.tier2.range",
+      "label": "Cities · Breda · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 3615
+    },
+    {
+      "key": "cities.breda.tier2.price",
+      "label": "Cities · Breda · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 3618
+    },
+    {
+      "key": "cities.breda.tier3.range",
+      "label": "Cities · Breda · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 3621
+    },
+    {
+      "key": "cities.breda.tier3.price",
+      "label": "Cities · Breda · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 3624
+    },
+    {
+      "key": "cities.breda.tier4.range",
+      "label": "Cities · Breda · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 3627
+    },
+    {
+      "key": "cities.breda.tier4.price",
+      "label": "Cities · Breda · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 3630
+    },
+    {
+      "key": "cities.nijmegen.positioning",
+      "label": "Cities · Nijmegen · Positioning paragraph",
+      "kind": "text",
+      "text": "In het oudste deel van Nederland vragen Nijmeegse panden om respect voor het verleden en oog voor het nu. Wij brengen die balans bij elke renovatie.",
+      "image": null,
+      "sort_order": 3633
+    },
+    {
+      "key": "cities.nijmegen.wijken",
+      "label": "Cities · Nijmegen · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Lent, Hatert en Nijmegen-Oost, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 3636
+    },
+    {
+      "key": "cities.nijmegen.tier1.range",
+      "label": "Cities · Nijmegen · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 3639
+    },
+    {
+      "key": "cities.nijmegen.tier1.price",
+      "label": "Cities · Nijmegen · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 3642
+    },
+    {
+      "key": "cities.nijmegen.tier2.range",
+      "label": "Cities · Nijmegen · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 3645
+    },
+    {
+      "key": "cities.nijmegen.tier2.price",
+      "label": "Cities · Nijmegen · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 3648
+    },
+    {
+      "key": "cities.nijmegen.tier3.range",
+      "label": "Cities · Nijmegen · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 3651
+    },
+    {
+      "key": "cities.nijmegen.tier3.price",
+      "label": "Cities · Nijmegen · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 3654
+    },
+    {
+      "key": "cities.nijmegen.tier4.range",
+      "label": "Cities · Nijmegen · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 3657
+    },
+    {
+      "key": "cities.nijmegen.tier4.price",
+      "label": "Cities · Nijmegen · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 3660
+    },
+    {
+      "key": "cities.apeldoorn.positioning",
+      "label": "Cities · Apeldoorn · Positioning paragraph",
+      "kind": "text",
+      "text": "Apeldoorn ligt prachtig aan de Veluwe. Veel projecten draaien om verbouwingen van karakterwoningen en jaren-30 huizen met behoud van originele details.",
+      "image": null,
+      "sort_order": 3663
+    },
+    {
+      "key": "cities.apeldoorn.wijken",
+      "label": "Cities · Apeldoorn · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Zevenhuizen, Berg en Bos en Apeldoorn-Zuid, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 3666
+    },
+    {
+      "key": "cities.apeldoorn.tier1.range",
+      "label": "Cities · Apeldoorn · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 3669
+    },
+    {
+      "key": "cities.apeldoorn.tier1.price",
+      "label": "Cities · Apeldoorn · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 3672
+    },
+    {
+      "key": "cities.apeldoorn.tier2.range",
+      "label": "Cities · Apeldoorn · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 3675
+    },
+    {
+      "key": "cities.apeldoorn.tier2.price",
+      "label": "Cities · Apeldoorn · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 3678
+    },
+    {
+      "key": "cities.apeldoorn.tier3.range",
+      "label": "Cities · Apeldoorn · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 3681
+    },
+    {
+      "key": "cities.apeldoorn.tier3.price",
+      "label": "Cities · Apeldoorn · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 3684
+    },
+    {
+      "key": "cities.apeldoorn.tier4.range",
+      "label": "Cities · Apeldoorn · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 3687
+    },
+    {
+      "key": "cities.apeldoorn.tier4.price",
+      "label": "Cities · Apeldoorn · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 3690
+    },
+    {
+      "key": "cities.haarlem.positioning",
+      "label": "Cities · Haarlem · Positioning paragraph",
+      "kind": "text",
+      "text": "Haarlem heeft een rijk historisch centrum waar monumentenzorg vaak een rol speelt. Wij weten hoe je een 17e-eeuws pand bewoonbaar maakt zonder de ziel weg te halen.",
+      "image": null,
+      "sort_order": 3693
+    },
+    {
+      "key": "cities.haarlem.wijken",
+      "label": "Cities · Haarlem · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Schalkwijk, Haarlem-Noord en Spaarndammerbuurt, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 3696
+    },
+    {
+      "key": "cities.haarlem.tier1.range",
+      "label": "Cities · Haarlem · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 3699
+    },
+    {
+      "key": "cities.haarlem.tier1.price",
+      "label": "Cities · Haarlem · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 3702
+    },
+    {
+      "key": "cities.haarlem.tier2.range",
+      "label": "Cities · Haarlem · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 3705
+    },
+    {
+      "key": "cities.haarlem.tier2.price",
+      "label": "Cities · Haarlem · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 3708
+    },
+    {
+      "key": "cities.haarlem.tier3.range",
+      "label": "Cities · Haarlem · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 3711
+    },
+    {
+      "key": "cities.haarlem.tier3.price",
+      "label": "Cities · Haarlem · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 3714
+    },
+    {
+      "key": "cities.haarlem.tier4.range",
+      "label": "Cities · Haarlem · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 3717
+    },
+    {
+      "key": "cities.haarlem.tier4.price",
+      "label": "Cities · Haarlem · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 3720
+    },
+    {
+      "key": "cities.arnhem.positioning",
+      "label": "Cities · Arnhem · Positioning paragraph",
+      "kind": "text",
+      "text": "Het glooiende Arnhem vraagt om ervaring met hoogteverschillen, kelders en bijzondere kapconstructies. Onze ploeg kent de stad door en door.",
+      "image": null,
+      "sort_order": 3723
+    },
+    {
+      "key": "cities.arnhem.wijken",
+      "label": "Cities · Arnhem · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Spijkerkwartier, Klarendal en Velperweg, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 3726
+    },
+    {
+      "key": "cities.arnhem.tier1.range",
+      "label": "Cities · Arnhem · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 3729
+    },
+    {
+      "key": "cities.arnhem.tier1.price",
+      "label": "Cities · Arnhem · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 3732
+    },
+    {
+      "key": "cities.arnhem.tier2.range",
+      "label": "Cities · Arnhem · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 3735
+    },
+    {
+      "key": "cities.arnhem.tier2.price",
+      "label": "Cities · Arnhem · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 3738
+    },
+    {
+      "key": "cities.arnhem.tier3.range",
+      "label": "Cities · Arnhem · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 3741
+    },
+    {
+      "key": "cities.arnhem.tier3.price",
+      "label": "Cities · Arnhem · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 3744
+    },
+    {
+      "key": "cities.arnhem.tier4.range",
+      "label": "Cities · Arnhem · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 3747
+    },
+    {
+      "key": "cities.arnhem.tier4.price",
+      "label": "Cities · Arnhem · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 3750
+    },
+    {
+      "key": "cities.enschede.positioning",
+      "label": "Cities · Enschede · Positioning paragraph",
+      "kind": "text",
+      "text": "Twentse degelijkheid past goed bij onze werkwijze: heldere afspraken, geen poespas, een woning die generaties meegaat.",
+      "image": null,
+      "sort_order": 3753
+    },
+    {
+      "key": "cities.enschede.wijken",
+      "label": "Cities · Enschede · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Lonneker, Stadsveld en Glanerbrug, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 3756
+    },
+    {
+      "key": "cities.enschede.tier1.range",
+      "label": "Cities · Enschede · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 3759
+    },
+    {
+      "key": "cities.enschede.tier1.price",
+      "label": "Cities · Enschede · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 3762
+    },
+    {
+      "key": "cities.enschede.tier2.range",
+      "label": "Cities · Enschede · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 3765
+    },
+    {
+      "key": "cities.enschede.tier2.price",
+      "label": "Cities · Enschede · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 3768
+    },
+    {
+      "key": "cities.enschede.tier3.range",
+      "label": "Cities · Enschede · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 3771
+    },
+    {
+      "key": "cities.enschede.tier3.price",
+      "label": "Cities · Enschede · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 3774
+    },
+    {
+      "key": "cities.enschede.tier4.range",
+      "label": "Cities · Enschede · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 3777
+    },
+    {
+      "key": "cities.enschede.tier4.price",
+      "label": "Cities · Enschede · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 3780
+    },
+    {
+      "key": "cities.amersfoort.positioning",
+      "label": "Cities · Amersfoort · Positioning paragraph",
+      "kind": "text",
+      "text": "Van karakterwoningen in het Soesterkwartier tot ruime gezinshuizen in Vathorst, onze ploeg rijdt vanuit Leerdam zonder reiskosten naar je toe.",
+      "image": null,
+      "sort_order": 3783
+    },
+    {
+      "key": "cities.amersfoort.wijken",
+      "label": "Cities · Amersfoort · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Soesterkwartier, Vathorst en Schothorst, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 3786
+    },
+    {
+      "key": "cities.amersfoort.tier1.range",
+      "label": "Cities · Amersfoort · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 3789
+    },
+    {
+      "key": "cities.amersfoort.tier1.price",
+      "label": "Cities · Amersfoort · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 3792
+    },
+    {
+      "key": "cities.amersfoort.tier2.range",
+      "label": "Cities · Amersfoort · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 3795
+    },
+    {
+      "key": "cities.amersfoort.tier2.price",
+      "label": "Cities · Amersfoort · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 3798
+    },
+    {
+      "key": "cities.amersfoort.tier3.range",
+      "label": "Cities · Amersfoort · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 3801
+    },
+    {
+      "key": "cities.amersfoort.tier3.price",
+      "label": "Cities · Amersfoort · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 3804
+    },
+    {
+      "key": "cities.amersfoort.tier4.range",
+      "label": "Cities · Amersfoort · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 3807
+    },
+    {
+      "key": "cities.amersfoort.tier4.price",
+      "label": "Cities · Amersfoort · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 3810
+    },
+    {
+      "key": "cities.zaanstad.positioning",
+      "label": "Cities · Zaanstad · Positioning paragraph",
+      "kind": "text",
+      "text": "Zaanse houten huizen vragen specialistisch onderhoud en renovatie. Wij hebben ervaring met traditionele bouwmethoden in combinatie met moderne installaties.",
+      "image": null,
+      "sort_order": 3813
+    },
+    {
+      "key": "cities.zaanstad.wijken",
+      "label": "Cities · Zaanstad · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Zaandam, Wormerveer, Krommenie en Koog aan de Zaan, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 3816
+    },
+    {
+      "key": "cities.zaanstad.tier1.range",
+      "label": "Cities · Zaanstad · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 3819
+    },
+    {
+      "key": "cities.zaanstad.tier1.price",
+      "label": "Cities · Zaanstad · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 3822
+    },
+    {
+      "key": "cities.zaanstad.tier2.range",
+      "label": "Cities · Zaanstad · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 3825
+    },
+    {
+      "key": "cities.zaanstad.tier2.price",
+      "label": "Cities · Zaanstad · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 3828
+    },
+    {
+      "key": "cities.zaanstad.tier3.range",
+      "label": "Cities · Zaanstad · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 3831
+    },
+    {
+      "key": "cities.zaanstad.tier3.price",
+      "label": "Cities · Zaanstad · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 3834
+    },
+    {
+      "key": "cities.zaanstad.tier4.range",
+      "label": "Cities · Zaanstad · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 3837
+    },
+    {
+      "key": "cities.zaanstad.tier4.price",
+      "label": "Cities · Zaanstad · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 3840
+    },
+    {
+      "key": "cities.haarlemmermeer.positioning",
+      "label": "Cities · Haarlemmermeer · Positioning paragraph",
+      "kind": "text",
+      "text": "De Haarlemmermeer combineert dorpse rust met snelle verbindingen naar Schiphol en Amsterdam. We renoveren hier veel jaren-70 woningen tot moderne gezinshuizen.",
+      "image": null,
+      "sort_order": 3843
+    },
+    {
+      "key": "cities.haarlemmermeer.wijken",
+      "label": "Cities · Haarlemmermeer · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Hoofddorp, Nieuw-Vennep, Badhoevedorp en Zwanenburg, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 3846
+    },
+    {
+      "key": "cities.haarlemmermeer.tier1.range",
+      "label": "Cities · Haarlemmermeer · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 3849
+    },
+    {
+      "key": "cities.haarlemmermeer.tier1.price",
+      "label": "Cities · Haarlemmermeer · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 3852
+    },
+    {
+      "key": "cities.haarlemmermeer.tier2.range",
+      "label": "Cities · Haarlemmermeer · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 3855
+    },
+    {
+      "key": "cities.haarlemmermeer.tier2.price",
+      "label": "Cities · Haarlemmermeer · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 3858
+    },
+    {
+      "key": "cities.haarlemmermeer.tier3.range",
+      "label": "Cities · Haarlemmermeer · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 3861
+    },
+    {
+      "key": "cities.haarlemmermeer.tier3.price",
+      "label": "Cities · Haarlemmermeer · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 3864
+    },
+    {
+      "key": "cities.haarlemmermeer.tier4.range",
+      "label": "Cities · Haarlemmermeer · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 3867
+    },
+    {
+      "key": "cities.haarlemmermeer.tier4.price",
+      "label": "Cities · Haarlemmermeer · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 3870
+    },
+    {
+      "key": "cities.den-bosch.positioning",
+      "label": "Cities · Den Bosch · Positioning paragraph",
+      "kind": "text",
+      "text": "Bossche binnenstadspanden zijn vaak monumentaal. We werken nauw samen met monumentenzorg en welstand voor strakke uitkomsten met behoud van karakter.",
+      "image": null,
+      "sort_order": 3873
+    },
+    {
+      "key": "cities.den-bosch.wijken",
+      "label": "Cities · Den Bosch · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Vughterpoort, Maaspoort en Engelen, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 3876
+    },
+    {
+      "key": "cities.den-bosch.tier1.range",
+      "label": "Cities · Den Bosch · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 3879
+    },
+    {
+      "key": "cities.den-bosch.tier1.price",
+      "label": "Cities · Den Bosch · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 3882
+    },
+    {
+      "key": "cities.den-bosch.tier2.range",
+      "label": "Cities · Den Bosch · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 3885
+    },
+    {
+      "key": "cities.den-bosch.tier2.price",
+      "label": "Cities · Den Bosch · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 3888
+    },
+    {
+      "key": "cities.den-bosch.tier3.range",
+      "label": "Cities · Den Bosch · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 3891
+    },
+    {
+      "key": "cities.den-bosch.tier3.price",
+      "label": "Cities · Den Bosch · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 3894
+    },
+    {
+      "key": "cities.den-bosch.tier4.range",
+      "label": "Cities · Den Bosch · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 3897
+    },
+    {
+      "key": "cities.den-bosch.tier4.price",
+      "label": "Cities · Den Bosch · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 3900
+    },
+    {
+      "key": "cities.zoetermeer.positioning",
+      "label": "Cities · Zoetermeer · Positioning paragraph",
+      "kind": "text",
+      "text": "Veel Zoetermeerse woningen zijn nu 40+ jaar oud en toe aan een grondige opfris. Wij combineren modern wooncomfort met efficiënte uitvoering.",
+      "image": null,
+      "sort_order": 3903
+    },
+    {
+      "key": "cities.zoetermeer.wijken",
+      "label": "Cities · Zoetermeer · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Meerzicht, Rokkeveen en Buytenwegh, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 3906
+    },
+    {
+      "key": "cities.zoetermeer.tier1.range",
+      "label": "Cities · Zoetermeer · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 3909
+    },
+    {
+      "key": "cities.zoetermeer.tier1.price",
+      "label": "Cities · Zoetermeer · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 3912
+    },
+    {
+      "key": "cities.zoetermeer.tier2.range",
+      "label": "Cities · Zoetermeer · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 3915
+    },
+    {
+      "key": "cities.zoetermeer.tier2.price",
+      "label": "Cities · Zoetermeer · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 3918
+    },
+    {
+      "key": "cities.zoetermeer.tier3.range",
+      "label": "Cities · Zoetermeer · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 3921
+    },
+    {
+      "key": "cities.zoetermeer.tier3.price",
+      "label": "Cities · Zoetermeer · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 3924
+    },
+    {
+      "key": "cities.zoetermeer.tier4.range",
+      "label": "Cities · Zoetermeer · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 3927
+    },
+    {
+      "key": "cities.zoetermeer.tier4.price",
+      "label": "Cities · Zoetermeer · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 3930
+    },
+    {
+      "key": "cities.zwolle.positioning",
+      "label": "Cities · Zwolle · Positioning paragraph",
+      "kind": "text",
+      "text": "Zwolse hanzepanden vragen om vakmanschap met respect voor historie. We werken hier al jaren samen met monumentenzorg en lokale toeleveranciers.",
+      "image": null,
+      "sort_order": 3933
+    },
+    {
+      "key": "cities.zwolle.wijken",
+      "label": "Cities · Zwolle · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Assendorp, Stadshagen en Holtenbroek, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 3936
+    },
+    {
+      "key": "cities.zwolle.tier1.range",
+      "label": "Cities · Zwolle · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 3939
+    },
+    {
+      "key": "cities.zwolle.tier1.price",
+      "label": "Cities · Zwolle · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 3942
+    },
+    {
+      "key": "cities.zwolle.tier2.range",
+      "label": "Cities · Zwolle · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 3945
+    },
+    {
+      "key": "cities.zwolle.tier2.price",
+      "label": "Cities · Zwolle · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 3948
+    },
+    {
+      "key": "cities.zwolle.tier3.range",
+      "label": "Cities · Zwolle · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 3951
+    },
+    {
+      "key": "cities.zwolle.tier3.price",
+      "label": "Cities · Zwolle · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 3954
+    },
+    {
+      "key": "cities.zwolle.tier4.range",
+      "label": "Cities · Zwolle · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 3957
+    },
+    {
+      "key": "cities.zwolle.tier4.price",
+      "label": "Cities · Zwolle · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 3960
+    },
+    {
+      "key": "cities.leiden.positioning",
+      "label": "Cities · Leiden · Positioning paragraph",
+      "kind": "text",
+      "text": "Leidens historische centrum heeft veel 17e-eeuwse panden met scheve vloeren en bijzondere constructies. Wij hebben de ervaring om dat type project succesvol op te leveren.",
+      "image": null,
+      "sort_order": 3963
+    },
+    {
+      "key": "cities.leiden.wijken",
+      "label": "Cities · Leiden · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Mors, Stevenshof en Vogelwijk, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 3966
+    },
+    {
+      "key": "cities.leiden.tier1.range",
+      "label": "Cities · Leiden · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 3969
+    },
+    {
+      "key": "cities.leiden.tier1.price",
+      "label": "Cities · Leiden · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 3972
+    },
+    {
+      "key": "cities.leiden.tier2.range",
+      "label": "Cities · Leiden · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 3975
+    },
+    {
+      "key": "cities.leiden.tier2.price",
+      "label": "Cities · Leiden · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 3978
+    },
+    {
+      "key": "cities.leiden.tier3.range",
+      "label": "Cities · Leiden · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 3981
+    },
+    {
+      "key": "cities.leiden.tier3.price",
+      "label": "Cities · Leiden · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 3984
+    },
+    {
+      "key": "cities.leiden.tier4.range",
+      "label": "Cities · Leiden · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 3987
+    },
+    {
+      "key": "cities.leiden.tier4.price",
+      "label": "Cities · Leiden · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 3990
+    },
+    {
+      "key": "cities.maastricht.positioning",
+      "label": "Cities · Maastricht · Positioning paragraph",
+      "kind": "text",
+      "text": "Maastrichtse panden combineren Bourgondische allure met monumentale eisen. We werken hier met sterke lokale partners om alles strak op te leveren.",
+      "image": null,
+      "sort_order": 3993
+    },
+    {
+      "key": "cities.maastricht.wijken",
+      "label": "Cities · Maastricht · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Wyck, Sint Pieter en Boschstraatkwartier, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 3996
+    },
+    {
+      "key": "cities.maastricht.tier1.range",
+      "label": "Cities · Maastricht · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 3999
+    },
+    {
+      "key": "cities.maastricht.tier1.price",
+      "label": "Cities · Maastricht · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 4002
+    },
+    {
+      "key": "cities.maastricht.tier2.range",
+      "label": "Cities · Maastricht · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 4005
+    },
+    {
+      "key": "cities.maastricht.tier2.price",
+      "label": "Cities · Maastricht · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 4008
+    },
+    {
+      "key": "cities.maastricht.tier3.range",
+      "label": "Cities · Maastricht · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 4011
+    },
+    {
+      "key": "cities.maastricht.tier3.price",
+      "label": "Cities · Maastricht · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 4014
+    },
+    {
+      "key": "cities.maastricht.tier4.range",
+      "label": "Cities · Maastricht · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 4017
+    },
+    {
+      "key": "cities.maastricht.tier4.price",
+      "label": "Cities · Maastricht · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 4020
+    },
+    {
+      "key": "cities.dordrecht.positioning",
+      "label": "Cities · Dordrecht · Positioning paragraph",
+      "kind": "text",
+      "text": "Dordrechtse pakhuispanden en herenhuizen vragen specialistische aanpak: fundering, kelders en historisch metselwerk zijn ons werk.",
+      "image": null,
+      "sort_order": 4023
+    },
+    {
+      "key": "cities.dordrecht.wijken",
+      "label": "Cities · Dordrecht · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Dubbeldam, Sterrenburg en Krispijn, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 4026
+    },
+    {
+      "key": "cities.dordrecht.tier1.range",
+      "label": "Cities · Dordrecht · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 4029
+    },
+    {
+      "key": "cities.dordrecht.tier1.price",
+      "label": "Cities · Dordrecht · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 4032
+    },
+    {
+      "key": "cities.dordrecht.tier2.range",
+      "label": "Cities · Dordrecht · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 4035
+    },
+    {
+      "key": "cities.dordrecht.tier2.price",
+      "label": "Cities · Dordrecht · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 4038
+    },
+    {
+      "key": "cities.dordrecht.tier3.range",
+      "label": "Cities · Dordrecht · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 4041
+    },
+    {
+      "key": "cities.dordrecht.tier3.price",
+      "label": "Cities · Dordrecht · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 4044
+    },
+    {
+      "key": "cities.dordrecht.tier4.range",
+      "label": "Cities · Dordrecht · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 4047
+    },
+    {
+      "key": "cities.dordrecht.tier4.price",
+      "label": "Cities · Dordrecht · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 4050
+    },
+    {
+      "key": "cities.ede.positioning",
+      "label": "Cities · Ede · Positioning paragraph",
+      "kind": "text",
+      "text": "Edese woningen variëren van karakterhuizen op de Veluwezoom tot strakke nieuwbouw. Wij brengen elk project naar het juiste niveau.",
+      "image": null,
+      "sort_order": 4053
+    },
+    {
+      "key": "cities.ede.wijken",
+      "label": "Cities · Ede · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Veldhuizen, Bennekom en Lunteren, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 4056
+    },
+    {
+      "key": "cities.ede.tier1.range",
+      "label": "Cities · Ede · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 4059
+    },
+    {
+      "key": "cities.ede.tier1.price",
+      "label": "Cities · Ede · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 4062
+    },
+    {
+      "key": "cities.ede.tier2.range",
+      "label": "Cities · Ede · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 4065
+    },
+    {
+      "key": "cities.ede.tier2.price",
+      "label": "Cities · Ede · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 4068
+    },
+    {
+      "key": "cities.ede.tier3.range",
+      "label": "Cities · Ede · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 4071
+    },
+    {
+      "key": "cities.ede.tier3.price",
+      "label": "Cities · Ede · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 4074
+    },
+    {
+      "key": "cities.ede.tier4.range",
+      "label": "Cities · Ede · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 4077
+    },
+    {
+      "key": "cities.ede.tier4.price",
+      "label": "Cities · Ede · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 4080
+    },
+    {
+      "key": "cities.alphen-aan-den-rijn.positioning",
+      "label": "Cities · Alphen aan den Rijn · Positioning paragraph",
+      "kind": "text",
+      "text": "In Alphen renoveren we veel jaren-80 en jaren-90 gezinswoningen, vaak met energiebesparende ingrepen die het comfort fors verhogen.",
+      "image": null,
+      "sort_order": 4083
+    },
+    {
+      "key": "cities.alphen-aan-den-rijn.wijken",
+      "label": "Cities · Alphen aan den Rijn · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Ridderveld, Kerk en Zanen en Aarlanderveen, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 4086
+    },
+    {
+      "key": "cities.alphen-aan-den-rijn.tier1.range",
+      "label": "Cities · Alphen aan den Rijn · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 4089
+    },
+    {
+      "key": "cities.alphen-aan-den-rijn.tier1.price",
+      "label": "Cities · Alphen aan den Rijn · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 4092
+    },
+    {
+      "key": "cities.alphen-aan-den-rijn.tier2.range",
+      "label": "Cities · Alphen aan den Rijn · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 4095
+    },
+    {
+      "key": "cities.alphen-aan-den-rijn.tier2.price",
+      "label": "Cities · Alphen aan den Rijn · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 4098
+    },
+    {
+      "key": "cities.alphen-aan-den-rijn.tier3.range",
+      "label": "Cities · Alphen aan den Rijn · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 4101
+    },
+    {
+      "key": "cities.alphen-aan-den-rijn.tier3.price",
+      "label": "Cities · Alphen aan den Rijn · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 4104
+    },
+    {
+      "key": "cities.alphen-aan-den-rijn.tier4.range",
+      "label": "Cities · Alphen aan den Rijn · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 4107
+    },
+    {
+      "key": "cities.alphen-aan-den-rijn.tier4.price",
+      "label": "Cities · Alphen aan den Rijn · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 4110
+    },
+    {
+      "key": "cities.leeuwarden.positioning",
+      "label": "Cities · Leeuwarden · Positioning paragraph",
+      "kind": "text",
+      "text": "Friese degelijkheid vraagt geen poeha, wel kwaliteit. Onze Leeuwardense projecten kenmerken zich door strakke planning en heldere uitvoering.",
+      "image": null,
+      "sort_order": 4113
+    },
+    {
+      "key": "cities.leeuwarden.wijken",
+      "label": "Cities · Leeuwarden · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Huizum, Bilgaard en Camminghaburen, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 4116
+    },
+    {
+      "key": "cities.leeuwarden.tier1.range",
+      "label": "Cities · Leeuwarden · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 4119
+    },
+    {
+      "key": "cities.leeuwarden.tier1.price",
+      "label": "Cities · Leeuwarden · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 4122
+    },
+    {
+      "key": "cities.leeuwarden.tier2.range",
+      "label": "Cities · Leeuwarden · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 4125
+    },
+    {
+      "key": "cities.leeuwarden.tier2.price",
+      "label": "Cities · Leeuwarden · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 4128
+    },
+    {
+      "key": "cities.leeuwarden.tier3.range",
+      "label": "Cities · Leeuwarden · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 4131
+    },
+    {
+      "key": "cities.leeuwarden.tier3.price",
+      "label": "Cities · Leeuwarden · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 4134
+    },
+    {
+      "key": "cities.leeuwarden.tier4.range",
+      "label": "Cities · Leeuwarden · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 4137
+    },
+    {
+      "key": "cities.leeuwarden.tier4.price",
+      "label": "Cities · Leeuwarden · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 4140
+    },
+    {
+      "key": "cities.alkmaar.positioning",
+      "label": "Cities · Alkmaar · Positioning paragraph",
+      "kind": "text",
+      "text": "Alkmaarse panden in het centrum zijn vaak monumentaal. We werken zorgvuldig met welstandscommissie en behouden de oorspronkelijke uitstraling.",
+      "image": null,
+      "sort_order": 4143
+    },
+    {
+      "key": "cities.alkmaar.wijken",
+      "label": "Cities · Alkmaar · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Overdie, Oudorp en Daalmeer, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 4146
+    },
+    {
+      "key": "cities.alkmaar.tier1.range",
+      "label": "Cities · Alkmaar · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 4149
+    },
+    {
+      "key": "cities.alkmaar.tier1.price",
+      "label": "Cities · Alkmaar · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 4152
+    },
+    {
+      "key": "cities.alkmaar.tier2.range",
+      "label": "Cities · Alkmaar · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 4155
+    },
+    {
+      "key": "cities.alkmaar.tier2.price",
+      "label": "Cities · Alkmaar · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 4158
+    },
+    {
+      "key": "cities.alkmaar.tier3.range",
+      "label": "Cities · Alkmaar · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 4161
+    },
+    {
+      "key": "cities.alkmaar.tier3.price",
+      "label": "Cities · Alkmaar · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 4164
+    },
+    {
+      "key": "cities.alkmaar.tier4.range",
+      "label": "Cities · Alkmaar · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 4167
+    },
+    {
+      "key": "cities.alkmaar.tier4.price",
+      "label": "Cities · Alkmaar · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 4170
+    },
+    {
+      "key": "cities.emmen.positioning",
+      "label": "Cities · Emmen · Positioning paragraph",
+      "kind": "text",
+      "text": "In Emmen renoveren we veel jaren-70 en jaren-80 woningen tot moderne energiezuinige gezinshuizen, met oog voor de typisch Drentse bouwwijze.",
+      "image": null,
+      "sort_order": 4173
+    },
+    {
+      "key": "cities.emmen.wijken",
+      "label": "Cities · Emmen · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Bargeres, Angelslo en Emmermeer, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 4176
+    },
+    {
+      "key": "cities.emmen.tier1.range",
+      "label": "Cities · Emmen · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 4179
+    },
+    {
+      "key": "cities.emmen.tier1.price",
+      "label": "Cities · Emmen · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 4182
+    },
+    {
+      "key": "cities.emmen.tier2.range",
+      "label": "Cities · Emmen · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 4185
+    },
+    {
+      "key": "cities.emmen.tier2.price",
+      "label": "Cities · Emmen · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 4188
+    },
+    {
+      "key": "cities.emmen.tier3.range",
+      "label": "Cities · Emmen · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 4191
+    },
+    {
+      "key": "cities.emmen.tier3.price",
+      "label": "Cities · Emmen · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 4194
+    },
+    {
+      "key": "cities.emmen.tier4.range",
+      "label": "Cities · Emmen · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 4197
+    },
+    {
+      "key": "cities.emmen.tier4.price",
+      "label": "Cities · Emmen · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 4200
+    },
+    {
+      "key": "cities.westland.positioning",
+      "label": "Cities · Westland · Positioning paragraph",
+      "kind": "text",
+      "text": "Westlandse woningen vragen vaak om praktische oplossingen. Wij kennen het werk hier en houden rekening met de specifieke ondergrond en bebouwingsvoorschriften.",
+      "image": null,
+      "sort_order": 4203
+    },
+    {
+      "key": "cities.westland.wijken",
+      "label": "Cities · Westland · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Naaldwijk, s-Gravenzande, Wateringen en Honselersdijk, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 4206
+    },
+    {
+      "key": "cities.westland.tier1.range",
+      "label": "Cities · Westland · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 4209
+    },
+    {
+      "key": "cities.westland.tier1.price",
+      "label": "Cities · Westland · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 4212
+    },
+    {
+      "key": "cities.westland.tier2.range",
+      "label": "Cities · Westland · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 4215
+    },
+    {
+      "key": "cities.westland.tier2.price",
+      "label": "Cities · Westland · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 4218
+    },
+    {
+      "key": "cities.westland.tier3.range",
+      "label": "Cities · Westland · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 4221
+    },
+    {
+      "key": "cities.westland.tier3.price",
+      "label": "Cities · Westland · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 4224
+    },
+    {
+      "key": "cities.westland.tier4.range",
+      "label": "Cities · Westland · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 4227
+    },
+    {
+      "key": "cities.westland.tier4.price",
+      "label": "Cities · Westland · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 4230
+    },
+    {
+      "key": "cities.delft.positioning",
+      "label": "Cities · Delft · Positioning paragraph",
+      "kind": "text",
+      "text": "Delftse grachtenpanden en jaren-30 huizen zijn ons specialisme. We combineren oude details met modern wooncomfort.",
+      "image": null,
+      "sort_order": 4233
+    },
+    {
+      "key": "cities.delft.wijken",
+      "label": "Cities · Delft · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Tanthof, Hof van Delft en Voorhof, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 4236
+    },
+    {
+      "key": "cities.delft.tier1.range",
+      "label": "Cities · Delft · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 4239
+    },
+    {
+      "key": "cities.delft.tier1.price",
+      "label": "Cities · Delft · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 4242
+    },
+    {
+      "key": "cities.delft.tier2.range",
+      "label": "Cities · Delft · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 4245
+    },
+    {
+      "key": "cities.delft.tier2.price",
+      "label": "Cities · Delft · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 4248
+    },
+    {
+      "key": "cities.delft.tier3.range",
+      "label": "Cities · Delft · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 4251
+    },
+    {
+      "key": "cities.delft.tier3.price",
+      "label": "Cities · Delft · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 4254
+    },
+    {
+      "key": "cities.delft.tier4.range",
+      "label": "Cities · Delft · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 4257
+    },
+    {
+      "key": "cities.delft.tier4.price",
+      "label": "Cities · Delft · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 4260
+    },
+    {
+      "key": "cities.deventer.positioning",
+      "label": "Cities · Deventer · Positioning paragraph",
+      "kind": "text",
+      "text": "Deventer hanzepanden zijn vaak monumentaal. Wij werken volgens de eisen van monumentenzorg en houden de uitvoering strak.",
+      "image": null,
+      "sort_order": 4263
+    },
+    {
+      "key": "cities.deventer.wijken",
+      "label": "Cities · Deventer · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Voorstad, Borgele en Keizerslanden, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 4266
+    },
+    {
+      "key": "cities.deventer.tier1.range",
+      "label": "Cities · Deventer · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 4269
+    },
+    {
+      "key": "cities.deventer.tier1.price",
+      "label": "Cities · Deventer · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 4272
+    },
+    {
+      "key": "cities.deventer.tier2.range",
+      "label": "Cities · Deventer · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 4275
+    },
+    {
+      "key": "cities.deventer.tier2.price",
+      "label": "Cities · Deventer · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 4278
+    },
+    {
+      "key": "cities.deventer.tier3.range",
+      "label": "Cities · Deventer · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 4281
+    },
+    {
+      "key": "cities.deventer.tier3.price",
+      "label": "Cities · Deventer · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 4284
+    },
+    {
+      "key": "cities.deventer.tier4.range",
+      "label": "Cities · Deventer · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 4287
+    },
+    {
+      "key": "cities.deventer.tier4.price",
+      "label": "Cities · Deventer · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 4290
+    },
+    {
+      "key": "cities.sittard-geleen.positioning",
+      "label": "Cities · Sittard-Geleen · Positioning paragraph",
+      "kind": "text",
+      "text": "In Zuid-Limburg werken we vaak aan karakterwoningen met natuursteen en mergel. Bewerking en restauratie zijn ons werk.",
+      "image": null,
+      "sort_order": 4293
+    },
+    {
+      "key": "cities.sittard-geleen.wijken",
+      "label": "Cities · Sittard-Geleen · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Sittard-Centrum, Geleen, Born en Stadbroek, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 4296
+    },
+    {
+      "key": "cities.sittard-geleen.tier1.range",
+      "label": "Cities · Sittard-Geleen · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 4299
+    },
+    {
+      "key": "cities.sittard-geleen.tier1.price",
+      "label": "Cities · Sittard-Geleen · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 4302
+    },
+    {
+      "key": "cities.sittard-geleen.tier2.range",
+      "label": "Cities · Sittard-Geleen · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 4305
+    },
+    {
+      "key": "cities.sittard-geleen.tier2.price",
+      "label": "Cities · Sittard-Geleen · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 4308
+    },
+    {
+      "key": "cities.sittard-geleen.tier3.range",
+      "label": "Cities · Sittard-Geleen · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 4311
+    },
+    {
+      "key": "cities.sittard-geleen.tier3.price",
+      "label": "Cities · Sittard-Geleen · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 4314
+    },
+    {
+      "key": "cities.sittard-geleen.tier4.range",
+      "label": "Cities · Sittard-Geleen · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 4317
+    },
+    {
+      "key": "cities.sittard-geleen.tier4.price",
+      "label": "Cities · Sittard-Geleen · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 4320
+    },
+    {
+      "key": "cities.helmond.positioning",
+      "label": "Cities · Helmond · Positioning paragraph",
+      "kind": "text",
+      "text": "Helmondse woningen variëren van karakterpanden in Stiphout tot moderne nieuwbouw in Brandevoort. Wij doen ze allebei.",
+      "image": null,
+      "sort_order": 4323
+    },
+    {
+      "key": "cities.helmond.wijken",
+      "label": "Cities · Helmond · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Brouwhuis, Stiphout en Dierdonk, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 4326
+    },
+    {
+      "key": "cities.helmond.tier1.range",
+      "label": "Cities · Helmond · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 4329
+    },
+    {
+      "key": "cities.helmond.tier1.price",
+      "label": "Cities · Helmond · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 4332
+    },
+    {
+      "key": "cities.helmond.tier2.range",
+      "label": "Cities · Helmond · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 4335
+    },
+    {
+      "key": "cities.helmond.tier2.price",
+      "label": "Cities · Helmond · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 4338
+    },
+    {
+      "key": "cities.helmond.tier3.range",
+      "label": "Cities · Helmond · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 4341
+    },
+    {
+      "key": "cities.helmond.tier3.price",
+      "label": "Cities · Helmond · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 4344
+    },
+    {
+      "key": "cities.helmond.tier4.range",
+      "label": "Cities · Helmond · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 4347
+    },
+    {
+      "key": "cities.helmond.tier4.price",
+      "label": "Cities · Helmond · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 4350
+    },
+    {
+      "key": "cities.venlo.positioning",
+      "label": "Cities · Venlo · Positioning paragraph",
+      "kind": "text",
+      "text": "Limburgse woningen in Venlo kennen vaak een rijke geschiedenis. Onze ploeg combineert moderne technieken met respect voor de regionale bouwstijl.",
+      "image": null,
+      "sort_order": 4353
+    },
+    {
+      "key": "cities.venlo.wijken",
+      "label": "Cities · Venlo · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Blerick, Tegelen en Belfeld, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 4356
+    },
+    {
+      "key": "cities.venlo.tier1.range",
+      "label": "Cities · Venlo · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 4359
+    },
+    {
+      "key": "cities.venlo.tier1.price",
+      "label": "Cities · Venlo · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 4362
+    },
+    {
+      "key": "cities.venlo.tier2.range",
+      "label": "Cities · Venlo · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 4365
+    },
+    {
+      "key": "cities.venlo.tier2.price",
+      "label": "Cities · Venlo · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 4368
+    },
+    {
+      "key": "cities.venlo.tier3.range",
+      "label": "Cities · Venlo · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 4371
+    },
+    {
+      "key": "cities.venlo.tier3.price",
+      "label": "Cities · Venlo · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 4374
+    },
+    {
+      "key": "cities.venlo.tier4.range",
+      "label": "Cities · Venlo · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 4377
+    },
+    {
+      "key": "cities.venlo.tier4.price",
+      "label": "Cities · Venlo · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 4380
+    },
+    {
+      "key": "cities.hilversum.positioning",
+      "label": "Cities · Hilversum · Positioning paragraph",
+      "kind": "text",
+      "text": "Hilversumse villa's en jaren-30 woningen: uitgesproken architectuur die om uitgesproken vakwerk vraagt. Daar zijn wij voor.",
+      "image": null,
+      "sort_order": 4383
+    },
+    {
+      "key": "cities.hilversum.wijken",
+      "label": "Cities · Hilversum · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Kerkelanden, Hilversumse Meent en Hoog-Anna, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 4386
+    },
+    {
+      "key": "cities.hilversum.tier1.range",
+      "label": "Cities · Hilversum · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 4389
+    },
+    {
+      "key": "cities.hilversum.tier1.price",
+      "label": "Cities · Hilversum · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 4392
+    },
+    {
+      "key": "cities.hilversum.tier2.range",
+      "label": "Cities · Hilversum · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 4395
+    },
+    {
+      "key": "cities.hilversum.tier2.price",
+      "label": "Cities · Hilversum · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 4398
+    },
+    {
+      "key": "cities.hilversum.tier3.range",
+      "label": "Cities · Hilversum · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 4401
+    },
+    {
+      "key": "cities.hilversum.tier3.price",
+      "label": "Cities · Hilversum · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 4404
+    },
+    {
+      "key": "cities.hilversum.tier4.range",
+      "label": "Cities · Hilversum · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 4407
+    },
+    {
+      "key": "cities.hilversum.tier4.price",
+      "label": "Cities · Hilversum · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 4410
+    },
+    {
+      "key": "cities.oss.positioning",
+      "label": "Cities · Oss · Positioning paragraph",
+      "kind": "text",
+      "text": "Osse woningen, vaak gebouwd in jaren '70 en '80, zijn nu rijp voor een grondige opwaardering. Wij specialiseren ons in deze fase van renovatie.",
+      "image": null,
+      "sort_order": 4413
+    },
+    {
+      "key": "cities.oss.wijken",
+      "label": "Cities · Oss · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Schadewijk, Krinkelhoek en Ruwaard, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 4416
+    },
+    {
+      "key": "cities.oss.tier1.range",
+      "label": "Cities · Oss · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 4419
+    },
+    {
+      "key": "cities.oss.tier1.price",
+      "label": "Cities · Oss · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 4422
+    },
+    {
+      "key": "cities.oss.tier2.range",
+      "label": "Cities · Oss · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 4425
+    },
+    {
+      "key": "cities.oss.tier2.price",
+      "label": "Cities · Oss · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 4428
+    },
+    {
+      "key": "cities.oss.tier3.range",
+      "label": "Cities · Oss · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 4431
+    },
+    {
+      "key": "cities.oss.tier3.price",
+      "label": "Cities · Oss · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 4434
+    },
+    {
+      "key": "cities.oss.tier4.range",
+      "label": "Cities · Oss · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 4437
+    },
+    {
+      "key": "cities.oss.tier4.price",
+      "label": "Cities · Oss · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 4440
+    },
+    {
+      "key": "cities.amstelveen.positioning",
+      "label": "Cities · Amstelveen · Positioning paragraph",
+      "kind": "text",
+      "text": "Amstelveense gezinswoningen vragen om strakke uitvoering en oog voor detail. Onze ploeg rijdt vanuit Leerdam naar je toe, zonder reiskosten.",
+      "image": null,
+      "sort_order": 4443
+    },
+    {
+      "key": "cities.amstelveen.wijken",
+      "label": "Cities · Amstelveen · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Westwijk, Buitenveldert en Bovenkerk, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 4446
+    },
+    {
+      "key": "cities.amstelveen.tier1.range",
+      "label": "Cities · Amstelveen · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 4449
+    },
+    {
+      "key": "cities.amstelveen.tier1.price",
+      "label": "Cities · Amstelveen · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 4452
+    },
+    {
+      "key": "cities.amstelveen.tier2.range",
+      "label": "Cities · Amstelveen · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 4455
+    },
+    {
+      "key": "cities.amstelveen.tier2.price",
+      "label": "Cities · Amstelveen · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 4458
+    },
+    {
+      "key": "cities.amstelveen.tier3.range",
+      "label": "Cities · Amstelveen · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 4461
+    },
+    {
+      "key": "cities.amstelveen.tier3.price",
+      "label": "Cities · Amstelveen · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 4464
+    },
+    {
+      "key": "cities.amstelveen.tier4.range",
+      "label": "Cities · Amstelveen · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 4467
+    },
+    {
+      "key": "cities.amstelveen.tier4.price",
+      "label": "Cities · Amstelveen · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 4470
+    },
+    {
+      "key": "cities.heerlen.positioning",
+      "label": "Cities · Heerlen · Positioning paragraph",
+      "kind": "text",
+      "text": "In Heerlen werken we vaak met mijnbouwgeschiedenis in de ondergrond. Wij houden rekening met fundering en zettingsproblemen, ook bij grootschalige renovaties.",
+      "image": null,
+      "sort_order": 4473
+    },
+    {
+      "key": "cities.heerlen.wijken",
+      "label": "Cities · Heerlen · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Heerlerheide, Hoensbroek en Welten, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 4476
+    },
+    {
+      "key": "cities.heerlen.tier1.range",
+      "label": "Cities · Heerlen · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 4479
+    },
+    {
+      "key": "cities.heerlen.tier1.price",
+      "label": "Cities · Heerlen · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 4482
+    },
+    {
+      "key": "cities.heerlen.tier2.range",
+      "label": "Cities · Heerlen · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 4485
+    },
+    {
+      "key": "cities.heerlen.tier2.price",
+      "label": "Cities · Heerlen · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 4488
+    },
+    {
+      "key": "cities.heerlen.tier3.range",
+      "label": "Cities · Heerlen · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 4491
+    },
+    {
+      "key": "cities.heerlen.tier3.price",
+      "label": "Cities · Heerlen · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 4494
+    },
+    {
+      "key": "cities.heerlen.tier4.range",
+      "label": "Cities · Heerlen · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 4497
+    },
+    {
+      "key": "cities.heerlen.tier4.price",
+      "label": "Cities · Heerlen · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 4500
+    },
+    {
+      "key": "cities.roosendaal.positioning",
+      "label": "Cities · Roosendaal · Positioning paragraph",
+      "kind": "text",
+      "text": "Roosendaalse woningen kennen veel variatie, van karakterpanden in het centrum tot moderne wijken aan de rand. Wij doen ze allebei.",
+      "image": null,
+      "sort_order": 4503
+    },
+    {
+      "key": "cities.roosendaal.wijken",
+      "label": "Cities · Roosendaal · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Tolberg, Westrand en Kalsdonk, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 4506
+    },
+    {
+      "key": "cities.roosendaal.tier1.range",
+      "label": "Cities · Roosendaal · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 4509
+    },
+    {
+      "key": "cities.roosendaal.tier1.price",
+      "label": "Cities · Roosendaal · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 4512
+    },
+    {
+      "key": "cities.roosendaal.tier2.range",
+      "label": "Cities · Roosendaal · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 4515
+    },
+    {
+      "key": "cities.roosendaal.tier2.price",
+      "label": "Cities · Roosendaal · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 4518
+    },
+    {
+      "key": "cities.roosendaal.tier3.range",
+      "label": "Cities · Roosendaal · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 4521
+    },
+    {
+      "key": "cities.roosendaal.tier3.price",
+      "label": "Cities · Roosendaal · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 4524
+    },
+    {
+      "key": "cities.roosendaal.tier4.range",
+      "label": "Cities · Roosendaal · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 4527
+    },
+    {
+      "key": "cities.roosendaal.tier4.price",
+      "label": "Cities · Roosendaal · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 4530
+    },
+    {
+      "key": "cities.purmerend.positioning",
+      "label": "Cities · Purmerend · Positioning paragraph",
+      "kind": "text",
+      "text": "Veel Purmerendse woningen zijn aan een tweede leven toe. Wij specialiseren ons in totale opfris-renovaties met behoud van indeling.",
+      "image": null,
+      "sort_order": 4533
+    },
+    {
+      "key": "cities.purmerend.wijken",
+      "label": "Cities · Purmerend · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Weidevenne, Overwhere en Wheermolen, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 4536
+    },
+    {
+      "key": "cities.purmerend.tier1.range",
+      "label": "Cities · Purmerend · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 4539
+    },
+    {
+      "key": "cities.purmerend.tier1.price",
+      "label": "Cities · Purmerend · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 4542
+    },
+    {
+      "key": "cities.purmerend.tier2.range",
+      "label": "Cities · Purmerend · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 4545
+    },
+    {
+      "key": "cities.purmerend.tier2.price",
+      "label": "Cities · Purmerend · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 4548
+    },
+    {
+      "key": "cities.purmerend.tier3.range",
+      "label": "Cities · Purmerend · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 4551
+    },
+    {
+      "key": "cities.purmerend.tier3.price",
+      "label": "Cities · Purmerend · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 4554
+    },
+    {
+      "key": "cities.purmerend.tier4.range",
+      "label": "Cities · Purmerend · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 4557
+    },
+    {
+      "key": "cities.purmerend.tier4.price",
+      "label": "Cities · Purmerend · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 4560
+    },
+    {
+      "key": "cities.schiedam.positioning",
+      "label": "Cities · Schiedam · Positioning paragraph",
+      "kind": "text",
+      "text": "Schiedamse historie zit in de stenen. Wij werken vaak met oude panden waar monumentenzorg en moderne installaties samen moeten komen.",
+      "image": null,
+      "sort_order": 4563
+    },
+    {
+      "key": "cities.schiedam.wijken",
+      "label": "Cities · Schiedam · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Nieuwland, Groenoord en Kethel, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 4566
+    },
+    {
+      "key": "cities.schiedam.tier1.range",
+      "label": "Cities · Schiedam · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 4569
+    },
+    {
+      "key": "cities.schiedam.tier1.price",
+      "label": "Cities · Schiedam · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 4572
+    },
+    {
+      "key": "cities.schiedam.tier2.range",
+      "label": "Cities · Schiedam · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 4575
+    },
+    {
+      "key": "cities.schiedam.tier2.price",
+      "label": "Cities · Schiedam · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 4578
+    },
+    {
+      "key": "cities.schiedam.tier3.range",
+      "label": "Cities · Schiedam · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 4581
+    },
+    {
+      "key": "cities.schiedam.tier3.price",
+      "label": "Cities · Schiedam · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 4584
+    },
+    {
+      "key": "cities.schiedam.tier4.range",
+      "label": "Cities · Schiedam · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 4587
+    },
+    {
+      "key": "cities.schiedam.tier4.price",
+      "label": "Cities · Schiedam · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 4590
+    },
+    {
+      "key": "cities.spijkenisse.positioning",
+      "label": "Cities · Spijkenisse · Positioning paragraph",
+      "kind": "text",
+      "text": "In Spijkenisse renoveren we veel jaren-70 woningen tot energiezuinige gezinshuizen. Wij kennen het type bouw en de oplossingen.",
+      "image": null,
+      "sort_order": 4593
+    },
+    {
+      "key": "cities.spijkenisse.wijken",
+      "label": "Cities · Spijkenisse · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Akkers, Sterrenkwartier en Maaswijk, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 4596
+    },
+    {
+      "key": "cities.spijkenisse.tier1.range",
+      "label": "Cities · Spijkenisse · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 4599
+    },
+    {
+      "key": "cities.spijkenisse.tier1.price",
+      "label": "Cities · Spijkenisse · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 4602
+    },
+    {
+      "key": "cities.spijkenisse.tier2.range",
+      "label": "Cities · Spijkenisse · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 4605
+    },
+    {
+      "key": "cities.spijkenisse.tier2.price",
+      "label": "Cities · Spijkenisse · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 4608
+    },
+    {
+      "key": "cities.spijkenisse.tier3.range",
+      "label": "Cities · Spijkenisse · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 4611
+    },
+    {
+      "key": "cities.spijkenisse.tier3.price",
+      "label": "Cities · Spijkenisse · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 4614
+    },
+    {
+      "key": "cities.spijkenisse.tier4.range",
+      "label": "Cities · Spijkenisse · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 4617
+    },
+    {
+      "key": "cities.spijkenisse.tier4.price",
+      "label": "Cities · Spijkenisse · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 4620
+    },
+    {
+      "key": "cities.vlaardingen.positioning",
+      "label": "Cities · Vlaardingen · Positioning paragraph",
+      "kind": "text",
+      "text": "Vlaardinger woningen zijn vaak naoorlogs, een goed moment voor een totale opfris met moderne isolatie en nieuwe installaties.",
+      "image": null,
+      "sort_order": 4623
+    },
+    {
+      "key": "cities.vlaardingen.wijken",
+      "label": "Cities · Vlaardingen · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Holy, Vettenoordsepolder en Westwijk, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 4626
+    },
+    {
+      "key": "cities.vlaardingen.tier1.range",
+      "label": "Cities · Vlaardingen · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 4629
+    },
+    {
+      "key": "cities.vlaardingen.tier1.price",
+      "label": "Cities · Vlaardingen · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 4632
+    },
+    {
+      "key": "cities.vlaardingen.tier2.range",
+      "label": "Cities · Vlaardingen · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 4635
+    },
+    {
+      "key": "cities.vlaardingen.tier2.price",
+      "label": "Cities · Vlaardingen · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 4638
+    },
+    {
+      "key": "cities.vlaardingen.tier3.range",
+      "label": "Cities · Vlaardingen · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 4641
+    },
+    {
+      "key": "cities.vlaardingen.tier3.price",
+      "label": "Cities · Vlaardingen · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 4644
+    },
+    {
+      "key": "cities.vlaardingen.tier4.range",
+      "label": "Cities · Vlaardingen · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 4647
+    },
+    {
+      "key": "cities.vlaardingen.tier4.price",
+      "label": "Cities · Vlaardingen · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 4650
+    },
+    {
+      "key": "cities.hoorn.positioning",
+      "label": "Cities · Hoorn · Positioning paragraph",
+      "kind": "text",
+      "text": "Hoornse koopmanshuizen in het centrum zijn ons specialisme: historische kwaliteit met modern comfort, zonder concessies aan beide.",
+      "image": null,
+      "sort_order": 4653
+    },
+    {
+      "key": "cities.hoorn.wijken",
+      "label": "Cities · Hoorn · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Risdam, Grote Waal en Kersenboogerd, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 4656
+    },
+    {
+      "key": "cities.hoorn.tier1.range",
+      "label": "Cities · Hoorn · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 4659
+    },
+    {
+      "key": "cities.hoorn.tier1.price",
+      "label": "Cities · Hoorn · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 4662
+    },
+    {
+      "key": "cities.hoorn.tier2.range",
+      "label": "Cities · Hoorn · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 4665
+    },
+    {
+      "key": "cities.hoorn.tier2.price",
+      "label": "Cities · Hoorn · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 4668
+    },
+    {
+      "key": "cities.hoorn.tier3.range",
+      "label": "Cities · Hoorn · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 4671
+    },
+    {
+      "key": "cities.hoorn.tier3.price",
+      "label": "Cities · Hoorn · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 4674
+    },
+    {
+      "key": "cities.hoorn.tier4.range",
+      "label": "Cities · Hoorn · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 4677
+    },
+    {
+      "key": "cities.hoorn.tier4.price",
+      "label": "Cities · Hoorn · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 4680
+    },
+    {
+      "key": "cities.gouda.positioning",
+      "label": "Cities · Gouda · Positioning paragraph",
+      "kind": "text",
+      "text": "Goudse binnenstadspanden vragen vaak om monumententechnische ingrepen. Daar hebben we de ervaring en de partners voor.",
+      "image": null,
+      "sort_order": 4683
+    },
+    {
+      "key": "cities.gouda.wijken",
+      "label": "Cities · Gouda · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Goverwelle, Bloemendaal en Korte Akkeren, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 4686
+    },
+    {
+      "key": "cities.gouda.tier1.range",
+      "label": "Cities · Gouda · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 4689
+    },
+    {
+      "key": "cities.gouda.tier1.price",
+      "label": "Cities · Gouda · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 4692
+    },
+    {
+      "key": "cities.gouda.tier2.range",
+      "label": "Cities · Gouda · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 4695
+    },
+    {
+      "key": "cities.gouda.tier2.price",
+      "label": "Cities · Gouda · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 4698
+    },
+    {
+      "key": "cities.gouda.tier3.range",
+      "label": "Cities · Gouda · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 4701
+    },
+    {
+      "key": "cities.gouda.tier3.price",
+      "label": "Cities · Gouda · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 4704
+    },
+    {
+      "key": "cities.gouda.tier4.range",
+      "label": "Cities · Gouda · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 4707
+    },
+    {
+      "key": "cities.gouda.tier4.price",
+      "label": "Cities · Gouda · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 4710
+    },
+    {
+      "key": "cities.lelystad.positioning",
+      "label": "Cities · Lelystad · Positioning paragraph",
+      "kind": "text",
+      "text": "Lelystad is een jonge stad waar veel woningen toe zijn aan hun eerste grote renovatie. Wij brengen ze in één keer naar deze tijd.",
+      "image": null,
+      "sort_order": 4713
+    },
+    {
+      "key": "cities.lelystad.wijken",
+      "label": "Cities · Lelystad · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Atolwijk, Boswijk en Punter, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 4716
+    },
+    {
+      "key": "cities.lelystad.tier1.range",
+      "label": "Cities · Lelystad · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 4719
+    },
+    {
+      "key": "cities.lelystad.tier1.price",
+      "label": "Cities · Lelystad · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 4722
+    },
+    {
+      "key": "cities.lelystad.tier2.range",
+      "label": "Cities · Lelystad · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 4725
+    },
+    {
+      "key": "cities.lelystad.tier2.price",
+      "label": "Cities · Lelystad · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 4728
+    },
+    {
+      "key": "cities.lelystad.tier3.range",
+      "label": "Cities · Lelystad · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 4731
+    },
+    {
+      "key": "cities.lelystad.tier3.price",
+      "label": "Cities · Lelystad · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 4734
+    },
+    {
+      "key": "cities.lelystad.tier4.range",
+      "label": "Cities · Lelystad · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 4737
+    },
+    {
+      "key": "cities.lelystad.tier4.price",
+      "label": "Cities · Lelystad · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 4740
+    },
+    {
+      "key": "cities.katwijk.positioning",
+      "label": "Cities · Katwijk · Positioning paragraph",
+      "kind": "text",
+      "text": "Aan de kust werken we vaak met zoute lucht en specifieke isolatie-eisen. Wij kennen de materialen en methodes die hier het beste werken.",
+      "image": null,
+      "sort_order": 4743
+    },
+    {
+      "key": "cities.katwijk.wijken",
+      "label": "Cities · Katwijk · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Katwijk aan den Rijn, Rijnsburg en Valkenburg, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 4746
+    },
+    {
+      "key": "cities.katwijk.tier1.range",
+      "label": "Cities · Katwijk · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 4749
+    },
+    {
+      "key": "cities.katwijk.tier1.price",
+      "label": "Cities · Katwijk · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 4752
+    },
+    {
+      "key": "cities.katwijk.tier2.range",
+      "label": "Cities · Katwijk · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 4755
+    },
+    {
+      "key": "cities.katwijk.tier2.price",
+      "label": "Cities · Katwijk · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 4758
+    },
+    {
+      "key": "cities.katwijk.tier3.range",
+      "label": "Cities · Katwijk · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 4761
+    },
+    {
+      "key": "cities.katwijk.tier3.price",
+      "label": "Cities · Katwijk · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 4764
+    },
+    {
+      "key": "cities.katwijk.tier4.range",
+      "label": "Cities · Katwijk · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 4767
+    },
+    {
+      "key": "cities.katwijk.tier4.price",
+      "label": "Cities · Katwijk · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 4770
+    },
+    {
+      "key": "cities.zeist.positioning",
+      "label": "Cities · Zeist · Positioning paragraph",
+      "kind": "text",
+      "text": "Zeistse villa's en landhuizen vragen om vakmanschap dat overeenkomt met de allure van de woning. Daar leveren wij voor.",
+      "image": null,
+      "sort_order": 4773
+    },
+    {
+      "key": "cities.zeist.wijken",
+      "label": "Cities · Zeist · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Den Dolder, Austerlitz en Huis ter Heide, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 4776
+    },
+    {
+      "key": "cities.zeist.tier1.range",
+      "label": "Cities · Zeist · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 4779
+    },
+    {
+      "key": "cities.zeist.tier1.price",
+      "label": "Cities · Zeist · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 4782
+    },
+    {
+      "key": "cities.zeist.tier2.range",
+      "label": "Cities · Zeist · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 4785
+    },
+    {
+      "key": "cities.zeist.tier2.price",
+      "label": "Cities · Zeist · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 4788
+    },
+    {
+      "key": "cities.zeist.tier3.range",
+      "label": "Cities · Zeist · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 4791
+    },
+    {
+      "key": "cities.zeist.tier3.price",
+      "label": "Cities · Zeist · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 4794
+    },
+    {
+      "key": "cities.zeist.tier4.range",
+      "label": "Cities · Zeist · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 4797
+    },
+    {
+      "key": "cities.zeist.tier4.price",
+      "label": "Cities · Zeist · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 4800
+    },
+    {
+      "key": "cities.veenendaal.positioning",
+      "label": "Cities · Veenendaal · Positioning paragraph",
+      "kind": "text",
+      "text": "Veenendaalse woningen, degelijk gebouwd in de jaren '70 en '80, verdienen een renovatie die nog vijftig jaar meegaat. Daar staan we voor.",
+      "image": null,
+      "sort_order": 4803
+    },
+    {
+      "key": "cities.veenendaal.wijken",
+      "label": "Cities · Veenendaal · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Veenendaal-Oost, Petenbos en Salamander, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 4806
+    },
+    {
+      "key": "cities.veenendaal.tier1.range",
+      "label": "Cities · Veenendaal · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 4809
+    },
+    {
+      "key": "cities.veenendaal.tier1.price",
+      "label": "Cities · Veenendaal · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 4812
+    },
+    {
+      "key": "cities.veenendaal.tier2.range",
+      "label": "Cities · Veenendaal · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 4815
+    },
+    {
+      "key": "cities.veenendaal.tier2.price",
+      "label": "Cities · Veenendaal · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 4818
+    },
+    {
+      "key": "cities.veenendaal.tier3.range",
+      "label": "Cities · Veenendaal · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 4821
+    },
+    {
+      "key": "cities.veenendaal.tier3.price",
+      "label": "Cities · Veenendaal · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 4824
+    },
+    {
+      "key": "cities.veenendaal.tier4.range",
+      "label": "Cities · Veenendaal · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 4827
+    },
+    {
+      "key": "cities.veenendaal.tier4.price",
+      "label": "Cities · Veenendaal · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 4830
+    },
+    {
+      "key": "cities.rijswijk.positioning",
+      "label": "Cities · Rijswijk · Positioning paragraph",
+      "kind": "text",
+      "text": "Rijswijkse jaren-30 woningen en flats kennen we goed. Wij brengen ze naar deze tijd met behoud van de oorspronkelijke charme.",
+      "image": null,
+      "sort_order": 4833
+    },
+    {
+      "key": "cities.rijswijk.wijken",
+      "label": "Cities · Rijswijk · Wijken sentence",
+      "kind": "text",
+      "text": "Of je nu woont in Centrum, Steenvoorde, Stationskwartier en Te Werve, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.",
+      "image": null,
+      "sort_order": 4836
+    },
+    {
+      "key": "cities.rijswijk.tier1.range",
+      "label": "Cities · Rijswijk · Tier 1 range",
+      "kind": "text",
+      "text": "€8.000 – €25.000",
+      "image": null,
+      "sort_order": 4839
+    },
+    {
+      "key": "cities.rijswijk.tier1.price",
+      "label": "Cities · Rijswijk · Tier 1 price",
+      "kind": "text",
+      "text": "Vanaf €8.000",
+      "image": null,
+      "sort_order": 4842
+    },
+    {
+      "key": "cities.rijswijk.tier2.range",
+      "label": "Cities · Rijswijk · Tier 2 range",
+      "kind": "text",
+      "text": "€25.000 – €60.000",
+      "image": null,
+      "sort_order": 4845
+    },
+    {
+      "key": "cities.rijswijk.tier2.price",
+      "label": "Cities · Rijswijk · Tier 2 price",
+      "kind": "text",
+      "text": "Vanaf €25.000",
+      "image": null,
+      "sort_order": 4848
+    },
+    {
+      "key": "cities.rijswijk.tier3.range",
+      "label": "Cities · Rijswijk · Tier 3 range",
+      "kind": "text",
+      "text": "€60.000 – €150.000",
+      "image": null,
+      "sort_order": 4851
+    },
+    {
+      "key": "cities.rijswijk.tier3.price",
+      "label": "Cities · Rijswijk · Tier 3 price",
+      "kind": "text",
+      "text": "Vanaf €60.000",
+      "image": null,
+      "sort_order": 4854
+    },
+    {
+      "key": "cities.rijswijk.tier4.range",
+      "label": "Cities · Rijswijk · Tier 4 range",
+      "kind": "text",
+      "text": "€150.000+",
+      "image": null,
+      "sort_order": 4857
+    },
+    {
+      "key": "cities.rijswijk.tier4.price",
+      "label": "Cities · Rijswijk · Tier 4 price",
+      "kind": "text",
+      "text": "Op aanvraag",
+      "image": null,
+      "sort_order": 4860
     }
   ]
 }
