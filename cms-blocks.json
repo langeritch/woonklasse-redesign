@@ -5,5 +5,42 @@
     "sub": "Eén vast aanspreekpunt, eigen vakmensen en een vaste prijs. Jij hoeft niets te regelen.",
     "cta": "Bespreek je project",
     "image": "https://images.unsplash.com/photo-1521783593447-5702b9bfd267?w=2000&q=80&auto=format&fit=crop"
+  },
+  "intro": {
+    "title": "Wat doen wij?",
+    "body1": "Een verbouwing kost je veel geld en maanden van je leven. De grootste angst is niet de bouw, maar de onzekerheid. Lopen de kosten op? Wordt het mooi? Duurt het langer dan beloofd?",
+    "body2": "Ons doel is jou ontzorgen. We nemen het hele traject uit handen, met eigen vakmensen, vaste leveranciers en één aanspreekpunt dat je kent. En we houden het persoonlijk: we behandelen je huis alsof het ons eigen huis is. Geen gedoe, geen verrassingen."
+  },
+  "quote": {
+    "text": "Wij hebben maar één doel: jou volledig ontzorgen. Jij droomt, wij regelen de rest."
+  },
+  "diensten": {
+    "eyebrow": "Diensten",
+    "title": "Alle disciplines in eigen hand.",
+    "body": "Of je nu één badkamer vernieuwt of je hele huis omgooit, je schakelt met één partij. Wij regelen alles van ontwerp tot oplevering."
+  },
+  "producten": {
+    "eyebrow": "Producten",
+    "title": "Vaste leveranciers, scherpe prijzen.",
+    "body1": "Naast onze diensten leveren én plaatsen we een breed assortiment producten. Door vaste leveranciers krijg je kwaliteit tegen een scherpe prijs, zonder opslag van tussenpersonen.",
+    "body2": "Voor badkamers hebben we eigen sanitairspecialisten en ontwerpen we je droombadkamer vooraf in 3D met Saninet, bij jou thuis."
+  },
+  "saninet": {
+    "eyebrow": "Saninet op locatie",
+    "title": "We ontwerpen je badkamer waar jij wilt.",
+    "body1": "Onze specialist komt naar de locatie van jouw keuze, meet de ruimte exact op en bouwt samen met jou je nieuwe badkamer op in Saninet 3D. Van de eerste plattegrond tot een realistisch beeld: je ziet vooraf precies wat je krijgt, helemaal naar wens.",
+    "body2": "Geen gokwerk en geen verrassingen. Je weet vooraf hoe je badkamer eruitziet, wat erin komt en wat het kost. Pas als het ontwerp helemaal naar wens is, gaan we aan de slag.",
+    "ctaLabel": "Plan je ontwerpsessie"
+  },
+  "promises": {
+    "title": "Vier beloftes"
+  },
+  "work": {
+    "eyebrow": "Recent opgeleverd",
+    "title": "Uit ons werk"
+  },
+  "finalCta": {
+    "title": "Klaar om te <em>beginnen</em>?<br/>Laten we kennismaken.",
+    "label": "Bespreek je project"
   }
 }
