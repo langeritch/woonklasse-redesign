@@ -1,56 +1,278 @@
 {
-  "hero": {
-    "kicker": "Persoonlijk · Vakmanschap · Ontzorgd",
-    "title": "Verbouwen<br/>zonder zorgen,<br/><em>persoonlijk geregeld</em>",
-    "sub": "Eén vast aanspreekpunt, eigen vakmensen en een vaste prijs. Jij hoeft niets te regelen.",
-    "cta": "Bespreek je project",
-    "image": "https://images.unsplash.com/photo-1521783593447-5702b9bfd267?w=2000&q=80&auto=format&fit=crop"
-  },
-  "intro": {
-    "title": "Wat doen wij?",
-    "body1": "Een verbouwing kost je veel geld en maanden van je leven. De grootste angst is niet de bouw, maar de onzekerheid. Lopen de kosten op? Wordt het mooi? Duurt het langer dan beloofd?",
-    "body2": "Ons doel is jou ontzorgen. We nemen het hele traject uit handen, met eigen vakmensen, vaste leveranciers en één aanspreekpunt dat je kent. En we houden het persoonlijk: we behandelen je huis alsof het ons eigen huis is. Geen gedoe, geen verrassingen."
-  },
-  "quote": {
-    "text": "Wij hebben maar één doel: jou volledig ontzorgen. Jij droomt, wij regelen de rest."
-  },
-  "diensten": {
-    "eyebrow": "Diensten",
-    "title": "Alle disciplines in eigen hand.",
-    "body": "Of je nu één badkamer vernieuwt of je hele huis omgooit, je schakelt met één partij. Wij regelen alles van ontwerp tot oplevering."
-  },
-  "producten": {
-    "eyebrow": "Producten",
-    "title": "Vaste leveranciers, scherpe prijzen.",
-    "body1": "Naast onze diensten leveren én plaatsen we een breed assortiment producten. Door vaste leveranciers krijg je kwaliteit tegen een scherpe prijs, zonder opslag van tussenpersonen.",
-    "body2": "Voor badkamers hebben we eigen sanitairspecialisten en ontwerpen we je droombadkamer vooraf in 3D met Saninet, bij jou thuis."
-  },
-  "saninet": {
-    "eyebrow": "Saninet op locatie",
-    "title": "We ontwerpen je badkamer waar jij wilt.",
-    "body1": "Onze specialist komt naar de locatie van jouw keuze, meet de ruimte exact op en bouwt samen met jou je nieuwe badkamer op in Saninet 3D. Van de eerste plattegrond tot een realistisch beeld: je ziet vooraf precies wat je krijgt, helemaal naar wens.",
-    "body2": "Geen gokwerk en geen verrassingen. Je weet vooraf hoe je badkamer eruitziet, wat erin komt en wat het kost. Pas als het ontwerp helemaal naar wens is, gaan we aan de slag.",
-    "ctaLabel": "Plan je ontwerpsessie"
-  },
-  "promises": {
-    "title": "Vier beloftes"
-  },
-  "work": {
-    "eyebrow": "Recent opgeleverd",
-    "title": "Uit ons werk"
-  },
-  "finalCta": {
-    "title": "Klaar om te <em>beginnen</em>?<br/>Laten we kennismaken.",
-    "label": "Bespreek je project"
-  },
-  "footer": {
-    "tagline": "Jouw droomwoning begint hier. Kwaliteit, vakmanschap en persoonlijke aandacht in elk project.",
-    "email": "info@woonklasse.nl",
-    "phoneDisplay": "+31 30 207 23 88",
-    "phoneHref": "+31302072388",
-    "whatsappUrl": "https://wa.me/31650424683",
-    "address": "Laantje van Van Iperen 26<br/>4142 ER Leerdam",
-    "copyright": "© 2026 Woonklasse. Alle rechten voorbehouden.",
-    "kvk": "KVK 85409146 · BTW NL004092100B36"
-  }
+  "dashboard": "woonklasse",
+  "generated_at": "2026-06-08T00:00:00.000Z",
+  "blocks": [
+    {
+      "key": "hero.kicker",
+      "label": "Hero kicker",
+      "kind": "text",
+      "text": "Persoonlijk · Vakmanschap · Ontzorgd",
+      "image": null,
+      "sort_order": 10
+    },
+    {
+      "key": "hero.title",
+      "label": "Hero title (HTML)",
+      "kind": "rich_text",
+      "text": "Verbouwen<br/>zonder zorgen,<br/><em>persoonlijk geregeld</em>",
+      "image": null,
+      "sort_order": 20
+    },
+    {
+      "key": "hero.sub",
+      "label": "Hero subhead",
+      "kind": "text",
+      "text": "Eén vast aanspreekpunt, eigen vakmensen en een vaste prijs. Jij hoeft niets te regelen.",
+      "image": null,
+      "sort_order": 30
+    },
+    {
+      "key": "hero.cta",
+      "label": "Hero CTA label",
+      "kind": "text",
+      "text": "Bespreek je project",
+      "image": null,
+      "sort_order": 40
+    },
+    {
+      "key": "hero.image",
+      "label": "Hero background image",
+      "kind": "image",
+      "text": null,
+      "image": "https://images.unsplash.com/photo-1521783593447-5702b9bfd267?w=2000&q=80&auto=format&fit=crop",
+      "sort_order": 50
+    },
+    {
+      "key": "intro.title",
+      "label": "Intro section title",
+      "kind": "text",
+      "text": "Wat doen wij?",
+      "image": null,
+      "sort_order": 100
+    },
+    {
+      "key": "intro.body1",
+      "label": "Intro paragraph 1",
+      "kind": "text",
+      "text": "Een verbouwing kost je veel geld en maanden van je leven. De grootste angst is niet de bouw, maar de onzekerheid. Lopen de kosten op? Wordt het mooi? Duurt het langer dan beloofd?",
+      "image": null,
+      "sort_order": 110
+    },
+    {
+      "key": "intro.body2",
+      "label": "Intro paragraph 2",
+      "kind": "text",
+      "text": "Ons doel is jou ontzorgen. We nemen het hele traject uit handen, met eigen vakmensen, vaste leveranciers en één aanspreekpunt dat je kent. En we houden het persoonlijk: we behandelen je huis alsof het ons eigen huis is. Geen gedoe, geen verrassingen.",
+      "image": null,
+      "sort_order": 120
+    },
+    {
+      "key": "quote.text",
+      "label": "Pull quote",
+      "kind": "text",
+      "text": "Wij hebben maar één doel: jou volledig ontzorgen. Jij droomt, wij regelen de rest.",
+      "image": null,
+      "sort_order": 200
+    },
+    {
+      "key": "diensten.eyebrow",
+      "label": "Diensten eyebrow",
+      "kind": "text",
+      "text": "Diensten",
+      "image": null,
+      "sort_order": 300
+    },
+    {
+      "key": "diensten.title",
+      "label": "Diensten title",
+      "kind": "text",
+      "text": "Alle disciplines in eigen hand.",
+      "image": null,
+      "sort_order": 310
+    },
+    {
+      "key": "diensten.body",
+      "label": "Diensten body",
+      "kind": "text",
+      "text": "Of je nu één badkamer vernieuwt of je hele huis omgooit, je schakelt met één partij. Wij regelen alles van ontwerp tot oplevering.",
+      "image": null,
+      "sort_order": 320
+    },
+    {
+      "key": "producten.eyebrow",
+      "label": "Producten eyebrow",
+      "kind": "text",
+      "text": "Producten",
+      "image": null,
+      "sort_order": 400
+    },
+    {
+      "key": "producten.title",
+      "label": "Producten title",
+      "kind": "text",
+      "text": "Vaste leveranciers, scherpe prijzen.",
+      "image": null,
+      "sort_order": 410
+    },
+    {
+      "key": "producten.body1",
+      "label": "Producten paragraph 1",
+      "kind": "text",
+      "text": "Naast onze diensten leveren én plaatsen we een breed assortiment producten. Door vaste leveranciers krijg je kwaliteit tegen een scherpe prijs, zonder opslag van tussenpersonen.",
+      "image": null,
+      "sort_order": 420
+    },
+    {
+      "key": "producten.body2",
+      "label": "Producten paragraph 2 (Saninet pitch)",
+      "kind": "text",
+      "text": "Voor badkamers hebben we eigen sanitairspecialisten en ontwerpen we je droombadkamer vooraf in 3D met Saninet, bij jou thuis.",
+      "image": null,
+      "sort_order": 430
+    },
+    {
+      "key": "saninet.eyebrow",
+      "label": "Saninet eyebrow",
+      "kind": "text",
+      "text": "Saninet op locatie",
+      "image": null,
+      "sort_order": 500
+    },
+    {
+      "key": "saninet.title",
+      "label": "Saninet title",
+      "kind": "text",
+      "text": "We ontwerpen je badkamer waar jij wilt.",
+      "image": null,
+      "sort_order": 510
+    },
+    {
+      "key": "saninet.body1",
+      "label": "Saninet body top",
+      "kind": "text",
+      "text": "Onze specialist komt naar de locatie van jouw keuze, meet de ruimte exact op en bouwt samen met jou je nieuwe badkamer op in Saninet 3D. Van de eerste plattegrond tot een realistisch beeld: je ziet vooraf precies wat je krijgt, helemaal naar wens.",
+      "image": null,
+      "sort_order": 520
+    },
+    {
+      "key": "saninet.body2",
+      "label": "Saninet body bottom",
+      "kind": "text",
+      "text": "Geen gokwerk en geen verrassingen. Je weet vooraf hoe je badkamer eruitziet, wat erin komt en wat het kost. Pas als het ontwerp helemaal naar wens is, gaan we aan de slag.",
+      "image": null,
+      "sort_order": 530
+    },
+    {
+      "key": "saninet.ctaLabel",
+      "label": "Saninet CTA label",
+      "kind": "text",
+      "text": "Plan je ontwerpsessie",
+      "image": null,
+      "sort_order": 540
+    },
+    {
+      "key": "promises.title",
+      "label": "Vier beloftes section title",
+      "kind": "text",
+      "text": "Vier beloftes",
+      "image": null,
+      "sort_order": 600
+    },
+    {
+      "key": "work.eyebrow",
+      "label": "Uit ons werk eyebrow",
+      "kind": "text",
+      "text": "Recent opgeleverd",
+      "image": null,
+      "sort_order": 700
+    },
+    {
+      "key": "work.title",
+      "label": "Uit ons werk title",
+      "kind": "text",
+      "text": "Uit ons werk",
+      "image": null,
+      "sort_order": 710
+    },
+    {
+      "key": "finalCta.title",
+      "label": "Final CTA title (HTML)",
+      "kind": "rich_text",
+      "text": "Klaar om te <em>beginnen</em>?<br/>Laten we kennismaken.",
+      "image": null,
+      "sort_order": 800
+    },
+    {
+      "key": "finalCta.label",
+      "label": "Final CTA button label",
+      "kind": "text",
+      "text": "Bespreek je project",
+      "image": null,
+      "sort_order": 810
+    },
+    {
+      "key": "footer.tagline",
+      "label": "Footer tagline",
+      "kind": "text",
+      "text": "Jouw droomwoning begint hier. Kwaliteit, vakmanschap en persoonlijke aandacht in elk project.",
+      "image": null,
+      "sort_order": 900
+    },
+    {
+      "key": "footer.email",
+      "label": "Contact email",
+      "kind": "text",
+      "text": "info@woonklasse.nl",
+      "image": null,
+      "sort_order": 910
+    },
+    {
+      "key": "footer.phoneDisplay",
+      "label": "Phone (display format)",
+      "kind": "text",
+      "text": "+31 30 207 23 88",
+      "image": null,
+      "sort_order": 920
+    },
+    {
+      "key": "footer.phoneHref",
+      "label": "Phone (tel: href format, digits only)",
+      "kind": "text",
+      "text": "+31302072388",
+      "image": null,
+      "sort_order": 925
+    },
+    {
+      "key": "footer.whatsappUrl",
+      "label": "WhatsApp URL",
+      "kind": "text",
+      "text": "https://wa.me/31650424683",
+      "image": null,
+      "sort_order": 930
+    },
+    {
+      "key": "footer.address",
+      "label": "Postal address (HTML, use <br/>)",
+      "kind": "rich_text",
+      "text": "Laantje van Van Iperen 26<br/>4142 ER Leerdam",
+      "image": null,
+      "sort_order": 940
+    },
+    {
+      "key": "footer.copyright",
+      "label": "Copyright line",
+      "kind": "text",
+      "text": "© 2026 Woonklasse. Alle rechten voorbehouden.",
+      "image": null,
+      "sort_order": 950
+    },
+    {
+      "key": "footer.kvk",
+      "label": "KVK + BTW line",
+      "kind": "text",
+      "text": "KVK 85409146 · BTW NL004092100B36",
+      "image": null,
+      "sort_order": 960
+    }
+  ]
 }

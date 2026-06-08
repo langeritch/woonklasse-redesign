@@ -1,14 +1,26 @@
-// Minimal CMS token replacer for woonklasse-redesign.
+// CMS token replacer for woonklasse-redesign.
 //
-// Reads cms-blocks.json and replaces {{key.path}} tokens in every .html file
-// at the repo root, IN PLACE. Vercel runs this via `npm run build`, edits the
-// freshly checked-out files, and serves the result. The repo on GitHub keeps
-// the tokenized version, which is the canonical source of truth.
+// Reads cms-blocks.json (committed to the repo by the Datareaches admin's
+// "Deploy" action) and replaces {{block.key}} tokens in every .html file
+// at the repo root, IN PLACE.
 //
-// Phase 1 wires only the hero on index.html. Other HTML files contain no
-// tokens, so they pass through untouched but are still rewritten (idempotent).
+// Expected JSON shape (written by hightouch-clone's deployAction):
 //
-// No npm deps on purpose — keeps the install step trivial on Vercel.
+//   {
+//     "dashboard": "woonklasse",
+//     "generated_at": "2026-06-08T12:34:56.000Z",
+//     "blocks": [
+//       { "key": "hero.title", "kind": "text", "text": "...", "image": null,
+//         "label": "Hero title", "sort_order": 10 },
+//       { "key": "hero.image", "kind": "image", "text": null,
+//         "image": "https://...", "label": "Hero image", "sort_order": 20 }
+//     ]
+//   }
+//
+// For each block, the value is `image` when kind === "image", otherwise
+// `text`. Tokens whose key isn't present are left untouched and logged.
+//
+// No npm deps on purpose — keeps install trivial on Vercel.
 
 const fs = require("node:fs");
 const path = require("node:path");
@@ -21,30 +33,43 @@ if (!fs.existsSync(BLOCKS_PATH)) {
   process.exit(1);
 }
 
-const blocks = JSON.parse(fs.readFileSync(BLOCKS_PATH, "utf8"));
+const raw = JSON.parse(fs.readFileSync(BLOCKS_PATH, "utf8"));
 
-// Flatten nested keys into dot-paths so authors can write {{hero.title}}
-// while still grouping the JSON by section.
-function flatten(obj, prefix = "", out = {}) {
+// Build a flat key→value map from whichever JSON shape is present.
+function buildMap(raw) {
+  const map = {};
+  if (raw && Array.isArray(raw.blocks)) {
+    for (const b of raw.blocks) {
+      const v = b.kind === "image" ? b.image : b.text;
+      if (v != null) map[b.key] = String(v);
+    }
+    return map;
+  }
+  // Legacy nested-object shape: { hero: { title: "...", image: "..." } }
+  // Kept as a fallback so old snapshots and hand-authored files still work.
+  flatten(raw, "", map);
+  return map;
+}
+
+function flatten(obj, prefix, out) {
   for (const [k, v] of Object.entries(obj)) {
     const key = prefix ? `${prefix}.${k}` : k;
     if (v && typeof v === "object" && !Array.isArray(v)) {
       flatten(v, key, out);
     } else {
-      out[key] = v;
+      out[key] = v == null ? "" : String(v);
     }
   }
-  return out;
 }
 
-const flat = flatten(blocks);
+const map = buildMap(raw);
 
 // Match {{ some.key }} with optional surrounding whitespace.
 const TOKEN = /\{\{\s*([a-zA-Z0-9_.-]+)\s*\}\}/g;
 
 function render(html) {
   return html.replace(TOKEN, (match, key) => {
-    if (key in flat) return String(flat[key]);
+    if (key in map) return map[key];
     console.warn(`[cms] missing block: ${key} (left token in place)`);
     return match;
   });

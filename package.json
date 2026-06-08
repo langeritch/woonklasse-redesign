@@ -4,6 +4,6 @@
   "version": "1.0.0",
   "description": "Woonklasse static site with a tiny CMS token replacer (build.js).",
   "scripts": {
-    "build": "node fetch-blocks.js && node build.js"
+    "build": "node build.js"
   }
 }
