@@ -530,7 +530,7 @@ body.loaded::before { opacity: 0; visibility: hidden; }
   display: flex;
   width: max-content;
   will-change: transform;
-  animation: work-marquee 60s linear infinite;
+  animation: work-marquee 40s linear infinite;
 }
 .work__track:hover { animation-play-state: paused; }
 @keyframes work-marquee {

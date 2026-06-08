@@ -87,13 +87,30 @@ const logoFor = (where) => where === 'footer'
   ? LOGO_SVG.replace('VARIANT', 'white').replace('VARIANT_CLASS', 'footer__brand-img').replace('VARIANT_W', '120').replace('VARIANT_H', '120')
   : LOGO_SVG.replace('VARIANT', 'dark').replace('VARIANT_CLASS', 'logo-block__img').replace('VARIANT_W', '160').replace('VARIANT_H', '160');
 
-const HEAD = (title, desc) => `<!doctype html>
+const HEAD = (title, desc, slug, cityName) => `<!doctype html>
 <html lang="nl">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>${title}</title>
 <meta name="description" content="${desc}"/>
+<link rel="canonical" href="https://woonklasse.nl/${slug}.html"/>
+<meta name="robots" content="index, follow, max-image-preview:large"/>
+<meta name="theme-color" content="#1a1a1a"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Woonklasse"/>
+<meta property="og:locale" content="nl_NL"/>
+<meta property="og:url" content="https://woonklasse.nl/${slug}.html"/>
+<meta property="og:title" content="${title}"/>
+<meta property="og:description" content="${desc}"/>
+<meta property="og:image" content="https://woonklasse.nl/assets/og-image.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="${title}"/>
+<meta name="twitter:description" content="${desc}"/>
+<meta name="twitter:image" content="https://woonklasse.nl/assets/og-image.jpg"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"GeneralContractor","@id":"https://woonklasse.nl/#business","name":"Woonklasse","image":"https://woonklasse.nl/assets/og-image.jpg","logo":"https://woonklasse.nl/assets/woonklasse-logo-dark.png","url":"https://woonklasse.nl/","telephone":"+31302072388","email":"info@woonklasse.nl","priceRange":"€€","address":{"@type":"PostalAddress","streetAddress":"Joop Geesinkweg 201","postalCode":"1114 AB","addressLocality":"Amsterdam-Duivendrecht","addressCountry":"NL"},"areaServed":{"@type":"City","name":"${cityName}"},"vatID":"NL004092100B36","knowsLanguage":"nl"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
@@ -175,7 +192,9 @@ const cityTemplate = (city, idx) => {
 
   return `${HEAD(
     `Verbouwen in ${city.name} | Woonklasse`,
-    `Renovatie en verbouwing in ${city.name} door eigen vakmensen. Eén aanspreekpunt, vaste prijs, op tijd opgeleverd.`
+    `Renovatie en verbouwing in ${city.name} door eigen vakmensen. Eén aanspreekpunt, vaste prijs, op tijd opgeleverd.`,
+    city.slug,
+    city.name
   )}
 ${HEADER}
 
@@ -203,7 +222,7 @@ ${HEADER}
       <p class="body-caps" style="margin-top: 20px;">Of je nu woont in ${wijkenSentence}, onze projectleider komt graag bij je langs voor een vrijblijvend gesprek.</p>
       <a href="contact.html" class="link-underline" style="margin-top:32px;">Plan een gesprek</a>
     </div>
-    <div class="story__media"><img src="${storyImg}" alt="${city.name} woning"/></div>
+    <div class="story__media"><img loading="lazy" decoding="async" src="${storyImg}" alt="${city.name} woning"/></div>
   </div>
 </section>
 
@@ -258,9 +277,9 @@ ${HEADER}
 <section class="projects">
   <div class="projects__head"><h2 class="section-title">Recent werk uit ${city.name}</h2></div>
   <div class="projects__track">
-    <a class="proj-card proj-card--offset-1" href="projecten.html"><div class="proj-card__img"><img src="${projectImgs[0]}" alt="Renovatie ${city.wijken[0]}"/></div><p class="proj-card__name">Stadswoning ${city.wijken[0]}</p><p class="proj-card__num">01</p></a>
-    <a class="proj-card proj-card--offset-3 proj-card--bg-black" href="projecten.html"><div class="proj-card__img"><img src="${projectImgs[1]}" alt="Badkamer ${city.wijken[1]}"/></div><p class="proj-card__name">Masterbadkamer ${city.wijken[1]}</p><p class="proj-card__num">02</p></a>
-    <a class="proj-card proj-card--offset-2" href="projecten.html"><div class="proj-card__img"><img src="${projectImgs[2]}" alt="Keuken ${city.wijken[2]}"/></div><p class="proj-card__name">Open keuken ${city.wijken[2]}</p><p class="proj-card__num">03</p></a>
+    <a class="proj-card proj-card--offset-1" href="projecten.html"><div class="proj-card__img"><img loading="lazy" decoding="async" src="${projectImgs[0]}" alt="Renovatie ${city.wijken[0]}"/></div><p class="proj-card__name">Stadswoning ${city.wijken[0]}</p><p class="proj-card__num">01</p></a>
+    <a class="proj-card proj-card--offset-3 proj-card--bg-black" href="projecten.html"><div class="proj-card__img"><img loading="lazy" decoding="async" src="${projectImgs[1]}" alt="Badkamer ${city.wijken[1]}"/></div><p class="proj-card__name">Masterbadkamer ${city.wijken[1]}</p><p class="proj-card__num">02</p></a>
+    <a class="proj-card proj-card--offset-2" href="projecten.html"><div class="proj-card__img"><img loading="lazy" decoding="async" src="${projectImgs[2]}" alt="Keuken ${city.wijken[2]}"/></div><p class="proj-card__name">Open keuken ${city.wijken[2]}</p><p class="proj-card__num">03</p></a>
   </div>
 </section>
 
