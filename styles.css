@@ -1585,3 +1585,10 @@ body.loaded::before { opacity: 0; visibility: hidden; }
     padding: 26px 0;
   }
 }
+
+/* Juridische pagina's (privacy, voorwaarden) */
+.legal { font-family: var(--body); color: var(--ink); font-size: 16px; line-height: 1.7; }
+.legal h2 { font-family: var(--display); text-transform: uppercase; letter-spacing: 0.02em; font-size: 20px; margin: 40px 0 12px; }
+.legal p { margin: 0 0 16px; color: #333; }
+.legal ul { margin: 0 0 16px; padding-left: 20px; color: #333; }
+.legal li { margin-bottom: 6px; }
