@@ -30,6 +30,38 @@ async function readJson(req) {
   });
 }
 
+// Sends a copy of the lead to the Datareaches dashboard inquiry inbox.
+// Same-origin path: /api/inquiries/woonklasse on datareaches.com. Auth via
+// the INQUIRY_SECRET env var (shared with the dashboard project). Errors
+// are swallowed so user-facing submission is never blocked by analytics.
+function mirrorToDatareaches(payload, clientIp) {
+  const secret = process.env.INQUIRY_SECRET;
+  if (!secret) return;
+  const url = process.env.INQUIRY_SINK_URL ||
+    'https://datareaches.com/api/inquiries/woonklasse';
+  // The dashboard's inquiry sink expects { name, email, phone, message }.
+  // Map the lead-form fields onto that shape; pass everything else under
+  // `raw` so nothing is lost.
+  const out = {
+    name: payload.name || null,
+    email: payload.email || null,
+    phone: payload.phone || null,
+    message: payload.message || payload.note || null,
+    eventType: payload.type || null,
+    raw: payload,
+  };
+  fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-inquiry-secret': secret,
+      ...(clientIp ? { 'x-forwarded-for': clientIp } : {}),
+    },
+    body: JSON.stringify(out),
+    signal: AbortSignal.timeout(5000),
+  }).catch(() => { /* analytics-grade; never throws */ });
+}
+
 module.exports = async function handler(req, res) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
@@ -46,6 +78,12 @@ module.exports = async function handler(req, res) {
     String(req.headers['x-forwarded-for'] || '').split(',')[0].trim() ||
     (req.socket && req.socket.remoteAddress) ||
     '';
+
+  // Fire-and-forget mirror to the Datareaches dashboard's inquiry inbox so
+  // the operator sees every submission there too (the upstream path still
+  // sends the SMTP/push to the recipient). Failures here never block the
+  // user-facing flow.
+  mirrorToDatareaches(payload, clientIp);
 
   try {
     const upstream = await fetch(UPSTREAM, {

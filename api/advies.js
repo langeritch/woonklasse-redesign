@@ -39,6 +39,32 @@ module.exports = async function handler(req, res) {
     (req.socket && req.socket.remoteAddress) ||
     '';
 
+  // Fire-and-forget mirror to the Datareaches dashboard's Inquiries inbox.
+  // Same secret as api/contact.js. Errors swallowed.
+  (function () {
+    const secret = process.env.INQUIRY_SECRET;
+    if (!secret) return;
+    const url = process.env.INQUIRY_SINK_URL ||
+      'https://datareaches.com/api/inquiries/woonklasse';
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-inquiry-secret': secret,
+        ...(clientIp ? { 'x-forwarded-for': clientIp } : {}),
+      },
+      body: JSON.stringify({
+        name: payload.name || null,
+        email: payload.email || null,
+        phone: payload.phone || null,
+        message: payload.message || payload.note || null,
+        eventType: payload.type || 'Lead quiz (rooms+photos)',
+        raw: payload,
+      }),
+      signal: AbortSignal.timeout(5000),
+    }).catch(() => {});
+  })();
+
   try {
     const upstream = await fetch(UPSTREAM, {
       method: 'POST',
