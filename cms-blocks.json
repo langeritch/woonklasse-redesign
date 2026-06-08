@@ -1,6 +1,6 @@
 {
   "dashboard": "woonklasse",
-  "generated_at": "2026-06-08T12:00:00.000Z",
+  "generated_at": "2026-06-08T12:30:00.000Z",
   "blocks": [
     {
       "key": "hero.kicker",
@@ -30,7 +30,7 @@
       "key": "hero.cta",
       "label": "Hero CTA label",
       "kind": "text",
-      "text": "Vraag een vrijblijvende offerte aan",
+      "text": "Bespreek je project",
       "image": null,
       "sort_order": 40
     },
