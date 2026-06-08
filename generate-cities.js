@@ -116,6 +116,9 @@ const HEAD = (title, desc, slug, cityName) => `<!doctype html>
 <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <link rel="icon" type="image/png" href="/assets/favicon.png"/>
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"/>
+<link rel="preconnect" href="https://images.unsplash.com"/>
+<link rel="manifest" href="/site.webmanifest"/>
+<meta property="og:image:alt" content="Badkamer opgeleverd door Woonklasse"/>
 <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>`;
