@@ -48,14 +48,14 @@
 </header>
 
 <section class="hero hero--short">
-  <div class="hero__media"><img src="https://images.unsplash.com/photo-1601086540476-7d9fa9dd6023?w=2000&q=80&auto=format&fit=crop" alt="Vakmanschap Woonklasse"/></div>
+  <div class="hero__media"><img src="{{diensten.hero.image}}" data-cms-key="diensten.hero.image" alt="Vakmanschap Woonklasse"/></div>
   <div class="hero__overlay" aria-hidden="true"></div>
   <div class="hero__inner">
-    <p class="hero__sub" style="margin-bottom: 18px; letter-spacing: 0.18em;">Onze Diensten</p>
-    <h1 class="hero__title">Vakmanschap<br/><em>in elk project</em></h1>
-    <p class="hero__sub">Van badkamer en keuken tot complete woningrenovatie. Alle disciplines in eigen huis.</p>
+    <p class="hero__sub" style="margin-bottom: 18px; letter-spacing: 0.18em;" data-cms-key="diensten.hero.kicker">{{diensten.hero.kicker}}</p>
+    <h1 class="hero__title" data-cms-key="diensten.hero.title">{{diensten.hero.title}}</h1>
+    <p class="hero__sub" data-cms-key="diensten.hero.sub">{{diensten.hero.sub}}</p>
     <div class="hero__actions">
-      <a href="contact.html" class="link-underline link-underline--light">Bespreek je project</a>
+      <a href="contact.html" class="link-underline link-underline--light" data-cms-key="diensten.hero.cta">{{diensten.hero.cta}}</a>
     </div>
   </div>
 </section>
@@ -66,7 +66,7 @@
   <div class="story__grid">
     <div class="story__text">
       <p style="font-family: var(--display); text-transform: uppercase; letter-spacing: 0.18em; font-size: 13px; color: var(--gold); margin: 0 0 18px;">Onze Aanpak</p>
-      <h2 class="section-title">Vier stappen, één visie.</h2>
+      <h2 class="section-title" data-cms-key="diensten.section1.title">{{diensten.section1.title}}</h2>
       <p class="body-caps" style="margin-top: 32px;">Elk project begint met luisteren. We verdiepen ons in de locatie, de architectuur en jullie wensen. Vanuit die context bouwen we naar een ontwerp dat klopt.</p>
     </div>
     <div class="story__media"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1521783593447-5702b9bfd267?w=1000&q=80&auto=format&fit=crop" alt="Onze aanpak"/></div>
@@ -75,7 +75,7 @@
 
 <section class="services">
   <div class="services__head">
-    <h2 class="section-title section-title--light">De vier fases</h2>
+    <h2 class="section-title section-title--light" data-cms-key="diensten.section2.title">{{diensten.section2.title}}</h2>
   </div>
   <div class="services__list">
     <div class="service-row"><span class="service-row__num">01</span><span class="service-row__title">Context</span><span class="service-row__toggle">+</span><p class="service-row__body">Elk project begint met luisteren. We verdiepen ons in de locatie, de architectuur en de manier waarop jij wilt wonen. Zonder die context geen ontwerp dat klopt.</p></div>
@@ -89,7 +89,7 @@
 <section class="section" style="background: #fff;">
   <div class="section__inner">
     <p style="font-family: var(--display); text-transform: uppercase; letter-spacing: 0.18em; font-size: 13px; color: var(--gold); margin: 0 0 18px;">Alle diensten op een rij</p>
-    <h2 class="section-title" style="margin-bottom: 50px;">Specialismen.</h2>
+    <h2 class="section-title" style="margin-bottom: 50px;" data-cms-key="diensten.section3.title">{{diensten.section3.title}}</h2>
 
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--line);">
       <div style="padding: 32px 24px 32px 0; border-bottom: 1px solid var(--line);">
@@ -139,8 +139,8 @@
 <section class="cta">
   <div class="cta__deco" aria-hidden="true"></div>
   <div class="cta__inner">
-    <h2 class="cta__title">Vertel ons over je <em>plannen</em>.<br/>Binnen 48 uur een voorstel.</h2>
-    <a href="contact.html" class="link-underline">Start je project</a>
+    <h2 class="cta__title" data-cms-key="diensten.finalCta.title">{{diensten.finalCta.title}}</h2>
+    <a href="contact.html" class="link-underline" data-cms-key="diensten.finalCta.label">{{diensten.finalCta.label}}</a>
   </div>
 </section>
 

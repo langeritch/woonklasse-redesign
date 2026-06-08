@@ -48,14 +48,14 @@
 </header>
 
 <section class="hero hero--short">
-  <div class="hero__media"><img src="https://images.unsplash.com/photo-1601086540476-7d9fa9dd6023?w=2000&q=80&auto=format&fit=crop" alt="Budget en planning"/></div>
+  <div class="hero__media"><img src="{{prijzen.hero.image}}" data-cms-key="prijzen.hero.image" alt="Budget en planning"/></div>
   <div class="hero__overlay" aria-hidden="true"></div>
   <div class="hero__inner">
-    <p class="hero__sub" style="margin-bottom: 18px; letter-spacing: 0.18em;">Prijzen 2026</p>
-    <h1 class="hero__title">Wat kost een<br/><em>verbouwing</em> in 2026?</h1>
-    <p class="hero__sub">Vier heldere prijscategorieën, een interactieve calculator en alle factoren die je budget beïnvloeden, zonder verborgen kosten of vage uurtarieven.</p>
+    <p class="hero__sub" style="margin-bottom: 18px; letter-spacing: 0.18em;" data-cms-key="prijzen.hero.kicker">{{prijzen.hero.kicker}}</p>
+    <h1 class="hero__title" data-cms-key="prijzen.hero.title">{{prijzen.hero.title}}</h1>
+    <p class="hero__sub" data-cms-key="prijzen.hero.sub">{{prijzen.hero.sub}}</p>
     <div class="hero__actions">
-      <a href="contact.html" class="link-underline link-underline--light">Bereken je indicatie</a>
+      <a href="contact.html" class="link-underline link-underline--light" data-cms-key="prijzen.hero.cta">{{prijzen.hero.cta}}</a>
     </div>
   </div>
 </section>
@@ -133,7 +133,7 @@
 <!-- FAQ -->
 <section class="section section--taupe">
   <div class="section__inner">
-    <h2 class="section-title section-title--light" style="margin-bottom: 50px;">Veelgestelde vragen</h2>
+    <h2 class="section-title section-title--light" style="margin-bottom: 50px;" data-cms-key="prijzen.section1.title">{{prijzen.section1.title}}</h2>
     <div class="faq">
       <details><summary>Hoe weet ik in welke categorie mijn project valt?</summary><div>Tijdens het kennismakingsgesprek brengen we je wensen in kaart en geven we direct een eerste indicatie. Vaak hoor je binnen een half uur in welke richting je moet denken.</div></details>
       <details><summary>Krijg ik echt een vaste prijs?</summary><div>Ja. Na het definitieve ontwerp ontvang je een vaste prijsopgave. Meerwerk gebeurt alleen na schriftelijke goedkeuring en blijft uitzondering, geen regel.</div></details>
@@ -147,8 +147,8 @@
 <section class="cta">
   <div class="cta__deco" aria-hidden="true"></div>
   <div class="cta__inner">
-    <h2 class="cta__title">Klaar voor een <em>prijsindicatie</em>?</h2>
-    <a href="tel:{{footer.phoneHref}}" class="link-underline">Bel direct {{footer.phoneDisplay}}</a>
+    <h2 class="cta__title" data-cms-key="prijzen.finalCta.title">{{prijzen.finalCta.title}}</h2>
+    <a href="tel:{{footer.phoneHref}}" class="link-underline" data-cms-key="prijzen.finalCta.label">{{prijzen.finalCta.label}}</a>
   </div>
 </section>
 

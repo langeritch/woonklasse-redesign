@@ -48,12 +48,12 @@
 </header>
 
 <section class="hero hero--short">
-  <div class="hero__media"><img src="https://images.unsplash.com/photo-1708111776235-990d08c84658?w=2000&q=80&auto=format&fit=crop" alt="Recente realisaties"/></div>
+  <div class="hero__media"><img src="{{projecten.hero.image}}" data-cms-key="projecten.hero.image" alt="Recente realisaties"/></div>
   <div class="hero__overlay" aria-hidden="true"></div>
   <div class="hero__inner">
-    <p class="hero__sub" style="margin-bottom: 18px; letter-spacing: 0.18em;">Portfolio</p>
-    <h1 class="hero__title">Onze<br/><em>realisaties</em></h1>
-    <p class="hero__sub">Ruimtes die inspireren en duurzaam zijn. Van volledige transformaties tot verfijnde details. Bekijk ons werk.</p>
+    <p class="hero__sub" style="margin-bottom: 18px; letter-spacing: 0.18em;" data-cms-key="projecten.hero.kicker">{{projecten.hero.kicker}}</p>
+    <h1 class="hero__title" data-cms-key="projecten.hero.title">{{projecten.hero.title}}</h1>
+    <p class="hero__sub" data-cms-key="projecten.hero.sub">{{projecten.hero.sub}}</p>
   </div>
 </section>
 
@@ -150,8 +150,8 @@
 <section class="cta">
   <div class="cta__deco" aria-hidden="true"></div>
   <div class="cta__inner">
-    <h2 class="cta__title">Neem contact op voor een vrijblijvend gesprek over uw <em>droomproject</em>.</h2>
-    <a href="contact.html" class="link-underline">Start uw project</a>
+    <h2 class="cta__title" data-cms-key="projecten.finalCta.title">{{projecten.finalCta.title}}</h2>
+    <a href="contact.html" class="link-underline" data-cms-key="projecten.finalCta.label">{{projecten.finalCta.label}}</a>
   </div>
 </section>
 
