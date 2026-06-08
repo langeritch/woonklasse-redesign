@@ -644,3 +644,24 @@ async function uploadRoomPhotos(roomDetails, onProgress) {
     initNav();
   }
 })();
+
+/* 'Uit ons werk' marquee — dupliceer de slides voor een naadloze loop */
+(function () {
+  function initWork() {
+    var track = document.getElementById('workTrack');
+    if (!track || track.dataset.cloned) return;
+    var slides = Array.prototype.slice.call(track.children);
+    slides.forEach(function (s) {
+      var c = s.cloneNode(true);
+      c.setAttribute('aria-hidden', 'true');
+      c.setAttribute('tabindex', '-1');
+      track.appendChild(c);
+    });
+    track.dataset.cloned = '1';
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initWork);
+  } else {
+    initWork();
+  }
+})();
