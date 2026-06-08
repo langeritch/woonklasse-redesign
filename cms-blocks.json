@@ -42,5 +42,15 @@
   "finalCta": {
     "title": "Klaar om te <em>beginnen</em>?<br/>Laten we kennismaken.",
     "label": "Bespreek je project"
+  },
+  "footer": {
+    "tagline": "Jouw droomwoning begint hier. Kwaliteit, vakmanschap en persoonlijke aandacht in elk project.",
+    "email": "info@woonklasse.nl",
+    "phoneDisplay": "+31 30 207 23 88",
+    "phoneHref": "+31302072388",
+    "whatsappUrl": "https://wa.me/31650424683",
+    "address": "Laantje van Van Iperen 26<br/>4142 ER Leerdam",
+    "copyright": "© 2026 Woonklasse. Alle rechten voorbehouden.",
+    "kvk": "KVK 85409146 · BTW NL004092100B36"
   }
 }

@@ -21,7 +21,7 @@
 <meta name="twitter:title" content="Verbouwen in Haarlem | Woonklasse"/>
 <meta name="twitter:description" content="Renovatie en verbouwing in Haarlem door eigen vakmensen. Eén aanspreekpunt, vaste prijs, op tijd opgeleverd."/>
 <meta name="twitter:image" content="https://woonklasse.nl/assets/og-image.jpg"/>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"GeneralContractor","@id":"https://woonklasse.nl/#business","name":"Woonklasse","image":"https://woonklasse.nl/assets/og-image.jpg","logo":"https://woonklasse.nl/assets/woonklasse-logo-dark.png","url":"https://woonklasse.nl/","telephone":"+31302072388","email":"info@woonklasse.nl","priceRange":"€€","address":{"@type":"PostalAddress","streetAddress":"Laantje van Van Iperen 26","postalCode":"4142 ER","addressLocality":"Leerdam","addressCountry":"NL"},"areaServed":{"@type":"City","name":"Haarlem"},"vatID":"NL004092100B36","knowsLanguage":"nl"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"GeneralContractor","@id":"https://woonklasse.nl/#business","name":"Woonklasse","image":"https://woonklasse.nl/assets/og-image.jpg","logo":"https://woonklasse.nl/assets/woonklasse-logo-dark.png","url":"https://woonklasse.nl/","telephone":"+31302072388","email":"{{footer.email}}","priceRange":"€€","address":{"@type":"PostalAddress","streetAddress":"Laantje van Van Iperen 26","postalCode":"4142 ER","addressLocality":"Leerdam","addressCountry":"NL"},"areaServed":{"@type":"City","name":"Haarlem"},"vatID":"NL004092100B36","knowsLanguage":"nl"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
@@ -54,7 +54,7 @@
     <p class="hero__sub">Renovatie en verbouwing door eigen vakmensen.</p>
     <div class="hero__actions">
       <a href="contact.html" class="link-underline link-underline--light">Offerte aanvragen</a>
-      <a href="tel:+31302072388" class="link-underline link-underline--light">+31 30 207 23 88</a>
+      <a href="tel:{{footer.phoneHref}}" class="link-underline link-underline--light">{{footer.phoneDisplay}}</a>
     </div>
   </div>
 </section>
@@ -175,7 +175,7 @@
       <img src="assets/woonklasse-logo-white.png" alt="Woonklasse" class="footer__brand-img" width="120" height="120"/>
       <span class="footer__wordmark">Woonklasse</span>
     </div>
-    <p style="font-family: var(--body); color: rgba(255,255,255,0.7); max-width: 36ch; margin: -40px 0 50px; font-size: 14.5px;">Jouw droomwoning begint hier. Kwaliteit, vakmanschap en persoonlijke aandacht in elk project.</p>
+    <p style="font-family: var(--body); color: rgba(255,255,255,0.7); max-width: 36ch; margin: -40px 0 50px; font-size: 14.5px;">{{footer.tagline}}</p>
     <div class="footer__cols">
       <div>
         <a href="index.html">Home</a>
@@ -186,10 +186,10 @@
         <a href="contact.html">Contact</a>
       </div>
       <div>
-        <a href="mailto:info@woonklasse.nl">info@woonklasse.nl</a>
-        <a href="tel:+31302072388">+31 30 207 23 88</a>
-        <a href="https://wa.me/31650424683">WhatsApp</a>
-        <span>Laantje van Van Iperen 26<br/>4142 ER Leerdam</span>
+        <a href="mailto:{{footer.email}}">{{footer.email}}</a>
+        <a href="tel:{{footer.phoneHref}}">{{footer.phoneDisplay}}</a>
+        <a href="{{footer.whatsappUrl}}">WhatsApp</a>
+        <span>{{footer.address}}</span>
       </div>
       <div>
         <span style="opacity: 0.6; font-size: 12px;">Zusterbedrijf</span>
@@ -197,13 +197,13 @@
       </div>
     </div>
     <div class="footer__legal">
-      <span>© 2026 Woonklasse. Alle rechten voorbehouden.</span>
+      <span>{{footer.copyright}}</span>
       <span class="sep">|</span>
       <a href="privacy.html">Privacybeleid</a>
       <span class="sep">|</span>
       <a href="voorwaarden.html">Algemene voorwaarden</a>
     </div>
-    <p class="footer__credit">KVK 85409146 · BTW NL004092100B36</p>
+    <p class="footer__credit">{{footer.kvk}}</p>
   </div>
 </footer>
 <script defer src="/_vercel/insights/script.js"></script>

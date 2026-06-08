@@ -21,7 +21,7 @@
 <meta name="twitter:title" content="Woonklasse | Verbouwen zonder zorgen, persoonlijk geregeld"/>
 <meta name="twitter:description" content="Eén vast aanspreekpunt, eigen vakmensen en een vaste prijs. Jij hoeft niets te regelen. Renovaties, luxe badkamers en complete woningverbouwingen."/>
 <meta name="twitter:image" content="https://woonklasse.nl/assets/og-image.jpg"/>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"GeneralContractor","@id":"https://woonklasse.nl/#business","name":"Woonklasse","image":"https://woonklasse.nl/assets/og-image.jpg","logo":"https://woonklasse.nl/assets/woonklasse-logo-dark.png","url":"https://woonklasse.nl/","telephone":"+31302072388","email":"info@woonklasse.nl","priceRange":"€€","address":{"@type":"PostalAddress","streetAddress":"Laantje van Van Iperen 26","postalCode":"4142 ER","addressLocality":"Leerdam","addressCountry":"NL"},"areaServed":{"@type":"Country","name":"Nederland"},"vatID":"NL004092100B36","knowsLanguage":"nl"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"GeneralContractor","@id":"https://woonklasse.nl/#business","name":"Woonklasse","image":"https://woonklasse.nl/assets/og-image.jpg","logo":"https://woonklasse.nl/assets/woonklasse-logo-dark.png","url":"https://woonklasse.nl/","telephone":"+31302072388","email":"{{footer.email}}","priceRange":"€€","address":{"@type":"PostalAddress","streetAddress":"Laantje van Van Iperen 26","postalCode":"4142 ER","addressLocality":"Leerdam","addressCountry":"NL"},"areaServed":{"@type":"Country","name":"Nederland"},"vatID":"NL004092100B36","knowsLanguage":"nl"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
@@ -164,7 +164,7 @@
         <div class="lead-quiz__check" aria-hidden="true">✓</div>
         <h3 class="lead-quiz__title">Bedankt, <em>we hebben je aanvraag ontvangen</em></h3>
         <p style="font-size: 15px; color: var(--muted); line-height: 1.6; margin: 0 0 8px;">We nemen binnen <strong>2 werkdagen</strong> contact met je op om je project persoonlijk door te spreken.</p>
-        <p style="font-size: 15px; color: var(--muted); line-height: 1.6; margin: 0 0 24px;">In de tussentijd kun je ons ook bereiken op <a href="tel:+31302072388" style="color: var(--ink); border-bottom: 1px solid currentColor;">+31 30 207 23 88</a>.</p>
+        <p style="font-size: 15px; color: var(--muted); line-height: 1.6; margin: 0 0 24px;">In de tussentijd kun je ons ook bereiken op <a href="tel:{{footer.phoneHref}}" style="color: var(--ink); border-bottom: 1px solid currentColor;">{{footer.phoneDisplay}}</a>.</p>
         <button type="button" class="lead-quiz__btn lead-quiz__restart">Nieuwe aanvraag starten</button>
       </div>
     </form>
@@ -353,7 +353,7 @@
       <img src="assets/woonklasse-logo-white.png" alt="Woonklasse" class="footer__brand-img" width="120" height="120"/>
       <span class="footer__wordmark">Woonklasse</span>
     </div>
-    <p style="font-family: var(--body); color: rgba(255,255,255,0.7); max-width: 36ch; margin: -40px 0 50px; font-size: 14.5px;">Jouw droomwoning begint hier. Kwaliteit, vakmanschap en persoonlijke aandacht in elk project.</p>
+    <p style="font-family: var(--body); color: rgba(255,255,255,0.7); max-width: 36ch; margin: -40px 0 50px; font-size: 14.5px;">{{footer.tagline}}</p>
     <div class="footer__cols">
       <div>
         <a href="index.html">Home</a>
@@ -364,10 +364,10 @@
         <a href="contact.html">Contact</a>
       </div>
       <div>
-        <a href="mailto:info@woonklasse.nl">info@woonklasse.nl</a>
-        <a href="tel:+31302072388">+31 30 207 23 88</a>
-        <a href="https://wa.me/31650424683">WhatsApp</a>
-        <span>Laantje van Van Iperen 26<br/>4142 ER Leerdam</span>
+        <a href="mailto:{{footer.email}}">{{footer.email}}</a>
+        <a href="tel:{{footer.phoneHref}}">{{footer.phoneDisplay}}</a>
+        <a href="{{footer.whatsappUrl}}">WhatsApp</a>
+        <span>{{footer.address}}</span>
       </div>
       <div>
         <span style="opacity: 0.6; font-size: 12px;">Zusterbedrijf</span>
@@ -375,13 +375,13 @@
       </div>
     </div>
     <div class="footer__legal">
-      <span>© 2026 Woonklasse. Alle rechten voorbehouden.</span>
+      <span>{{footer.copyright}}</span>
       <span class="sep">|</span>
       <a href="privacy.html">Privacybeleid</a>
       <span class="sep">|</span>
       <a href="voorwaarden.html">Algemene voorwaarden</a>
     </div>
-    <p class="footer__credit">KVK 85409146 · BTW NL004092100B36</p>
+    <p class="footer__credit">{{footer.kvk}}</p>
   </div>
 </footer>
 

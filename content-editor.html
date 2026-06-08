@@ -390,17 +390,17 @@ const CONTENT = [
     page: "alle pagina's",
     title: "Footer",
     fields: [
-      { id: "footer.tagline", label: "Tagline onder logo", current: "Jouw droomwoning begint hier. Kwaliteit, vakmanschap en persoonlijke aandacht in elk project.", multiline: true },
-      { id: "footer.email", label: "E-mailadres", current: "info@woonklasse.nl" },
-      { id: "footer.phone", label: "Telefoonnummer", current: "+31 30 207 23 88" },
+      { id: "footer.tagline", label: "Tagline onder logo", current: "{{footer.tagline}}", multiline: true },
+      { id: "footer.email", label: "E-mailadres", current: "{{footer.email}}" },
+      { id: "footer.phone", label: "Telefoonnummer", current: "{{footer.phoneDisplay}}" },
       { id: "footer.whatsapp_label", label: "WhatsApp label", current: "WhatsApp" },
       { id: "footer.address", label: "Adres", current: "Joop Geesinkweg 201, 1114 AB Amsterdam-Duivendrecht", multiline: true },
       { id: "footer.sister_label", label: "Zusterbedrijf label", current: "Zusterbedrijf" },
       { id: "footer.sister_link", label: "Zusterbedrijf link tekst", current: "Badkamerstijl →" },
-      { id: "footer.copyright", label: "Copyright regel", current: "© 2026 Woonklasse. Alle rechten voorbehouden." },
+      { id: "footer.copyright", label: "Copyright regel", current: "{{footer.copyright}}" },
       { id: "footer.legal1", label: "Legal link 1", current: "Privacybeleid" },
       { id: "footer.legal2", label: "Legal link 2", current: "Algemene voorwaarden" },
-      { id: "footer.kvk_btw", label: "Bedrijfsgegevens", current: "KVK 85409146 · BTW NL004092100B36" },
+      { id: "footer.kvk_btw", label: "Bedrijfsgegevens", current: "{{footer.kvk}}" },
     ]
   },
 
@@ -458,7 +458,7 @@ const CONTENT = [
       { id: "quiz.s3.assurance", label: "Geruststelling onderaan", current: "We nemen binnen 2 werkdagen contact met je op om je advies persoonlijk door te spreken. We delen je gegevens nooit met derden.", multiline: true },
       { id: "quiz.done.title", label: "Bevestiging titel", current: "Bedankt — we hebben je aanvraag ontvangen", multiline: true },
       { id: "quiz.done.body1", label: "Bevestiging body 1", current: "We nemen binnen 2 werkdagen contact met je op om je project persoonlijk door te spreken.", multiline: true },
-      { id: "quiz.done.body2", label: "Bevestiging body 2", current: "In de tussentijd kun je ons ook bereiken op +31 30 207 23 88." },
+      { id: "quiz.done.body2", label: "Bevestiging body 2", current: "In de tussentijd kun je ons ook bereiken op {{footer.phoneDisplay}}." },
       { id: "quiz.done.restart", label: "Bevestiging knop", current: "Nieuwe aanvraag starten" },
     ]
   },
@@ -706,7 +706,7 @@ const CONTENT = [
       { id: "prijzen.faq.q5", label: "Q5", current: "Krijg ik garantie op het werk?" },
       { id: "prijzen.faq.a5", label: "A5", current: "Standaard 5 jaar garantie op constructieve onderdelen en 2 jaar op afwerking. Sanitaironderdelen volgen de fabrikantgarantie. Bij Maatwerk-projecten ontvang je een garantieboek bij oplevering.", multiline: true },
       { id: "prijzen.cta.title", label: "CTA titel", current: "Klaar voor een prijsindicatie?" },
-      { id: "prijzen.cta.link", label: "CTA link", current: "Bel direct +31 30 207 23 88" },
+      { id: "prijzen.cta.link", label: "CTA link", current: "Bel direct {{footer.phoneDisplay}}" },
     ]
   },
 
@@ -834,9 +834,9 @@ const CONTENT = [
     title: "Contact — Info kolom (links)",
     fields: [
       { id: "contact.info.tel_label", label: "Telefoon label", current: "Telefoon" },
-      { id: "contact.info.tel", label: "Telefoon waarde", current: "+31 30 207 23 88" },
+      { id: "contact.info.tel", label: "Telefoon waarde", current: "{{footer.phoneDisplay}}" },
       { id: "contact.info.mail_label", label: "Mailadres label", current: "Mailadres" },
-      { id: "contact.info.mail", label: "Mailadres waarde", current: "info@woonklasse.nl" },
+      { id: "contact.info.mail", label: "Mailadres waarde", current: "{{footer.email}}" },
       { id: "contact.info.wa_label", label: "WhatsApp label", current: "WhatsApp" },
       { id: "contact.info.wa", label: "WhatsApp waarde", current: "+31 6 5042 4683" },
       { id: "contact.info.adr_label", label: "Bezoekadres label", current: "Bezoekadres" },
@@ -898,7 +898,7 @@ const CONTENT = [
       { id: "city.hero.title", label: "Titel", current: "Verbouwen in {City} zonder verrassingen", multiline: true },
       { id: "city.hero.sub", label: "Subtitel", current: "Renovatie en verbouwing door eigen vakmensen." },
       { id: "city.hero.cta1", label: "CTA link 1", current: "Offerte aanvragen" },
-      { id: "city.hero.cta2", label: "CTA link 2", current: "+31 30 207 23 88" },
+      { id: "city.hero.cta2", label: "CTA link 2", current: "{{footer.phoneDisplay}}" },
     ]
   },
   {
