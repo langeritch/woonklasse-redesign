@@ -49,9 +49,9 @@
 
 <section class="section" style="padding-top: clamp(140px, 16vw, 200px); background: #fff;">
   <div class="section__inner">
-    <p style="font-family: var(--display); text-transform: uppercase; letter-spacing: 0.18em; font-size: 13px; color: var(--gold); margin: 0 0 18px;">Contact</p>
-    <h1 class="section-title" style="margin-bottom: 28px;">Start uw project.</h1>
-    <p style="font-family: var(--body); font-size: 19px; line-height: 1.5; color: var(--muted); max-width: 56ch; margin: 0 0 80px;">Vertel ons over uw plannen en ontvang binnen 48 uur een maatwerk voorstel. Elk gesprek begint met luisteren.</p>
+    <p style="font-family: var(--display); text-transform: uppercase; letter-spacing: 0.18em; font-size: 13px; color: var(--gold); margin: 0 0 18px;" data-cms-key="contact.eyebrow">{{contact.eyebrow}}</p>
+    <h1 class="section-title" style="margin-bottom: 28px;" data-cms-key="contact.title">{{contact.title}}</h1>
+    <p style="font-family: var(--body); font-size: 19px; line-height: 1.5; color: var(--muted); max-width: 56ch; margin: 0 0 80px;" data-cms-key="contact.subtitle">{{contact.subtitle}}</p>
 
     <div class="contact-grid">
 
@@ -60,7 +60,7 @@
         <p style="margin: 0 0 32px;"><strong>Mailadres</strong><a href="mailto:{{footer.email}}" data-cms-key="footer.email">{{footer.email}}</a></p>
         <p style="margin: 0 0 32px;"><strong>WhatsApp</strong><a href="{{footer.whatsappUrl}}" data-cms-key="footer.whatsappUrl">+31 6 5042 4683</a></p>
         <p style="margin: 0 0 32px;"><strong>Bezoekadres</strong>{{footer.address}}</p>
-        <p style="margin: 0 0 32px;"><strong>Openingstijden</strong>Maandag – vrijdag 08:00 – 17:00<br/>Zaterdag op afspraak</p>
+        <p style="margin: 0 0 32px;"><strong>Openingstijden</strong><span data-cms-key="contact.openingstijden">{{contact.openingstijden}}</span></p>
         <p style="margin: 0; opacity: 0.6;"><strong>Bedrijfsgegevens</strong>KVK 85409146<br/>BTW NL004092100B36</p>
       </div>
 
@@ -68,8 +68,8 @@
         <!-- Honeypot: hidden from users; only bots fill it. The backend treats a
              filled "website" field as spam and silently accepts without mailing. -->
         <input class="lead-form__hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"/>
-        <h3>Maatwerk voorstel aanvragen</h3>
-        <p class="lead-form__sub">Vul onderstaand formulier in. We reageren binnen 48 uur met een vrijblijvende inschatting.</p>
+        <h3 data-cms-key="contact.form.title">{{contact.form.title}}</h3>
+        <p class="lead-form__sub" data-cms-key="contact.form.sub">{{contact.form.sub}}</p>
 
         <label for="name">Naam *</label>
         <input id="name" name="name" required placeholder="Voor- en achternaam"/>
