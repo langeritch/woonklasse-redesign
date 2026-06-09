@@ -94,13 +94,13 @@ const HEAD = (title, desc, slug, cityName) => `<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>${title}</title>
 <meta name="description" content="${desc}"/>
-<link rel="canonical" href="https://woonklasse.nl/${slug}.html"/>
+<link rel="canonical" href="https://woonklasse.nl/${slug}"/>
 <meta name="robots" content="index, follow, max-image-preview:large"/>
 <meta name="theme-color" content="#1a1a1a"/>
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="Woonklasse"/>
 <meta property="og:locale" content="nl_NL"/>
-<meta property="og:url" content="https://woonklasse.nl/${slug}.html"/>
+<meta property="og:url" content="https://woonklasse.nl/${slug}"/>
 <meta property="og:title" content="${title}"/>
 <meta property="og:description" content="${desc}"/>
 <meta property="og:image" content="https://woonklasse.nl/assets/og-image.jpg"/>
