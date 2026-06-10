@@ -1825,14 +1825,27 @@ html.menu-open, html.menu-open body { overflow: hidden; }
 .menu-overlay__cta:active { opacity: 0.85; }
 .menu-overlay__contact {
   display: flex;
-  flex-wrap: wrap;
-  gap: 6px 22px;
-  align-items: baseline;
-  font-size: 13.5px;
-  color: var(--muted);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
 }
-.menu-overlay__contact a { color: var(--muted); }
-.menu-overlay__contact a:hover { color: var(--ink); }
+.menu-overlay__icons { display: flex; gap: 14px; }
+.menu-overlay__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: #fff;
+  transition: transform .2s ease, opacity .2s ease;
+}
+.menu-overlay__icon svg { display: block; }
+.menu-overlay__icon--wa { background: #25d366; }
+.menu-overlay__icon:active { transform: scale(0.94); }
+.menu-overlay__icon:hover { opacity: 0.88; }
+.menu-overlay__address { font-size: 13.5px; line-height: 1.5; color: var(--muted); }
 
 @media (max-width: 768px) {
   .site-header .nav { display: none; }
