@@ -130,6 +130,7 @@ const HEADER = `
     <a href="diensten.html">Diensten</a>
     <a href="prijzen.html">Prijzen</a>
     <a href="projecten.html">Projecten</a>
+    <a href="blog.html">Blog</a>
     <a href="over-ons.html">Over ons</a>
     <a href="contact.html">Contact</a>
   </nav>
@@ -149,6 +150,7 @@ const FOOTER = `
         <a href="diensten.html">Diensten</a>
         <a href="prijzen.html">Prijzen</a>
         <a href="projecten.html">Projecten</a>
+        <a href="blog.html">Blog</a>
         <a href="over-ons.html">Over ons</a>
         <a href="contact.html">Contact</a>
       </div>
