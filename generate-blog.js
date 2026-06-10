@@ -24,7 +24,7 @@ const MONTHS = ['januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 
 
 // ---------- helpers ----------
 const fileFor = (slug) => `blog-${slug}.html`;
-const urlFor = (slug) => `${SITE}/${fileFor(slug)}`;
+const urlFor = (slug) => `${SITE}/blog-${slug}`;
 
 function formatDate(iso) {
   const [y, m, d] = iso.split('-').map(Number);
@@ -90,7 +90,7 @@ const FOOTER = `
       </div>
       <div>
         <span style="opacity: 0.6; font-size: 12px;">Zusterbedrijf</span>
-        <a href="https://badkamerstijl.nl" target="_blank" rel="noopener">Badkamerstijl →</a>
+        <a href="https://badkamerstijl.nl" target="_blank" rel="noopener" class="footer__bks" aria-label="Badkamerstijl"><img src="assets/badkamerstijl-logo.svg" alt="Badkamerstijl" class="footer__bks-logo" width="116" height="48"/></a>
       </div>
     </div>
     <div class="footer__legal">
@@ -246,7 +246,7 @@ function indexJsonLd(posts) {
   return JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Blog',
-    '@id': `${SITE}/blog.html`,
+    '@id': `${SITE}/blog`,
     name: 'Woonklasse Blog',
     description: 'Praktische gidsen over verbouwen, renoveren en verduurzamen.',
     publisher: { '@type': 'Organization', name: 'Woonklasse', logo: { '@type': 'ImageObject', url: `${SITE}/assets/woonklasse-logo-dark.png` } },
@@ -263,13 +263,13 @@ function renderIndex(posts) {
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Blog | Woonklasse</title>
 <meta name="description" content="Praktische gidsen over verbouwen, renoveren en verduurzamen. Realistische kosten, vergunningen, subsidies en eerlijk advies voor woningeigenaren."/>
-<link rel="canonical" href="${SITE}/blog.html"/>
+<link rel="canonical" href="${SITE}/blog"/>
 <meta name="robots" content="index, follow, max-image-preview:large"/>
 <meta name="theme-color" content="#1a1a1a"/>
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="Woonklasse"/>
 <meta property="og:locale" content="nl_NL"/>
-<meta property="og:url" content="${SITE}/blog.html"/>
+<meta property="og:url" content="${SITE}/blog"/>
 <meta property="og:title" content="Blog | Woonklasse"/>
 <meta property="og:description" content="Praktische gidsen over verbouwen, renoveren en verduurzamen voor woningeigenaren."/>
 <meta property="og:image" content="${SITE}/assets/og-image.jpg"/>
@@ -311,7 +311,7 @@ function updateSitemap(posts) {
   let xml = fs.readFileSync(file, 'utf8');
   // Drop existing blog URLs (index + articles), then re-insert a fresh block.
   xml = xml.replace(/^\s*<url><loc>[^<]*\/blog[^<]*<\/loc>.*<\/url>\n/gm, '');
-  const lines = [`  <url><loc>${SITE}/blog.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>`];
+  const lines = [`  <url><loc>${SITE}/blog</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>`];
   for (const p of posts) {
     lines.push(`  <url><loc>${urlFor(p.slug)}</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>`);
   }
