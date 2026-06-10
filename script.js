@@ -612,36 +612,83 @@ async function uploadRoomPhotos(roomDetails, onProgress) {
   }
 })();
 
-/* Mobiel hamburger-menu (injecteert de knop in de header op elke pagina) */
+/* Mobiel menu: fullscreen overlay (Badkamerstijl-structuur in Woonklasse-stijl).
+   Bouwt de links uit de bestaande header-nav en leest de contactgegevens uit de
+   (CMS-gedreven) footer, zodat alles automatisch in sync blijft. */
 (function () {
-  function initNav() {
+  function clean(v) { return v && v.indexOf('{{') === -1 ? v : ''; }
+  function fText(key) { var el = document.querySelector('[data-cms-key="' + key + '"]'); return el ? clean(el.textContent.trim()) : ''; }
+  function fAttr(key, attr) { var el = document.querySelector('[data-cms-key="' + key + '"]'); return el ? clean(el.getAttribute(attr) || '') : ''; }
+
+  function initMenu() {
     var header = document.getElementById('siteHeader');
-    if (!header || header.querySelector('.nav-toggle')) return;
+    if (!header || document.querySelector('.menu-toggle')) return;
+
     var btn = document.createElement('button');
-    btn.className = 'nav-toggle';
+    btn.className = 'menu-toggle';
     btn.type = 'button';
-    btn.setAttribute('aria-label', 'Menu openen of sluiten');
+    btn.setAttribute('aria-label', 'Menu openen');
     btn.setAttribute('aria-expanded', 'false');
-    btn.innerHTML = '<span></span><span></span><span></span>';
-    btn.addEventListener('click', function () {
-      var open = header.classList.toggle('nav-open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
+    btn.innerHTML = '<span></span><span></span>';
     header.appendChild(btn);
+
     var nav = header.querySelector('.nav');
-    if (nav) {
-      nav.addEventListener('click', function (e) {
-        if (e.target.tagName === 'A') {
-          header.classList.remove('nav-open');
-          btn.setAttribute('aria-expanded', 'false');
-        }
-      });
+    var anchors = nav ? Array.prototype.slice.call(nav.querySelectorAll('a')) : [];
+    var linksHtml = anchors.map(function (a) {
+      return '<a href="' + a.getAttribute('href') + '">' + a.textContent.trim() + '</a>';
+    }).join('');
+
+    var phone = fText('footer.phoneDisplay');
+    var phoneHref = fAttr('footer.phoneDisplay', 'href');
+    var waHref = fAttr('footer.whatsappUrl', 'href');
+    var addrEl = document.querySelector('[data-cms-key="footer.address"]');
+    var addrHtml = addrEl ? clean(addrEl.innerHTML) : '';
+
+    var contact = '';
+    if (phone) contact += '<a href="' + (phoneHref || 'tel:' + phone.replace(/\s/g, '')) + '">' + phone + '</a>';
+    if (waHref) contact += '<a href="' + waHref + '" target="_blank" rel="noopener">WhatsApp</a>';
+    if (addrHtml) contact += '<span>' + addrHtml + '</span>';
+
+    var overlay = document.createElement('div');
+    overlay.className = 'menu-overlay';
+    overlay.setAttribute('aria-hidden', 'true');
+    overlay.innerHTML =
+      '<div class="menu-overlay__top">' +
+        '<span class="menu-overlay__brand">Woonklasse</span>' +
+        '<button class="menu-overlay__close" type="button" aria-label="Menu sluiten"><span>Sluiten</span><i aria-hidden="true"></i></button>' +
+      '</div>' +
+      '<nav class="menu-overlay__nav" aria-label="Mobiel menu">' + linksHtml + '</nav>' +
+      '<div class="menu-overlay__foot">' +
+        '<a class="menu-overlay__cta" href="contact.html">Bespreek je project</a>' +
+        (contact ? '<div class="menu-overlay__contact">' + contact + '</div>' : '') +
+      '</div>';
+    document.body.appendChild(overlay);
+
+    function open() {
+      overlay.classList.add('is-open');
+      document.documentElement.classList.add('menu-open');
+      overlay.setAttribute('aria-hidden', 'false');
+      btn.setAttribute('aria-expanded', 'true');
     }
+    function close() {
+      overlay.classList.remove('is-open');
+      document.documentElement.classList.remove('menu-open');
+      overlay.setAttribute('aria-hidden', 'true');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+
+    btn.addEventListener('click', open);
+    overlay.querySelector('.menu-overlay__close').addEventListener('click', close);
+    overlay.addEventListener('click', function (e) { if (e.target.tagName === 'A') close(); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && overlay.classList.contains('is-open')) close();
+    });
   }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initNav);
+    document.addEventListener('DOMContentLoaded', initMenu);
   } else {
-    initNav();
+    initMenu();
   }
 })();
 
