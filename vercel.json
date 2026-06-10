@@ -1,12 +1,7 @@
 {
   "buildCommand": "node build.js",
   "outputDirectory": ".",
-  "rewrites": [
-    { "source": "/saninet", "destination": "/saninet.html" }
-  ],
-  "redirects": [
-    { "source": "/saninet.html", "destination": "/saninet", "permanent": true }
-  ],
+  "cleanUrls": true,
   "headers": [
     {
       "source": "/(.*)",
