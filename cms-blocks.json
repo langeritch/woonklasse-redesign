@@ -1823,14 +1823,14 @@
       "label": "Work · Tile 2 image",
       "kind": "image",
       "text": null,
-      "image": "assets/badkamer-vleuten-wastafel.jpg",
+      "image": "assets/diensten-after.jpg",
       "sort_order": 2800
     },
     {
       "key": "work.tile2.tag",
       "label": "Work · Tile 2 tag",
       "kind": "text",
-      "text": "Detail",
+      "text": "Interieur op maat",
       "image": null,
       "sort_order": 2805
     },
@@ -1838,7 +1838,7 @@
       "key": "work.tile2.name",
       "label": "Work · Tile 2 name",
       "kind": "text",
-      "text": "Maatwerk wastafel",
+      "text": "Woonkamer & TV-wand",
       "image": null,
       "sort_order": 2810
     },
@@ -1847,14 +1847,14 @@
       "label": "Work · Tile 3 image",
       "kind": "image",
       "text": null,
-      "image": "assets/badkamer-vleuten-2.jpg",
+      "image": "assets/producten-3.jpg",
       "sort_order": 2815
     },
     {
       "key": "work.tile3.tag",
       "label": "Work · Tile 3 tag",
       "kind": "text",
-      "text": "Detail",
+      "text": "Veranda",
       "image": null,
       "sort_order": 2820
     },
@@ -1862,7 +1862,7 @@
       "key": "work.tile3.name",
       "label": "Work · Tile 3 name",
       "kind": "text",
-      "text": "Inloopdouche",
+      "text": "Overkapping op maat",
       "image": null,
       "sort_order": 2825
     },
@@ -1871,7 +1871,7 @@
       "label": "Work · Tile 4 image",
       "kind": "image",
       "text": null,
-      "image": "https://images.unsplash.com/photo-1620626011761-996317b8d101?w=900&q=80&auto=format&fit=crop",
+      "image": "assets/eindresultaat-1.jpg",
       "sort_order": 2830
     },
     {
@@ -1886,7 +1886,7 @@
       "key": "work.tile4.name",
       "label": "Work · Tile 4 name",
       "kind": "text",
-      "text": "Luxe badkamer",
+      "text": "Inloopdouche op maat",
       "image": null,
       "sort_order": 2840
     },
@@ -1895,14 +1895,14 @@
       "label": "Work · Tile 5 image",
       "kind": "image",
       "text": null,
-      "image": "https://images.unsplash.com/photo-1601086540476-7d9fa9dd6023?w=900&q=80&auto=format&fit=crop",
+      "image": "assets/footer-project.jpg",
       "sort_order": 2845
     },
     {
       "key": "work.tile5.tag",
       "label": "Work · Tile 5 tag",
       "kind": "text",
-      "text": "Totaalrenovatie",
+      "text": "Keukenrenovatie",
       "image": null,
       "sort_order": 2850
     },
@@ -1910,7 +1910,7 @@
       "key": "work.tile5.name",
       "label": "Work · Tile 5 name",
       "kind": "text",
-      "text": "Woningverbouwing",
+      "text": "Open keuken",
       "image": null,
       "sort_order": 2855
     },
@@ -1919,14 +1919,14 @@
       "label": "Work · Tile 6 image",
       "kind": "image",
       "text": null,
-      "image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=900&q=80&auto=format&fit=crop",
+      "image": "assets/producten-after.jpg",
       "sort_order": 2860
     },
     {
       "key": "work.tile6.tag",
       "label": "Work · Tile 6 tag",
       "kind": "text",
-      "text": "Sanitair",
+      "text": "Veranda",
       "image": null,
       "sort_order": 2865
     },
@@ -1934,7 +1934,7 @@
       "key": "work.tile6.name",
       "label": "Work · Tile 6 name",
       "kind": "text",
-      "text": "Moderne badkamer",
+      "text": "Glazen overkapping",
       "image": null,
       "sort_order": 2870
     },
