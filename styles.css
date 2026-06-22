@@ -1924,3 +1924,17 @@ html.menu-open .wa-float { opacity: 0; pointer-events: none; }
   .eind-slideshow img { animation: none; }
   .eind-slideshow img:nth-child(1) { opacity: 1; }
 }
+
+/* =========================================================================
+   Before/after cross-fade (generiek, bv. diensten-sectie)
+   ========================================================================= */
+.ba-crossfade img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ba-crossfade .ba-crossfade__after { opacity: 0; animation: baCrossfade 9s ease-in-out infinite; }
+@keyframes baCrossfade {
+  0%, 40%  { opacity: 0; }
+  50%, 90% { opacity: 1; }
+  100%     { opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ba-crossfade .ba-crossfade__after { animation: none; opacity: 1; }
+}
