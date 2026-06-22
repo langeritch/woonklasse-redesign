@@ -716,7 +716,6 @@ body.loaded::before { opacity: 0; visibility: hidden; }
   left: 48%; right: 0; bottom: 0;     /* starts near the middle, so it shows as ~1/3 on the right and the peek only reaches ~halfway across */
   z-index: 0;
   background: #14110f url("assets/footer-project.jpg") center center / cover no-repeat;
-  background-image: image-set(url("assets/footer-project.avif") type("image/avif"), url("assets/footer-project.jpg") type("image/jpeg"));
 }
 /* Left black content block — ~2/3 of the width, overlapping the photo's left edge. */
 .footer__inner {
@@ -1878,3 +1877,19 @@ html.menu-open, html.menu-open body { overflow: hidden; }
 
 /* WhatsApp-float verbergen wanneer het mobiele menu open is (staat al in de contactrij) */
 html.menu-open .wa-float { opacity: 0; pointer-events: none; }
+
+/* =========================================================================
+   Hero before/after: automatische cross-fade tussen twee foto's
+   ========================================================================= */
+.hero__media--ba .hero__ba-after {
+  opacity: 0;
+  animation: heroBeforeAfter 9s ease-in-out infinite;
+}
+@keyframes heroBeforeAfter {
+  0%, 38%  { opacity: 0; }   /* voor */
+  50%, 88% { opacity: 1; }   /* na */
+  100%     { opacity: 0; }   /* terug naar voor */
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero__media--ba .hero__ba-after { animation: none; opacity: 1; }
+}
