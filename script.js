@@ -702,19 +702,102 @@ async function uploadRoomPhotos(roomDetails, onProgress) {
   }
 })();
 
-/* 'Uit ons werk' marquee — dupliceer de slides voor een naadloze loop */
+/* 'Uit ons werk' carrousel: auto-scroll plus sleepbaar (drag to scroll) */
 (function () {
   function initWork() {
     var track = document.getElementById('workTrack');
-    if (!track || track.dataset.cloned) return;
-    var slides = Array.prototype.slice.call(track.children);
-    slides.forEach(function (s) {
-      var c = s.cloneNode(true);
-      c.setAttribute('aria-hidden', 'true');
-      c.setAttribute('tabindex', '-1');
-      track.appendChild(c);
+    if (!track || track.dataset.enhanced) return;
+    var viewport = track.parentElement;
+    var originals = Array.prototype.slice.call(track.children);
+
+    function setWidth() {
+      var w = 0;
+      originals.forEach(function (s) {
+        var st = getComputedStyle(s);
+        w += s.offsetWidth + parseFloat(st.marginRight || 0) + parseFloat(st.marginLeft || 0);
+      });
+      return w;
+    }
+    /* dupliceer de slides tot de baan ruim breder is dan de viewport,
+       zodat de loop in beide richtingen naadloos blijft */
+    var guard = 0;
+    while (track.scrollWidth < viewport.offsetWidth * 2 + setWidth() && guard < 12) {
+      originals.forEach(function (s) {
+        var c = s.cloneNode(true);
+        c.setAttribute('aria-hidden', 'true');
+        c.setAttribute('tabindex', '-1');
+        track.appendChild(c);
+      });
+      guard++;
+    }
+    track.dataset.enhanced = '1';
+
+    var one = setWidth();
+    var pos = 0, dragging = false, pending = false, hovering = false, paused = false;
+    var sx = 0, sy = 0, spos = 0, moved = 0, pid = null;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var SPEED = 0.6;
+
+    function wrap() { if (one > 0) { while (pos <= -one) pos += one; while (pos > 0) pos -= one; } }
+    function apply() { track.style.transform = 'translate3d(' + pos + 'px,0,0)'; }
+    function frame() {
+      if (!dragging && !paused && !reduce) pos -= SPEED;
+      wrap(); apply();
+      requestAnimationFrame(frame);
+    }
+
+    viewport.addEventListener('mouseenter', function () { hovering = true; paused = true; });
+    viewport.addEventListener('mouseleave', function () { hovering = false; if (!dragging) paused = false; });
+
+    track.addEventListener('pointerdown', function (e) {
+      pending = true; pid = e.pointerId;
+      sx = e.clientX; sy = e.clientY; spos = pos; moved = 0;
     });
-    track.dataset.cloned = '1';
+    track.addEventListener('pointermove', function (e) {
+      if (pending && !dragging) {
+        var dx = e.clientX - sx, dy = e.clientY - sy;
+        if (Math.abs(dx) > 4 && Math.abs(dx) > Math.abs(dy)) {
+          dragging = true; paused = true;
+          try { track.setPointerCapture(pid); } catch (err) {}
+          track.classList.add('is-grabbing');
+        } else if (Math.abs(dy) > 6 && Math.abs(dy) > Math.abs(dx)) {
+          pending = false;
+        }
+      }
+      if (dragging) {
+        var d = e.clientX - sx;
+        pos = spos + d;
+        moved = Math.max(moved, Math.abs(d));
+        wrap(); apply();
+      }
+    });
+    function endDrag() {
+      pending = false;
+      if (!dragging) return;
+      dragging = false;
+      track.classList.remove('is-grabbing');
+      try { track.releasePointerCapture(pid); } catch (err) {}
+      paused = hovering;
+    }
+    track.addEventListener('pointerup', endDrag);
+    track.addEventListener('pointercancel', endDrag);
+    track.addEventListener('lostpointercapture', endDrag);
+
+    /* na een sleep de klik onderdrukken, anders opent de tegel-link */
+    track.addEventListener('click', function (e) {
+      if (moved > 6) { e.preventDefault(); e.stopPropagation(); }
+    }, true);
+
+    Array.prototype.forEach.call(track.querySelectorAll('img'), function (img) { img.draggable = false; });
+    track.addEventListener('dragstart', function (e) { e.preventDefault(); });
+
+    var rt;
+    window.addEventListener('resize', function () {
+      clearTimeout(rt);
+      rt = setTimeout(function () { one = setWidth(); wrap(); apply(); }, 200);
+    });
+
+    requestAnimationFrame(frame);
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initWork);
