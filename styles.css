@@ -530,13 +530,12 @@ body.loaded::before { opacity: 0; visibility: hidden; }
   display: flex;
   width: max-content;
   will-change: transform;
-  animation: work-marquee 40s linear infinite;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
 }
-.work__track:hover { animation-play-state: paused; }
-@keyframes work-marquee {
-  from { transform: translate3d(0, 0, 0); }
-  to { transform: translate3d(-50%, 0, 0); }
-}
+.work__track.is-grabbing { cursor: grabbing; }
 @media (prefers-reduced-motion: reduce) {
   .work__track { animation: none; }
 }
