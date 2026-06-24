@@ -447,7 +447,7 @@
       "label": "Projecten · Hero image",
       "kind": "image",
       "text": null,
-      "image": "https://images.unsplash.com/photo-1708111776235-990d08c84658?w=2000&q=80&auto=format&fit=crop",
+      "image": "assets/producten-after.jpg",
       "sort_order": 1230
     },
     {
@@ -1206,7 +1206,7 @@
       "key": "projecten.card1.name",
       "label": "Projecten · Card 1 name",
       "kind": "text",
-      "text": "Complete renovatie",
+      "text": "Vleuten",
       "image": null,
       "sort_order": 2415
     },
@@ -1215,14 +1215,14 @@
       "label": "Projecten · Card 1 image",
       "kind": "image",
       "text": null,
-      "image": "https://images.unsplash.com/photo-1710883734891-93709398496d?w=900&q=80&auto=format&fit=crop",
+      "image": "assets/badkamer-vleuten.jpg",
       "sort_order": 2420
     },
     {
       "key": "projecten.card2.name",
       "label": "Projecten · Card 2 name",
       "kind": "text",
-      "text": "Luxe afwerking",
+      "text": "Woonkamer & TV-wand",
       "image": null,
       "sort_order": 2425
     },
@@ -1231,14 +1231,14 @@
       "label": "Projecten · Card 2 image",
       "kind": "image",
       "text": null,
-      "image": "https://images.unsplash.com/photo-1708111776235-990d08c84658?w=900&q=80&auto=format&fit=crop",
+      "image": "assets/diensten-after.jpg",
       "sort_order": 2430
     },
     {
       "key": "projecten.card3.name",
       "label": "Projecten · Card 3 name",
       "kind": "text",
-      "text": "Totaalverbouwing",
+      "text": "Veranda op maat",
       "image": null,
       "sort_order": 2435
     },
@@ -1247,14 +1247,14 @@
       "label": "Projecten · Card 3 image",
       "kind": "image",
       "text": null,
-      "image": "https://images.unsplash.com/photo-1746439318854-4a8bc02a03ba?w=900&q=80&auto=format&fit=crop",
+      "image": "assets/producten-3.jpg",
       "sort_order": 2440
     },
     {
       "key": "projecten.card4.name",
       "label": "Projecten · Card 4 name",
       "kind": "text",
-      "text": "Luxe dubbel penthouse",
+      "text": "Inloopdouche op maat",
       "image": null,
       "sort_order": 2445
     },
@@ -1263,14 +1263,14 @@
       "label": "Projecten · Card 4 image",
       "kind": "image",
       "text": null,
-      "image": "https://images.unsplash.com/photo-1521783593447-5702b9bfd267?w=900&q=80&auto=format&fit=crop",
+      "image": "assets/eindresultaat-1.jpg",
       "sort_order": 2450
     },
     {
       "key": "projecten.card5.name",
       "label": "Projecten · Card 5 name",
       "kind": "text",
-      "text": "Drielaagse transformatie",
+      "text": "Open keuken",
       "image": null,
       "sort_order": 2455
     },
@@ -1279,14 +1279,14 @@
       "label": "Projecten · Card 5 image",
       "kind": "image",
       "text": null,
-      "image": "https://images.unsplash.com/photo-1601086540476-7d9fa9dd6023?w=900&q=80&auto=format&fit=crop",
+      "image": "assets/footer-project.jpg",
       "sort_order": 2460
     },
     {
       "key": "projecten.desc1.eyebrow",
       "label": "Projecten · Description 1 eyebrow",
       "kind": "text",
-      "text": "Verbouwing",
+      "text": "Badkamerrenovatie",
       "image": null,
       "sort_order": 2465
     },
@@ -1294,7 +1294,7 @@
       "key": "projecten.desc1.title",
       "label": "Projecten · Description 1 title",
       "kind": "text",
-      "text": "Complete renovatie",
+      "text": "Complete badkamer Vleuten",
       "image": null,
       "sort_order": 2470
     },
@@ -1302,7 +1302,7 @@
       "key": "projecten.desc1.body",
       "label": "Projecten · Description 1 body",
       "kind": "text",
-      "text": "Van historisch casco tot modern meesterwerk. Een volledige transformatie met behoud van authentiek karakter.",
+      "text": "Een volledige badkamerrenovatie in Vleuten met inloopdouche, strakke tegels en maatwerk sanitair. Van ontwerp tot oplevering in eigen beheer.",
       "image": null,
       "sort_order": 2475
     },
@@ -1310,7 +1310,7 @@
       "key": "projecten.desc2.eyebrow",
       "label": "Projecten · Description 2 eyebrow",
       "kind": "text",
-      "text": "Verbouwing",
+      "text": "Interieur op maat",
       "image": null,
       "sort_order": 2480
     },
@@ -1318,7 +1318,7 @@
       "key": "projecten.desc2.title",
       "label": "Projecten · Description 2 title",
       "kind": "text",
-      "text": "Luxe afwerking",
+      "text": "Woonkamer met houten TV-wand",
       "image": null,
       "sort_order": 2485
     },
@@ -1326,7 +1326,7 @@
       "key": "projecten.desc2.body",
       "label": "Projecten · Description 2 body",
       "kind": "text",
-      "text": "Panoramisch uitzicht verdient een interieur dat daaraan evenredig is. Strak, warm en tijdloos.",
+      "text": "Een woonkamer met een maatwerk houten lattenwand rondom de televisie. Warm, strak ingebouwd en naadloos afgewerkt.",
       "image": null,
       "sort_order": 2490
     },
@@ -1334,7 +1334,7 @@
       "key": "projecten.desc3.eyebrow",
       "label": "Projecten · Description 3 eyebrow",
       "kind": "text",
-      "text": "Verbouwing",
+      "text": "Veranda",
       "image": null,
       "sort_order": 2495
     },
@@ -1342,7 +1342,7 @@
       "key": "projecten.desc3.title",
       "label": "Projecten · Description 3 title",
       "kind": "text",
-      "text": "Totaalverbouwing",
+      "text": "Veranda met overkapping",
       "image": null,
       "sort_order": 2500
     },
@@ -1350,7 +1350,7 @@
       "key": "projecten.desc3.body",
       "label": "Projecten · Description 3 body",
       "kind": "text",
-      "text": "Een ruime villa volledig getransformeerd met oog voor licht, ruimte en duurzaamheid.",
+      "text": "Een veranda met anthraciet overkapping over het terras. Het hele jaar door beschut buiten zitten, stijlvol afgewerkt.",
       "image": null,
       "sort_order": 2505
     },
@@ -1358,7 +1358,7 @@
       "key": "projecten.desc4.eyebrow",
       "label": "Projecten · Description 4 eyebrow",
       "kind": "text",
-      "text": "Verbouwing",
+      "text": "Badkamerrenovatie",
       "image": null,
       "sort_order": 2510
     },
@@ -1366,7 +1366,7 @@
       "key": "projecten.desc4.title",
       "label": "Projecten · Description 4 title",
       "kind": "text",
-      "text": "Luxe dubbel penthouse",
+      "text": "Inloopdouche met gouden details",
       "image": null,
       "sort_order": 2515
     },
@@ -1374,7 +1374,7 @@
       "key": "projecten.desc4.body",
       "label": "Projecten · Description 4 body",
       "kind": "text",
-      "text": "Twee verdiepingen samengevoegd tot één spectaculaire woonervaring met adembenemende afwerking.",
+      "text": "Een inloopdouche met gouden regendouche en zachtgroene tegels. Rustige kleuren, luxe accenten en strak glaswerk.",
       "image": null,
       "sort_order": 2520
     },
@@ -1382,7 +1382,7 @@
       "key": "projecten.desc5.eyebrow",
       "label": "Projecten · Description 5 eyebrow",
       "kind": "text",
-      "text": "Verbouwing",
+      "text": "Keukenrenovatie",
       "image": null,
       "sort_order": 2525
     },
@@ -1390,7 +1390,7 @@
       "key": "projecten.desc5.title",
       "label": "Projecten · Description 5 title",
       "kind": "text",
-      "text": "Drielaagse transformatie",
+      "text": "Open keuken met kookeiland",
       "image": null,
       "sort_order": 2530
     },
@@ -1398,7 +1398,7 @@
       "key": "projecten.desc5.body",
       "label": "Projecten · Description 5 body",
       "kind": "text",
-      "text": "Een indrukwekkend meervoudig appartement omgetoverd tot een architecturaal juweel met oog voor detail.",
+      "text": "Een ruime open keuken met kookeiland en hoogwaardige afwerking. Functioneel ingedeeld en open verbonden met de leefruimte.",
       "image": null,
       "sort_order": 2535
     },
