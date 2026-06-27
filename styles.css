@@ -1957,3 +1957,50 @@ html.menu-open .wa-float { opacity: 0; pointer-events: none; }
   .slide3 img { animation: none; }
   .slide3 img:nth-child(1) { opacity: 1; }
 }
+
+/* =========================================================================
+   Hero: kort contactformulier (vervangt de quiz in de hero)
+   ========================================================================= */
+.lead-form--hero {
+  background: #fff;
+  width: 100%;
+  max-width: 520px;
+  justify-self: end;
+  box-shadow: 0 30px 80px -28px rgba(0,0,0,0.35);
+  z-index: 4;
+}
+.lead-form--hero h3 { font-size: clamp(22px, 2vw, 26px); }
+.lead-form--hero .form-submit { margin-top: 30px; }
+
+/* =========================================================================
+   Uitgebreide aanvraag onderaan: de verplaatste lead-quiz op donkere bg
+   ========================================================================= */
+.quiz-section { background: var(--taupe); }
+.quiz-section__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: center;
+}
+.quiz-section__kicker {
+  font-family: var(--display);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 16px;
+  font-weight: 500;
+}
+.quiz-section__sub {
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.78);
+  margin: 22px 0 0;
+  max-width: 46ch;
+}
+.quiz-section .lead-quiz { justify-self: end; }
+@media (max-width: 860px) {
+  .quiz-section__inner { grid-template-columns: 1fr; gap: 32px; }
+  .quiz-section .lead-quiz { justify-self: stretch; max-width: 100%; }
+}
