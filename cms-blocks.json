@@ -678,7 +678,7 @@
       "key": "diensten.spec3.price",
       "label": "Diensten · Specialism 3 price",
       "kind": "text",
-      "text": "Vanaf €1.800 / m²",
+      "text": "Vanaf €1.750 / m²",
       "image": null,
       "sort_order": 2085
     },
@@ -702,7 +702,7 @@
       "key": "diensten.spec4.price",
       "label": "Diensten · Specialism 4 price",
       "kind": "text",
-      "text": "Vanaf €800 / m²",
+      "text": "€1.900 / m²",
       "image": null,
       "sort_order": 2100
     },
