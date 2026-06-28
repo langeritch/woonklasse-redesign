@@ -45,8 +45,7 @@ if (track) {
 // =========================================================================
 // Homepage 3-stappen lead quiz
 // =========================================================================
-const quiz = document.getElementById('leadQuiz');
-if (quiz) {
+function initLeadQuiz(quiz) {
   const ROOM_TYPES = ['Woonkamer', 'Keuken', 'Badkamer', 'Slaapkamer', 'Hal / entree', 'Hele woning', 'Anders'];
   const MAX_ROOMS = 5;
   const makeRoom = () => ({ kind: '', m2: '', desc: '', photos: [] });
@@ -61,9 +60,9 @@ if (quiz) {
   const progressEls = quiz.querySelectorAll('.lead-quiz__progress span');
   const step1Next = quiz.querySelector('.lead-quiz__step[data-step="1"] .lead-quiz__next');
   const step3Submit = quiz.querySelector('.lead-quiz__submit');
-  const roomsListEl = quiz.querySelector('#roomsList');
-  const roomsCountEl = quiz.querySelector('#roomsCount');
-  const addRoomBtn = quiz.querySelector('#addRoomBtn');
+  const roomsListEl = quiz.querySelector('.lead-quiz__rooms-list');
+  const roomsCountEl = quiz.querySelector('.lead-quiz__rooms-count');
+  const addRoomBtn = quiz.querySelector('.add-room-btn');
   const restartBtn = quiz.querySelector('.lead-quiz__restart');
 
   const isEmail = (s) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(String(s || '').trim());
@@ -368,6 +367,7 @@ if (quiz) {
 
   checkStep1Ready();
 }
+document.querySelectorAll('.lead-quiz').forEach(initLeadQuiz);
 
 // Scroll-triggered reveals — IntersectionObserver, staggered per group
 if ('IntersectionObserver' in window) {

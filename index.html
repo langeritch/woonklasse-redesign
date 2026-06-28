@@ -68,20 +68,110 @@
       </div>
     </div>
 
-    <!-- 3-stappen lead quiz -->
-    <form class="lead-form lead-form--hero" novalidate>
-      <h3>Plan een vrijblijvend gesprek</h3>
-      <p class="lead-form__sub">Laat je gegevens achter, dan bellen we je binnen 2 werkdagen om je plan door te nemen.</p>
-      <label for="hf-name">Naam</label>
-      <input id="hf-name" type="text" name="name" placeholder="Je naam" required autocomplete="name"/>
-      <label for="hf-phone">Telefoon</label>
-      <input id="hf-phone" type="tel" name="phone" placeholder="Je telefoonnummer" required autocomplete="tel"/>
-      <label for="hf-email">E-mail</label>
-      <input id="hf-email" type="email" name="email" placeholder="Je e-mailadres" required autocomplete="email"/>
-      <label for="hf-message">Je project (optioneel)</label>
-      <textarea id="hf-message" name="message" placeholder="Vertel kort waar we je mee kunnen helpen"></textarea>
-      <input class="lead-form__hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"/>
-      <button type="submit" class="form-submit">Vraag een gesprek aan</button>
+    <!-- Uitgebreide aanvraag-quiz (ook in de hero) -->
+    <form class="lead-quiz" id="leadQuizHero" novalidate>
+      <p class="lead-quiz__kicker">Persoonlijk advies · in 3 stappen</p>
+      <h3 class="lead-quiz__title">Vertel ons over je project, <em>wij denken met je mee</em></h3>
+      <div class="lead-quiz__progress" aria-hidden="true">
+        <span class="active"></span><span></span><span></span>
+      </div>
+
+      <!-- Stap 1: kamers + type -->
+      <div class="lead-quiz__step" data-step="1">
+        <label>Hoeveel kamers wil je verbouwen?</label>
+        <div class="chips chips--num" data-group="rooms">
+          <button type="button" data-rooms="1">1</button>
+          <button type="button" data-rooms="2">2</button>
+          <button type="button" data-rooms="3">3</button>
+          <button type="button" data-rooms="4">4</button>
+          <button type="button" data-rooms="5+">5+</button>
+        </div>
+
+        <label>Wat voor type project?</label>
+        <div class="chips" data-group="type">
+          <button type="button" data-type="Totaal renovatie">Totaal renovatie</button>
+          <button type="button" data-type="Nieuwbouw">Nieuwbouw</button>
+          <button type="button" data-type="Sanitair / badkamer">Sanitair / badkamer</button>
+          <button type="button" data-type="Onderhoud">Onderhoud</button>
+          <button type="button" data-type="Anders">Anders</button>
+        </div>
+
+        <div class="lead-quiz__actions lead-quiz__actions--end">
+          <button type="button" class="lead-quiz__btn lead-quiz__next" disabled>Volgende →</button>
+        </div>
+      </div>
+
+      <!-- Stap 2: per kamer details -->
+      <div class="lead-quiz__step hidden" data-step="2">
+        <div class="lead-quiz__rooms-head">
+          <span>Per kamer</span>
+          <span class="lead-quiz__rooms-count">0 kamers · 0 foto's</span>
+        </div>
+        <div class="lead-quiz__rooms-list"></div>
+
+        <button type="button" class="add-room-btn">+ Kamer toevoegen</button>
+
+        <div class="lead-quiz__actions">
+          <button type="button" class="lead-quiz__back">← Terug</button>
+          <button type="button" class="lead-quiz__btn lead-quiz__next">Volgende →</button>
+        </div>
+      </div>
+
+      <!-- Stap 3: contact -->
+      <div class="lead-quiz__step hidden" data-step="3">
+        <div class="lead-quiz__row">
+          <input type="text" name="name" placeholder="Naam *" required autocomplete="name"/>
+          <input type="email" name="email" placeholder="E-mailadres *" required autocomplete="email"/>
+        </div>
+        <input type="tel" name="phone" placeholder="Telefoon *" required autocomplete="tel"/>
+        <input type="text" name="city" placeholder="Plaats / stad (optioneel)" autocomplete="address-level2"/>
+
+        <details class="lead-quiz__more">
+          <summary>▸ Extra informatie (optioneel), klap uit</summary>
+          <div class="lead-quiz__more-grid">
+            <div>
+              <label class="inline-label">Indicatie budget</label>
+              <select name="budget">
+                <option value="">Selecteer een bandbreedte</option>
+                <option>Onder €10.000</option>
+                <option>€10.000 tot €25.000</option>
+                <option>€25.000 tot €60.000</option>
+                <option>€60.000 tot €150.000</option>
+                <option>€150.000+</option>
+                <option>Weet ik nog niet</option>
+              </select>
+            </div>
+            <div>
+              <label class="inline-label">Wanneer wil je starten?</label>
+              <select name="timing">
+                <option value="">Selecteer een termijn</option>
+                <option>Zo snel mogelijk</option>
+                <option>Binnen 3 maanden</option>
+                <option>Dit jaar</option>
+                <option>Volgend jaar</option>
+                <option>Nog flexibel</option>
+              </select>
+            </div>
+          </div>
+          <textarea name="message" placeholder="Bijzondere wensen, voorkeuren of vragen..."></textarea>
+        </details>
+
+        <div class="lead-quiz__actions">
+          <button type="button" class="lead-quiz__back">← Terug</button>
+          <button type="submit" class="lead-quiz__btn lead-quiz__submit" disabled>Verstuur aanvraag</button>
+        </div>
+
+        <p class="lead-quiz__assurance">We bellen je binnen 2 werkdagen om je plan persoonlijk door te nemen. Je gegevens blijven bij ons.</p>
+      </div>
+
+      <!-- Stap 4: bevestiging na submit -->
+      <div class="lead-quiz__step hidden lead-quiz__done" data-step="4">
+        <div class="lead-quiz__check" aria-hidden="true">✓</div>
+        <h3 class="lead-quiz__title">Bedankt, <em>we hebben je aanvraag ontvangen</em></h3>
+        <p style="font-size: 15px; color: var(--muted); line-height: 1.6; margin: 0 0 8px;">We nemen binnen <strong>2 werkdagen</strong> contact met je op om je project persoonlijk door te spreken.</p>
+        <p style="font-size: 15px; color: var(--muted); line-height: 1.6; margin: 0 0 24px;">In de tussentijd kun je ons ook bereiken op <a href="tel:{{footer.phoneHref}}" style="color: var(--ink); border-bottom: 1px solid currentColor;" data-cms-key="footer.phoneDisplay">{{footer.phoneDisplay}}</a>.</p>
+        <button type="button" class="lead-quiz__btn lead-quiz__restart">Nieuwe aanvraag starten</button>
+      </div>
     </form>
 
   </div>
@@ -320,11 +410,11 @@
       <div class="lead-quiz__step hidden" data-step="2">
         <div class="lead-quiz__rooms-head">
           <span>Per kamer</span>
-          <span id="roomsCount">0 kamers · 0 foto's</span>
+          <span class="lead-quiz__rooms-count">0 kamers · 0 foto's</span>
         </div>
-        <div id="roomsList"></div>
+        <div class="lead-quiz__rooms-list"></div>
 
-        <button type="button" class="add-room-btn" id="addRoomBtn">+ Kamer toevoegen</button>
+        <button type="button" class="add-room-btn">+ Kamer toevoegen</button>
 
         <div class="lead-quiz__actions">
           <button type="button" class="lead-quiz__back">← Terug</button>
