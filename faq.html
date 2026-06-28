@@ -45,71 +45,119 @@
     <a href="blog.html">Blog</a>
     <a href="over-ons.html">Over ons</a>
     <a href="contact.html">Contact</a>
+      <a class="header-call" href="tel:{{footer.phoneHref}}" aria-label="Bel ons"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg><span data-cms-key="footer.phoneDisplay">{{footer.phoneDisplay}}</span></a>
   </nav>
 </header>
 
-<section class="hero hero--short">
-  <div class="hero__media"><img src="assets/badkamer-vleuten.jpg" alt="Badkamer opgeleverd door Woonklasse"/></div>
+<section class="hero hero--short hero--faq">
+  <div class="hero__media"><img src="assets/saninet-3d.jpg" alt="Badkamer vooraf in 3D ontworpen met Saninet"/></div>
   <div class="hero__overlay" aria-hidden="true"></div>
   <div class="hero__inner">
-    <p class="hero__sub" style="margin-bottom: 18px; letter-spacing: 0.18em;">Veelgestelde vragen</p>
-    <h1 class="hero__title">Alles wat je wilt weten, <em>helder beantwoord</em></h1>
-    <p class="hero__sub">Van prijs en planning tot ontwerp en garantie: hier vind je rustig en eerlijk antwoord op de vragen die je je stelt voordat je aan een verbouwing begint. Met een vast aanspreekpunt, eigen vakmensen en een vaste prijs weet je vooraf precies waar je aan toe bent.</p>
+    <p class="hero__eyebrow">Veelgestelde vragen</p>
+    <h1 class="hero__title hero__title--faq">Je vragen, <em>helder beantwoord</em></h1>
+    <p class="hero__sub hero__sub--lead">Van prijs en planning tot ontwerp en garantie. Alles wat je wilt weten voordat je begint.</p>
     <div class="hero__actions">
       <a href="contact.html" class="link-underline link-underline--light">Plan een gratis gesprek</a>
     </div>
   </div>
 </section>
 
-<section class="section section--taupe">
+<section class="section faq-section">
   <div class="section__inner">
-    <p class="faq-intro">Een verbouwing of nieuwe badkamer is een mooie stap, maar je wilt natuurlijk geen verrassingen. Daarom hebben we de vragen die we het vaakst krijgen op een rij gezet, met duidelijke antwoorden. Staat jouw vraag er niet bij? Plan dan een gratis en vrijblijvend kennismakingsgesprek, dan denken we graag persoonlijk met je mee.</p>
+    <p class="faq-intro">Een verbouwing of nieuwe badkamer is een mooie stap, maar je wilt geen verrassingen. Hieronder vind je de vragen die we het vaakst krijgen, met heldere antwoorden. Zoek op een trefwoord of spring direct naar een onderwerp.</p>
 
-    <h2 class="section-title section-title--light faq-cat" data-faq-cat>Prijs, offerte en betaling</h2>
-    <div class="faq">
-      <details><summary>Wat kost een verbouwing of badkamer ongeveer?</summary><div>Dat hangt vooral af van de omvang van het werk, de afwerking en de materialen die je kiest. Daarom werken we met vier categorieen: Basis, Standaard, Uitgebreid en Maatwerk, zodat je een richting hebt die bij jouw wensen en budget past. Een eerlijke prijs kunnen we pas geven nadat we bij je langs zijn geweest en goed weten wat je voor ogen hebt. Plan gerust een gratis adviesgesprek, dan denken we vrijblijvend met je mee.</div></details>
-      <details><summary>Wat zit er wel en niet bij de prijs?</summary><div>Onze vaste aanneemsom is inclusief arbeid, materiaal, projectleiding, de oplevering en BTW. Je krijgt dus een totaalprijs en geen losse posten die er achteraf bijkomen. In het adviesgesprek en de offerte maken we altijd duidelijk wat er precies in zit, zodat je niets hoeft aan te nemen. Heb je specifieke wensen, dan nemen we die gewoon mee in de opgave.</div></details>
-      <details><summary>Hoe werkt de vaste aanneemsom?</summary><div>Voordat we beginnen leggen we de complete prijs voor jouw project vast in een heldere offerte. Die prijs staat vast, zodat je vooraf precies weet waar je aan toe bent en niet voor verrassingen komt te staan. Zo houd jij de regie over je budget en kunnen wij ons richten op een mooi eindresultaat.</div></details>
-      <details><summary>Kom ik achteraf voor verrassingen te staan qua prijs?</summary><div>Nee. Je werkt met een vaste aanneemsom, dus geen meerwerk dat je overvalt en geen verborgen kosten. Wil je gaandeweg toch iets anders, of komen we onderweg iets tegen wat aandacht nodig heeft? Dan bespreken we het eerst met je en leggen we het vooraf vast in prijs. Jij beslist, en pas daarna gaan we verder. Zo blijft je budget ook tijdens de uitvoering voorspelbaar.</div></details>
-      <details><summary>Hoe verloopt de betaling?</summary><div>Je betaalt niet alles in een keer vooraf, maar in termijnen die gekoppeld zijn aan de fases van het werk. Meestal gaat dat in drie tot vijf termijnen, telkens wanneer een onderdeel is afgerond. Zo betaal je steeds voor werk dat ook echt is gedaan en houd je grip op het geheel. Het volledige schema spreken we vooraf met je af, zodat het voor iedereen helder is.</div></details>
-      <details><summary>Krijg ik vooraf een vrijblijvende offerte?</summary><div>Ja. We starten altijd met een gratis kennismaking, daarna maken we een ontwerp en pas dan ontvang je een vaste prijsopgave. Je zit nergens aan vast totdat je zelf besluit om door te gaan. Zo kun je rustig en goed geinformeerd je keuze maken.</div></details>
-    </div>
+    <form class="faq-search" role="search" autocomplete="off" onsubmit="return false">
+      <label for="faqSearch" class="visually-hidden">Zoek in veelgestelde vragen</label>
+      <svg class="faq-search__icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="search" id="faqSearch" enterkeyhint="search" placeholder="Zoek je vraag, bijvoorbeeld prijs, planning of garantie" aria-controls="faqGroups"/>
+    </form>
+    <p class="faq-search__empty" hidden role="status">Geen vraag gevonden. Plan gerust een gratis gesprek, dan denken we met je mee.</p>
 
-    <h2 class="section-title section-title--light faq-cat" data-faq-cat>Werkwijze en ontzorgen</h2>
-    <div class="faq">
-      <details><summary>Hoe verloopt het hele traject van eerste contact tot oplevering?</summary><div>Je begint met een gratis kennismakings- en adviesgesprek, waarin we je wensen en de mogelijkheden bespreken. Daarna maken we een ontwerp (bij badkamers zelfs in 3D, bij jou op locatie met Saninet), volgt een heldere prijsopgave en gaan onze eigen vakmensen aan de slag. We sluiten af met een nette oplevering, zodat je woning helemaal klaar is om van te genieten.</div></details>
-      <details><summary>Hoeveel moet ik zelf regelen tijdens de verbouwing?</summary><div>Zo goed als niets. Wij verzorgen het ontwerp, de materialen, de projectleiding en de uitvoering, zodat jij het niet hoeft te coordineren. We stemmen alles met je af en houden je op de hoogte, maar het regelwerk nemen we volledig uit handen. Jij hoeft eigenlijk alleen je wensen aan te geven en straks te genieten van het resultaat.</div></details>
-      <details><summary>Heb ik tijdens de verbouwing steeds met dezelfde persoon te maken?</summary><div>Ja. Je krijgt een vast aanspreekpunt dat je van het eerste gesprek tot de oplevering begeleidt. Je hoeft je verhaal dus nooit opnieuw te vertellen en weet altijd bij wie je terechtkunt met vragen. Dat maakt het hele traject rustig en overzichtelijk.</div></details>
-      <details><summary>Werken jullie met onderaannemers of met eigen mensen?</summary><div>We werken met onze eigen vaste vakmensen, geen onderaannemers. Daardoor houden we zelf de regie over de kwaliteit, de planning en de afstemming op de bouwplaats. Je weet wie er bij je over de vloer komt en kunt rekenen op hetzelfde hoge niveau bij elk onderdeel van je project.</div></details>
-      <details><summary>Wat als er na de oplevering iets niet goed blijkt te zijn?</summary><div>Dan staan we er gewoon voor. Je krijgt garantie op ons werk, aangevuld met de fabrieksgaranties van de topmerken die we gebruiken. Omdat we met eigen vakmensen werken en je een vast aanspreekpunt houdt, weet je precies bij wie je terechtkunt. Plan gerust een vrijblijvend kennismakingsgesprek in, dan vertellen we je er alles over.</div></details>
-    </div>
+    <div class="faq-layout">
+      <nav class="faq-nav" aria-label="Categorieen">
+        <p class="faq-nav__label">Categorieen</p>
+        <ul>
+          <li><a href="#cat-prijs">Prijs, offerte en betaling</a></li>
+          <li><a href="#cat-werkwijze">Werkwijze en ontzorgen</a></li>
+          <li><a href="#cat-planning">Planning en doorlooptijd</a></li>
+          <li><a href="#cat-ontwerp">Ontwerp en Saninet 3D</a></li>
+          <li><a href="#cat-kwaliteit">Kwaliteit, garantie en zekerheid</a></li>
+        </ul>
+        <button type="button" class="faq-nav__toggle" data-expand-all aria-pressed="false">Alles uitklappen</button>
+        <div class="faq-nav__cta">
+          <p>Staat je vraag er niet bij?</p>
+          <a href="contact.html" class="link-underline">Plan een gratis gesprek</a>
+        </div>
+      </nav>
 
-    <h2 class="section-title section-title--light faq-cat" data-faq-cat>Ontwerp en Saninet 3D</h2>
-    <div class="faq">
-      <details><summary>Hoe weet ik vooraf of mijn nieuwe badkamer er goed uitziet?</summary><div>Voordat er ook maar iets gesloopt of gebouwd wordt, ontwerpen we jouw badkamer in realistisch 3D met Saninet, gewoon bij jou thuis op locatie. Zo zie je op voorhand precies hoe alles eruit komt te zien, van indeling tot kleuren en materialen. Geen gokwerk en geen verrassingen achteraf, maar een helder beeld waar je je goed bij voelt.</div></details>
-      <details><summary>Waarom maken jullie het ontwerp bij mij thuis en niet op kantoor?</summary><div>Omdat we de ruimte zelf willen zien en opmeten, zodat het ontwerp klopt met jouw werkelijke situatie. Tijdens dat gesprek bij jou op locatie bouwen we samen het 3D-ontwerp op en denken we mee over wat past bij jouw ruimte en wensen. Zo voorkomen we misverstanden en weet je zeker dat het plan op jouw woning is afgestemd.</div></details>
-      <details><summary>Kan ik zelf meebeslissen over de materialen, het sanitair en de producten?</summary><div>Zeker, het ontwerp maken we samen. We kiezen samen de materialen, het sanitair en de producten uit en je ziet de keuzes meteen terug in het 3D-beeld. We werken daarbij met topmerken die fabrieksgarantie meebrengen, zodat je niet alleen op de mooiste maar ook op de meest betrouwbare oplossing uitkomt.</div></details>
-      <details><summary>Wat als ik tijdens het ontwerp nog iets wil aanpassen?</summary><div>Dat kan, en dat is juist het hele idee van werken in 3D. We passen het ontwerp net zo lang aan tot het echt klopt en jij er helemaal tevreden over bent, allemaal vooraf en op het scherm. Pas als het plan staat en jij erachter staat, gaan onze eigen vakmensen aan de slag. Aanpassen op papier is veel makkelijker en goedkoper dan aanpassen tijdens de bouw.</div></details>
-      <details><summary>Geldt dit 3D-ontwerp alleen voor badkamers of ook voor andere ruimtes?</summary><div>We zijn gespecialiseerd in badkamers vooraf in 3D ontwerpen via Saninet, samen met ons zusterbedrijf Badkamerstijl in Leerdam. Daarnaast verzorgen we complete verbouwingen, keukens, veranda's en maatwerk interieur zoals wandkasten en TV-wanden, met dezelfde persoonlijke begeleiding van ontwerp tot oplevering. Plan gerust een gratis kennismaking in, dan bespreken we wat we voor jouw ruimte kunnen betekenen.</div></details>
-    </div>
+      <div class="faq-groups" id="faqGroups">
+        <section data-faq-group id="cat-prijs">
+          <span class="faq-cat__num">01</span>
+          <h2 class="faq-cat">Prijs, offerte en betaling</h2>
+          <p class="faq-cat__intro">Wat het kost, wat erin zit en hoe je betaalt, zonder verrassingen achteraf.</p>
+          <div class="faq">
+          <details open><summary><h3>Wat kost een verbouwing of badkamer ongeveer?</h3></summary><div id="faq-prijs-kosten">Dat hangt vooral af van de omvang van het werk, de afwerking en de materialen die je kiest. Daarom werken we met vier categorieen: Basis, Standaard, Uitgebreid en Maatwerk, zodat je een richting hebt die bij jouw wensen en budget past. Een eerlijke prijs kunnen we pas geven nadat we bij je langs zijn geweest en goed weten wat je voor ogen hebt. Plan gerust een gratis adviesgesprek, dan denken we vrijblijvend met je mee.</div></details>
+          <details><summary><h3>Wat zit er wel en niet bij de prijs?</h3></summary><div id="faq-prijs-inclusief">Onze vaste aanneemsom is inclusief arbeid, materiaal, projectleiding, de oplevering en BTW. Je krijgt dus een totaalprijs en geen losse posten die er achteraf bijkomen. In het adviesgesprek en de offerte maken we altijd duidelijk wat er precies in zit, zodat je niets hoeft aan te nemen. Heb je specifieke wensen, dan nemen we die gewoon mee in de opgave.</div></details>
+          <details><summary><h3>Hoe werkt de vaste aanneemsom?</h3></summary><div id="faq-prijs-aanneemsom">Voordat we beginnen leggen we de complete prijs voor jouw project vast in een heldere offerte. Die prijs staat vast, zodat je vooraf precies weet waar je aan toe bent en niet voor verrassingen komt te staan. Zo houd jij de regie over je budget en kunnen wij ons richten op een mooi eindresultaat.</div></details>
+          <details><summary><h3>Kom ik achteraf voor verrassingen te staan qua prijs?</h3></summary><div id="faq-prijs-verrassingen">Nee. Je werkt met een vaste aanneemsom, dus geen meerwerk dat je overvalt en geen verborgen kosten. Wil je gaandeweg toch iets anders, of komen we onderweg iets tegen wat aandacht nodig heeft? Dan bespreken we het eerst met je en leggen we het vooraf vast in prijs. Jij beslist, en pas daarna gaan we verder. Zo blijft je budget ook tijdens de uitvoering voorspelbaar.</div></details>
+          <details><summary><h3>Hoe verloopt de betaling?</h3></summary><div id="faq-prijs-betaling">Je betaalt niet alles in een keer vooraf, maar in termijnen die gekoppeld zijn aan de fases van het werk. Meestal gaat dat in drie tot vijf termijnen, telkens wanneer een onderdeel is afgerond. Zo betaal je steeds voor werk dat ook echt is gedaan en houd je grip op het geheel. Het volledige schema spreken we vooraf met je af, zodat het voor iedereen helder is.</div></details>
+          <details><summary><h3>Krijg ik vooraf een vrijblijvende offerte?</h3></summary><div id="faq-prijs-offerte">Ja. We starten altijd met een gratis kennismaking, daarna maken we een ontwerp en pas dan ontvang je een vaste prijsopgave. Je zit nergens aan vast totdat je zelf besluit om door te gaan. Zo kun je rustig en goed geinformeerd je keuze maken.</div></details>
+          </div>
+        </section>
 
-    <h2 class="section-title section-title--light faq-cat" data-faq-cat>Kwaliteit, garantie en zekerheid</h2>
-    <div class="faq">
-      <details><summary>Welke garantie krijg ik op het werk en op de gebruikte producten?</summary><div>Je krijgt garantie op het vakwerk dat wij leveren, plus de fabrieksgaranties van de topmerken die we verwerken. Omdat we met eigen vaste vakmensen werken en niet met wisselende onderaannemers, staan we ook echt achter wat er bij je thuis gebeurt. In het adviesgesprek leggen we precies uit welke garanties bij jouw project horen en wat ze inhouden, zodat je vooraf weet waar je aan toe bent.</div></details>
-      <details><summary>Wat gebeurt er als er na de oplevering toch iets niet goed is?</summary><div>Dan los je dat met ons op, niet met een onbekende onderaannemer. Je hebt bij Woonklasse een vast aanspreekpunt dat je project van begin tot eind kent, ook nadat de laatste vakman de deur uit is. Merk je later iets op, dan neem je gewoon contact op en kijken we samen naar de beste oplossing binnen de afspraken die we hebben gemaakt.</div></details>
-      <details><summary>Zijn jullie verzekerd en hoe zit het met aansprakelijkheid tijdens de verbouwing?</summary><div>Ja, we werken als professioneel verbouwbedrijf met eigen vaste vakmensen en de bijbehorende verzekeringen, zodat je niet voor onverwachte risico's opdraait. Doordat we niet met wisselende onderaannemers werken, is altijd duidelijk wie verantwoordelijk is voor het werk in jouw woning. Wil je precies weten hoe dit voor jouw project geregeld is? Dan lichten we dat graag persoonlijk toe.</div></details>
-      <details><summary>Hoe zit het met vergunningen bij mijn verbouwing?</summary><div>Wij denken vanaf het eerste gesprek met je mee over wat jouw plannen betekenen en of er een vergunning nodig is. Zo kom je niet halverwege voor verrassingen te staan en weet je vooraf wat er geregeld moet worden. Twijfel je of jouw verbouwing vergunningsplichtig is? Bespreek het in de gratis kennismaking, dan brengen we het samen in kaart.</div></details>
-      <details><summary>Hoe zorgen jullie dat de kwaliteit klopt met wat ik vooraf voor ogen had?</summary><div>Bij badkamers ontwerpen we je ruimte vooraf in 3D met Saninet, gewoon bij jou op locatie, zodat je precies ziet wat je krijgt voordat we beginnen. Door persoonlijke begeleiding van ontwerp tot oplevering en eigen vaste vakmensen blijft de lijn tussen wat je wilde en wat er gebouwd wordt kort en helder. Bij de oplevering lopen we samen alles na, zodat je pas tevreden afsluit als het klopt.</div></details>
-    </div>
+        <section data-faq-group id="cat-werkwijze">
+          <span class="faq-cat__num">02</span>
+          <h2 class="faq-cat">Werkwijze en ontzorgen</h2>
+          <p class="faq-cat__intro">Hoe het traject loopt en hoeveel we uit handen nemen.</p>
+          <div class="faq">
+          <details open><summary><h3>Hoe verloopt het hele traject van eerste contact tot oplevering?</h3></summary><div id="faq-werkwijze-traject">Je begint met een gratis kennismakings- en adviesgesprek, waarin we je wensen en de mogelijkheden bespreken. Daarna maken we een ontwerp (bij badkamers zelfs in 3D, bij jou op locatie met Saninet), volgt een heldere prijsopgave en gaan onze eigen vakmensen aan de slag. We sluiten af met een nette oplevering, zodat je woning helemaal klaar is om van te genieten.</div></details>
+          <details><summary><h3>Hoeveel moet ik zelf regelen tijdens de verbouwing?</h3></summary><div id="faq-werkwijze-regelen">Zo goed als niets. Wij verzorgen het ontwerp, de materialen, de projectleiding en de uitvoering, zodat jij het niet hoeft te coordineren. We stemmen alles met je af en houden je op de hoogte, maar het regelwerk nemen we volledig uit handen. Jij hoeft eigenlijk alleen je wensen aan te geven en straks te genieten van het resultaat.</div></details>
+          <details><summary><h3>Heb ik tijdens de verbouwing steeds met dezelfde persoon te maken?</h3></summary><div id="faq-werkwijze-aanspreekpunt">Ja. Je krijgt een vast aanspreekpunt dat je van het eerste gesprek tot de oplevering begeleidt. Je hoeft je verhaal dus nooit opnieuw te vertellen en weet altijd bij wie je terechtkunt met vragen. Dat maakt het hele traject rustig en overzichtelijk.</div></details>
+          <details><summary><h3>Werken jullie met onderaannemers of met eigen mensen?</h3></summary><div id="faq-werkwijze-eigen-mensen">We werken met onze eigen vaste vakmensen, geen onderaannemers. Daardoor houden we zelf de regie over de kwaliteit, de planning en de afstemming op de bouwplaats. Je weet wie er bij je over de vloer komt en kunt rekenen op hetzelfde hoge niveau bij elk onderdeel van je project.</div></details>
+          <details><summary><h3>Wat als er na de oplevering iets niet goed blijkt te zijn?</h3></summary><div id="faq-werkwijze-na-oplevering">Dan staan we er gewoon voor. Je krijgt garantie op ons werk, aangevuld met de fabrieksgaranties van de topmerken die we gebruiken. Omdat we met eigen vakmensen werken en je een vast aanspreekpunt houdt, weet je precies bij wie je terechtkunt. Plan gerust een vrijblijvend kennismakingsgesprek in, dan vertellen we je er alles over.</div></details>
+          </div>
+        </section>
 
-    <h2 class="section-title section-title--light faq-cat" data-faq-cat>Planning en doorlooptijd</h2>
-    <div class="faq">
-      <details><summary>Hoe lang duurt een verbouwing bij jullie?</summary><div>Dat hangt af van wat je laat doen: een badkamer of keuken loopt anders dan een complete woningverbouwing met maatwerk. Tijdens je gratis adviesgesprek brengen we de hele klus in kaart en koppelen we daar een realistische planning aan. Die planning leggen we vooraf vast, zodat je precies weet waar je aan toe bent en niet voor verrassingen komt te staan.</div></details>
-      <details><summary>Waar hangt de doorlooptijd precies van af?</summary><div>Vooral van de omvang en complexiteit van het werk, de gekozen categorie (Basis, Standaard, Uitgebreid of Maatwerk) en de levertijd van materialen en topmerken. Ook keuzes die je tijdens het ontwerp maakt spelen mee. Omdat we met eigen vaste vakmensen werken en geen onderaannemers inschakelen, houden we de planning strak en voorspelbaar, zonder dat we afhankelijk zijn van de agenda van derden.</div></details>
-      <details><summary>Wanneer kunnen jullie starten?</summary><div>Dat bespreken we tijdens je kennismaking, zodra we weten wat je wilt en wanneer het jou uitkomt. Na het ontwerp en de vaste prijsopgave plannen we samen een startdatum in die in onze agenda en die van jou past. Je hebt steeds een vast aanspreekpunt, dus je weet precies wanneer we beginnen en wie er bij je thuis aan de slag gaat.</div></details>
-      <details><summary>Kan ik tijdens de verbouwing in huis blijven wonen?</summary><div>Bij veel projecten kan dat prima, zeker als het om een afgebakend deel van je woning gaat zoals een badkamer of keuken. Bij grotere verbouwingen bekijken we per situatie wat verstandig en comfortabel is en bespreken we dat eerlijk met je vooraf. Zo weet je van tevoren wat je kunt verwachten en kun je je er goed op voorbereiden.</div></details>
-      <details><summary>Hoe beperken jullie overlast en stof in mijn huis?</summary><div>We werken netjes en georganiseerd: we schermen werkruimtes af, beschermen vloeren en meubels en ruimen aan het eind van de werkdag op. Doordat onze eigen vaste vakmensen het werk uitvoeren, weten ze precies hoe ze in een bewoond huis te werk gaan en houden ze rekening met jouw situatie. Je vaste aanspreekpunt is bovendien altijd bereikbaar als er iets is.</div></details>
-      <details><summary>Wat als de planning toch uitloopt?</summary><div>We maken vooraf een realistische planning en houden je gedurende het hele traject op de hoogte, zodat je nooit in het ongewisse zit. Mocht er iets veranderen, bijvoorbeeld door een levertijd, dan hoor je dat op tijd van je vaste aanspreekpunt en bekijken we samen de beste oplossing. We begeleiden je persoonlijk van ontwerp tot oplevering, zodat je het hele proces met een gerust gevoel doorloopt.</div></details>
+        <section data-faq-group id="cat-planning">
+          <span class="faq-cat__num">03</span>
+          <h2 class="faq-cat">Planning en doorlooptijd</h2>
+          <p class="faq-cat__intro">Hoe lang het duurt, wanneer we starten en wat je merkt in huis.</p>
+          <div class="faq">
+          <details open><summary><h3>Hoe lang duurt een verbouwing bij jullie?</h3></summary><div id="faq-planning-duur">Dat hangt af van wat je laat doen: een badkamer of keuken loopt anders dan een complete woningverbouwing met maatwerk. Tijdens je gratis adviesgesprek brengen we de hele klus in kaart en koppelen we daar een realistische planning aan. Die planning leggen we vooraf vast, zodat je precies weet waar je aan toe bent en niet voor verrassingen komt te staan.</div></details>
+          <details><summary><h3>Waar hangt de doorlooptijd precies van af?</h3></summary><div id="faq-planning-doorlooptijd">Vooral van de omvang en complexiteit van het werk, de gekozen categorie (Basis, Standaard, Uitgebreid of Maatwerk) en de levertijd van materialen en topmerken. Ook keuzes die je tijdens het ontwerp maakt spelen mee. Omdat we met eigen vaste vakmensen werken en geen onderaannemers inschakelen, houden we de planning strak en voorspelbaar, zonder dat we afhankelijk zijn van de agenda van derden.</div></details>
+          <details><summary><h3>Wanneer kunnen jullie starten?</h3></summary><div id="faq-planning-starten">Dat bespreken we tijdens je kennismaking, zodra we weten wat je wilt en wanneer het jou uitkomt. Na het ontwerp en de vaste prijsopgave plannen we samen een startdatum in die in onze agenda en die van jou past. Je hebt steeds een vast aanspreekpunt, dus je weet precies wanneer we beginnen en wie er bij je thuis aan de slag gaat.</div></details>
+          <details><summary><h3>Kan ik tijdens de verbouwing in huis blijven wonen?</h3></summary><div id="faq-planning-blijven-wonen">Bij veel projecten kan dat prima, zeker als het om een afgebakend deel van je woning gaat zoals een badkamer of keuken. Bij grotere verbouwingen bekijken we per situatie wat verstandig en comfortabel is en bespreken we dat eerlijk met je vooraf. Zo weet je van tevoren wat je kunt verwachten en kun je je er goed op voorbereiden.</div></details>
+          <details><summary><h3>Hoe beperken jullie overlast en stof in mijn huis?</h3></summary><div id="faq-planning-overlast">We werken netjes en georganiseerd: we schermen werkruimtes af, beschermen vloeren en meubels en ruimen aan het eind van de werkdag op. Doordat onze eigen vaste vakmensen het werk uitvoeren, weten ze precies hoe ze in een bewoond huis te werk gaan en houden ze rekening met jouw situatie. Je vaste aanspreekpunt is bovendien altijd bereikbaar als er iets is.</div></details>
+          <details><summary><h3>Wat als de planning toch uitloopt?</h3></summary><div id="faq-planning-uitloop">We maken vooraf een realistische planning en houden je gedurende het hele traject op de hoogte, zodat je nooit in het ongewisse zit. Mocht er iets veranderen, bijvoorbeeld door een levertijd, dan hoor je dat op tijd van je vaste aanspreekpunt en bekijken we samen de beste oplossing. We begeleiden je persoonlijk van ontwerp tot oplevering, zodat je het hele proces met een gerust gevoel doorloopt.</div></details>
+          </div>
+        </section>
+
+        <section data-faq-group id="cat-ontwerp">
+          <span class="faq-cat__num">04</span>
+          <h2 class="faq-cat">Ontwerp en Saninet 3D</h2>
+          <p class="faq-cat__intro">Je badkamer vooraf in 3D zien, en zelf meebeslissen.</p>
+          <div class="faq">
+          <details open><summary><h3>Hoe weet ik vooraf of mijn nieuwe badkamer er goed uitziet?</h3></summary><div id="faq-ontwerp-3d">Voordat er ook maar iets gesloopt of gebouwd wordt, ontwerpen we jouw badkamer in realistisch 3D met Saninet, gewoon bij jou thuis op locatie. Zo zie je op voorhand precies hoe alles eruit komt te zien, van indeling tot kleuren en materialen. Geen gokwerk en geen verrassingen achteraf, maar een helder beeld waar je je goed bij voelt.</div></details>
+          <details><summary><h3>Waarom maken jullie het ontwerp bij mij thuis en niet op kantoor?</h3></summary><div id="faq-ontwerp-locatie">Omdat we de ruimte zelf willen zien en opmeten, zodat het ontwerp klopt met jouw werkelijke situatie. Tijdens dat gesprek bij jou op locatie bouwen we samen het 3D-ontwerp op en denken we mee over wat past bij jouw ruimte en wensen. Zo voorkomen we misverstanden en weet je zeker dat het plan op jouw woning is afgestemd.</div></details>
+          <details><summary><h3>Kan ik zelf meebeslissen over de materialen, het sanitair en de producten?</h3></summary><div id="faq-ontwerp-meebeslissen">Zeker, het ontwerp maken we samen. We kiezen samen de materialen, het sanitair en de producten uit en je ziet de keuzes meteen terug in het 3D-beeld. We werken daarbij met topmerken die fabrieksgarantie meebrengen, zodat je niet alleen op de mooiste maar ook op de meest betrouwbare oplossing uitkomt.</div></details>
+          <details><summary><h3>Wat als ik tijdens het ontwerp nog iets wil aanpassen?</h3></summary><div id="faq-ontwerp-aanpassen">Dat kan, en dat is juist het hele idee van werken in 3D. We passen het ontwerp net zo lang aan tot het echt klopt en jij er helemaal tevreden over bent, allemaal vooraf en op het scherm. Pas als het plan staat en jij erachter staat, gaan onze eigen vakmensen aan de slag. Aanpassen op papier is veel makkelijker en goedkoper dan aanpassen tijdens de bouw.</div></details>
+          <details><summary><h3>Geldt dit 3D-ontwerp alleen voor badkamers of ook voor andere ruimtes?</h3></summary><div id="faq-ontwerp-ruimtes">We zijn gespecialiseerd in badkamers vooraf in 3D ontwerpen via Saninet, samen met ons zusterbedrijf Badkamerstijl in Leerdam. Daarnaast verzorgen we complete verbouwingen, keukens, veranda's en maatwerk interieur zoals wandkasten en TV-wanden, met dezelfde persoonlijke begeleiding van ontwerp tot oplevering. Plan gerust een gratis kennismaking in, dan bespreken we wat we voor jouw ruimte kunnen betekenen.</div></details>
+          </div>
+        </section>
+
+        <section data-faq-group id="cat-kwaliteit">
+          <span class="faq-cat__num">05</span>
+          <h2 class="faq-cat">Kwaliteit, garantie en zekerheid</h2>
+          <p class="faq-cat__intro">Garantie, verzekering en wat er gebeurt als er toch iets is.</p>
+          <div class="faq">
+          <details open><summary><h3>Welke garantie krijg ik op het werk en op de gebruikte producten?</h3></summary><div id="faq-kwaliteit-garantie">Je krijgt garantie op het vakwerk dat wij leveren, plus de fabrieksgaranties van de topmerken die we verwerken. Omdat we met eigen vaste vakmensen werken en niet met wisselende onderaannemers, staan we ook echt achter wat er bij je thuis gebeurt. In het adviesgesprek leggen we precies uit welke garanties bij jouw project horen en wat ze inhouden, zodat je vooraf weet waar je aan toe bent.</div></details>
+          <details><summary><h3>Wat gebeurt er als er na de oplevering toch iets niet goed is?</h3></summary><div id="faq-kwaliteit-na-oplevering">Dan los je dat met ons op, niet met een onbekende onderaannemer. Je hebt bij Woonklasse een vast aanspreekpunt dat je project van begin tot eind kent, ook nadat de laatste vakman de deur uit is. Merk je later iets op, dan neem je gewoon contact op en kijken we samen naar de beste oplossing binnen de afspraken die we hebben gemaakt.</div></details>
+          <details><summary><h3>Zijn jullie verzekerd en hoe zit het met aansprakelijkheid tijdens de verbouwing?</h3></summary><div id="faq-kwaliteit-verzekerd">Ja, we werken als professioneel verbouwbedrijf met eigen vaste vakmensen en de bijbehorende verzekeringen, zodat je niet voor onverwachte risico's opdraait. Doordat we niet met wisselende onderaannemers werken, is altijd duidelijk wie verantwoordelijk is voor het werk in jouw woning. Wil je precies weten hoe dit voor jouw project geregeld is? Dan lichten we dat graag persoonlijk toe.</div></details>
+          <details><summary><h3>Hoe zit het met vergunningen bij mijn verbouwing?</h3></summary><div id="faq-kwaliteit-vergunningen">Wij denken vanaf het eerste gesprek met je mee over wat jouw plannen betekenen en of er een vergunning nodig is. Zo kom je niet halverwege voor verrassingen te staan en weet je vooraf wat er geregeld moet worden. Twijfel je of jouw verbouwing vergunningsplichtig is? Bespreek het in de gratis kennismaking, dan brengen we het samen in kaart.</div></details>
+          <details><summary><h3>Hoe zorgen jullie dat de kwaliteit klopt met wat ik vooraf voor ogen had?</h3></summary><div id="faq-kwaliteit-vooraf">Bij badkamers ontwerpen we je ruimte vooraf in 3D met Saninet, gewoon bij jou op locatie, zodat je precies ziet wat je krijgt voordat we beginnen. Door persoonlijke begeleiding van ontwerp tot oplevering en eigen vaste vakmensen blijft de lijn tussen wat je wilde en wat er gebouwd wordt kort en helder. Bij de oplevering lopen we samen alles na, zodat je pas tevreden afsluit als het klopt.</div></details>
+          </div>
+        </section>
+      </div>
     </div>
   </div>
 </section>
@@ -117,7 +165,7 @@
 <section class="cta">
   <div class="cta__deco" aria-hidden="true"></div>
   <div class="cta__inner">
-    <h2 class="cta__title">Staat jouw vraag er niet bij? Plan een gratis en vrijblijvend kennismakingsgesprek</h2>
+    <h2 class="cta__title">Staat je vraag er niet bij? Plan een gratis en vrijblijvend kennismakingsgesprek</h2>
     <a href="contact.html" class="link-underline">Plan je gratis adviesgesprek</a>
   </div>
 </section>

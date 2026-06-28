@@ -834,41 +834,6 @@ body.loaded::before { opacity: 0; visibility: hidden; }
 .tier ul li:first-child { border-top: 0; }
 .tier .link-underline { margin-top: auto; align-self: flex-start; }
 
-.faq { max-width: 880px; margin: 0 auto; padding: 0 var(--gutter); }
-.faq details {
-  border-bottom: 1px solid rgba(255,255,255,0.4);
-  padding: 24px 0;
-  transition: padding .25s ease;
-}
-.faq details[open] { padding-bottom: 32px; }
-.faq summary {
-  cursor: pointer; list-style: none;
-  font-family: var(--display); font-weight: 400;
-  font-size: clamp(18px, 1.8vw, 24px);
-  text-transform: uppercase; letter-spacing: 0.02em;
-  display: flex; justify-content: space-between; align-items: center; gap: 16px;
-  color: inherit;
-  transition: padding-left .3s ease;
-}
-.faq summary:hover { padding-left: 6px; }
-.faq summary::-webkit-details-marker { display: none; }
-.faq summary::after {
-  content: "+"; font-size: 22px; font-weight: 300;
-  width: 36px; height: 36px;
-  border: 1px solid currentColor; border-radius: 50%;
-  display: grid; place-items: center;
-  transition: transform .3s ease, background-color .3s ease;
-}
-.faq details[open] summary::after { transform: rotate(45deg); background: rgba(255,255,255,0.15); }
-.faq details > div {
-  padding: 16px 0 4px;
-  font-family: var(--body);
-  text-transform: none;
-  font-size: 15.5px; line-height: 1.65;
-  opacity: 0.92;
-  max-width: 64ch;
-}
-
 .cities-grid {
   max-width: var(--max);
   margin: 0 auto;
@@ -2006,28 +1971,6 @@ html.menu-open .wa-float { opacity: 0; pointer-events: none; }
 }
 
 /* =========================================================================
-   FAQ-pagina: categorie-koppen + intro (op donkere sectie)
-   ========================================================================= */
-.faq-intro {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 0 var(--gutter);
-  text-align: center;
-  font-family: var(--body);
-  color: rgba(255, 255, 255, 0.82);
-  font-size: 17px;
-  line-height: 1.65;
-}
-.faq-cat {
-  max-width: 880px;
-  margin: 66px auto 24px;
-  padding: 0 var(--gutter);
-  font-size: clamp(22px, 2.4vw, 32px);
-  text-align: left;
-}
-.faq-cat:first-of-type { margin-top: 44px; }
-
-/* =========================================================================
    Projecten-pagina: afwisselende project-rijen + proces + reviews-kader
    ========================================================================= */
 .proj-intro { max-width: 760px; margin: 0 auto; text-align: center; font-family: var(--body); color: var(--muted); font-size: 17px; line-height: 1.65; }
@@ -2064,3 +2007,135 @@ html.menu-open .wa-float { opacity: 0; pointer-events: none; }
 .review-card__name { font-family: var(--display); font-weight: 500; font-size: 15px; color: var(--ink); }
 .review-card__meta { font-family: var(--body); font-size: 13px; color: var(--muted); }
 .reviews-section { background: #f5f6f7; }
+
+/* =========================================================================
+   Bel-knop in de header + vertrouwensblok onder de hero (quick wins)
+   ========================================================================= */
+.header-call {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 15px;
+  border: 1px solid currentColor;
+  border-radius: 100px;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  line-height: 1;
+  white-space: nowrap;
+}
+.header-call svg { flex-shrink: 0; }
+
+.trust-strip { padding: clamp(48px, 7vw, 82px) 0; background: #f5f6f7; }
+.trust-grid {
+  max-width: var(--maxw, 1280px);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+.trust-item { padding-top: 18px; border-top: 2px solid #d9a93a; }
+.trust-item__title {
+  font-family: var(--display);
+  font-size: 19px;
+  font-weight: 600;
+  margin: 0 0 9px;
+  color: var(--ink);
+  letter-spacing: 0.01em;
+}
+.trust-item__body { font-size: 15px; line-height: 1.6; margin: 0; color: var(--gold-soft); }
+@media (max-width: 860px) { .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 30px 26px; } }
+@media (max-width: 520px) { .trust-grid { grid-template-columns: 1fr; } }
+
+/* Projecten-reviews als 2x2 (homepage blijft de gedeelde reviews-grid) */
+.reviews-grid--2col { grid-template-columns: repeat(2, 1fr); max-width: 880px; }
+@media (max-width: 640px) { .reviews-grid--2col { grid-template-columns: 1fr; } }
+
+/* =========================================================================
+   FAQ-pagina: licht vlak, zoekfilter, sticky categorie-rail, accordeon
+   ========================================================================= */
+.faq-section { background: var(--bg); color: var(--ink); }
+
+.faq-intro { max-width: 64ch; margin: 0 0 clamp(28px, 4vw, 44px); text-align: left;
+  font-family: var(--body); color: var(--muted); font-size: 17px; line-height: 1.65; padding: 0; }
+
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+.faq-search { position: relative; display: flex; align-items: center; gap: 10px;
+  max-width: 560px; margin: 0 0 clamp(28px, 4vw, 40px);
+  border: 1px solid var(--line); border-radius: 999px; padding: 0 18px; background: #fff; }
+.faq-search:focus-within { border-color: #d9a93a; }
+.faq-search__icon { color: var(--gold-soft); flex: none; }
+.faq-search input { flex: 1; border: 0; outline: 0; background: transparent;
+  font-family: var(--body); font-size: 16px; color: var(--ink); padding: 14px 0; }
+.faq-search input::placeholder { color: var(--gold-soft); }
+.faq-search__empty { color: var(--muted); font-family: var(--body); margin: 8px 0 0; }
+
+.faq-layout { display: grid; grid-template-columns: minmax(220px,1fr) minmax(0,2.4fr);
+  gap: clamp(32px,5vw,72px); align-items: start; }
+
+.faq-nav { position: sticky; top: 110px; }
+.faq-nav__label { font-family: var(--display); text-transform: uppercase;
+  letter-spacing: 0.14em; font-size: 13px; color: var(--gold-soft); margin: 0 0 14px; }
+.faq-nav ul { list-style: none; margin: 0 0 24px; padding: 0; }
+.faq-nav li { margin: 0; }
+.faq-nav a { display: block; padding: 9px 0 9px 14px; font-family: var(--body); font-size: 15px;
+  color: var(--muted); border-left: 2px solid transparent; text-decoration: none;
+  transition: color .2s ease, border-color .2s ease; }
+.faq-nav a:hover { color: var(--ink); }
+.faq-nav a[aria-current="true"] { color: var(--ink); border-left-color: #d9a93a; font-weight: 500; }
+.faq-nav__toggle { font: inherit; cursor: pointer; background: none; border: 0;
+  color: var(--gold-soft); padding: 0; margin: 0 0 28px; text-decoration: underline; }
+.faq-nav__toggle:hover { color: var(--ink); }
+.faq-nav__cta { border-top: 1px solid var(--line); padding-top: 20px; }
+.faq-nav__cta p { font-family: var(--body); font-size: 14.5px; color: var(--muted); margin: 0 0 8px; }
+
+[data-faq-group] { scroll-margin-top: 120px; }
+[data-faq-group] + [data-faq-group] { margin-top: clamp(48px, 6vw, 80px); }
+.faq-cat__num { display: block; font-family: var(--display); font-size: 14px;
+  letter-spacing: 0.18em; color: #d9a93a; margin-bottom: 6px; }
+.faq-cat { font-family: var(--display); font-size: clamp(26px, 3vw, 40px); font-weight: 500;
+  text-transform: none; color: var(--ink); margin: 0 0 6px; max-width: none; padding: 0; text-align: left; }
+.faq-cat::after { content: ""; display: block; width: 48px; height: 2px; background: #d9a93a; margin-top: 14px; }
+.faq-cat__intro { font-family: var(--body); color: var(--muted); font-size: 15px; max-width: 60ch; margin: 18px 0 8px; }
+
+.faq { max-width: none; margin: 0; padding: 0; }
+.faq details { border-bottom: 1px solid var(--line); padding: 20px 0; transition: padding .25s ease; }
+.faq details[open] { padding-bottom: 28px; }
+.faq summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between;
+  align-items: center; gap: 20px; text-transform: none; transition: padding-left .3s ease; }
+.faq summary:hover { padding-left: 6px; }
+.faq summary:focus-visible { outline: 2px solid #d9a93a; outline-offset: 4px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary h3 { display: inline; margin: 0; font-family: var(--display); font-weight: 600;
+  font-size: clamp(17px, 1.4vw, 20px); text-transform: none; letter-spacing: 0; color: var(--ink); }
+.faq summary:hover h3 { color: #000; }
+.faq summary::after { content: "+"; font-size: 22px; font-weight: 300; flex: none;
+  width: 34px; height: 34px; border: 1px solid var(--line); border-radius: 50%;
+  display: grid; place-items: center; color: var(--gold-soft);
+  transition: transform .3s ease, border-color .3s ease, color .3s ease; }
+.faq details[open] summary::after { transform: rotate(45deg); border-color: #d9a93a; color: #d9a93a; background: none; }
+.faq details > div[id] { padding: 14px 0 2px; font-family: var(--body); text-transform: none;
+  font-size: 15.5px; line-height: 1.65; color: #4a4f55; opacity: 1; max-width: 70ch; scroll-margin-top: 120px; }
+
+@media (max-width: 900px) {
+  .faq-layout { grid-template-columns: 1fr; }
+  .faq-nav { position: sticky; top: 64px; display: flex; gap: 8px; overflow-x: auto;
+    white-space: nowrap; padding-bottom: 8px; background: var(--bg); z-index: 5; }
+  .faq-nav ul { display: flex; gap: 8px; margin: 0; }
+  .faq-nav a { border-left: 0; border-bottom: 2px solid transparent; padding: 8px 4px; }
+  .faq-nav a[aria-current="true"] { border-left: 0; border-bottom-color: #d9a93a; }
+  .faq-nav__label, .faq-nav__toggle, .faq-nav__cta { display: none; }
+  [data-faq-group], .faq details > div[id] { scroll-margin-top: 84px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Hero-FAQ varianten (eigen, rustiger dan projecten) */
+.hero--faq { min-height: 56vh; }
+.hero__eyebrow { font-family: var(--display); text-transform: uppercase; letter-spacing: 0.18em;
+  font-size: clamp(13px,1vw,15px); color: rgba(255,255,255,0.85); margin: 0 0 18px; }
+.hero__title--faq { font-size: clamp(48px, 8vw, 96px); margin-bottom: 24px; max-width: 18ch; }
+.hero__sub--lead { font-family: var(--body); text-transform: none; letter-spacing: 0;
+  font-size: clamp(16px,1.3vw,19px); color: rgba(255,255,255,0.92); max-width: 52ch; }

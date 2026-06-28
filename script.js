@@ -579,7 +579,7 @@ async function uploadRoomPhotos(roomDetails, onProgress) {
     if (result.ok) {
       form.querySelectorAll('label, input, select, textarea, .form-submit')
         .forEach((el) => { el.style.display = 'none'; });
-      s.textContent = 'Bedankt! We hebben je aanvraag ontvangen en nemen binnen 48 uur contact op.';
+      s.textContent = 'Bedankt! We hebben je aanvraag ontvangen en nemen binnen 2 werkdagen contact op.';
       s.dataset.state = 'success';
     } else {
       s.textContent = result.message
@@ -804,4 +804,84 @@ async function uploadRoomPhotos(roomDetails, onProgress) {
   } else {
     initWork();
   }
+})();
+
+/* =========================================================================
+   FAQ-pagina: zoekfilter + alles uitklappen + scroll-spy + deep-link
+   ========================================================================= */
+(function () {
+  const search = document.getElementById('faqSearch');
+  const groups = [...document.querySelectorAll('[data-faq-group]')];
+  if (!search && !groups.length) return; // niet op deze pagina
+
+  const items = [...document.querySelectorAll('.faq details')];
+  const empty = document.querySelector('.faq-search__empty');
+  const norm = (s) => (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  const defaultOpen = new WeakSet();
+  items.forEach((d) => { if (d.open) defaultOpen.add(d); });
+
+  // 1) live zoekfilter
+  if (search) {
+    const apply = () => {
+      const q = norm(search.value.trim());
+      items.forEach((d) => {
+        const hit = !q || norm(d.textContent).includes(q);
+        d.hidden = !hit;
+        if (hit) d.classList.add('in');           // forceer reveal als de filter 'm toont
+        d.open = q ? hit : defaultOpen.has(d);     // treffers open tijdens zoeken, anders standaard
+      });
+      let any = false;
+      groups.forEach((g) => {
+        const visible = g.querySelector('.faq details:not([hidden])');
+        g.hidden = !visible;
+        if (visible) any = true;
+      });
+      if (empty) empty.hidden = any || !q;
+    };
+    let t;
+    search.addEventListener('input', () => { clearTimeout(t); t = setTimeout(apply, 120); });
+  }
+
+  // 2) alles uitklappen / inklappen
+  const toggleAll = document.querySelector('[data-expand-all]');
+  if (toggleAll) {
+    toggleAll.addEventListener('click', () => {
+      const open = toggleAll.getAttribute('aria-pressed') !== 'true';
+      items.forEach((d) => { if (!d.hidden) { d.open = open; d.classList.add('in'); } });
+      toggleAll.setAttribute('aria-pressed', String(open));
+      toggleAll.textContent = open ? 'Alles inklappen' : 'Alles uitklappen';
+    });
+  }
+
+  // 3) scroll-spy: active categorie in de rail
+  const navLinks = [...document.querySelectorAll('.faq-nav a')];
+  if (navLinks.length && 'IntersectionObserver' in window) {
+    const linkFor = (id) => navLinks.find((a) => a.getAttribute('href') === '#' + id);
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          navLinks.forEach((a) => a.removeAttribute('aria-current'));
+          const link = linkFor(e.target.id);
+          if (link) link.setAttribute('aria-current', 'true');
+        }
+      });
+    }, { rootMargin: '-120px 0px -65% 0px', threshold: 0 });
+    groups.forEach((g) => io.observe(g));
+  }
+
+  // 4) deep-link: open de juiste vraag vanuit #hash (groep-anchors laat CSS scrollen)
+  const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function openFromHash() {
+    const hash = location.hash;
+    if (!hash || hash.length < 2) return;
+    let el; try { el = document.querySelector(hash); } catch (_) { return; }
+    if (!el) return;
+    const d = el.closest('details');
+    if (!d) return;
+    d.hidden = false; d.open = true; d.classList.add('in');
+    const g = d.closest('[data-faq-group]'); if (g) g.hidden = false;
+    el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+  }
+  window.addEventListener('load', openFromHash);
+  window.addEventListener('hashchange', openFromHash);
 })();
