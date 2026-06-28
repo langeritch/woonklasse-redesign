@@ -54,7 +54,7 @@ const NAV = `
   </a>
   <nav class="nav" aria-label="Hoofdmenu">
     <a href="diensten.html">Diensten</a>
-    <a href="prijzen.html">Prijzen</a>
+    <a href="faq.html">FAQ</a>
     <a href="projecten.html">Projecten</a>
     <a href="blog.html">Blog</a>
     <a href="over-ons.html">Over ons</a>
@@ -76,7 +76,7 @@ const FOOTER = `
       <div>
         <a href="index.html">Home</a>
         <a href="diensten.html">Diensten</a>
-        <a href="prijzen.html">Prijzen</a>
+        <a href="faq.html">FAQ</a>
         <a href="projecten.html">Projecten</a>
         <a href="blog.html">Blog</a>
         <a href="over-ons.html">Over ons</a>
