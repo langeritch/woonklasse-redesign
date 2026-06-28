@@ -579,7 +579,7 @@ async function uploadRoomPhotos(roomDetails, onProgress) {
     if (result.ok) {
       form.querySelectorAll('label, input, select, textarea, .form-submit')
         .forEach((el) => { el.style.display = 'none'; });
-      s.textContent = 'Bedankt! We hebben je aanvraag ontvangen en nemen binnen 48 uur contact op.';
+      s.textContent = 'Bedankt! We hebben je aanvraag ontvangen en nemen binnen 2 werkdagen contact op.';
       s.dataset.state = 'success';
     } else {
       s.textContent = result.message

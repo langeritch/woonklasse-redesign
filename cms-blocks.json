@@ -342,7 +342,7 @@
       "key": "diensten.finalCta.title",
       "label": "Diensten · Final CTA title (HTML)",
       "kind": "rich_text",
-      "text": "Vertel ons over je <em>plannen</em>.<br/>Binnen 48 uur een voorstel.",
+      "text": "Vertel ons over je <em>plannen</em>.<br/>Binnen 2 werkdagen een voorstel.",
       "image": null,
       "sort_order": 1080
     },
@@ -1598,7 +1598,7 @@
       "key": "contact.subtitle",
       "label": "Contact · Subtitle",
       "kind": "text",
-      "text": "Vertel ons over uw plannen en ontvang binnen 48 uur een maatwerk voorstel. Elk gesprek begint met luisteren.",
+      "text": "Vertel ons over uw plannen en ontvang binnen 2 werkdagen een maatwerk voorstel. Elk gesprek begint met luisteren.",
       "image": null,
       "sort_order": 2660
     },
@@ -1606,7 +1606,7 @@
       "key": "contact.openingstijden",
       "label": "Contact · Opening hours",
       "kind": "text",
-      "text": "Maandag – vrijdag 08:00 – 17:00<br/>Zaterdag op afspraak",
+      "text": "Maandag tot en met vrijdag 08:00 tot 17:00<br/>Zaterdag op afspraak",
       "image": null,
       "sort_order": 2665
     },
@@ -1622,7 +1622,7 @@
       "key": "contact.form.sub",
       "label": "Contact · Form sub",
       "kind": "text",
-      "text": "Vul onderstaand formulier in. We reageren binnen 48 uur met een vrijblijvende inschatting.",
+      "text": "Vul onderstaand formulier in. We reageren binnen 2 werkdagen met een vrijblijvende inschatting.",
       "image": null,
       "sort_order": 2675
     },
@@ -2886,7 +2886,7 @@
       "key": "cities.amsterdam.tier1.range",
       "label": "Cities · Amsterdam · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 3336
     },
@@ -2918,7 +2918,7 @@
       "key": "cities.amsterdam.tier2.range",
       "label": "Cities · Amsterdam · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 3348
     },
@@ -2950,7 +2950,7 @@
       "key": "cities.amsterdam.tier3.range",
       "label": "Cities · Amsterdam · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 3360
     },
@@ -3054,7 +3054,7 @@
       "key": "cities.rotterdam.tier1.range",
       "label": "Cities · Rotterdam · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 3399
     },
@@ -3070,7 +3070,7 @@
       "key": "cities.rotterdam.tier2.range",
       "label": "Cities · Rotterdam · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 3405
     },
@@ -3086,7 +3086,7 @@
       "key": "cities.rotterdam.tier3.range",
       "label": "Cities · Rotterdam · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 3411
     },
@@ -3134,7 +3134,7 @@
       "key": "cities.den-haag.tier1.range",
       "label": "Cities · Den Haag · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 3429
     },
@@ -3150,7 +3150,7 @@
       "key": "cities.den-haag.tier2.range",
       "label": "Cities · Den Haag · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 3435
     },
@@ -3166,7 +3166,7 @@
       "key": "cities.den-haag.tier3.range",
       "label": "Cities · Den Haag · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 3441
     },
@@ -3214,7 +3214,7 @@
       "key": "cities.utrecht.tier1.range",
       "label": "Cities · Utrecht · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 3459
     },
@@ -3230,7 +3230,7 @@
       "key": "cities.utrecht.tier2.range",
       "label": "Cities · Utrecht · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 3465
     },
@@ -3246,7 +3246,7 @@
       "key": "cities.utrecht.tier3.range",
       "label": "Cities · Utrecht · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 3471
     },
@@ -3294,7 +3294,7 @@
       "key": "cities.eindhoven.tier1.range",
       "label": "Cities · Eindhoven · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 3489
     },
@@ -3310,7 +3310,7 @@
       "key": "cities.eindhoven.tier2.range",
       "label": "Cities · Eindhoven · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 3495
     },
@@ -3326,7 +3326,7 @@
       "key": "cities.eindhoven.tier3.range",
       "label": "Cities · Eindhoven · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 3501
     },
@@ -3374,7 +3374,7 @@
       "key": "cities.tilburg.tier1.range",
       "label": "Cities · Tilburg · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 3519
     },
@@ -3390,7 +3390,7 @@
       "key": "cities.tilburg.tier2.range",
       "label": "Cities · Tilburg · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 3525
     },
@@ -3406,7 +3406,7 @@
       "key": "cities.tilburg.tier3.range",
       "label": "Cities · Tilburg · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 3531
     },
@@ -3454,7 +3454,7 @@
       "key": "cities.groningen.tier1.range",
       "label": "Cities · Groningen · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 3549
     },
@@ -3470,7 +3470,7 @@
       "key": "cities.groningen.tier2.range",
       "label": "Cities · Groningen · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 3555
     },
@@ -3486,7 +3486,7 @@
       "key": "cities.groningen.tier3.range",
       "label": "Cities · Groningen · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 3561
     },
@@ -3534,7 +3534,7 @@
       "key": "cities.almere.tier1.range",
       "label": "Cities · Almere · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 3579
     },
@@ -3550,7 +3550,7 @@
       "key": "cities.almere.tier2.range",
       "label": "Cities · Almere · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 3585
     },
@@ -3566,7 +3566,7 @@
       "key": "cities.almere.tier3.range",
       "label": "Cities · Almere · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 3591
     },
@@ -3614,7 +3614,7 @@
       "key": "cities.breda.tier1.range",
       "label": "Cities · Breda · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 3609
     },
@@ -3630,7 +3630,7 @@
       "key": "cities.breda.tier2.range",
       "label": "Cities · Breda · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 3615
     },
@@ -3646,7 +3646,7 @@
       "key": "cities.breda.tier3.range",
       "label": "Cities · Breda · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 3621
     },
@@ -3694,7 +3694,7 @@
       "key": "cities.nijmegen.tier1.range",
       "label": "Cities · Nijmegen · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 3639
     },
@@ -3710,7 +3710,7 @@
       "key": "cities.nijmegen.tier2.range",
       "label": "Cities · Nijmegen · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 3645
     },
@@ -3726,7 +3726,7 @@
       "key": "cities.nijmegen.tier3.range",
       "label": "Cities · Nijmegen · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 3651
     },
@@ -3774,7 +3774,7 @@
       "key": "cities.apeldoorn.tier1.range",
       "label": "Cities · Apeldoorn · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 3669
     },
@@ -3790,7 +3790,7 @@
       "key": "cities.apeldoorn.tier2.range",
       "label": "Cities · Apeldoorn · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 3675
     },
@@ -3806,7 +3806,7 @@
       "key": "cities.apeldoorn.tier3.range",
       "label": "Cities · Apeldoorn · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 3681
     },
@@ -3854,7 +3854,7 @@
       "key": "cities.haarlem.tier1.range",
       "label": "Cities · Haarlem · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 3699
     },
@@ -3870,7 +3870,7 @@
       "key": "cities.haarlem.tier2.range",
       "label": "Cities · Haarlem · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 3705
     },
@@ -3886,7 +3886,7 @@
       "key": "cities.haarlem.tier3.range",
       "label": "Cities · Haarlem · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 3711
     },
@@ -3934,7 +3934,7 @@
       "key": "cities.arnhem.tier1.range",
       "label": "Cities · Arnhem · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 3729
     },
@@ -3950,7 +3950,7 @@
       "key": "cities.arnhem.tier2.range",
       "label": "Cities · Arnhem · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 3735
     },
@@ -3966,7 +3966,7 @@
       "key": "cities.arnhem.tier3.range",
       "label": "Cities · Arnhem · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 3741
     },
@@ -4014,7 +4014,7 @@
       "key": "cities.enschede.tier1.range",
       "label": "Cities · Enschede · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 3759
     },
@@ -4030,7 +4030,7 @@
       "key": "cities.enschede.tier2.range",
       "label": "Cities · Enschede · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 3765
     },
@@ -4046,7 +4046,7 @@
       "key": "cities.enschede.tier3.range",
       "label": "Cities · Enschede · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 3771
     },
@@ -4094,7 +4094,7 @@
       "key": "cities.amersfoort.tier1.range",
       "label": "Cities · Amersfoort · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 3789
     },
@@ -4110,7 +4110,7 @@
       "key": "cities.amersfoort.tier2.range",
       "label": "Cities · Amersfoort · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 3795
     },
@@ -4126,7 +4126,7 @@
       "key": "cities.amersfoort.tier3.range",
       "label": "Cities · Amersfoort · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 3801
     },
@@ -4174,7 +4174,7 @@
       "key": "cities.zaanstad.tier1.range",
       "label": "Cities · Zaanstad · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 3819
     },
@@ -4190,7 +4190,7 @@
       "key": "cities.zaanstad.tier2.range",
       "label": "Cities · Zaanstad · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 3825
     },
@@ -4206,7 +4206,7 @@
       "key": "cities.zaanstad.tier3.range",
       "label": "Cities · Zaanstad · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 3831
     },
@@ -4254,7 +4254,7 @@
       "key": "cities.haarlemmermeer.tier1.range",
       "label": "Cities · Haarlemmermeer · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 3849
     },
@@ -4270,7 +4270,7 @@
       "key": "cities.haarlemmermeer.tier2.range",
       "label": "Cities · Haarlemmermeer · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 3855
     },
@@ -4286,7 +4286,7 @@
       "key": "cities.haarlemmermeer.tier3.range",
       "label": "Cities · Haarlemmermeer · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 3861
     },
@@ -4334,7 +4334,7 @@
       "key": "cities.den-bosch.tier1.range",
       "label": "Cities · Den Bosch · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 3879
     },
@@ -4350,7 +4350,7 @@
       "key": "cities.den-bosch.tier2.range",
       "label": "Cities · Den Bosch · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 3885
     },
@@ -4366,7 +4366,7 @@
       "key": "cities.den-bosch.tier3.range",
       "label": "Cities · Den Bosch · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 3891
     },
@@ -4414,7 +4414,7 @@
       "key": "cities.zoetermeer.tier1.range",
       "label": "Cities · Zoetermeer · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 3909
     },
@@ -4430,7 +4430,7 @@
       "key": "cities.zoetermeer.tier2.range",
       "label": "Cities · Zoetermeer · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 3915
     },
@@ -4446,7 +4446,7 @@
       "key": "cities.zoetermeer.tier3.range",
       "label": "Cities · Zoetermeer · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 3921
     },
@@ -4494,7 +4494,7 @@
       "key": "cities.zwolle.tier1.range",
       "label": "Cities · Zwolle · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 3939
     },
@@ -4510,7 +4510,7 @@
       "key": "cities.zwolle.tier2.range",
       "label": "Cities · Zwolle · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 3945
     },
@@ -4526,7 +4526,7 @@
       "key": "cities.zwolle.tier3.range",
       "label": "Cities · Zwolle · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 3951
     },
@@ -4574,7 +4574,7 @@
       "key": "cities.leiden.tier1.range",
       "label": "Cities · Leiden · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 3969
     },
@@ -4590,7 +4590,7 @@
       "key": "cities.leiden.tier2.range",
       "label": "Cities · Leiden · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 3975
     },
@@ -4606,7 +4606,7 @@
       "key": "cities.leiden.tier3.range",
       "label": "Cities · Leiden · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 3981
     },
@@ -4654,7 +4654,7 @@
       "key": "cities.maastricht.tier1.range",
       "label": "Cities · Maastricht · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 3999
     },
@@ -4670,7 +4670,7 @@
       "key": "cities.maastricht.tier2.range",
       "label": "Cities · Maastricht · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 4005
     },
@@ -4686,7 +4686,7 @@
       "key": "cities.maastricht.tier3.range",
       "label": "Cities · Maastricht · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 4011
     },
@@ -4734,7 +4734,7 @@
       "key": "cities.dordrecht.tier1.range",
       "label": "Cities · Dordrecht · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 4029
     },
@@ -4750,7 +4750,7 @@
       "key": "cities.dordrecht.tier2.range",
       "label": "Cities · Dordrecht · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 4035
     },
@@ -4766,7 +4766,7 @@
       "key": "cities.dordrecht.tier3.range",
       "label": "Cities · Dordrecht · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 4041
     },
@@ -4814,7 +4814,7 @@
       "key": "cities.ede.tier1.range",
       "label": "Cities · Ede · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 4059
     },
@@ -4830,7 +4830,7 @@
       "key": "cities.ede.tier2.range",
       "label": "Cities · Ede · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 4065
     },
@@ -4846,7 +4846,7 @@
       "key": "cities.ede.tier3.range",
       "label": "Cities · Ede · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 4071
     },
@@ -4894,7 +4894,7 @@
       "key": "cities.alphen-aan-den-rijn.tier1.range",
       "label": "Cities · Alphen aan den Rijn · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 4089
     },
@@ -4910,7 +4910,7 @@
       "key": "cities.alphen-aan-den-rijn.tier2.range",
       "label": "Cities · Alphen aan den Rijn · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 4095
     },
@@ -4926,7 +4926,7 @@
       "key": "cities.alphen-aan-den-rijn.tier3.range",
       "label": "Cities · Alphen aan den Rijn · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 4101
     },
@@ -4974,7 +4974,7 @@
       "key": "cities.leeuwarden.tier1.range",
       "label": "Cities · Leeuwarden · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 4119
     },
@@ -4990,7 +4990,7 @@
       "key": "cities.leeuwarden.tier2.range",
       "label": "Cities · Leeuwarden · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 4125
     },
@@ -5006,7 +5006,7 @@
       "key": "cities.leeuwarden.tier3.range",
       "label": "Cities · Leeuwarden · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 4131
     },
@@ -5054,7 +5054,7 @@
       "key": "cities.alkmaar.tier1.range",
       "label": "Cities · Alkmaar · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 4149
     },
@@ -5070,7 +5070,7 @@
       "key": "cities.alkmaar.tier2.range",
       "label": "Cities · Alkmaar · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 4155
     },
@@ -5086,7 +5086,7 @@
       "key": "cities.alkmaar.tier3.range",
       "label": "Cities · Alkmaar · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 4161
     },
@@ -5134,7 +5134,7 @@
       "key": "cities.emmen.tier1.range",
       "label": "Cities · Emmen · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 4179
     },
@@ -5150,7 +5150,7 @@
       "key": "cities.emmen.tier2.range",
       "label": "Cities · Emmen · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 4185
     },
@@ -5166,7 +5166,7 @@
       "key": "cities.emmen.tier3.range",
       "label": "Cities · Emmen · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 4191
     },
@@ -5214,7 +5214,7 @@
       "key": "cities.westland.tier1.range",
       "label": "Cities · Westland · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 4209
     },
@@ -5230,7 +5230,7 @@
       "key": "cities.westland.tier2.range",
       "label": "Cities · Westland · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 4215
     },
@@ -5246,7 +5246,7 @@
       "key": "cities.westland.tier3.range",
       "label": "Cities · Westland · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 4221
     },
@@ -5294,7 +5294,7 @@
       "key": "cities.delft.tier1.range",
       "label": "Cities · Delft · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 4239
     },
@@ -5310,7 +5310,7 @@
       "key": "cities.delft.tier2.range",
       "label": "Cities · Delft · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 4245
     },
@@ -5326,7 +5326,7 @@
       "key": "cities.delft.tier3.range",
       "label": "Cities · Delft · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 4251
     },
@@ -5374,7 +5374,7 @@
       "key": "cities.deventer.tier1.range",
       "label": "Cities · Deventer · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 4269
     },
@@ -5390,7 +5390,7 @@
       "key": "cities.deventer.tier2.range",
       "label": "Cities · Deventer · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 4275
     },
@@ -5406,7 +5406,7 @@
       "key": "cities.deventer.tier3.range",
       "label": "Cities · Deventer · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 4281
     },
@@ -5454,7 +5454,7 @@
       "key": "cities.sittard-geleen.tier1.range",
       "label": "Cities · Sittard-Geleen · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 4299
     },
@@ -5470,7 +5470,7 @@
       "key": "cities.sittard-geleen.tier2.range",
       "label": "Cities · Sittard-Geleen · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 4305
     },
@@ -5486,7 +5486,7 @@
       "key": "cities.sittard-geleen.tier3.range",
       "label": "Cities · Sittard-Geleen · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 4311
     },
@@ -5534,7 +5534,7 @@
       "key": "cities.helmond.tier1.range",
       "label": "Cities · Helmond · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 4329
     },
@@ -5550,7 +5550,7 @@
       "key": "cities.helmond.tier2.range",
       "label": "Cities · Helmond · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 4335
     },
@@ -5566,7 +5566,7 @@
       "key": "cities.helmond.tier3.range",
       "label": "Cities · Helmond · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 4341
     },
@@ -5614,7 +5614,7 @@
       "key": "cities.venlo.tier1.range",
       "label": "Cities · Venlo · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 4359
     },
@@ -5630,7 +5630,7 @@
       "key": "cities.venlo.tier2.range",
       "label": "Cities · Venlo · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 4365
     },
@@ -5646,7 +5646,7 @@
       "key": "cities.venlo.tier3.range",
       "label": "Cities · Venlo · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 4371
     },
@@ -5694,7 +5694,7 @@
       "key": "cities.hilversum.tier1.range",
       "label": "Cities · Hilversum · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 4389
     },
@@ -5710,7 +5710,7 @@
       "key": "cities.hilversum.tier2.range",
       "label": "Cities · Hilversum · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 4395
     },
@@ -5726,7 +5726,7 @@
       "key": "cities.hilversum.tier3.range",
       "label": "Cities · Hilversum · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 4401
     },
@@ -5774,7 +5774,7 @@
       "key": "cities.oss.tier1.range",
       "label": "Cities · Oss · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 4419
     },
@@ -5790,7 +5790,7 @@
       "key": "cities.oss.tier2.range",
       "label": "Cities · Oss · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 4425
     },
@@ -5806,7 +5806,7 @@
       "key": "cities.oss.tier3.range",
       "label": "Cities · Oss · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 4431
     },
@@ -5854,7 +5854,7 @@
       "key": "cities.amstelveen.tier1.range",
       "label": "Cities · Amstelveen · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 4449
     },
@@ -5870,7 +5870,7 @@
       "key": "cities.amstelveen.tier2.range",
       "label": "Cities · Amstelveen · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 4455
     },
@@ -5886,7 +5886,7 @@
       "key": "cities.amstelveen.tier3.range",
       "label": "Cities · Amstelveen · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 4461
     },
@@ -5934,7 +5934,7 @@
       "key": "cities.heerlen.tier1.range",
       "label": "Cities · Heerlen · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 4479
     },
@@ -5950,7 +5950,7 @@
       "key": "cities.heerlen.tier2.range",
       "label": "Cities · Heerlen · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 4485
     },
@@ -5966,7 +5966,7 @@
       "key": "cities.heerlen.tier3.range",
       "label": "Cities · Heerlen · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 4491
     },
@@ -6014,7 +6014,7 @@
       "key": "cities.roosendaal.tier1.range",
       "label": "Cities · Roosendaal · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 4509
     },
@@ -6030,7 +6030,7 @@
       "key": "cities.roosendaal.tier2.range",
       "label": "Cities · Roosendaal · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 4515
     },
@@ -6046,7 +6046,7 @@
       "key": "cities.roosendaal.tier3.range",
       "label": "Cities · Roosendaal · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 4521
     },
@@ -6094,7 +6094,7 @@
       "key": "cities.purmerend.tier1.range",
       "label": "Cities · Purmerend · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 4539
     },
@@ -6110,7 +6110,7 @@
       "key": "cities.purmerend.tier2.range",
       "label": "Cities · Purmerend · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 4545
     },
@@ -6126,7 +6126,7 @@
       "key": "cities.purmerend.tier3.range",
       "label": "Cities · Purmerend · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 4551
     },
@@ -6174,7 +6174,7 @@
       "key": "cities.schiedam.tier1.range",
       "label": "Cities · Schiedam · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 4569
     },
@@ -6190,7 +6190,7 @@
       "key": "cities.schiedam.tier2.range",
       "label": "Cities · Schiedam · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 4575
     },
@@ -6206,7 +6206,7 @@
       "key": "cities.schiedam.tier3.range",
       "label": "Cities · Schiedam · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 4581
     },
@@ -6254,7 +6254,7 @@
       "key": "cities.spijkenisse.tier1.range",
       "label": "Cities · Spijkenisse · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 4599
     },
@@ -6270,7 +6270,7 @@
       "key": "cities.spijkenisse.tier2.range",
       "label": "Cities · Spijkenisse · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 4605
     },
@@ -6286,7 +6286,7 @@
       "key": "cities.spijkenisse.tier3.range",
       "label": "Cities · Spijkenisse · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 4611
     },
@@ -6334,7 +6334,7 @@
       "key": "cities.vlaardingen.tier1.range",
       "label": "Cities · Vlaardingen · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 4629
     },
@@ -6350,7 +6350,7 @@
       "key": "cities.vlaardingen.tier2.range",
       "label": "Cities · Vlaardingen · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 4635
     },
@@ -6366,7 +6366,7 @@
       "key": "cities.vlaardingen.tier3.range",
       "label": "Cities · Vlaardingen · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 4641
     },
@@ -6414,7 +6414,7 @@
       "key": "cities.hoorn.tier1.range",
       "label": "Cities · Hoorn · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 4659
     },
@@ -6430,7 +6430,7 @@
       "key": "cities.hoorn.tier2.range",
       "label": "Cities · Hoorn · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 4665
     },
@@ -6446,7 +6446,7 @@
       "key": "cities.hoorn.tier3.range",
       "label": "Cities · Hoorn · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 4671
     },
@@ -6494,7 +6494,7 @@
       "key": "cities.gouda.tier1.range",
       "label": "Cities · Gouda · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 4689
     },
@@ -6510,7 +6510,7 @@
       "key": "cities.gouda.tier2.range",
       "label": "Cities · Gouda · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 4695
     },
@@ -6526,7 +6526,7 @@
       "key": "cities.gouda.tier3.range",
       "label": "Cities · Gouda · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 4701
     },
@@ -6574,7 +6574,7 @@
       "key": "cities.lelystad.tier1.range",
       "label": "Cities · Lelystad · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 4719
     },
@@ -6590,7 +6590,7 @@
       "key": "cities.lelystad.tier2.range",
       "label": "Cities · Lelystad · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 4725
     },
@@ -6606,7 +6606,7 @@
       "key": "cities.lelystad.tier3.range",
       "label": "Cities · Lelystad · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 4731
     },
@@ -6654,7 +6654,7 @@
       "key": "cities.katwijk.tier1.range",
       "label": "Cities · Katwijk · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 4749
     },
@@ -6670,7 +6670,7 @@
       "key": "cities.katwijk.tier2.range",
       "label": "Cities · Katwijk · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 4755
     },
@@ -6686,7 +6686,7 @@
       "key": "cities.katwijk.tier3.range",
       "label": "Cities · Katwijk · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 4761
     },
@@ -6734,7 +6734,7 @@
       "key": "cities.zeist.tier1.range",
       "label": "Cities · Zeist · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 4779
     },
@@ -6750,7 +6750,7 @@
       "key": "cities.zeist.tier2.range",
       "label": "Cities · Zeist · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 4785
     },
@@ -6766,7 +6766,7 @@
       "key": "cities.zeist.tier3.range",
       "label": "Cities · Zeist · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 4791
     },
@@ -6814,7 +6814,7 @@
       "key": "cities.veenendaal.tier1.range",
       "label": "Cities · Veenendaal · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 4809
     },
@@ -6830,7 +6830,7 @@
       "key": "cities.veenendaal.tier2.range",
       "label": "Cities · Veenendaal · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 4815
     },
@@ -6846,7 +6846,7 @@
       "key": "cities.veenendaal.tier3.range",
       "label": "Cities · Veenendaal · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 4821
     },
@@ -6894,7 +6894,7 @@
       "key": "cities.rijswijk.tier1.range",
       "label": "Cities · Rijswijk · Tier 1 range",
       "kind": "text",
-      "text": "€8.000 – €25.000",
+      "text": "€8.000 tot €25.000",
       "image": null,
       "sort_order": 4839
     },
@@ -6910,7 +6910,7 @@
       "key": "cities.rijswijk.tier2.range",
       "label": "Cities · Rijswijk · Tier 2 range",
       "kind": "text",
-      "text": "€25.000 – €60.000",
+      "text": "€25.000 tot €60.000",
       "image": null,
       "sort_order": 4845
     },
@@ -6926,7 +6926,7 @@
       "key": "cities.rijswijk.tier3.range",
       "label": "Cities · Rijswijk · Tier 3 range",
       "kind": "text",
-      "text": "€60.000 – €150.000",
+      "text": "€60.000 tot €150.000",
       "image": null,
       "sort_order": 4851
     },

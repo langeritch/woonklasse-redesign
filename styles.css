@@ -2064,3 +2064,43 @@ html.menu-open .wa-float { opacity: 0; pointer-events: none; }
 .review-card__name { font-family: var(--display); font-weight: 500; font-size: 15px; color: var(--ink); }
 .review-card__meta { font-family: var(--body); font-size: 13px; color: var(--muted); }
 .reviews-section { background: #f5f6f7; }
+
+/* =========================================================================
+   Bel-knop in de header + vertrouwensblok onder de hero (quick wins)
+   ========================================================================= */
+.header-call {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 15px;
+  border: 1px solid currentColor;
+  border-radius: 100px;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  line-height: 1;
+  white-space: nowrap;
+}
+.header-call svg { flex-shrink: 0; }
+
+.trust-strip { padding: clamp(48px, 7vw, 82px) 0; background: #f5f6f7; }
+.trust-grid {
+  max-width: var(--maxw, 1280px);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+.trust-item { padding-top: 18px; border-top: 2px solid #d9a93a; }
+.trust-item__title {
+  font-family: var(--display);
+  font-size: 19px;
+  font-weight: 600;
+  margin: 0 0 9px;
+  color: var(--ink);
+  letter-spacing: 0.01em;
+}
+.trust-item__body { font-size: 15px; line-height: 1.6; margin: 0; color: var(--gold-soft); }
+@media (max-width: 860px) { .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 30px 26px; } }
+@media (max-width: 520px) { .trust-grid { grid-template-columns: 1fr; } }
