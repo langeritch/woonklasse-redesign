@@ -2133,9 +2133,17 @@ html.menu-open .wa-float { opacity: 0; pointer-events: none; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 /* Hero-FAQ varianten (eigen, rustiger dan projecten) */
-.hero--faq { min-height: 56vh; }
-.hero__eyebrow { font-family: var(--display); text-transform: uppercase; letter-spacing: 0.18em;
-  font-size: clamp(13px,1vw,15px); color: rgba(255,255,255,0.85); margin: 0 0 18px; }
-.hero__title--faq { font-size: clamp(48px, 8vw, 96px); margin-bottom: 24px; max-width: 18ch; }
+.hero--faq { min-height: 58vh; }
+/* Sterke donkere gradient links zodat de witte tekst altijd leesbaar is, ongeacht de foto */
+.hero--faq .hero__overlay {
+  background:
+    linear-gradient(90deg, rgba(16,18,21,0.88) 0%, rgba(16,18,21,0.74) 30%, rgba(16,18,21,0.44) 56%, rgba(16,18,21,0.18) 82%, rgba(16,18,21,0.06) 100%),
+    linear-gradient(180deg, rgba(0,0,0,0.20) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.26) 100%);
+}
+/* Kleinere witte step zodat de tekst er ruim boven blijft */
+.hero--faq::after { width: 26%; height: 7vh; }
+.hero__eyebrow { font-family: var(--display); text-transform: uppercase; letter-spacing: 0.2em;
+  font-size: clamp(13px,1vw,15px); color: #d9a93a; margin: 0 0 20px; }
+.hero__title--faq { font-size: clamp(46px, 7vw, 84px); margin-bottom: 22px; max-width: 16ch; }
 .hero__sub--lead { font-family: var(--body); text-transform: none; letter-spacing: 0;
-  font-size: clamp(16px,1.3vw,19px); color: rgba(255,255,255,0.92); max-width: 52ch; }
+  font-size: clamp(16px,1.3vw,19px); color: rgba(255,255,255,0.94); max-width: 52ch; }
