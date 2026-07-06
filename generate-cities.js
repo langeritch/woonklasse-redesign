@@ -103,13 +103,13 @@ const HEAD = (title, desc, slug, cityName) => `<!doctype html>
 <meta property="og:url" content="https://woonklasse.nl/${slug}"/>
 <meta property="og:title" content="${title}"/>
 <meta property="og:description" content="${desc}"/>
-<meta property="og:image" content="https://woonklasse.nl/assets/og-image.jpg"/>
+<meta property="og:image" content="https://woonklasse.nl/assets/og-woonklasse.jpg"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="${title}"/>
 <meta name="twitter:description" content="${desc}"/>
-<meta name="twitter:image" content="https://woonklasse.nl/assets/og-image.jpg"/>
+<meta name="twitter:image" content="https://woonklasse.nl/assets/og-woonklasse.jpg"/>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"GeneralContractor","@id":"https://woonklasse.nl/#business","name":"Woonklasse","image":"https://woonklasse.nl/assets/og-image.jpg","logo":"https://woonklasse.nl/assets/woonklasse-logo-dark.png","url":"https://woonklasse.nl/","telephone":"+31302072388","email":"info@woonklasse.nl","priceRange":"€€","address":{"@type":"PostalAddress","streetAddress":"Laantje van Van Iperen 26b","postalCode":"4142 ER","addressLocality":"Leerdam","addressCountry":"NL"},"areaServed":{"@type":"City","name":"${cityName}"},"vatID":"NL004092100B36","knowsLanguage":"nl"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
