@@ -110,7 +110,7 @@ const HEAD = (title, desc, slug, cityName) => `<!doctype html>
 <meta name="twitter:title" content="${title}"/>
 <meta name="twitter:description" content="${desc}"/>
 <meta name="twitter:image" content="https://woonklasse.nl/assets/og-image.jpg"/>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"GeneralContractor","@id":"https://woonklasse.nl/#business","name":"Woonklasse","image":"https://woonklasse.nl/assets/og-image.jpg","logo":"https://woonklasse.nl/assets/woonklasse-logo-dark.png","url":"https://woonklasse.nl/","telephone":"+31302072388","email":"info@woonklasse.nl","priceRange":"€€","address":{"@type":"PostalAddress","streetAddress":"Laantje van Van Iperen 26","postalCode":"4142 ER","addressLocality":"Leerdam","addressCountry":"NL"},"areaServed":{"@type":"City","name":"${cityName}"},"vatID":"NL004092100B36","knowsLanguage":"nl"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"GeneralContractor","@id":"https://woonklasse.nl/#business","name":"Woonklasse","image":"https://woonklasse.nl/assets/og-image.jpg","logo":"https://woonklasse.nl/assets/woonklasse-logo-dark.png","url":"https://woonklasse.nl/","telephone":"+31302072388","email":"info@woonklasse.nl","priceRange":"€€","address":{"@type":"PostalAddress","streetAddress":"Laantje van Van Iperen 26b","postalCode":"4142 ER","addressLocality":"Leerdam","addressCountry":"NL"},"areaServed":{"@type":"City","name":"${cityName}"},"vatID":"NL004092100B36","knowsLanguage":"nl"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
@@ -159,7 +159,7 @@ const FOOTER = `
         <a href="mailto:info@woonklasse.nl">info@woonklasse.nl</a>
         <a href="tel:+31302072388">+31 30 207 23 88</a>
         <a href="https://wa.me/31650424683">WhatsApp</a>
-        <span>Laantje van Van Iperen 26<br/>4142 ER Leerdam</span>
+        <span>Laantje van Van Iperen 26b<br/>4142 ER Leerdam</span>
       </div>
       <div>
         <span style="opacity: 0.6; font-size: 12px;">Zusterbedrijf</span>

@@ -254,7 +254,7 @@
       "key": "footer.address",
       "label": "Postal address (HTML, use <br/>)",
       "kind": "rich_text",
-      "text": "Laantje van Van Iperen 26<br/>4142 ER Leerdam",
+      "text": "Laantje van Van Iperen 26b<br/>4142 ER Leerdam",
       "image": null,
       "sort_order": 940
     },
@@ -2046,7 +2046,7 @@
       "key": "privacy.section1.body",
       "label": "Privacy · Section 1 body (HTML)",
       "kind": "rich_text",
-      "text": "<p>Woonklasse, gevestigd aan de Laantje van Van Iperen 26, 4142 ER Leerdam, is verantwoordelijk voor de verwerking van persoonsgegevens zoals beschreven in dit beleid. KVK 85409146, BTW NL004092100B36. Je kunt ons bereiken via {{footer.email}} of {{footer.phoneDisplay}}.</p>",
+      "text": "<p>Woonklasse, gevestigd aan de Laantje van Van Iperen 26b, 4142 ER Leerdam, is verantwoordelijk voor de verwerking van persoonsgegevens zoals beschreven in dit beleid. KVK 85409146, BTW NL004092100B36. Je kunt ons bereiken via {{footer.email}} of {{footer.phoneDisplay}}.</p>",
       "image": null,
       "sort_order": 3015
     },
@@ -2398,7 +2398,7 @@
       "key": "voorwaarden.section12.body",
       "label": "Voorwaarden · Section 12 body (HTML)",
       "kind": "rich_text",
-      "text": "<p>Woonklasse, Laantje van Van Iperen 26, 4142 ER Leerdam. KVK 85409146, BTW NL004092100B36. E-mail {{footer.email}}, telefoon {{footer.phoneDisplay}}.</p>",
+      "text": "<p>Woonklasse, Laantje van Van Iperen 26b, 4142 ER Leerdam. KVK 85409146, BTW NL004092100B36. E-mail {{footer.email}}, telefoon {{footer.phoneDisplay}}.</p>",
       "image": null,
       "sort_order": 3147
     },
