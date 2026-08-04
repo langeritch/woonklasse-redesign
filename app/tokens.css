@@ -1,0 +1,46 @@
+/* =============================================================
+   Woonklasse — shared design tokens (§9 of site-mapping)
+   One token set. Brand colour, logo and typefaces are IDENTICAL
+   across modes; only density / radius / vertical rhythm differ.
+   ============================================================= */
+
+:root {
+  /* --- Brand (identical across every mode) --- */
+  --wk-bg: #ffffff;
+  --wk-ink: #1a1a1a;
+  --wk-muted: #6b6b6b;
+  --wk-line: #e4e6e7;
+  --wk-anthracite: #32383b;   /* secondary surface */
+  --wk-anthracite-soft: #dce0e2;
+  --wk-accent: #2a2e33;       /* deep anthracite — actions/price */
+  --wk-accent-soft: #6c747d;
+  --wk-black: #0a0a0a;
+
+  /* --- Type --- */
+  --wk-display: "Advent Pro", "Helvetica Neue", Arial, sans-serif;
+  --wk-body: "Inter", "Helvetica Neue", Arial, sans-serif;
+
+  /* --- Layout --- */
+  --wk-gutter: clamp(28px, 5vw, 80px);
+  --wk-max: 1440px;
+  --wk-ease: cubic-bezier(.22, .61, .36, 1);
+
+  /* --- Mode defaults (neutral / entry) --- */
+  --wk-density: comfortable;
+  --wk-radius: 8px;
+  --wk-section-y: clamp(56px, 8vw, 96px);
+}
+
+/* Shop = dense, functional, small radius, tight rhythm */
+[data-mode="shop"] {
+  --wk-density: compact;
+  --wk-radius: 6px;
+  --wk-section-y: 48px;
+}
+
+/* Verbouwen = roomy, warm, larger radius, generous rhythm */
+[data-mode="verbouwen"] {
+  --wk-density: roomy;
+  --wk-radius: 10px;
+  --wk-section-y: 96px;
+}
