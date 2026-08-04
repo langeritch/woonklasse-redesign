@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import ContentGap from "../components/ContentGap";
 
 type Mode = "shop" | "verbouwen";
 
@@ -16,6 +17,9 @@ type Panel = {
   poster?: string;
   /** optional video; only played when motion is allowed */
   video?: string;
+  /** registered content-gap id — when set, the panel media shows the
+   * shared placeholder photo (no real poster/video is delivered yet). */
+  gapId?: string;
 };
 
 const PANELS: Panel[] = [
@@ -27,8 +31,9 @@ const PANELS: Panel[] = [
     sub: "Badkamers, sanitair en raamdecoratie op maat",
     cta: "Naar de webshop →",
     meta: "300+ merken",
-    // No shop/badkamer imagery exists in the repo yet — branded CSS treatment
-    // stands in. cat-badkamer-1.mp4 is registered in content-gaps.json.
+    // No shop/badkamer poster or video exists in the repo yet.
+    // cat-badkamer-1.mp4 is registered in content-gaps.json.
+    gapId: "home-split-video-shop",
   },
   {
     mode: "verbouwen",
@@ -38,8 +43,9 @@ const PANELS: Panel[] = [
     sub: "Complete verbouwingen met eigen vakmensen",
     cta: "Plan een gratis intake →",
     meta: "Vaste prijs · eigen team",
-    poster: "/assets/footer-project.jpg", // real project photo from the repo
-    // cat-verbouwen-1.mp4 is registered in content-gaps.json.
+    // A real work video (cat-verbouwen-1.mp4) is still needed — registered
+    // in content-gaps.json — so the shared placeholder photo stands in.
+    gapId: "home-split-video-verbouwen",
   },
 ];
 
@@ -91,28 +97,32 @@ export default function SplitEntry() {
         {PANELS.map((p) => (
           <a
             key={p.mode}
-            className={`wk-panel wk-panel--${p.mode}`}
+            className={`wk-panel wk-panel--${p.mode}${p.gapId ? " wk-panel--gap" : ""}`}
             href={p.href}
             onClick={() => remember(p.mode)}
             aria-label={`${p.title} — ${p.sub}`}
           >
-            <div className="wk-panel__media" aria-hidden="true">
-              {p.video && !reduced.current ? (
-                <video
-                  poster={p.poster}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="none"
-                >
-                  <source src={p.video} type="video/mp4" />
-                </video>
-              ) : p.poster ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img src={p.poster} alt="" />
-              ) : null}
-            </div>
+            {p.gapId ? (
+              <ContentGap id={p.gapId} variant="fill" />
+            ) : (
+              <div className="wk-panel__media" aria-hidden="true">
+                {p.video && !reduced.current ? (
+                  <video
+                    poster={p.poster}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="none"
+                  >
+                    <source src={p.video} type="video/mp4" />
+                  </video>
+                ) : p.poster ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={p.poster} alt="" />
+                ) : null}
+              </div>
+            )}
 
             <p className="wk-panel__eyebrow">{p.eyebrow}</p>
             <h2 className="wk-panel__title">{p.title}</h2>

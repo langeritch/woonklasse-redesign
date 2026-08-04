@@ -110,6 +110,111 @@
   margin: 16px 0 0;
 }
 
+/* ---------- Content gap placeholder (shared, dev + prod) ----------
+   Every content gap renders the SAME placeholder photo so it is
+   impossible to miss where the owner still needs to add his own
+   content. Visible in development AND production. */
+.wk-gap {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--wk-radius);
+  background: #1b1f22;
+  isolation: isolate;
+}
+.wk-gap__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.wk-gap__caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px 20px;
+  background: linear-gradient(
+    to top,
+    rgba(10, 10, 10, 0.92) 0%,
+    rgba(10, 10, 10, 0.62) 62%,
+    rgba(10, 10, 10, 0) 100%
+  );
+  color: #fff;
+}
+.wk-gap__tag {
+  font-family: var(--wk-display);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  color: #ff66be;
+}
+.wk-gap__vraag {
+  font-family: var(--wk-body);
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: #fff;
+}
+
+/* Block variant — self-contained section-width card. */
+.wk-gap--block {
+  margin: 24px auto;
+  max-width: var(--wk-max);
+  border: 3px dashed #ff008a;
+  aspect-ratio: 16 / 7;
+}
+
+/* Fill variant — fills a positioned ancestor (e.g. a splitscreen panel).
+   It sits above the panel's own background but below the panel text. */
+.wk-gap--fill {
+  position: absolute;
+  inset: 0;
+  border-radius: 0;
+  height: 100%;
+  z-index: 0;
+}
+/* caption to the TOP so it never collides with the panel's bottom-aligned
+   nav text; z-index keeps it above the legibility scrim below. */
+.wk-gap--fill .wk-gap__caption {
+  top: 0;
+  bottom: auto;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 10, 0.92) 0%,
+    rgba(10, 10, 10, 0.6) 62%,
+    rgba(10, 10, 10, 0) 100%
+  );
+}
+/* scrim over the bottom of the placeholder so the panel's white nav text
+   (title / sub / cta) stays readable on top of the bright placeholder. */
+.wk-gap--fill::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 10, 10, 0.85) 0%,
+    rgba(10, 10, 10, 0.4) 45%,
+    rgba(10, 10, 10, 0.12) 100%
+  );
+}
+
+/* Panel-with-gap: lift the nav text above the placeholder fill. */
+.wk-panel--gap > :not(.wk-gap) {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 860px) {
+  .wk-gap--block {
+    aspect-ratio: 4 / 3;
+  }
+}
+
 /* ---------- Minimal group header (fase 1 scaffold) ---------- */
 .wk-modehead {
   display: flex;
