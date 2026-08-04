@@ -1,0 +1,304 @@
+/* =============================================================
+   Splitscreen entry (/) — anatomy per §3 of site-mapping.
+   ============================================================= */
+
+.wk-entry {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Minimal top bar ---------- */
+.wk-entry-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px var(--wk-gutter);
+}
+.wk-entry-bar__logo img {
+  height: 40px;
+  width: auto;
+}
+.wk-entry-bar__meta {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 3vw, 28px);
+  font-family: var(--wk-body);
+  font-size: 13.5px;
+  color: var(--wk-ink);
+}
+.wk-entry-bar__meta a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Resume quick-link (localStorage) ---------- */
+.wk-resume {
+  display: flex;
+  justify-content: center;
+  padding: 8px var(--wk-gutter);
+  background: var(--wk-anthracite-soft);
+}
+.wk-resume__link {
+  font-family: var(--wk-display);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12.5px;
+  color: var(--wk-accent);
+  display: inline-flex;
+  gap: 8px;
+}
+.wk-resume__link:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Split ---------- */
+.wk-split {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 72vh;
+}
+
+.wk-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  min-height: 72vh;
+  padding: clamp(28px, 5vw, 72px);
+  color: #fff;
+  isolation: isolate;
+  transition: flex-grow 0.4s var(--wk-ease);
+  background: var(--wk-anthracite);
+}
+.wk-panel__media {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+.wk-panel__media img,
+.wk-panel__media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: transform 0.6s var(--wk-ease);
+}
+.wk-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    to top,
+    rgba(10, 10, 10, 0.82) 0%,
+    rgba(10, 10, 10, 0.35) 45%,
+    rgba(10, 10, 10, 0.15) 100%
+  );
+  transition: opacity 0.4s var(--wk-ease);
+}
+
+/* shop panel — no shop imagery exists in the repo yet, so a branded
+   anthracite treatment stands in until a poster/video is delivered. */
+.wk-panel--shop {
+  background:
+    radial-gradient(120% 90% at 30% 20%, #3a4147 0%, #262b2f 60%, #1b1f22 100%);
+}
+
+.wk-panel__eyebrow {
+  font-family: var(--wk-display);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 12px;
+  opacity: 0.85;
+  margin: 0 0 14px;
+}
+.wk-panel__title {
+  font-family: var(--wk-display);
+  font-weight: 500;
+  font-size: clamp(30px, 4.4vw, 62px);
+  line-height: 1.02;
+  margin: 0 0 16px;
+  max-width: 16ch;
+}
+.wk-panel__sub {
+  font-family: var(--wk-body);
+  font-size: clamp(15px, 1.4vw, 18px);
+  line-height: 1.5;
+  max-width: 34ch;
+  margin: 0 0 26px;
+  color: rgba(255, 255, 255, 0.9);
+}
+.wk-panel__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--wk-display);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 15px;
+  padding: 14px 26px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: var(--wk-radius);
+  transition: background 0.25s var(--wk-ease), color 0.25s var(--wk-ease);
+}
+.wk-panel__meta {
+  font-family: var(--wk-body);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  margin: 16px 0 0;
+  opacity: 0.85;
+}
+
+/* The whole column is a link. Hover/focus expands it and lifts the media. */
+.wk-panel:hover,
+.wk-panel:focus-visible {
+  flex-grow: 1.36;
+}
+.wk-panel:hover .wk-panel__media img,
+.wk-panel:hover .wk-panel__media video,
+.wk-panel:focus-visible .wk-panel__media img,
+.wk-panel:focus-visible .wk-panel__media video {
+  transform: scale(1.08);
+}
+.wk-panel:hover .wk-panel__cta,
+.wk-panel:focus-visible .wk-panel__cta {
+  background: #fff;
+  color: var(--wk-ink);
+  border-color: #fff;
+}
+.wk-panel:focus-visible {
+  outline: 4px solid #fff;
+  outline-offset: -4px;
+}
+
+/* ---------- Scroll hint ---------- */
+.wk-scrollhint {
+  display: flex;
+  justify-content: center;
+  padding: 18px;
+  font-family: var(--wk-display);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 12.5px;
+  color: var(--wk-muted);
+}
+.wk-scrollhint__arrow {
+  margin-right: 10px;
+}
+
+/* ---------- Brand story ---------- */
+.wk-story {
+  padding-block: var(--wk-section-y);
+}
+.wk-story__inner {
+  max-width: 780px;
+}
+.wk-story__eyebrow {
+  font-family: var(--wk-display);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 13px;
+  color: var(--wk-accent);
+  margin: 0 0 18px;
+}
+.wk-story h2 {
+  font-size: clamp(26px, 3.4vw, 40px);
+  line-height: 1.1;
+  margin: 0 0 24px;
+}
+
+/* ---------- Uitgelicht ---------- */
+.wk-featured {
+  padding-block: var(--wk-section-y);
+  background: #f7f8f8;
+}
+.wk-featured__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.wk-featured__head h2 {
+  font-size: clamp(24px, 3vw, 34px);
+}
+.wk-featured__project {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 0;
+  border-radius: var(--wk-radius);
+  overflow: hidden;
+  background: var(--wk-anthracite);
+  color: #fff;
+}
+.wk-featured__project img {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+}
+.wk-featured__project-body {
+  padding: clamp(28px, 4vw, 56px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.wk-featured__project-body h3 {
+  font-size: clamp(24px, 3vw, 38px);
+  margin: 0 0 16px;
+}
+.wk-featured__project-body p {
+  font-family: var(--wk-body);
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.6;
+  margin: 0 0 26px;
+  max-width: 40ch;
+}
+
+.wk-linkcta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--wk-display);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 14px;
+  color: inherit;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 4px;
+  align-self: flex-start;
+}
+
+/* ---------- Mobile: stacked panels ~45vh each ---------- */
+@media (max-width: 860px) {
+  .wk-split {
+    grid-template-columns: 1fr;
+  }
+  .wk-panel {
+    min-height: 45vh;
+  }
+  .wk-panel:hover,
+  .wk-panel:focus-visible {
+    flex-grow: 0;
+  }
+  .wk-featured__project {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .wk-panel,
+  .wk-panel__media img,
+  .wk-panel__media video,
+  .wk-panel__cta {
+    transition: none !important;
+  }
+  .wk-panel:hover,
+  .wk-panel:focus-visible {
+    flex-grow: 1;
+  }
+}
