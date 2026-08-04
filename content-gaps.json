@@ -1,0 +1,37 @@
+[
+  {
+    "id": "home-merkverhaal",
+    "pagina": "/",
+    "sectie": "Merkverhaal (§3 sectie 5)",
+    "blokkerend": false,
+    "vraag": "Schrijf 2 alinea's over Woonklasse als bedrijf. Sinds wanneer bestaat Woonklasse, hoeveel vakmensen werken er, en waarom bieden jullie zowel de webshop als de aannemerstak onder één dak aan? Nu staat er alleen 'Alles voor je huis'."
+  },
+  {
+    "id": "home-uitgelicht-producten",
+    "pagina": "/",
+    "sectie": "Uitgelicht — 4 producten (§3 sectie 6)",
+    "blokkerend": false,
+    "vraag": "Lever de sale-/productfeed aan (minimaal 4 uitgelichte producten met foto, merk, titel, prijs en van-prijs). Er is nu geen productdata in deze repo — dit is de verbouwen-branch, de webshop-catalogus ontbreekt volledig."
+  },
+  {
+    "id": "home-split-video-shop",
+    "pagina": "/",
+    "sectie": "Splitscreen — webshop-paneel (§3 sectie 2)",
+    "blokkerend": false,
+    "vraag": "Lever de webshop-paneelvideo 'cat-badkamer-1.mp4' (plus poster-afbeelding) aan. Er staat nu géén badkamer-/shopbeeld in de repo; het paneel toont voorlopig een merk-anthraciet vlak. Poster + video (muted, loop, playsinline, preload=none) nodig."
+  },
+  {
+    "id": "home-split-video-verbouwen",
+    "pagina": "/",
+    "sectie": "Splitscreen — verbouwen-paneel (§3 sectie 2)",
+    "blokkerend": false,
+    "vraag": "Lever de verbouwen-paneelvideo 'cat-verbouwen-1.mp4' aan. Het paneel gebruikt nu de bestaande projectfoto (assets/footer-project.jpg) als poster; een echte werkvideo van vakmensen is gewenst."
+  },
+  {
+    "id": "topbar-showroom-whatsapp-discrepantie",
+    "pagina": "/ + footer",
+    "sectie": "Contactgegevens",
+    "blokkerend": false,
+    "vraag": "De specs noemen 'Showroom Leerdam' en WhatsApp wa.me/31615623995, maar de bestaande footer in deze repo noemt Amsterdam-Duivendrecht (Joop Geesinkweg 201) en WhatsApp wa.me/31650424683 + tel +31 30 207 23 88. Welke gegevens zijn correct/actueel? Nu staat de topbar op de spec-waarden (Leerdam) en de footer op de repo-waarden (Amsterdam) — dit moet gelijkgetrokken worden."
+  }
+]
